@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>河合悠祐 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>河合悠祐 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 9 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>ヘイト扇動
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>排外主義
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#a5d6a7"></div>差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>根拠不明発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>地位濫用
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/kawai-yusuke-fujisawa-muslim-hate-demo.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260412" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月12日</span>
+            <span class="event-title">河合悠祐が藤沢市でイスラム教徒排斥のヘイトデモを実施した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年4月12日、河合悠祐氏が神奈川県藤沢市の藤沢駅周辺でイスラム教徒（ムスリム）の排斥を煽るヘイトデモを企画・実施した。モスク建設計画への反対を名目にデマを基に憎悪を扇動するデモであり、神奈川新聞は「外国人差別を政治利用するレイシスト」と批判した。カウンター市民と衝突し騒然となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-newroz-pkk-claim.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260322" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月22日</span>
+            <span class="event-title">河合悠祐がクルド人の祭りネウロズをPKK関連として中止要求を繰り返した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+          </div>
+          
+          
+          <div class="event-body">河合悠祐氏はクルド人の新春祭りネウロズをPKK（クルディスタン労働者党・国際テロ組織）関連の行事と断定し、埼玉県に対してさいたま市秋ケ瀬公園の貸し出し中止を求める抗議を繰り返した。2026年3月22日のネウロズ当日にも会場に赴いて撮影・抗議活動を行った。祭りとPKKの組織的関係を示す根拠は示されていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-nihon-yamato-to-founding.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250812" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年8月12日</span>
+            <span class="event-title">河合悠祐が日本大和党を結党し外国人排除政策を掲げた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年8月12日、河合悠祐氏が日本保守党を離党後に「日本大和党」を結党した。党の政策として「単一民族国家95%の維持」「外国人への生活保護支給の廃止」「不法移民の強制送還」「外国人の日本の土地所有の禁止」「外国人参政権反対」などを掲げた。川口市長選に反移民を旗印とする候補者を擁立している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-child-hate-speech-sangiin.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250713" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年7月13日</span>
+            <span class="event-title">河合悠祐が参院選の街頭演説で子どもにマイクを握らせ差別発言をさせた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年7月13日、参院選の選挙運動においてJR蕨駅前の街頭演説で、河合悠祐氏が女児にマイクを握らせて外国人差別的な内容を叫ばせた。神奈川新聞は「前代未聞の蛮行」と報じた。子どもを政治的な差別扇動活動に利用するものとして、各方面から強い批判を受けた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-kawasaki-hate-speech-intimidation.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250615" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年6月15日</span>
+            <span class="event-title">河合悠祐が川崎駅前のヘイト街宣に参加し抗議市民を恫喝した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年6月15日、河合悠祐氏がJR川崎駅前で行われたヘイト街宣に参加し、抗議のために集まった市民を恫喝した。神奈川新聞が「時代の正体」シリーズで報道した。川崎市は差別禁止条例を持つ都市であり、市民からの抗議も多数あった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-kurd-video-dema-post.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250200" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年2月</span>
+            <span class="event-title">河合悠祐がクルド人の誕生日動画を「違法パーティー」とデマ投稿した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年2月、河合悠祐氏は蕨市の公園で5年以上前に撮影されたクルド人家族の誕生日パーティー動画を「蕨市民公園で違法パーティ。蕨の市長は共産党だから多文化共生を進めて治安を悪くする」と公職を明示してX投稿した。動画は家族の私的イベントのものであり事実と異なる。社会学専門家は「ヘイトど真ん中の行為」と批判。後に投稿を削除したが理由は説明しなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-warabi-anti-kurd-patrol.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20241005" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年10月5日</span>
+            <span class="event-title">河合悠祐が蕨駅周辺でクルド人をターゲットにしたヘイトパトロールを実施した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2024年10月5日夜、河合悠祐氏が「クルド人から川口市の治安を守るためにパトロール」と称して蕨駅周辺での集合を呼びかけ、ゴミ拾いを名目とした街頭活動を実施した。クルド人全体を犯罪者予備軍扱いする形での活動であり、批判者はこれを人種差別にあたると指摘している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-nude-poster-keishicho-warning.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20240620" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年6月20日</span>
+            <span class="event-title">河合悠祐が東京都知事選でほぼ全裸ポスターを掲示し警視庁から警告を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2024年東京都知事選に出馬した河合悠祐氏が、グラビアアイドル・桜井MIUを全裸ポスターのモデルに起用し都内各所の掲示板に貼り出した。ポスターには「表現の自由への規制はやめろ」のスローガンが記されていた。警視庁から迷惑防止条例違反（ひわいな言動）として警告を受け撤去した。桜井MIU自身はクライアント企業のイメージガールを同日付で降板させられた。河合氏は「女性の性表現の自由」を掲げる釈明を行い謝罪はしなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kawai-yusuke-chiba-seikenhouou-joker.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20210309" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2021年3月9日</span>
+            <span class="event-title">河合悠祐が千葉県知事選の政見放送でジョーカーメイクのコメディ演説を行い海外報道された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2021年3月9日の千葉県知事選の政見放送に、河合悠祐氏が映画『ジョーカー』のようなピエロメイク・赤いジャケット姿で登場した。「千葉県全体をディズニーランドにする」「『ゴミ』という言葉を廃止し『星のかけら』に変更する」などを主張し、「緊張で政策を忘れた」と述べるなどウケ狙いの内容だった。ニューヨーク・ポストなど複数の海外メディアが「日本のジョーカー」として報道した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

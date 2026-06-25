@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鈴木宗男 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>鈴木宗男 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 8 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>利権・癒着
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>金銭問題
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/suzuki-muneo-retrial-rejected.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240325" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年3月25日</span>
+            <span class="event-title">鈴木宗男の再審請求が東京高裁に棄却された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">鈴木宗男参院議員は、有罪確定後も無実を主張し再審請求を続けていた。2024年3月25日、東京高裁（三浦透裁判長）は、東京地検特捜部が作成したとされる「尋問シナリオ」など弁護側の新証拠は確定判決に影響しないとした地裁決定を支持し、即時抗告を棄却した。弁護側は最高裁へ特別抗告する方針を表明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/suzuki-muneo-unauthorized-russia-visit-leaves-ishin.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20231010" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年10月10日</span>
+            <span class="event-title">鈴木宗男が無届けでロシアを訪問しロシア擁護発言をして維新を離党した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">日本維新の会の鈴木宗男参院議員は2023年10月1日から5日にかけてロシアを訪問したが、参院には海外渡航を届け出た一方、党が定める事前申請は行っていなかった。
+訪問中、現地メディアの取材に対し「私は今までもロシアの友人で、これからもロシアの友人だ」などとロシア寄りとも取れる発言をした。
+党は除名の方針を固めたが、正式処分に先立って鈴木氏本人が離党を申し出てこれが受理され、無所属となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/suzuki-muneo-bribery-conviction.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20100908" data-amount="11000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2010年9月8日</span>
+            <span class="event-title">鈴木宗男が斡旋収賄罪で逮捕され実刑判決</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">鈴木宗男衆議院議員は、1997〜1998年に公共工事受注をめぐり建設会社「島田建設」から600万円、林業をめぐり「やまりん」から500万円を受け取ったとして斡旋収賄罪などで起訴された。2004年に懲役2年・追徴金1100万円の実刑判決を受け、2010年9月8日に最高裁が上告を棄却して判決が確定。鈴木氏は議員失職・収監となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/suzuki-muneo-false-testimony.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20020000" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2002年</span>
+            <span class="event-title">鈴木宗男が証人喚問で偽証し議院証言法違反で起訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2002年の国会証人喚問において、鈴木宗男はやまりん事件に関連する林野庁次長との面会を否定し、島田建設関連での秘書給与肩代わりも否定する証言を行った。これらが虚偽証言として認定され、議院証言法違反で起訴された。2004年に有罪（懲役2年に含む）が確定し、2010年9月に最高裁で刑が確定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/muneo-house-fraudulent-bid.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="19990707" data-amount="398000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">1999年7月7日</span>
+            <span class="event-title">ムネオハウス入札で鈴木宗男の秘書らが偽計業務妨害</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+          </div>
+          
+          
+          <div class="event-body">1999年7月、国後島に建設された「日本人とロシア人の友好の家」（通称ムネオハウス）の工事入札で、鈴木宗男の公設第一秘書・宮野明と地元建設業者5人が共謀し、入札前に釧路市の鈴木事務所で入札情報と予定価格（約3億9800万円）を漏洩して他業者の参加を断念させ、渡辺建設工業ら共同企業体が随意契約で受注した。2002年4月に秘書と業者ら7人が偽計業務妨害容疑で逮捕され、業者5人の有罪が確定した。鈴木本人はこの件では立件されなかったが、入札枠の事実上の絞り込みに関与した疑いが指摘された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/suzuki-muneo-yamarin-bribery.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="19980800" data-amount="5000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">1998年8月</span>
+            <span class="event-title">やまりん事件で鈴木宗男があっせん収賄</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+          </div>
+          
+          
+          <div class="event-body">1998年8月頃、内閣官房副長官だった鈴木宗男は、国有林の無断伐採で行政処分を受けた北海道の林業会社「やまりん」の社長らから、林野庁幹部への働きかけに対する見返りとして500万円を受け取ったとされる。あっせん収賄罪で起訴され、2004年に有罪（懲役2年・追徴金1100万円）、2010年9月に最高裁で確定した。鈴木は一貫して無実を主張している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/suzuki-muneo-political-funds-violation.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="19980000" data-amount="36000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">1998年</span>
+            <span class="event-title">鈴木宗男が政治資金規正法に違反し起訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">1998年、鈴木宗男の資金管理団体が自宅購入費3600万円を流用し、また島田建設から受領した800万円の闇献金を収支報告書に記載しなかったとして政治資金規正法違反で起訴された。2004年に有罪（懲役2年に含む）が確定し、2010年9月に最高裁で刑が確定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/suzuki-muneo-shimada-kensetsu-bribery.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="19980000" data-amount="6000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">1998年</span>
+            <span class="event-title">島田建設事件で鈴木宗男が受託収賄</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+          </div>
+          
+          
+          <div class="event-body">1997〜1998年、北海道開発庁長官だった鈴木宗男は、網走港・紋別港の港湾工事の受注をめぐり、北海道の建設会社「島田建設」が望み通りの工事を落札できるよう北海道開発局に指示した見返りに600万円を受け取ったとされる。さらに島田建設からの800万円の闇献金と秘書給与の肩代わりも認定された。受託収賄罪等で起訴され、2004年に有罪（懲役2年・追徴金1100万円）、2010年9月に最高裁で確定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

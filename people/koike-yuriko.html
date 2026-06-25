@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小池百合子 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>小池百合子 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 11 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>地位濫用
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffa726"></div>選挙工作
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>利権・癒着
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>公費浪費
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>環境破壊加担
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ef5350"></div>民主主義破壊
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#a5d6a7"></div>差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>公約不履行
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/koike-2024-election-law-violation.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240628" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年6月28日</span>
+            <span class="event-title">小池百合子・2024年知事選での公選法違反疑惑</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2024年東京都知事選（7月7日投開票）の選挙期間中、小池百合子知事は休職せず在職したまま選挙活動を行い、6月28日の知事定例記者会見で街頭活動の手応えや公約の訴求内容を説明した。郷原信郎弁護士（元検事）は公職選挙法136条の2（公務員の地位利用による選挙運動禁止）に「完全にアウト」と違反の可能性を指摘し、上脇博之教授とともに東京地検特捜部に告発状を提出。別途、首長への出馬要請を自ら仕込んだとして市民175人も公選法違反（地位利用）で告発した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-cairo-university-credentials.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240619" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年6月19日</span>
+            <span class="event-title">小池百合子・カイロ大学学歴詐称疑惑</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
+          </div>
+          
+          
+          <div class="event-body">元側近の小島敏郎氏（元都民ファーストの会事務総長）が2024年6月19日、小池知事がカイロ大学卒業という虚偽の学歴を選挙公報に記載したとして公選法違反で東京地検に告発状を提出した。
+小島氏は2024年4月の文藝春秋での告発で、2020年に駐日エジプト大使館のフェイスブックに掲載されたカイロ大学声明文の作成に知人が関与し「偽装工作に加担した」と証言した。
+小池知事は「大学が卒業を認めている」と否定しているが、元同居人も学歴への疑問を実名で証言している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-renewable-energy-fund-conflict.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240000" data-amount="1000000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年</span>
+            <span class="event-title">小池百合子・再エネファンド利益相反疑惑と議会答弁拒否</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">東京都が再生可能エネルギー発電拠点の整備を目的とする「サステナブルエネルギーファンド」に10億円を出資し、資金が北海道に投資されている。元都民ファーストの会の上田令子都議が「利益相反の疑いがある」と都議会で追及したが、小池都知事は答弁を拒否。同ファンドは小池知事が主導した再エネ推進施策の一環で、新たな利権構造との批判がある。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-projection-mapping-dentsu.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230000" data-amount="4850000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年</span>
+            <span class="event-title">小池百合子・都庁プロジェクションマッピング事業での電通グループへの随意契約</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+          </div>
+          
+          
+          <div class="event-body">東京都は2023〜2024年度の2年間で計48.5億円を都庁プロジェクションマッピング事業に投入した。映像制作業務を五輪談合事件で指名停止中（〜2024年8月）の電通の子会社「電通ライブ」が企画提案方式で受注。機材設置はパナソニックコネクトと特命随意契約を結び、入札の根拠資料の公開を都が拒否。小池知事は電通から2013・2014年に各20万円の政治献金を受け取っていた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-jingu-gaien-redevelopment.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20220700" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年7月</span>
+            <span class="event-title">小池百合子・神宮外苑再開発と大規模樹木伐採</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">環境破壊加担</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+          </div>
+          
+          
+          <div class="event-body">東京都は三井不動産など4社による神宮外苑の大規模再開発を許可し、約1900本のうち約900本（樹齢100年超の老木を含む）を伐採する計画が進んでいる。
+小池知事は「本数は増える」と繰り返したが、専門家は「老木と若木では機能が全然違う」と指摘し、ヒートアイランド対策や景観への悪影響を警告した。
+都民の約70%が反対意見を持ち、著名人・専門家・野党を含む幅広い批判が続いているにもかかわらず、知事は開発を推進した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-olympics-facilities-deficit.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20210000" data-amount="1000000000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2021年</span>
+            <span class="event-title">小池百合子・東京五輪施設の赤字問題</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
+          </div>
+          
+          
+          <div class="event-body">東京五輪・パラリンピックに向け都が約2900億円を投じて新設した6恒久施設のうち、5施設（水泳・ボート・アーチェリー・カヌースラローム・ホッケー）が年間1300万〜5億9000万円の赤字見込みで、都が委託費として補填を続けている（2024年度予算）。都の大会経費負担は計5965億円（全体1兆4238億円の約42%）。小池知事は大会を「レガシー」と自賛するが、贈収賄・談合疑惑での組織委幹部起訴もあり、維持費負担が都民に継続している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-kibono-to-haijo.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20170929" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2017年9月29日</span>
+            <span class="event-title">小池百合子・希望の党「排除します」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2017年9月29日、希望の党代表の小池百合子は記者会見で民進党からの合流希望者のうち安保法制・憲法観が一致しない候補者について「排除いたします」と明言し、リベラル派議員を全面排除する方針を示した。
+民進党の前原誠司代表は議員に「排除されない」と説明していたが、小池氏の発言はそれを否定するもので、野党再編の期待を裏切った。
+この発言が立憲民主党の結成を招き、希望の党は衆院選で失速して野党第一党の座を失った。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-kanto-earthquake-memorial-refusal.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20170901" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2017年9月1日</span>
+            <span class="event-title">小池百合子・関東大震災朝鮮人犠牲者追悼文不送付</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+          </div>
+          
+          
+          <div class="event-body">小池百合子都知事は2017年から毎年9月1日に行われる関東大震災朝鮮人犠牲者追悼式典（東京・横網町公園）への追悼文送付を拒否し、2024年時点で8年連続の不送付となっている。
+美濃部亮吉知事以降の歴代都知事が一貫して追悼文を送付してきた慣行を、小池知事は就任2年目に一方的に中止した。
+「同日の大法要で全ての犠牲者に哀悼の意を表す」を理由とするが、式典実行委は「震災の犠牲者と人為的な虐殺の犠牲者を同列にするものだ」と批判している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-harumi-land-sale-amakudari.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20161200" data-amount="107040000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2016年12月</span>
+            <span class="event-title">小池百合子・晴海選手村用地の格安売却と天下り問題</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
+          </div>
+          
+          
+          <div class="event-body">東京都は2016年12月、五輪選手村用地（約13.4ha、晴海）を三井不動産ら11社に129億6000万円（近隣公示地価の約10分の1）で売却した。財産価格審議会・都議会に諮らず小池知事就任直後に実行。値引き額は約1200億円に上り、住民33人が2017年に損害賠償訴訟を提起した。売却先8社には都の元局長ら計29人（都市整備局出身が26人）が天下りしていたことも判明。東京高裁は「価格は適正」として住民側を棄却したが、原告側は上告し係争中。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-toyosu-market-relocation-chaos.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20160831" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2016年8月31日</span>
+            <span class="event-title">小池百合子・豊洲市場移転迷走</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">小池百合子都知事は2016年8月の就任直後に豊洲市場への移転を延期し、その後方針を二転三転させた（「5年後に築地へ戻す」→「築地解体・豊洲へ移転」）。
+盛り土未施工問題の発覚を契機に延期を決定したが、問題解決のないまま2018年10月に開場し、地下水位超過・物流制限・商品取扱量試算の誤りなどの根本問題は放置された。
+3年超の迷走で市場の仲卸業者らが甚大な経済的損害を被り、監査請求や損害賠償請求に発展した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koike-seven-zeros-unfulfilled.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20160700" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2016年7月</span>
+            <span class="event-title">小池百合子・7つのゼロ公約不履行</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公約不履行</span>
+            
+          </div>
+          
+          
+          <div class="event-body">小池百合子は2016年の都知事選で「待機児童・介護離職・残業・都道電柱・満員電車・多摩格差・ペット殺処分」の7項目をゼロにする公約を掲げたが、8年経っても大半が未達成。
+特に介護離職は2017年の7,800人から2022年に14,200人へと倍増し、残業・満員電車・多摩格差も顕著な改善なし。
+批判を受けた知事は「ネガティブキャンペーン」と反論し、自己評価では「達成している」と強調したが、客観的データとの乖離が大きい。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

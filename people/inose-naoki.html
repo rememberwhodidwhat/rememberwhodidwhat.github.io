@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>猪瀬直樹 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>猪瀬直樹 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 2 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>利権・癒着
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>金銭問題
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/inose-diet-session-disruption-warning.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230605" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年6月5日</span>
+            <span class="event-title">猪瀬直樹が国会審議中にあくびやスマホ操作・ガム噛みを繰り返し審議が中断し厳重注意を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">日本維新の会の猪瀬直樹参院議員は、2023年6月5日の参院地方デジタル委員会で大きなあくびをした後、他会派議員の発言中にスマートフォンの操作音を響かせ、携帯電話使用が禁止された委員会室での審議を一時中断させた。同氏は同年4月の参院憲法審査会でも質疑中にガムを噛んでいたとして、参院議院運営委員長から各会派に厳重注意を受けていた。一連の行動に野党議員からは批判の声が上がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/inose-tokushukai-undisclosed-donation-resignation.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20131224" data-amount="50000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年12月24日</span>
+            <span class="event-title">猪瀬直樹が徳洲会から5000万円を受領し収支報告書に未記載で都知事を辞職</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">東京都知事だった猪瀬直樹は、2012年の都知事選を控えた同年11月、医療法人徳洲会グループから現金5000万円を受け取りながら、選挙運動費用収支報告書にこれを記載しなかった。当初は都議会で「選挙目的ではなかった」と説明していたが、後に「選挙資金の側面があったことは否定できない」と一転して認めた。徳洲会への強制捜査後に5000万円は全額返却されたが、都議会の追及を受けて2013年12月19日に辞意を表明し、同月24日に都知事を辞職した。2014年3月には公職選挙法違反（収支報告書の虚偽記入）で略式起訴され罰金50万円を納付し、5年間の公民権停止処分を受けた。猪瀬氏は2022年参院選に日本維新の会公認で出馬している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

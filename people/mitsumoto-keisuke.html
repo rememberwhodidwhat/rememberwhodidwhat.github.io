@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光本圭佑 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>光本圭佑 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 2 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>金銭問題
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/mitsumoto-amagasaki-fund-embezzlement.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20231012" data-amount="2100000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年10月12日</span>
+            <span class="event-title">光本圭佑が尼崎市議会維新の会の政務活動費約210万円を着服し在宅起訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">尼崎市議会の会派「日本維新の会」で幹事長を務めていた光本圭佑市議は、2021年8月にパソコン購入費など約76万円を政務活動費から支出する際、偽造した納品書・領収書を会派に提出するなどして、計約210万円の政務活動費を着服した疑いが持たれた。兵庫県警は2023年10月に光本氏を業務上横領罪と有印私文書偽造・同行使罪の容疑で書類送検し、神戸地検は同年12月に在宅起訴した。日本維新の会は2022年6月に光本氏を除名処分とし、尼崎市議会は2022年6月・2023年6月・同年11月の3度にわたり全会一致で辞職勧告決議を可決したが、光本氏は応じず、2025年3月にようやく辞職した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/mitsumoto-keisuke-demon-slayer-poster-apology.html" style="--accent: #55b07a"
+       data-buzz="0" data-sort-key="20210204" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2021年2月4日</span>
+            <span class="event-title">光本圭佑が鬼滅の刃に酷似した政治ポスターを作成し批判を受け謝罪・差し替えた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">日本維新の会の光本圭佑・尼崎市議は2021年2月、漫画「鬼滅の刃」を想起させる党ロゴ・市松模様・キャッチコピーを用いた政治ポスターを作成し掲示した。
+ネット上で著作権侵害や政治利用ではないかとの批判が広がり、同月4日に週刊少年ジャンプ編集部が「一切関与していない」とする声明を発表した。
+光本市議は同日、自身のブログで謝罪し、ポスターを別デザインのものに差し替えた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
+            <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

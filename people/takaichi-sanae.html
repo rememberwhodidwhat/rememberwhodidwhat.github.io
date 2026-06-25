@@ -1,0 +1,2638 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高市早苗 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>高市早苗 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 65 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>矛盾発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>歴史修正主義
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffa726"></div>選挙工作
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ef5350"></div>民主主義破壊
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>軍拡推進
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>根拠不明発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>外交問題
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>戦争容認
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>利権・癒着
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>市民監視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>金銭問題
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff7043"></div>脱法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>統一教会癒着
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>排外主義
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#f48fb1"></div>性差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#a5d6a7"></div>差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>ヘイト扇動
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>弱者攻撃
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#66bb6a"></div>エセ科学
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>虚偽発言
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/takaichi-2026-g7-isolation.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260616" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月16日</span>
+            <span class="event-title">高市早苗がG7で他国首脳と歓談できず孤立した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年6月16日、フランス・エビアン・レ・バンで開催されたG7サミットのファミリーフォト撮影前、高市早苗首相がマクロン仏大統領とカーニー加首相の間に立つ場面が映像に収められた。
+高市首相は一瞬首を振りながら口を開閉させていたが、そこに話し相手は誰も居なかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-smear-video-diet-answer-correction.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260605" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月5日</span>
+            <span class="event-title">高市が中傷動画疑惑をめぐる参院予算委での答弁に誤りがあり自民が訂正を申し出た</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2026年6月5日の参院予算委員会で、自身の陣営による中傷動画作成疑惑をめぐる答弁に誤りがあった。自民党は6月11日、立憲民主党との国対委員長会談で訂正を申し出たが、立民側は文書で詳しい経緯の回答を求めた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-smear-video-campaign.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260511" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年5月11日</span>
+            <span class="event-title">高市陣営による中傷動画作成問題</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年の自民党総裁選中、高市早苗陣営が小泉進次郎氏・林芳正氏を中傷するAI動画をTikTokの匿名アカウント「真実の政治」で作成・拡散していたことが週刊文春のスクープで判明（2026年5月報道）。AIとスマートフォン20台を使い1日100本のペースで制作・投稿されており、高市首相秘書が主導したとされる証拠も公開された。高市首相は本会議で関与を否定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sdf-rank-renaming.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260424" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月24日</span>
+            <span class="event-title">高市政権が自衛隊幹部の階級呼称を「大将・中将・大佐」等に変更する方針を固めた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市政権は、1954年の自衛隊発足以来初めて幹部の階級呼称を変更する方針を固めた。将官を現行の2段階から「大将・中将・少将」の3段階に、佐官を「大佐・中佐・少佐」に変更するとされる。政府は「諸外国の軍隊に準じた呼称にする」と説明したが、ファクトチェックにより主要同盟国（米英仏露）の将官は4段階以上であり「諸外国に準じた」とは言えないことが指摘された。また変更後の階級体系は旧日本陸軍の階級制度と同一であることも明らかになった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-jsdf-singer-ldp-convention.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260412" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月12日</span>
+            <span class="event-title">自民党党大会に自衛隊ソプラノ歌手を参加させる</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年4月12日の自民党大会で、陸上自衛隊中央音楽隊所属の鶫真衣3等陸曹が制服姿で国歌を斉唱した。防衛相の小泉進次郎がその後ツーショット写真をSNSに投稿したが批判を受けて削除した。
+自衛隊法は隊員の政治活動を禁止しており、野党から「自衛隊の政治利用」「法令違反の疑い」と批判が噴出した。
+高市首相は「私人として民間人の依頼を受けた」と違法性を否定したが、自衛隊を党の演出に動員したとの批判は続いた。
+小泉氏は4月14日の記者会見で、自身の投稿削除について「念のため事実関係等を確認するため消した」と説明し、鶫氏の斉唱についても「私人として国歌を歌唱した」「制服を着て私人として行動することは問題ない」として政治活動には当たらないと釈明した。一方で自衛官の党大会出席を防衛省内で「報告が上がらなかった」と述べ、部下に責任を転嫁する発言をした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-autopent-unbelievable-diet.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260330" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月30日</span>
+            <span class="event-title">高市がオートペンを指さした件に関して「アンビリバボー」と釈明</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年3月の日米首脳会談でホワイトハウスを訪問した際、バイデン前大統領の肖像の代わりにオートペン（自動署名機）の写真が置かれた展示を見た高市首相が指さして笑う場面が公式動画に記録された。3月30日の参院予算委員会で「アンビリーバブルだった」と釈明し、やゆを否定したが批判はやまなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-biden-autopent-mockery.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260324" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月24日</span>
+            <span class="event-title">高市が日米首脳会談中にバイデン前大統領がオートペンに差し替えられている肖像を指さして嗤った</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年3月の日米首脳会談中、ホワイトハウスがバイデン前大統領の肖像をオートペン（自動署名機）の写真に差し替えた展示の前で、高市首相がトランプ大統領とともに笑いながら指さす場面がホワイトハウス公式動画に記録された。強者に媚びるためバイデン前大統領を嘲笑したとして国内外から品格を欠くと批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-only-donald-peace.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260319" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月19日</span>
+            <span class="event-title">高市がトランプに「世界に平和をもたらせるのはドナルドだけ」と発言した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年3月19日の日米首脳会談において、高市早苗首相はトランプ大統領に対し「世界中に平和と繁栄をもたらせるのはドナルド、あなただけだ」と発言した。
+高市首相は参院本会議で、この発言は「米国がリーダーシップを発揮し建設的な役割を果たすことへの日本の支持を伝えたもの」と説明したが、立憲民主党議員から「強い違和感を覚える」と批判された。
+ニューヨーク・タイムズは、真珠湾攻撃に関するトランプのジョークにも沈黙を保つなど、愛想を武器にした「お世辞戦略」が奏功したと報じた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sanae-sangiin-yosan-iran-us-attack-evasion.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260317" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月17日</span>
+            <span class="event-title">高市早苗が参院予算委でイランへの米国攻撃について挑発的な態度で答弁を避けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年3月17日の参院予算委員会で、共産党の山添拓議員から「米国・イスラエルを批難しておらず、トランプ大統領に攻撃の中止も求めていないのはなぜか」と問われた高市首相は「トランプ大統領とはこれからお会いします。以上です」と述べ、挑発的に肩をすくめるポーズをとった。首脳会談で攻撃中止を求めるかどうかについても「答えは差し控えます」と回答を拒んだ。米国の攻撃を批難しない理由として「国際法上の評価ができないから」と説明した一方、イランへの懸念は表明している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-arms-export-times-change.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260317" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月17日</span>
+            <span class="event-title">高市の「時代が変わったから武器輸出して良い」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2026年3月17日の参院予算委員会で、1976年に宮沢喜一外相が国会で述べた「武器輸出して金を稼ぐほど落ちぶれていない」という答弁について「もう時代が変わった」「落ちぶれたことだとは思わない」と否定した。
+安全保障環境の変化と同志国との連携を理由に武器輸出拡大を正当化し、「防衛装備移転は日本経済の成長にもつながる」と述べた。
+4月21日には「5類型」を撤廃し殺傷武器の輸出を事実上全面解禁した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-office-tax-evasion.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260314" data-amount="3960000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月14日</span>
+            <span class="event-title">高市事務所が脱税疑惑</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相の政治資金パーティー券購入者（控除対象外）を「寄付」として扱い、所得税控除のための書類を不正発行していた疑惑が2026年3月にしんぶん赤旗日曜版にスクープされた。判明分だけで396万円（2011・2012・2019年）が付け替えられていた。
+奈良県安堵町長がパーティー券購入者であることを証言しながらその名前が控除書類に記載されており、高市首相は国会で「事実は存在しない」と全面否定した。
+市民団体・ジャーナリスト計8人が3月19日に東京地検特捜部に脱税ほう助容疑で告発状を提出した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-palantir-thiel-meeting.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260305" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月5日</span>
+            <span class="event-title">高市がパランティア創業者ピーター・ティールと面会した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2026年3月5日、米データ解析大手パランティア・テクノロジーズのピーター・ティール会長（共同創業者）と首相官邸で約25分間面会した。同社は米国防総省など軍事・治安分野を主要顧客とするビッグデータ分析企業として知られ、高市政権が「スパイ防止法制の検討加速」「外国代理人登録制度の整備」を進める中での面会だったため、同社サービス導入への布石ではないかとの懸念が出た。
+3月17日の参院予算委員会で参政党の神谷宗幣代表からこの懸念を指摘された高市首相は「同社のサービスを利用するような話は全くしていない」「主にSMR（小型モジュール炉）や科学技術の話をした」と釈明したが、面会の経緯や狙いについて十分な説明はなされていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sanae-token.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260302" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月2日</span>
+            <span class="event-title">高市の名を無断使用した暗号資産「サナエトークン」が発行された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相の名前・イラストを使用した暗号資産「SANAE TOKEN（サナエトークン）」が2026年2月にSolanaブロックチェーン上で発行された。高市首相が3月2日に「全く存じ上げない」と声明を発するとトークン価格が75%超暴落。金融庁が暗号資産交換業の無登録営業の疑いで実態調査を開始した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-catalog-gift.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260225" data-amount="9500000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月25日</span>
+            <span class="event-title">高市カタログギフト配布</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff7043 18%, transparent); color: #ff7043; border: 1px solid color-mix(in srgb, #ff7043 40%, transparent);">脱法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相が2026年2月、自民党衆院議員315人全員に約3万円のカタログギフト（総額950万円相当）を奈良県第二選挙区支部を通じて配布した。首相は「法令上問題ない」と説明したが、過去の「支部への献金は私への献金ではない」という発言との矛盾や社会通念上の問題が指摘され批判を浴びた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-column-deletion.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260223" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月23日</span>
+            <span class="event-title">高市が自身のHPコラムを突然全削除した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年2月、高市早苗首相の公式サイトから約25年分にわたり政策・政治信条を綴ってきたコラム欄が突然全削除された。これは、プレジデントオンラインが高市氏のブログ約1000本を検証し、消費税をめぐる過去の発言と最近の政策方針との矛盾を指摘する記事を公開した翌日のことだった。
+衆院代表質問で問われた高市首相は「首相になってから書く時間がなく更新できていなかった」「サイトをシンプルにするため削除した」と説明したが、2025年11月の参院予算委員会では「撤回したものも含めすべて掲載を続けている」と述べていたことと矛盾しており、野党から削除のタイミングと真意を疑問視された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-just-becoming-a-normal-country-remark.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260219" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月19日</span>
+            <span class="event-title">高市の「普通の国になるだけだ」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2026年2月、安全保障政策の抜本的な転換を進める方針を示し、「普通の国になるだけだ」と述べた。
+具体的には、春までに「防衛装備移転三原則」の運用指針を見直して非殺傷兵器の規制を撤廃し、年末までに防衛費増額を含む安保関連3文書を前倒し改定するほか、国家情報局の創設やスパイ防止法の制定も検討するとしており、いずれも国会審議を経ずに政権の判断で進められる政策だという特徴がある。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-ota-mean-remark.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260208" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月8日</span>
+            <span class="event-title">高市が太田光に「いじわる」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年2月8日のTBS衆院選開票特番で、太田光が「消費税減税を実現できなかった場合どう責任を取るか」と質問したところ、高市早苗首相は「なんかいじわるやなぁ。最初からできへんと決めつけんといてください」と関西弁で返し、険悪な雰囲気になった。
+後日、太田はラジオで「いじわるでごめんね」と言及したが、これも炎上した。
+自民の大勝と首相への強い支持が背景にあり、批判的な質問をすること自体が集中砲火を受ける状況となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-youtube-100m-views.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260204" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月4日</span>
+            <span class="event-title">自民党が高市のPR動画に広告を大量投下し最速1億再生を記録した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
+          </div>
+          
+          
+          <div class="event-body">自民党が2026年1月26日にYouTubeに投稿した高市早苗首相のメッセージ動画（約30秒）が、わずか10日未満の2月4日に1億回再生を突破し、日本のYouTube動画で最速の1億再生記録を達成した。
+YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に上回ったが、自民党がXなどで有料広告として大量配信していたことが背景にあり、「広告費にいくら使ったのか」との疑問がSNS上で広がった。
+専門家から選挙広告のルール整備を求める指摘が上がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-debate-no-show.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260201" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月1日</span>
+            <span class="event-title">高市が党首討論を当日ドタキャンした</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">衆院選（2026年2月8日投開票）前の2月1日、高市早苗首相がNHK「日曜討論」（与野党10党の党首討論）への出演を当日朝に急遽キャンセルした。
+理由として遊説中の握手で右手を痛め関節リウマチが悪化したと説明したが、同日午後は岐阜・愛知5カ所での街頭演説を予定通りこなした。
+現役医師が「あのテーピング」を医学的に検証し不可解な点を指摘するなど、「ズル休み」を疑う声もSNS上で広がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-yen-depreciation-hokuhoku.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260131" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月31日</span>
+            <span class="event-title">高市が円安を「ホクホク」と表現し批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相が2026年1月31日の衆院選遊説（川崎）で「外為特会の運用は今すごくホクホク状態」と発言し、円安が輸出産業にとって「大きなチャンス」だと強調した。
+円安による輸入物価上昇で家計が苦しむ中、政府の外為特会の運用益を「ホクホク」と表現した発言が「庶民の苦しみを冷笑している」と批判を浴びた。
+首相はX上で「円安のメリットを強調したわけではない」と釈明したが、批判は収まらなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-unification-church-dodge.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260128" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月28日</span>
+            <span class="event-title">高市が旧統一教会との関係をめぐる疑惑に明確な説明を避けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏は2022年8月、旧統一教会との関係について「選挙応援なし、行事出席なし、金銭のやりとりなし」とSNSで断言していた。
+しかし2026年1月、週刊文春が「裏帳簿」を入手したと報じ、高市事務所のパーティーで旧統一教会の友好団体「世界平和連合奈良県連合会」を含む団体・個人の購入分（計約54万円）が収支報告書に記載されておらず、一部は「寄附」と偽って税控除証明書まで発行していた疑いが浮上した。
+報道を受け政府は「個別記事についてコメントは差し控える」と述べるにとどまり、高市氏自身も明確な説明を行っていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/ldp-endorsed-43-slush-fund-lawmakers-takaichi-defended.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260127" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月27日</span>
+            <span class="event-title">自民党が裏金議員43人を衆院選で公認し高市が擁護した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">自民党は2026年1月27日、派閥裏金事件に関与した前職・元職ら計43人（小選挙区38人、比例単独5人）を衆院選で公認し、うち23人については比例代表との重複立候補も認めた。
+高市早苗首相はテレビ番組で「専門知識を持って、一生懸命国のために働きたいという人材を、たった1回の過ちで二度と政治家になったらダメだとは思わない。また活躍してほしい」と述べ、公認方針を擁護した。これは前回衆院選で12人を非公認、34人の比例重複を認めなかった石破政権時の対応からの転換である。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-north-korea-nuclear-state-remark.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260126" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月26日</span>
+            <span class="event-title">高市の「北朝鮮は核保有国」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2026年1月26日のテレビ朝日番組で、中国・ロシア・北朝鮮の関係緊密化に触れ「いずれも核保有国」と発言した。しかし日本政府は従来、北朝鮮の核保有を「断じて認められない」との立場を取っており、首相の発言は政府の公式見解と食い違うものだった。
+発言後、佐藤官房副長官は「北朝鮮の核保有は断じて認められない」と従来の政府見解を改めて説明し、事実上首相発言の軌道修正を図った。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-warned-opposition-leader-of-defamation.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260126" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月26日</span>
+            <span class="event-title">高市が野党党首に「名誉毀損になりますよ」と警告した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年1月26日放送のTBS系『news23』の党首討論で、高市早苗首相は旧統一教会の内部文書「TM文書」を巡って首相と教団との関係を追及した野党党首に対し、「出所不明の文書について……それ名誉棄損になりますよ」と警告した。
+野党党首は「報道もされている文書であり名誉棄損には当たらない」「名誉棄損と言われる方が、名誉棄損」と反論し、論戦が激化した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-tm-special-report-unknown-origin-claim.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260126" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月26日</span>
+            <span class="event-title">高市が旧統一教会のTM特別報告書を「出所不明」と発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は党首討論で、旧統一教会の内部文書「TM特別報告書」（高市氏の名前が32回登場するとされる）について「出所不明の文書」だと発言した。
+しかし教団側は当該文書を「（教団幹部の）尹氏が韓鶴子総裁への報告のために作成したメモ文書」「内部向け資料」と説明して内部文書であることを自ら認めており、ファクトチェックでは首相の「出所不明」発言は「誤り」と判定された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-consumption-tax-lifelong-wish.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260119" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月19日</span>
+            <span class="event-title">高市による「消費税ゼロは悲願」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相が2026年1月19日の記者会見で食料品消費税を2年間ゼロにする案を「私自身の悲願だった」と発言。しかし就任後は「レジ改修に1年以上かかる」と慎重姿勢に転じるなど発言が一貫せず、選挙公示後は言及を避けた。公式ブログ1000本の検証で過去に消費税増税を支持していた事実が指摘され、「悲願」発言との矛盾が問われた。
+
+衆院選公約として食料品消費税の2年間ゼロを掲げた際も、「財源やスケジュールの在り方など、実現に向けた検討を加速します」という表現にとどめ、TBSコメンテーターの星浩氏からは「『検討を加速する』は永田町用語で『やるかやれるかわからない』というのが本音」であり、本気なら「実行する」と言うはずだと指摘されるなど、実現への意欲を疑問視する声が相次いだ。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-am-i-the-right-pm-dissolution.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260119" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月19日</span>
+            <span class="event-title">高市が自身への信任を問う形で衆院解散を表明した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は就任直後の会見で「目の前でやらなければいけないことが山ほど控えているので、解散については考えている暇がない」と述べていた。
+しかし2026年1月19日、就任からわずか3カ月ほどで一転して衆院解散（1月23日）を表明し、「高市早苗が、内閣総理大臣で良いのかどうか、今、主権者たる国民の皆様に決めていただく」と自身の信任そのものを解散理由に掲げた。
+高い支持率を背景にした党略的な「自己都合解散」であるとして、選挙のプロや野党から「大義なき解散」と批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-anti-espionage-law-push.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260119" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月19日</span>
+            <span class="event-title">高市がスパイ防止法の制定を急ぐ</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2026年1月の施政方針で、スパイ防止法の制定や国家情報局の設置、対内投資審査委員会の創設などを急ぐ考えを示し、「外国から日本を守る」として情報活動・情報窃取への対応を進める方針を打ち出した。
+スパイ防止法の制定は1968年設立の国際勝共連合（旧統一教会の友好団体）以来、自民党と教団双方にとって半世紀越しの「悲願」とされてきた政策であり、両者は1979年に推進団体を共同設立するなど協働の歴史がある。言論・思想統制につながりかねないとして人権団体などからは懸念の声が上がっている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-abe-photo-shrine.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260105" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月5日</span>
+            <span class="event-title">高市がクリアファイルに安倍の写真を入れる</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年1月5日、高市早苗首相が伊勢神宮参拝の際に安倍晋三元首相の遺影をクリアファイルに入れて持参し、宇治橋上で掲げる場面が報じられた。
+高市首相は「もう一度、伊勢神宮に連れてきてあげたかった」と説明し、安倍氏の後継者を自任するスタンスを示した。
+「遺影をサイズが合わないクリアファイルに入れるのは失礼」などの批判が寄せられる一方、称賛の声もあり賛否が分かれた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-venezuela-attack-no-comment.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260105" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月5日</span>
+            <span class="event-title">高市がアメリカのベネズエラ攻撃にノーコメント</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2026年1月5日の年頭記者会見で、米国によるベネズエラへの軍事攻撃とマドゥロ大統領らの拘束について問われ、「ベネズエラにおける民主主義の回復、情勢の安定化に向けた外交努力を進めていく」と述べるにとどめ、米軍事行動の国際法上の正当性についての評価や懸念の表明を避けた。
+記事は、この対応が日米同盟を外交安全保障の基軸とする日本政府の、同盟国アメリカへの配慮を最優先する姿勢を反映したものだと指摘している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-6600-yen-toothbrush.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251216" data-amount="33300000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年12月16日</span>
+            <span class="event-title">高市の事務所が6600円の歯ブラシを公認グッズとして販売した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相の事務所公認グッズショップが、「サナエ愛用」と称した歯ブラシセット（2本＋スタンド2個）を6600円・限定200セットで販売した。
+商品はVeanas合同会社が企画し、高市氏の資金管理団体が3330万円を支出している関係会社PoliLabが販売を担っており、高市陣営との深い関係が指摘されている。
+通常500〜1500円程度の歯ブラシに政治スローガンを刻印して高額販売したとして、SNSで批判が集まった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-work-work-work-remark-buzzword-award.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251201" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年12月1日</span>
+            <span class="event-title">高市の「働いて働いて働いてまいります」発言が流行語大賞に</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏が2025年10月の自民党新総裁就任演説で述べた「働いて働いて働いて働いて働いてまいります」という発言が、2025年の新語・流行語大賞で年間大賞に選ばれた。
+医師の夫を過労自殺で亡くした中原のり子さんら遺族は記者会見で「流行語大賞受賞には耳を疑った。家族にむち打つような行為だ」「言葉が独り歩きすれば過労死はなくならない」と懸念を示した。高市首相は表彰式で「働き過ぎを推奨する意図はない」と説明するにとどめた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-just-shut-up-invest.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251201" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年12月1日</span>
+            <span class="event-title">高市の「いいから黙って投資しろ」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相が2025年12月1日、サウジ主導の東京投資イベントで人気漫画「進撃の巨人」のセリフを引用し英語で「Just shut your mouths. And invest everything in me!!（いいから黙って全部オレに投資しろ！！）」と述べた。英語圏では侮辱的な表現とされ批判を受け、財政悪化が続く中での発言として「あまりにも軽すぎる」と専門家からも指摘された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-than-that-lets-cut-seats-remark.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251126" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月26日</span>
+            <span class="event-title">高市の「そんなことより定数削減」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2025年11月26日の党首討論で、企業・団体献金の規制強化法案について問われた際、「そんなことより定数削減をやりましょうよ」と述べた。
+公明党の斉藤鉄夫代表は「企業献金規制は『そんなこと』なんでしょうか」と強く反発し、政治とカネの問題を軽視する姿勢だと批判した。木原稔官房長官は翌27日の会見で「話題を転換する趣旨だった」と釈明したが、発言の撤回や謝罪は行われていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-g20-late-arrival.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251122" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月22日</span>
+            <span class="event-title">高市がG20の首脳歓談に遅刻した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2025年11月22日、南アフリカ・ヨハネスブルクで開催されたG20サミットに出席したが、会議開始前に各国首脳が歓談・握手を交わす場に遅れて参加し、中国の李強首相らとの接触機会を逃した。会議後の夕食会への出席も見送り、政府は「翌日以降の準備のため」と説明した。
+高市首相は中国の李強首相と「会話する機会はなかった」と述べる一方、「対話の扉は閉ざしていない」と釈明したが、日中関係が緊張する中での消極姿勢として注目された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-no-chinese-interpreter-at-g20.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251122" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月22日</span>
+            <span class="event-title">高市がG20に中国語通訳を帯同させなかった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2025年11月、南アフリカで開催されたG20サミットに、中国語の通訳を帯同させずに出席した。
+ジャーナリストの峯村健司氏は、これについて「無理して李強さんと会わないということ」であり、日本側が中国の李強首相とあえて会談しない姿勢を示すものだと分析した。この対応は、高市首相による台湾有事を巡る答弁に対して中国側の強い反発が続く中で行われた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-nara-deer-retraction-refusal.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251110" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月10日</span>
+            <span class="event-title">高市がシカ暴行発言の撤回を野党に求められるも拒否</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">首相就任後の2025年11月、衆院予算委員会で立憲民主党議員から「奈良公園のシカに悪行を加えたのは日本人」というデータを示され、[[高市早苗が「外国人観光客が奈良公園のシカを蹴り上げるなど暴行している」と発言|総裁選中の発言]]の撤回を求められた。
+高市首相は「一定の根拠があって申し上げた」「自分が注意したことがある」などと述べ、根拠を示さないまま撤回を拒否した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-taiwan-contingency.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251107" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月7日</span>
+            <span class="event-title">高市による台湾有事発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相が2025年11月7日の衆院予算委員会で台湾有事は日本の「存立危機事態」になり得ると発言し、中国が強く反発。中国は水産物禁輸・渡航自粛・日中韓首脳会談見送りなどの対抗措置をとった。2026年1月の衆院選中にも「逃げれば同盟崩壊」と発言を繰り返し、日中関係が長期的に悪化した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-2025-apec-conduct.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251031" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月31日</span>
+            <span class="event-title">高市がAPECで他国首脳に異例の距離感の近さで接近した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年10月31日、韓国・慶州で開催されたAPEC首脳会議で、高市早苗首相は着席したまま机を引き寄せ、隣席のインドネシア・プラボウォ大統領にスルスルと椅子ごと接近して親しげに話しかけたほか、チリのボリッチ大統領の肩に腕を回して顔を近づけて話し込む場面が映像に収められ、SNSで拡散された。国内では「距離感が近すぎる」「失礼ではないか」と疑問視する声が上がった。
+一方、11月1日には会場の日章旗・韓国の太極旗の双方に一礼する場面も話題となり、当初「女性版・安倍」「極右」と警戒されていた韓国国内での評価は「強硬姿勢を示しつつ現実的な判断もできる人物」へと好転した。同じ振る舞いが国内外で評価が分かれる結果となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-trump-nobel-nomination.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251028" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月28日</span>
+            <span class="event-title">高市がトランプをノーベル平和賞に推薦</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相が2025年10月28日の日米首脳会談でトランプ大統領にノーベル平和賞への推薦を伝えた。イスラエル・ハマス停戦合意の仲介を「かつてない歴史的偉業」と称えたもので、自民党重鎮の船田元も「取り消すべき」と苦言を呈し、野党からも批判が集中した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-nuclear-submarine-consideration.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251027" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月27日</span>
+            <span class="event-title">高市政権による原子力潜水艦の導入検討</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市政権が、原子力潜水艦を念頭に置いた「次世代の動力を活用する潜水艦」の保有検討を開始した。防衛省の有識者会議が9月に導入を提言し、自民党と日本維新の会は10月の連立政権合意書に次世代潜水艦の保有を明記した。
+これまで日本政府は「原子力基本法の現行解釈に従えば原子力潜水艦の保有は難しい」との立場を取ってきたが、公明党の連立離脱により歯止め役が不在となり方針転換が進んだ。原潜は技術的に核ミサイル搭載が可能であり、高市首相による非核三原則見直し発言とあわせて「核保有への地ならしではないか」との懸念が市民団体や識者から示されている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-non-nuclear-principles-obstacle.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251027" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月27日</span>
+            <span class="event-title">高市の「非核三原則は邪魔」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は、2024年9月出版の編著『国力研究』の中で「非核三原則は邪魔だ」と述べ、特に「持ち込ませず」の原則について安保3文書からの削除を要請していたことを自ら明かしていた。米国の「拡大抑止（核の傘）」と矛盾するとし、核兵器搭載機が飛来するような極限の事態では「非核三原則を守るかはその時の政府の判断」との見解を示している。
+首相は2026年末までに安保3文書を改定すると明言しており、「持たず・作らず・持ち込ませず」という戦後日本の国是が見直される危険性が指摘されている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-malaysia-sns-post-controversy.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251026" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月26日</span>
+            <span class="event-title">高市のマレーシアでのSNS投稿が現地の批判を招いた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2025年10月、ASEAN関連首脳会議出席のためマレーシアを訪問した際、現地の日本人墓地とマレーシアの「国家記念碑」をともに訪れたことをSNSに投稿した。
+「国家記念碑」は日本軍占領期や戦後のマラヤ危機で日本軍等と戦って犠牲となったマレーシア人を慰霊する施設であり、日本人犠牲者を悼む場ではないため、両施設を同列に扱うかのような投稿は現地から「加害の事実を無視している」と批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-defense-spending-gdp-ratio-funding-issue.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251024" data-amount="32000000000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月24日</span>
+            <span class="event-title">高市政権の防衛費GDP比増額方針と財源問題</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は2025年10月、防衛費を当初予定の2027年度より前倒しして2025年度中にGDP比2%（2025年度名目GDP629.3兆円換算で約12.5兆〜12.8兆円）まで増額する方針を示した。
+一方、トランプ米政権は同盟国にGDP比5%への増額を非公式に求めているとされ、日本がこれに応じた場合は年30兆円規模（試算では約32兆円）の予算が必要になる。財源確保のめどが立たないまま、復興増税の転用や赤字国債発行といった手段が取り沙汰されている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-opposes-selective-surnames.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251005" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月5日</span>
+            <span class="event-title">高市が選択的夫婦別姓に反対を表明</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f48fb1 18%, transparent); color: #f48fb1; border: 1px solid color-mix(in srgb, #f48fb1 40%, transparent);">性差別</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相は選択的夫婦別姓制度の導入に反対の立場をとり、代わりに旧姓の通称使用を法制化する方針を推進した。首相は法相に「旧姓単記」（公的書類に旧姓のみ記載可）の検討を指示し、戸籍上の夫婦同姓を堅持する姿勢を明確にした。
+自民党は「民法・戸籍法は不可侵」として選択的夫婦別姓を事実上封じた。
+女性首相の誕生にもかかわらず、女性が姓変更の不便を強いられる制度が温存されたことへの批判が相次いだ。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-opposes-same-sex-marriage.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251005" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月5日</span>
+            <span class="event-title">高市が同性婚に反対を表明</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f48fb1 18%, transparent); color: #f48fb1; border: 1px solid color-mix(in srgb, #f48fb1 40%, transparent);">性差別</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏は自民党総裁就任後、同性婚について「基本的に反対の立場。憲法で結婚は両性の合意によるとされており、現時点で賛同する立場ではない」と明言した。
+同性パートナーシップ制度については「いいと思う」と述べるものの、法的な婚姻には否定的な姿勢を維持した。
+日本初の女性首相として期待される中、LGBTQの権利向上には逆行するとの批判が国内外から寄せられた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-discard-work-life-balance-remark.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251004" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月4日</span>
+            <span class="event-title">高市の「ワークライフバランスという言葉を捨てる」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏は2025年10月4日、自民党新総裁に選出された際の演説で「（議員には）馬車馬のように働いてもらう。私自身もワーク・ライフ・バランスという言葉を捨てる」と発言した。
+過労死弁護団全国連絡会議は「政府が推し進めてきた健康的な職場づくりを否定し、古くからの精神主義を復活させるものだ」と抗議し撤回を求めたが、高市氏は翌日「皆さまはワーク・ライフ・バランスを大事にしてほしい」と釈明するにとどめ、発言の撤回は行わなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-nara-deer-no-evidence.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20250924" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年9月24日</span>
+            <span class="event-title">高市早苗がシカ暴行発言の根拠を示さず奈良県庁も否定</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+          </div>
+          
+          
+          <div class="event-body">[[高市早苗が「外国人観光客が奈良公園のシカを蹴り上げるなど暴行している」と発言]]について、9月24日の記者会見で根拠を問われた高市早苗氏は「自分なりに確認をした」と述べるのみで、具体的な確認方法や情報源は明らかにしなかった。
+奈良県庁は当該動画について「行為者が外国人であるかどうかは特定されていない」と説明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-nara-deer-claim.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250922" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年9月22日</span>
+            <span class="event-title">高市早苗が「外国人観光客が奈良公園のシカを蹴り上げるなど暴行している」と発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年9月、自民党総裁選（9月22日告示）に立候補していた高市早苗氏は、演説で「外国人観光客が奈良公園のシカを蹴り上げるなど暴行している」と主張した。
+具体的な根拠は示されておらず、外国人への排外的な印象を広げるものだとして批判を招いた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-foreigner-non-prosecution-interpreter-claim.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250900" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年9月</span>
+            <span class="event-title">高市の「通訳が間に合わず外国人が不起訴になる」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗前経済安全保障担当相は2025年9月の自民党総裁選において、刑事事件を起こした外国人について「警察で通訳の手配が間に合わず、不起訴にせざるを得ないとよく聞く」と発言した。
+しかし法務省・検察・警察の関係者は、そのような事案を把握していないとして発言の根拠に疑義を示しており、報道では発言の信憑性が問題視されている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sanae-nara-governor-youtube-2023.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230406" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年4月6日</span>
+            <span class="event-title">高市が奈良知事選直前に平木候補支持YouTuberを称賛した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2023年4月9日投開票の奈良県知事選の3日前、高市早苗が自身のXアカウントで候補者・平木しょう氏を支持する政治系YouTuber「ヒロクマさん」「闇のクマさん」による対談動画を称賛した。
+「闇のクマさん」は顔出しなしの匿名YouTuberで、中国に関するヘイト扇動的な粗悪コンテンツで知られていたが、高市は深夜に動画を視聴したと述べ「いつかお会いしてみたい」と公言し支持を表明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sanae-campaign-absence-2023.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20230326" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年3月26日</span>
+            <span class="event-title">高市が奈良知事選で自陣営候補の集会を2度欠席した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">奈良県知事選（2023年4月9日投開票）の期間中、高市早苗が自ら擁立した候補・平木省の集会を3月26日と4月2日の2度にわたって欠席した。
+「私が行くと票が減る」「熱が出た」などを理由とし、自民党奈良県連会長として現地入りを避けた。
+落選確定後には「高熱が続き張り付きで応援することができませんでした。深くおわびを申し上げます」とのコメントを出した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sanae-resign-message-2023.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230317" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年3月17日</span>
+            <span class="event-title">高市が放送法追及中に大臣辞任を私的に申し出た</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">放送法をめぐる国会追及が続いていた2023年3月17日、高市早苗が官邸幹部に「もう耐えられません。大臣を辞めたい」と私的メッセージを送った。
+同日朝の閣議後記者会見では「明らかにありもしないことを、あったかのように文章が作られた」と公に強弁していた。
+自民党中堅議員によれば「かなり精神的に不安定になっていた」とされる。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-dont-question-me.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20230315" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年3月15日</span>
+            <span class="event-title">高市の「私が信用できないなら質問しないでください」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2023年3月15日の参院予算委員会で高市早苗経済安全保障担当相（当時）が野党の杉尾秀哉議員から「全く信用できない」と言われたことに対し「信用できないなら、もう質問をなさらないでください」と答弁。委員長に「国会軽視」と注意され、3月20日にこの発言のみしぶしぶ撤回したが謝罪はしなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-refuses-resign-broadcast-law-docs.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230308" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年3月8日</span>
+            <span class="event-title">高市が根拠崩壊後も辞職拒否し立証責任を追及側に転嫁した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2023年3月7日に総務省が当該文書を行政文書として正式に認定・公開し、高市氏の「捏造」説の根拠が崩れた。しかし高市氏は3月8日の参院本会議で「捏造された行政文書によって閣僚や議員を辞職すべきだとは考えていない」と述べ辞職を拒否した。
+さらに「文書の正確性を完全に立証すべきだ」と主張し、説明責任を追及する野党側に転嫁した。この論法は専門家から「ナンセンスで筋違い」と批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-fabricated-document-claim.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230303" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年3月3日</span>
+            <span class="event-title">高市が総務省文書を「捏造」と断言し辞職を賭けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2023年3月3日、高市早苗・経済安全保障担当相は参院予算委員会で、放送法の「政治的公平性」解釈変更をめぐる総務省の行政文書（自身の発言の記録を含む）を「全くのねつ造文書だ」と断言した。
+立憲民主党の小西洋之議員から「捏造でなければ大臣・議員を辞職するか」と問われると「結構ですよ」と答え、辞職を賭けた発言として受け取られた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sanae-nara-split-2022.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20220900" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年9月</span>
+            <span class="event-title">高市が荒井知事への支援約束を反故にして奈良知事選の候補調整を怠った</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2022年9月に自民党奈良県連会長に就任した高市早苗が、荒井正吾知事への支援を約束していたにもかかわらず独断で元秘書官・平木省氏を知事候補として擁立した。
+荒井氏は「高市は直接会いにも来ない」と憤慨して出馬を表明し、自民党奈良県連は保守分裂選挙に突入した。
+自民党関係者は「荒井さんが空気を読んで自分から不出馬を決めるだろうと甘い考えだった」と批判した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-fight-to-the-end-remark.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20220300" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年3月</span>
+            <span class="event-title">高市の「戦闘員には最後まで戦っていただく」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏（当時自民党政調会長）は2022年3月、フジテレビの番組で「最高指揮官だったら戦闘員にどこをゴールにして戦わせるか」と問われ、「国土・領土を守り抜くため、最後まで戦っていただく」という趣旨の発言をした。
+評論家の宮田律氏は、これを戦場の悲惨な現実を知らない政治家の安易な思いつきだと批判し、太平洋戦争末期に多数の犠牲が集中した史実や文学者・従軍経験者の証言を引いて、安易に「最後まで戦え」と求める発想の危うさを指摘している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-flag-desecration-defeated-nation-claim-false.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20210127" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2021年1月27日</span>
+            <span class="event-title">高市早苗が国旗損壊罪不在の理由を「敗戦国だから」と誤って説明し記述を削除</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗前総務相は自身のホームページの1月27日付コラムで、日本国旗を破ること等を罰する規定が日本にない理由について、奥野信亮法務部会長が法務省刑事局に確認した結果として「敗戦国なので、このような形になり、そのままになっている」と記述した。
+しかし刑法は1907年制定時から当該処罰規定がなく敗戦（1945年）とは無関係で、法務省刑事局自身も「敗戦国であることは関係がない」とこの説明を否定した。
+高市氏の事務所は毎日新聞の取材を受けた4月13日、コラムから当該記述を削除した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-broadcast-suspension-remark.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20160208" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2016年2月8日</span>
+            <span class="event-title">高市の停波処分発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2016年、総務相だった高市早苗氏は衆院予算委員会で、放送局のキャスター降板に関する野党議員の質問に対し「行政が何度要請しても全く改善しない放送局に、何の対応もしないとは約束できない」と述べ、放送法第4条違反を理由とする電波法第76条の電波停止命令の可能性に言及した。
+翌日の質疑でも「極めて限定的な状況のみで行う」と答弁し、停波命令の可能性を否定しなかった。報道機関への萎縮効果を懸念する声が弁護士会・民放労連などから相次ぎ抗議声明が出されたが、高市氏は「一般論として答えた」とする説明にとどめ、発言の撤回や謝罪は行っていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-praised-nazi-glorifying-book.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20140900" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2014年9月</span>
+            <span class="event-title">高市がナチス礼賛本に推薦文を寄せた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗総務大臣（当時）は、自民党東京都連幹部が1994年に著したナチス礼賛本『HITLER ヒトラー選挙戦略』に「著者の指摘通り勝利への道は『強い意志』だ。国家と故郷への愛と夢を胸に、青年よ、挑戦しようよ！」という推薦文を寄せていた。
+同書は出版後、米紙などから批判を受けてわずか2か月で絶版・回収となっており、2014年にこの推薦の事実が改めて報じられた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-welfare-scrounger-remark.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20120000" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2012年</span>
+            <span class="event-title">高市の「さもしい顔をして」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">弱者攻撃</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏が安倍晋三主導の極右議員連盟「創生『日本』」の2012年研修会で「さもしい顔して貰えるものは貰おう。弱者のフリをして少しでも得しよう。そんな国民ばかりでは日本国は滅びてしまいます」と発言。当時の生活保護バッシングに乗っかった生活困窮者への差別的言動として批判を受けた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-no-war-remorse.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="19950316" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">1995年3月16日</span>
+            <span class="event-title">高市の「戦争反省してません」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
+          </div>
+          
+          
+          <div class="event-body">1995年3月16日の衆院外務委員会で当時新進党の高市早苗議員が「不戦決議」に反対する立場から「少なくとも私自身は、当事者とは言えない世代ですから、反省なんかしておりませんし、反省を求められるいわれもないと思っております」と発言。過去の侵略戦争への反省を否定した発言として繰り返し批判の対象となっている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-subliminal-tape.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="19910000" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">1991年</span>
+            <span class="event-title">高市が勧めるサブリミナルテープ</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏がテレビキャスター時代の1991年、超常現象・オカルト雑誌『パワースペース1999』第2号に掲載されたサブリミナルテープの広告に登場。「充実した毎日を送るための精神のビタミン剤として自信を持ってお勧めします」という推薦コメントとともに写真が掲載されていた。科学的根拠が疑わしい商品の宣伝への参加として批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-resume-fabrication.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="19890000" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">1989年</span>
+            <span class="event-title">高市早苗が「米連邦議会立法調査官」を騙って経歴詐称</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗氏は1989年の著書などで「米連邦議会立法調査官」という肩書きを名乗ってきたが、実際には民主党下院議員パトリシア・シュローダー氏のもとで無給インターン（コングレッショナル・フェロー）として2年間働いたに過ぎず、「立法調査官」という役職は米議会に正式には存在しない。
+1992年の雑誌インタビューで本人が経歴について「嘘を書いた」と語っていたとされる証言があるにもかかわらず、首相となった現在もこの肩書き問題について任命書の公開や訳語選択の説明など全面的な情報開示には応じていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

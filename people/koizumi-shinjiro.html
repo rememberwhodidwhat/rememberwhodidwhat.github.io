@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小泉進次郎 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>小泉進次郎 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 24 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>外交問題
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>軍拡推進
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>セカンドレイプ
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>根拠不明発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffa726"></div>選挙工作
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>環境破壊加担
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>虚偽発言
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/koizumi-mikasa-model-gift-to-indonesia.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260612" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月12日</span>
+            <span class="event-title">小泉進次郎がインドネシア大統領に旧日本海軍戦艦三笠の模型を贈呈した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">小泉進次郎防衛相は2026年6月12日のインドネシア訪問時、プラボウォ大統領に、自身の地元横須賀にゆかりのある旧日本海軍の戦艦「三笠」の模型を贈呈した。
+日本は太平洋戦争中の1942年から1945年までインドネシアを占領し多数の犠牲者を出した歴史があり、日本共産党や立憲民主党などの野党から「大日本帝国軍の艦艇模型を被害当事国の元首に贈るのは歴史認識を欠く」と批判された。
+小泉防衛相は翌13日に「プラボウォ大統領は喜んでくださった」とSNSに投稿したのみで、批判に対する撤回や謝罪は行っていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-sdf-dispatch-to-nato-support-organization.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260529" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年5月29日</span>
+            <span class="event-title">小泉進次郎がNATOのウクライナ支援組織に自衛官4人を初めて派遣した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+          </div>
+          
+          
+          <div class="event-body">防衛省は2026年5月29日、ウクライナへの軍事訓練調整・装備品供与を担うNATOの支援組織（ドイツの米軍基地内、加盟国等から約700人が常駐）に、自衛官4人（陸自2人、海自1人、空自1人）を日本として初めて派遣すると発表した。
+派遣される自衛官は実戦には関与しないとされるが、ウクライナ軍への装備品提供・訓練の調整や同志国との連絡役を担う実務に従事する。
+小泉進次郎防衛相は記者会見で「ウクライナで見られる新しい戦い方などの教訓を得ることは、日本の防衛体制強化につながる」と述べ、派遣を推進した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-declines-comment-on-us-soldier-assault-case.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260526" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年5月26日</span>
+            <span class="event-title">小泉進次郎が米兵性的暴行事件についてコメントを控える</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">セカンドレイプ</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年4月、沖縄県内で在沖米陸軍兵が知人女性に性的暴行をしたとして書類送致された事件について、小泉進次郎防衛相は5月26日の閣議後会見で「捜査中の事案でコメントを差し控えなければならない」と述べるにとどまった。「あってはならないものだ」との認識は示したが、米側への綱紀粛正の申し入れを継続するという従来の対応を繰り返すにとどまった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takaichi-sdf-rank-renaming.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260424" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月24日</span>
+            <span class="event-title">高市政権が自衛隊幹部の階級呼称を「大将・中将・大佐」等に変更する方針を固めた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">高市政権は、1954年の自衛隊発足以来初めて幹部の階級呼称を変更する方針を固めた。将官を現行の2段階から「大将・中将・少将」の3段階に、佐官を「大佐・中佐・少佐」に変更するとされる。政府は「諸外国の軍隊に準じた呼称にする」と説明したが、ファクトチェックにより主要同盟国（米英仏露）の将官は4段階以上であり「諸外国に準じた」とは言えないことが指摘された。また変更後の階級体系は旧日本陸軍の階級制度と同一であることも明らかになった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-cannot-explain-control-over-exported-weapons-use.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260421" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月21日</span>
+            <span class="event-title">小泉進次郎が輸出した武器の使用実態への対応を問われ答弁に詰まった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">政府が殺傷能力のある防衛装備品の輸出を原則可能とする閣議決定を行った2026年4月21日、参議院外交防衛委員会で広田一議員（無所属）が、輸出した装備品が国際法違反の侵略行為等に使われる恐れがある場合は移転・輸出をしないという理解でよいか質問した。
+防衛大臣の小泉進次郎は、国際約束により目的外使用への対応（使用停止を求めることを含む）を義務づけていると答弁したが、その根拠規定が条文上どこに書かれているか問われると具体的に示せず答弁に詰まった。
+輸出後の装備品の使用実態を実効的に把握・制御できるのか不明確であり、無責任な答弁だとの批判が上がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-communists-love-missiles.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260421" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月21日</span>
+            <span class="event-title">小泉進次郎が国会で「共産党さんはミサイル大好き」と答弁した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年4月21日の衆院安全保障委員会で、防衛大臣の小泉進次郎が共産党議員から敵基地攻撃能力について質問を受けた際「共産党さんはミサイルが大好きですね」と答弁した。
+隣に座る茂木外相が笑みを浮かべる場面も捉えられ、山添拓参院議員が「議会の場で野党を揶揄する答弁は許されない」と猛批判した。
+その場で謝罪・撤回はなく、委員会室では場が凍りつく一幕となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-drinking-during-sanriku-earthquake-tsunami-warning.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260420" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月20日</span>
+            <span class="event-title">小泉進次郎が三陸沖地震の津波警報下で焼肉店で飲酒していた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年4月20日16時52分頃に三陸沖を震源とする地震が発生し、青森県で最大震度5強、津波警報・注意報により約18万人に避難指示が出された。防衛大臣の小泉進次郎は地震発生から約1時間後、東京・港区の高級焼肉店で約2時間にわたり会食しアルコールを摂取した。
+会食中も余震が続き、青森・岩手の港には津波が到達していた。自衛隊を指揮する防衛大臣の危機管理意識の欠如だとして批判が上がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-x-post-jsdf-as-military.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260419" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月19日</span>
+            <span class="event-title">小泉進次郎が自衛官を軍人とX投稿し批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+          </div>
+          
+          
+          <div class="event-body">防衛大臣の小泉進次郎は2026年4月19日、X（旧Twitter）に海上自衛隊の斎藤聡海上幕僚長とオーストラリア海軍幹部が並んだ写真を投稿し、「軍人同士の友情も日豪関係の特筆すべき力です」とのキャプションを付けた。
+日本国憲法・自衛隊法上、自衛隊は「軍隊」と区別される存在であり、自衛官を「軍人」と呼ぶことは不正確だとして批判が相次いだ。
+小泉は4月21日の閣議後記者会見で「分かりやすく国民に伝える観点から表記した」と釈明したが、自衛隊が国内法上軍隊ではないとの指摘に対して誤りを認めず、批判がさらに拡大した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-jsdf-singer-ldp-convention.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260412" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月12日</span>
+            <span class="event-title">自民党党大会に自衛隊ソプラノ歌手を参加させる</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年4月12日の自民党大会で、陸上自衛隊中央音楽隊所属の鶫真衣3等陸曹が制服姿で国歌を斉唱した。防衛相の小泉進次郎がその後ツーショット写真をSNSに投稿したが批判を受けて削除した。
+自衛隊法は隊員の政治活動を禁止しており、野党から「自衛隊の政治利用」「法令違反の疑い」と批判が噴出した。
+高市首相は「私人として民間人の依頼を受けた」と違法性を否定したが、自衛隊を党の演出に動員したとの批判は続いた。
+小泉氏は4月14日の記者会見で、自身の投稿削除について「念のため事実関係等を確認するため消した」と説明し、鶫氏の斉唱についても「私人として国歌を歌唱した」「制服を着て私人として行動することは問題ない」として政治活動には当たらないと釈明した。一方で自衛官の党大会出席を防衛省内で「報告が上がらなかった」と述べ、部下に責任を転嫁する発言をした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-embassy-intrusion-response-no-apology.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260327" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月27日</span>
+            <span class="event-title">小泉進次郎が中国大使館侵入事件で誠に遺憾と述べたのみで謝罪・再発防止策に触れなかった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年3月24日に陸上自衛隊3等陸尉が刃物を所持して在日中国大使館敷地内に侵入し逮捕された事件を受け、小泉進次郎防衛相は事件発生から3日後の27日の記者会見で「法と規律を順守すべき自衛官が逮捕されたことは誠に遺憾だ」と述べた。
+小泉防衛相は「事実関係が明らかになり次第、厳正に対処する」とも述べたが、謝罪の表明や具体的な再発防止策には言及しなかった。
+中国外務省はこの対応を「まったく不十分」と反発し、しんぶん赤旗等は政府が動機・背景を明らかにせず再発防止に踏み込まない姿勢を批判した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-premature-iran-evacuation-post.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260305" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月5日</span>
+            <span class="event-title">小泉進次郎がイラン情勢緊迫化を受け外務省の正式依頼前に自衛隊機派遣準備着手をX投稿した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">米国・イスラエルによるイラン攻撃で中東情勢が緊迫化した2026年3月5日午前0時過ぎ、小泉進次郎防衛相は自身のX（旧Twitter）に「邦人輸送のための自衛隊機の派遣準備に着手しました」と投稿した。
+自衛隊法上、邦人退避のための自衛隊機派遣は外務大臣からの依頼に基づき実施されると定められているが、外務大臣からの正式な依頼があったのは3月6日であり、小泉防衛相の投稿はそれに先行していた。
+この「フライング」投稿は政府内に混乱をもたらしたと指摘され、外交上の手続きを越権的に先取りしたとして批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-retracts-radar-illumination-notice-claim.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251210" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年12月10日</span>
+            <span class="event-title">小泉進次郎防衛相が中国軍機レーダー照射事案で「通告なし」から一夜にして説明を訂正した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年12月6日、沖縄本島南東沖の公海上空で中国軍J15戦闘機が自衛隊F15戦闘機にレーダー照射したとされる事案が発生し、小泉進次郎防衛相は7日未明の緊急会見で中国側からの「通告はなかった」との趣旨で公表した。
+中国側が訓練の事前連絡を録音データとともに公開して反論したことを受け、小泉防衛相は12月10日の会見で、実際には「飛行訓練を開始する旨の連絡」自体はあったと一転して認め、危険回避に必要な訓練の規模・時間・座標等の詳細情報がなかった点を問題視する説明に改めた。
+当初の「通告なし」という説明と後の「連絡はあった」という説明の食い違いについて、防衛省側から明確な訂正の経緯説明はなされていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-no-resident-briefing-kumamoto-missile-deployment.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251112" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月12日</span>
+            <span class="event-title">小泉進次郎が熊本の長射程ミサイル配備で住民説明会を実施しないと表明した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">陸上自衛隊健軍駐屯地（熊本市東区）への長射程ミサイル（地対艦誘導弾能力向上型、後の25式地対艦誘導弾）配備に関し、防衛大臣の小泉進次郎は2025年11月12日の会見で「現時点において住民説明会を開催する予定はない」と述べ、九州防衛局の問い合わせ窓口やウェブサイトのQ&amp;Aで対応する方針を示した。
+2026年3月31日のミサイル配備後も小泉は説明会を実施しない方針を改めて表明した。
+共産党の田村智子委員長らが住民説明会の開催を求め、市民団体も「住民説明会は民主主義のプロセスとして最低限のマナーだ」として配備撤回を求める申し入れ書を提出したが、説明会は開かれなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-promotes-defense-equipment-export-expansion.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251022" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月22日</span>
+            <span class="event-title">小泉進次郎が防衛装備品輸出の5類型撤廃に意欲を示した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+          </div>
+          
+          
+          <div class="event-body">就任直後の防衛大臣小泉進次郎は2025年10月22日の記者会見で、防衛装備品の輸出を「救難」「輸送」など5つの用途に限定する「5類型」の撤廃を含め、防衛装備移転三原則・運用指針を見直す方針に意欲を示した。
+「戦後最も厳しく複雑な安全保障環境」にあるとして防衛装備品移転のさらなる推進が必要だと述べ、関係省庁と連携して見直しを進めるとした。
+政府は2026年4月21日に5類型を撤廃し、殺傷力のある防衛装備品の輸出を原則可能とする閣議決定を行った。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-shinjiro-niconico-stealth-marketing.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20250925" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年9月25日</span>
+            <span class="event-title">小泉進次郎陣営がニコニコ動画でステマコメントを指示した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2025年9月の自民党総裁選で、小泉進次郎陣営の総務・広報班長を務めていた牧島かれん元デジタル大臣の事務所が、一般視聴者を装ってニコニコ動画の生配信に小泉氏を称賛するコメントを投稿するよう指示するメールを送付していたことが週刊文春の報道で判明した。
+メールには24パターンの好意的コメント例文に加え、対抗候補の高市早苗氏を念頭に置いたとみられる中傷的な表現も含まれていた。
+小泉陣営は文春報道の基本的事実を認め、牧島氏は陣営の広報班長辞任を申し入れ小泉氏もこれを受け入れたが、小泉氏本人からの謝罪はなかった。
+陣営事務局幹部の小林史明衆院議員は国会内で記者団に事実関係をおおむね認め、対抗候補・高市早苗氏を批判する意図ではないと牧島氏が説明していると述べた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-eel-not-endangered.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250627" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年6月27日</span>
+            <span class="event-title">小泉進次郎農林水産大臣がウナギは絶滅危惧ではないと虚偽発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">環境破壊加担</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">農林水産大臣の小泉進次郎が2025年6月27日の閣議後会見で、EUのニホンウナギ輸出規制強化の動きを「遺憾」と述べつつ「絶滅の恐れはない」と強調した。
+ニホンウナギはIUCNレッドリストで絶滅危惧種（Endangered）、環境省のレッドリストでも絶滅危惧IB類に指定されており、事実に反する発言として批判を受けた。
+EUによる規制強化は科学的評価に基づくものであり、農相発言は国際的な保全議論と正面から食い違うものだった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-rice-minister.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250521" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年5月21日</span>
+            <span class="event-title">小泉進次郎が農水相就任時にコメ担当大臣という思いで取り組むと発言した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">前任の江藤拓農林水産相が「コメを買ったことがない」などの発言で辞任したことを受け、石破茂首相は2025年5月21日、小泉進次郎を後任の農林水産大臣に起用した。
+小泉は就任にあたり記者団に対し「いま、私がやらなければいけないことは、とにかくコメだと。コメ担当大臣だというような、そういった思いで集中して取り組んでいきたい」と述べた。
+この発言に対し、食料安全保障は米だけの問題ではなく漁業・林業など一次産業全体の構造課題を含むとして、コメ価格対策に偏重した姿勢を疑問視する指摘がなされた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-shinjiro-excess-corporate-donation.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20241210" data-amount="10000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年12月10日</span>
+            <span class="event-title">小泉進次郎の自民党支部が献金上限を超える1000万円を受領した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">小泉進次郎防衛相が代表を務める「自民党神奈川県第11選挙区支部」が、2024年12月10日付で大阪府の企業から1000万円の寄付を受け取った。
+政治資金規正法は企業の資本金規模に応じて年間寄付の上限額を定めており、当該企業（資本金1000万円）の上限額は750万円のため、受領額はこれを250万円超過する違法な献金だった。
+2025年の衆院予算委員会で立憲民主党の後藤祐一氏に追及され、小泉氏は「再発防止に努めたい」と謝罪したが、超過分の返金等の事実は報じられていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-oboro-46-percent.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20210426" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2021年4月26日</span>
+            <span class="event-title">小泉進次郎の「おおぼろげながら浮かんできたんです、46という数字が」発言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">環境大臣の小泉進次郎が、2030年度の温室効果ガス排出量を2013年度比46%削減するとした政府目標の根拠を記者から問われ、「おおぼろげながら浮かんできたんです、46という数字が」と発言した。
+この発言は、削減目標が科学的根拠や詳細な試算ではなく、感覚的に設定されたものであるかのような印象を与えた。
+「おおぼろげ」という表現がそのまま流行語のように広まり、政策決定プロセスへの疑問が指摘された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-plastic-oil.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20210318" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2021年3月18日</span>
+            <span class="event-title">小泉進次郎がプラスチックの原料は石油だと意外に知られていないと発言した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">環境大臣の小泉進次郎が、J-WAVEのラジオ番組「JAM THE WORLD」に出演し、使い捨てプラスチック削減を求める法律の趣旨を説明する中で、「プラスチックの原料って石油なんですよね。意外にこれ知られてないんですけど」と発言した。
+この発言はSNSで話題となり、上から目線で当たり前の事実を説明しているとして批判の声が上がった。
+一方でアンケートでは一定数（約16％）がプラスチックの原料が石油であることを知らないという結果もあり、発言の評価については賛否が分かれた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-circular-non-answer-on-apology.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20200219" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2020年2月19日</span>
+            <span class="event-title">小泉進次郎が反省の色が見えないという指摘に反省していると要領を得ない発言を繰り返した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">新型コロナウイルス感染症対策本部の会合を欠席した問題について、衆議院予算委員会で立憲民主党の[[本多平直]]議員から「おわびするのかしないのか」と明確な回答を求められた小泉進次郎環境大臣は、はっきり答えず「反省している」と繰り返した。
+翌日の閣議後会見でも、「反省しているとは言っているけど、お前は反省の色が見えないという指摘に対しても、反省している」という趣旨の発言を述べ、指摘内容自体への感想を反省の対象にする要領を得ない説明に終始した。
+謝罪するか否かという直接の質問に対する明確な回答は最後まで示されなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-skips-covid-task-force-for-new-year-party.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20200216" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2020年2月16日</span>
+            <span class="event-title">小泉進次郎が新型コロナ対策本部会合を欠席し地元新年会を優先した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">環境大臣の小泉進次郎は、2020年2月16日に首相官邸で開かれた政府の新型コロナウイルス感染症対策本部の会合を欠席し、地元横須賀の後援会合同新年会に出席した。
+新型コロナウイルスの感染拡大が懸念され始めていた時期に、国の対策本部より地元の政治活動を優先したことが衆議院予算委員会等で問題視された。
+小泉大臣は後に「反省している」と繰り返したが、明確な謝罪や会合欠席自体の撤回は行わなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-climate-sexy.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20190922" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年9月22日</span>
+            <span class="event-title">小泉進次郎が気候変動対策は「セクシー」に取り組むべきと発言した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">環境大臣の小泉進次郎が、ニューヨークの国連本部で開かれたアジア地域の再生可能エネルギー利用を促す会合後の記者会見で、気候変動問題への取り組みについて「楽しく、クールでセクシーだ」と発言した。
+発言の意図は十分に説明されず、国内外で「中身がない」として物議を醸し、環境大臣としての資質を問う声が上がった。
+野党の質問に対し政府は閣議で「文脈によって意味することが異なるため、ニュアンスも含めて正確な訳出は困難」とする答弁書を決定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/koizumi-tautology-imanomama.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20190900" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年9月</span>
+            <span class="event-title">小泉進次郎が地球温暖化対策で「今のままではいけない。だからこそ日本は今のままではいけない」と発言した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">環境大臣の小泉進次郎が、2019年9月の国連気候行動サミットのため訪米した際、地球温暖化対策について「今のままではいけないと思います。だからこそ、日本は今のままではいけないと思っています」と発言した。
+主張とその理由が同一内容の繰り返しになっており、具体的な対策や論理的な説明を欠くトートロジー（同語反復）的な発言として話題になった。
+この言い回しはその後「進次郎構文」と呼ばれるようになり、同種の発言が繰り返し指摘される発端となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

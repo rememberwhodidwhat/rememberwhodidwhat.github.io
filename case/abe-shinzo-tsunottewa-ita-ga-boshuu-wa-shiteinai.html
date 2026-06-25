@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安倍晋三が桜を見る会問題で「募ってはいるが募集はしていない」と答弁した — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e25555;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/abe-shinzo.html">← 安倍晋三</a><span class="sep">|</span>
+    
+    <a href="../people/miyamoto-toru.html">← 宮本徹</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>安倍晋三が桜を見る会問題で「募ってはいるが募集はしていない」と答弁した</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+      <span class="status-dot" style="background: #e25555"></span>未解決
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+    
+  </div>
+  <div class="event-date">2020年1月28日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">2020年1月28日の衆議院予算委員会で、共産党・宮本徹議員が桜を見る会への後援会員招待問題を追及した。安倍晋三首相は後援会関係者に参加を呼びかける文書の存在を認めながらも、「幅広く募っていたという認識だったが、募集していたという認識ではなかった」と答弁した。「募る」と「募集」は同義であると宮本議員に指摘され、語義矛盾として広く批判された。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.buzzfeed.com/jp/yoshihirokando/abe-qa" target="_blank" rel="noopener">安倍首相、桜を見る会で「募ってはいるが募集はしていない」と答弁。Twitterでは大喜利に<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          BuzzFeed Japan
+           &nbsp;·&nbsp; 
+          2020-01-28
+        </div>
+        
+        <div class="source-desc">2020年1月28日の衆院予算委員会で、安倍首相が桜を見る会の後援会員参加問題について「幅広く募っているという認識だったが、募集はしていない」と答弁し、語義矛盾と批判を受けた。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">関連事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="abe-shinzo-sakura-zennyasai-kyogi-toben-118.html" style="--rel-color: #e2a855">
+        <div class="related-date">2019年11月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">安倍晋三が桜を見る会前夜祭問題で118回の虚偽答弁をした</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">金銭問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="abe-shinzo-shinra-bansho.html" style="--rel-color: #e25555">
+        <div class="related-date">2019年2月6日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">安倍晋三が参院予算委で毎月勤労統計報告書を読まず森羅万象担当と発言</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="abe-unification-church-video.html" style="--rel-color: #e25555">
+        <div class="related-date">2021年9月12日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">安倍晋三が統一教会にビデオ参加</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">統一教会癒着</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="abe-nihonginko-kogaisha-hatsugen.html" style="--rel-color: #e25555">
+        <div class="related-date">2022年5月9日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">安倍晋三が日本銀行は政府の子会社と発言し財務相が否定した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">根拠不明発言</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="suzuki-muneo-false-testimony.html" style="--rel-color: #e25555">
+        <div class="related-date">2002年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">鈴木宗男が証人喚問で偽証し議院証言法違反で起訴された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="takaichi-broadcast-suspension-remark.html" style="--rel-color: #e2a855">
+        <div class="related-date">2016年2月8日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市の停波処分発言</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="adachi-yasushi-bougen-chobatsu.html" style="--rel-color: #e25555">
+        <div class="related-date">2016年4月8日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">足立康史が国会で暴言を繰り返し懲罰動議を受け党役職を解任された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hamada-diet-session-absence-endorsement-revoked.html" style="--rel-color: #e2a855">
+        <div class="related-date">2016年5月31日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">浜田和幸が参院本会議を欠席して選挙活動を行いおおさか維新の会から公認取り消しを受けた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+</body>
+</html>

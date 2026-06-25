@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岡野純子が参院選で正しい標旗を掲げずに選挙演説を行い公職選挙法違反容疑で書類送検された — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e2a855;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/okano-junko.html">← 岡野純子</a><span class="sep">|</span>
+    
+    <a href="../organization/democratic-party-for-the-people.html">← 国民民主党</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>岡野純子が参院選で正しい標旗を掲げずに選挙演説を行い公職選挙法違反容疑で書類送検された</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+      <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+    
+  </div>
+  <div class="event-date">2025年7月</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">岡野純子衆院議員（国民民主党・比例南関東）は、2025年7月の参院選で千葉選挙区候補者の応援演説を行った際、正しい標旗を掲げずに比例候補者用の標旗を使用した疑いがある。千葉県警は2025年12月23日、公職選挙法違反容疑で書類送検した。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.yomiuri.co.jp/national/20251223-GYT1T00210/" target="_blank" rel="noopener">国民民主党の岡野純子衆院議員、正しい「標旗」掲げず選挙演説行った疑い…公職選挙法違反容疑で書類送検<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          読売新聞オンライン
+           &nbsp;·&nbsp; 
+          2025-12-23
+        </div>
+        
+        <div class="source-desc">【読売新聞】　７月の参院選の街頭活動で、千葉選挙区候補者の名前が書かれた比例選候補者用の「標旗」を使用したとして、千葉県警は２３日、国民民主党の岡野純子衆院議員（４７）（比例南関東）を公職選挙法違反容疑で書類送検した。捜査関係者への</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.nikkei.com/article/DGXZQOUA149K80U6A110C2000000/" target="_blank" rel="noopener">国民民主党・岡野純子衆院議員が謝罪　参院選の標旗使用巡り送検<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          日本経済新聞
+           &nbsp;·&nbsp; 
+          2026-01-14
+        </div>
+        
+        <div class="source-desc">岡野純子議員が参院選での標旗誤使用について謝罪会見。千葉地検は嫌疑不十分で不起訴とした。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="okano-junko-power-harassment-chiba.html" style="--rel-color: #e2a855">
+        <div class="related-date">2024年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">岡野純子が国民民主党千葉県連の地方議員らにパワーハラスメントを行い4人が相次いで離党した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">パワハラ</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="okano-junko-seiji-shikin-fuki-kisai.html" style="--rel-color: #e2a855">
+        <div class="related-date">2024年10月22日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">岡野純子の後援会収支報告書に長年にわたる政治活動費の記載がないと報道された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">金銭問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="okano-junko-fax-protest-dismissal.html" style="--rel-color: #e25555">
+        <div class="related-date">2026年6月11日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">岡野純子が市民から送付されたFAXを床にばら撒き「これでは対話が生まれない」と発言した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="suzuki-muneo-shimada-kensetsu-bribery.html" style="--rel-color: #e25555">
+        <div class="related-date">1998年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">島田建設事件で鈴木宗男が受託収賄</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">利権・癒着</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="suzuki-muneo-political-funds-violation.html" style="--rel-color: #e25555">
+        <div class="related-date">1998年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">鈴木宗男が政治資金規正法に違反し起訴された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">金銭問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="suzuki-muneo-yamarin-bribery.html" style="--rel-color: #e25555">
+        <div class="related-date">1998年8月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">やまりん事件で鈴木宗男があっせん収賄</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">利権・癒着</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="muneo-house-fraudulent-bid.html" style="--rel-color: #e25555">
+        <div class="related-date">1999年7月7日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">ムネオハウス入札で鈴木宗男の秘書らが偽計業務妨害</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">利権・癒着</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="suzuki-muneo-false-testimony.html" style="--rel-color: #e25555">
+        <div class="related-date">2002年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">鈴木宗男が証人喚問で偽証し議院証言法違反で起訴された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高市が旧統一教会のTM特別報告書を「出所不明」と発言 — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e25555;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/takaichi-sanae.html">← 高市早苗</a><span class="sep">|</span>
+    
+    <a href="../organization/liberal-democratic-party.html">← 自由民主党</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>高市が旧統一教会のTM特別報告書を「出所不明」と発言</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+      <span class="status-dot" style="background: #e25555"></span>未解決
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+    
+  </div>
+  <div class="event-date">2026年1月26日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">高市早苗首相は党首討論で、旧統一教会の内部文書「TM特別報告書」（高市氏の名前が32回登場するとされる）について「出所不明の文書」だと発言した。
+しかし教団側は当該文書を「（教団幹部の）尹氏が韓鶴子総裁への報告のために作成したメモ文書」「内部向け資料」と説明して内部文書であることを自ら認めており、ファクトチェックでは首相の「出所不明」発言は「誤り」と判定された。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://ryukyushimpo.jp/national/entry-5017182.html" target="_blank" rel="noopener">「TM文書は出所不明の文書」は本当か？　旧統一教会巡る首相発言＜衆院選ファクトチェック＞<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          琉球新報
+           &nbsp;·&nbsp; 
+          2026-02-06
+        </div>
+        
+        <div class="source-desc">高市首相が旧統一教会の内部文書「TM特別報告書」を「出所不明の文書」と述べたが、教団側が内部資料であると認めており、首相発言は「誤り」と判定されたとするファクトチェック記事。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">関連事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="takaichi-warned-opposition-leader-of-defamation.html" style="--rel-color: #e25555">
+        <div class="related-date">2026年1月26日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市が野党党首に「名誉毀損になりますよ」と警告した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">統一教会癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="miyazawa-no-arms-export.html" style="--rel-color: #e25555">
+        <div class="related-date">1976年5月14日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">宮沢喜一外務大臣が「武器輸出するほど日本は落ちぶれていない」と発言</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>継続中
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">平和外交</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="takaichi-resume-fabrication.html" style="--rel-color: #e25555">
+        <div class="related-date">1989年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市早苗が「米連邦議会立法調査官」を騙って経歴詐称</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">虚偽発言</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="takaichi-subliminal-tape.html" style="--rel-color: #e25555">
+        <div class="related-date">1991年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市が勧めるサブリミナルテープ</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">エセ科学</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="takaichi-no-war-remorse.html" style="--rel-color: #e25555">
+        <div class="related-date">1995年3月16日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市の「戦争反省してません」発言</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">戦争容認</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aso-taro-buraku-discrimination-remark.html" style="--rel-color: #e25555">
+        <div class="related-date">2001年3月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">麻生太郎が野中広務を「部落出身者」と派閥会合で差別的に評した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">差別</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aso-taro-korean-name-change-remark.html" style="--rel-color: #e2a855">
+        <div class="related-date">2003年5月31日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">麻生太郎が創氏改名は朝鮮人の要求だったと発言した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">外交問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="inada-unification-church-event-2006.html" style="--rel-color: #e2a855">
+        <div class="related-date">2006年4月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">稲田朋美が世界平和女性連合の春のつどいに出席した（2006年4月）</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">統一教会癒着</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aso-taro-luxury-hotel-bar-habit.html" style="--rel-color: #e2a855">
+        <div class="related-date">2008年10月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">麻生太郎が首相在任中の高級ホテルバー通いを庶民感覚とのズレで批判された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+</body>
+</html>

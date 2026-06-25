@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ラサール石井が「真央ちゃんはエッチすべき」と発言 — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #55b07a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/lasalle-ishii.html">← ラサール石井</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>ラサール石井が「真央ちゃんはエッチすべき」と発言</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
+      <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent);">セクハラ</span>
+    
+  </div>
+  <div class="event-date">2011年5月1日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">タレントのラサール石井が2011年5月1日、フィギュアスケート世界選手権で6位だった浅田真央について「真央ちゃんは早く彼氏を作るべき。エッチしなきゃミキティやキムヨナには勝てないよ」という趣旨のツイートを投稿し、炎上した。
+「セクハラだ」「下品だ」と批判が殺到し、ラサール石井は謝罪とツイートの削除を行った。
+後に社民党から参院選に立候補した際に過去発言として再炎上した。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.j-cast.com/2011/05/02094737.html?p=all" target="_blank" rel="noopener">「浅田真央はエッチするべき」　「暴言」でラサール石井が謝罪<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          J-CASTニュース
+           &nbsp;·&nbsp; 
+          2011-05-02
+        </div>
+        
+        <div class="source-desc">2011年フィギュアスケート世界選手権で6位だった浅田真央について、ラサール石井がTwitterで「彼氏を作ってエッチするべき」と投稿し炎上、謝罪・削除した。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="sdp-leadership-press-conf-no-speaking-chance.html" style="--rel-color: #e2a855">
+        <div class="related-date">2026年4月6日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">福島瑞穂が社民党党首選後の会見で他候補に発言機会を与えなかった</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="yoshida-takashi-sankiku-sekkara.html" style="--rel-color: #e25555">
+        <div class="related-date">2013年9月1日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が主導した公募校長制度で採用された吉田敬が保護者にセクハラを行い懲戒処分・更迭・退職となった</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="mori-nobuto-sekkara.html" style="--rel-color: #e25555">
+        <div class="related-date">2013年9月13日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が最終面接を実施した公募区長・森伸人が女性職員にセクハラを行い懲戒処分・降格された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">パワハラ</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="ido-masatoshi-sexual-harassment.html" style="--rel-color: #e2a855">
+        <div class="related-date">2015年6月8日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">井戸正利が酒席で女性市議の胸を触るセクハラ行為に及び委員長を辞任した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="miura-underage-prostitution-arrest.html" style="--rel-color: #e25555">
+        <div class="related-date">2017年6月26日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">三浦一成が女子中学生に売春させ逮捕される</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">性的暴行</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aoyama-secretary-harassment-suspension.html" style="--rel-color: #e25555">
+        <div class="related-date">2017年10月25日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">青山雅幸が秘書へのセクハラ疑惑を文春に報じられ党員資格停止処分を受けた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">パワハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="maeda-minakami-mayor-sexual-harassment.html" style="--rel-color: #e25555">
+        <div class="related-date">2018年5月2日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">前田善成がみなかみ町長在任中に職員女性へのセクハラで告発され失職した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">性的暴行</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="akasaka-public-indecency-arrest-expulsion.html" style="--rel-color: #e25555">
+        <div class="related-date">2020年8月6日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">赤坂大輔が公然わいせつ容疑で逮捕され維新を除名される</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+</body>
+</html>

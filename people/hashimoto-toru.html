@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>橋下徹 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>橋下徹 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 15 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ef5350"></div>民主主義破壊
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#f48fb1"></div>性差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff8a65"></div>パワハラ
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>利権・癒着
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#f06292"></div>セクハラ
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>市民監視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>地位濫用
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>公費浪費
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>致死
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/hashimoto-toru-oishi-akiko-slapp.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20220200" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年2月</span>
+            <span class="event-title">橋下徹がれいわ新選組の大石あきこ議員を名誉毀損で提訴しスラップ訴訟と批判されたが全請求が棄却された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹は2022年2月、れいわ新選組の大石あきこ衆議院議員と日刊ゲンダイを名誉毀損で提訴し300万円を請求した。問題とされたのは大石議員が「橋下元知事は気に入らないマスコミをしばき、アメとムチでDVして服従させていた」と述べた発言。大石議員はスラップ訴訟と批判し対抗した。2024年1月に大阪地裁が全請求を棄却し、同年9月に大阪高裁も棄却して橋下の敗訴が確定した。橋下は謝罪していない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-toru-aijin-hatsugen.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20140407" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2014年4月7日</span>
+            <span class="event-title">橋下徹が経営者向け講演で「愛人を2〜3人住まわせて」と女性蔑視発言をした</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f48fb1 18%, transparent); color: #f48fb1; border: 1px solid color-mix(in srgb, #f48fb1 40%, transparent);">性差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長は2014年4月7日、御堂筋規制緩和に関する企業経営者向けシンポジウムで「高層ビルはレジデンスをオーケーにした。財界のみなさん、住んでください。どうかみなさん、愛人２、３人住まわせて」と発言した。批判を受けると「今回はしゃれ、冗談の極み」と釈明し撤回しなかった。慰安婦・風俗業発言に続く女性蔑視発言として批判を呼んだ。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/kitakado-hiroki-pawahhara.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20140325" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2014年3月25日</span>
+            <span class="event-title">橋下徹が主導した公募校長制度で採用された北角裕樹が教頭に土下座を強要するパワハラを行い懲戒処分・退職となった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長が主導して導入した公募校長制度で採用された大阪市立巽中学校（生野区）の公募校長・北角裕樹（38歳、元日経記者）は、地域連絡をめぐり教頭と口論になり、業務を中断させたまま約1分間の土下座謝罪を強要した。また懇親会での酩酊・不適切行為もあった。2014年3月、市教委は「校長として重大な信用失墜行為があった」として減給3カ月の懲戒処分を行い、北角は依願退職した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/tokura-shogo-gyosha-yuchaku.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20140101" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2014年1月1日</span>
+            <span class="event-title">橋下徹が最終面接を実施した公募区長・都倉尚吾が受注業者と不適切な会食を繰り返し降格された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長が自ら最終面接委員として選考した公募区長制度で採用された大阪市鶴見区の公募区長・都倉尚吾は、区の業務を受注している業者と電話連絡や会食など不適切な接触を繰り返していたとして、2014年1月に大阪市から口頭注意を受けた。その後も「期待された組織マネジメント力が十分発揮されなかった」として、2014年3月25日に部長級への降格が決定し、4月1日付で市民局区業務改善担当部長に異動となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/mori-nobuto-sekkara.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20130913" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年9月13日</span>
+            <span class="event-title">橋下徹が最終面接を実施した公募区長・森伸人が女性職員にセクハラを行い懲戒処分・降格された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent);">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長が自ら最終面接委員として選考した公募区長制度で採用された大阪市東成区の公募区長・森伸人は、2013年10〜12月に部下の女性職員の腹や背中・腰を触るなど身体的接触を伴うセクハラ行為を繰り返し、「東京に連れて帰る」等の不適切な発言を行った。大阪市は同年9月13日に減給処分を行い区長留任としたが、2014年3月25日、組織マネジメント上の問題も重なり部長級への降格を決定、4月1日付で市民局区業務改善担当部長に異動となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yoshida-takashi-sankiku-sekkara.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20130901" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年9月1日</span>
+            <span class="event-title">橋下徹が主導した公募校長制度で採用された吉田敬が保護者にセクハラを行い懲戒処分・更迭・退職となった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent);">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長が主導して導入した公募校長制度で採用された大阪市立三先小学校（港区）の公募校長・吉田敬（59歳）は、2013年5〜6月のPTA親睦会で保護者の体を触り、「僕と会えなかったらさみしい？」などの不適切なメールを保護者に送るセクハラ行為を行った。市教委は同年9月に減給6カ月の懲戒処分と更迭を実施。「校長の職責をまっとうできると考えがたい」として校長への復帰を認めず、吉田は2013年10月末に自主退職した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-toru-ianfu-fuzoku-hatsugen.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20130513" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年5月13日</span>
+            <span class="event-title">橋下徹が「慰安婦制度は必要だった」と発言し在沖縄米軍に風俗業活用を勧め国内外から批判を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f48fb1 18%, transparent); color: #f48fb1; border: 1px solid color-mix(in srgb, #f48fb1 40%, transparent);">性差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長（日本維新の会共同代表）は2013年5月13日、「慰安婦制度は軍にとって当時は必要だった」と発言し、在沖縄米海兵隊司令官に対して「風俗業を活用してほしい」と述べた。米国務省は「言語道断で攻撃的」と批判し、31以上の地方議会が抗議決議を採択。日弁連も撤回・謝罪を要求した。橋下は5月27日、米軍への「風俗業活用」発言のみ「不適切だった」として撤回し米国に謝罪したが、「慰安婦制度は必要だった」という発言は撤回しなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/wada-tomonari-nenkin-kaizan.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20130426" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年4月26日</span>
+            <span class="event-title">橋下徹が最終面接を実施した公募区長・和田智成が経歴詐称・年金記録改ざんで分限免職された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長が自ら最終面接委員として選考した公募区長制度で採用された大阪市東住吉区の公募区長・和田智成は、区長公募時に提出した経歴書で兼業の事実を隠し、その裏付けとなる年金記録に関する文書の内容を改ざんして大阪市に提出していたことが2013年4月26日に発覚した。また在任中に他の区長を「無能」と批判する暴言や重要会議への2回連続欠席なども問題となった。大阪市は「公務員として適格性を欠くことは間違いない」として同日付で分限免職処分とした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/okubo-tatsumi-kerekishousan-sagi.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20130401" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年4月1日</span>
+            <span class="event-title">橋下徹が主導した公募校長制度で採用された大久保達巳が経歴詐称で懲戒免職となり後に詐欺容疑で逮捕された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長が主導して導入した公募校長制度で採用された大阪市立大和田小学校（西淀川区）の公募校長・大久保達巳（51歳）は、採用応募の際に虚偽の職歴を記載していたことが発覚し、大阪市教委に懲戒免職処分とされた。その後、女性から現金をだまし取ったとして詐欺容疑で逮捕された。また赴任中にはPTAからの預かり金を無断で持ち出す問題行為もあったと報じられた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-toru-furin.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20120719" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2012年7月19日</span>
+            <span class="event-title">橋下徹が大阪府知事就任前の2006年頃に北新地のホステスと不倫関係を持ち市長時代に報道され一部を認めた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹は大阪府知事就任前の2006年頃、大阪・北新地の高級クラブに勤務する女性と不倫関係にあったとされる。大阪市長時代の2012年7月に週刊文春（7月26日号）が報道し、橋下は記者会見で「飲食をしたことまでは事実」と一部を認めたが、「聖人君子のような生き方をしていたわけでもない」と弁明するにとどまった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-toru-shiso-chosa-anket.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20120200" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2012年2月</span>
+            <span class="event-title">橋下徹が大阪市全職員に政治・組合活動を調査するアンケートを業務命令で強制し違憲と認定された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長は2012年2月、教育委員会を除く全職員約3万4千人に対し、労働組合活動・政治活動の有無や参加を誘った人物名などを問う22項目のアンケートを「正確に回答しない場合は処分対象」として業務命令で強制した。特別顧問・野村修也が調査責任者を務めた。全国的批判で一部中止となったが、橋下は同年5月に別途「入れ墨アンケート」も実施した。2016年3月に大阪高裁が5問を違憲と認定し、市の上告断念で判決が確定した。橋下は謝罪していない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-toru-okushita-jitsujitsu-koyo.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20120127" data-amount="20870000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2012年1月27日</span>
+            <span class="event-title">橋下徹が後援会長の息子・奥下剛光を特別秘書に情実採用し選挙のたびに休職させながら約2087万円の公費を支出した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪市長は2012年1月の就任直後、特別秘書を採用できる条例を新設し、自身の後援会長・奥下素子の息子である奥下剛光を特別秘書に採用した。奥下は在職4年間に選挙のたびに5回休職し（延べ213日）、一度退職して退職金105万円を受け取った後に再採用された。
+勤務実態を示す書類はほとんどなく、勤務時間中に私的ツイートも確認されたが、住民訴訟（約2200万円返還請求）に対し大阪地裁は「市長の裁量権の範囲内」として請求を棄却した。
+報酬総額は約2087万円（給与・手当・賞与・退職金を含む）。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-toru-kimigayo-ordinance.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20110603" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2011年6月3日</span>
+            <span class="event-title">橋下徹が大阪府の公立学校教職員に君が代斉唱時の起立斉唱を義務付ける条例を制定した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪府知事が代表を務める大阪維新の会は2011年5月に条例案を提出し、同年6月3日に可決・成立した。全国初の「君が代起立条例」で、府立学校の入学式・卒業式などで教職員に君が代斉唱時の起立・斉唱を義務付けた。日弁連は思想・良心の自由（憲法19条）を侵害するとして反対声明を発出。翌2012年には職員基本条例も成立し、同一職務命令違反3回で分限免職とする規定が設けられた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-osaka-suicides.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20110300" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2011年3月</span>
+            <span class="event-title">橋下徹が大阪府知事時代に知事部局で7人の自殺者を出した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹大阪府知事時代（2008〜2011年）、知事部局における職員の自殺者が1年間で6〜7人に達した。就任前5年間の年平均は1〜2人だったため異常な増加と指摘された。
+2010年10月には商工労働部の職員N氏が「仕事が増え続け、出口が見えない。限界です」と遺書を残して自殺した。橋下知事が台湾出張に関して部長会議でN氏の上司を激しく叱責したことが引き金とされた。
+大阪府幹部が週刊誌取材で「知事に追い込まれた」と実名証言した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/hashimoto-toru-koyousha-gym.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20080714" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2008年7月14日</span>
+            <span class="event-title">橋下徹が大阪府知事時代に府議会予算委員会審議中に公用車でフィットネスクラブへ向かい批判を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">橋下徹は大阪府知事として、府議会08年度予算案審議が進行中の2008年7月14日、公式スケジュールを「庁内執務」としながら公用車でホテル内フィットネスクラブへ向かい約3時間滞在した。「審議中に外出は軽率」「公用車は公私混同」と批判されたが、橋下は「知事に固定した勤務時間はない」として問題なしとした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>

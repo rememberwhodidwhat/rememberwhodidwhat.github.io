@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陸自隊員が刃物を持って中国大使館の敷地に侵入し逮捕される — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e25555;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../organization/japan-self-defense-forces.html">← 自衛隊</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>陸自隊員が刃物を持って中国大使館の敷地に侵入し逮捕される</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+      <span class="status-dot" style="background: #e25555"></span>未解決
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+    
+  </div>
+  <div class="event-date">2026年3月24日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">2026年3月24日午前、宮崎県の陸上自衛隊えびの駐屯地に勤務する3等陸尉（23）が、東京都港区の在日中国大使館の塀を乗り越えて敷地内に侵入し、刃渡り約18センチの刃物を所持していたとして建造物侵入容疑で逮捕された。
+本人は「（中国側に）強硬な発言を控えてほしかった」「大使の前で自決して相手を驚かせようとした」という趣旨の供述をしており、高市早苗首相の台湾有事関連答弁（2025年11月）に対する中国側の反発を念頭に置いていたとみられる。
+中国外務省は「ウィーン条約上の義務を真摯に履行していない」と日本側を非難したが、日本の警察は建造物侵入容疑での立件にとどまり「殺人未遂」等の容疑では立件していない。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.tokyo-np.co.jp/article/477403" target="_blank" rel="noopener">中国大使館への陸自隊員侵入なぜ起きた？　元隊員はどう考える？　SNS上では「自衛隊の教育が背景」とも<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          東京新聞
+           &nbsp;·&nbsp; 
+          2026-03-26
+        </div>
+        
+        <div class="source-desc">陸上自衛隊えびの駐屯地所属の3等陸尉が在日中国大使館の敷地に侵入し、建造物侵入容疑で逮捕された事件について報じる記事。</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://rkb.jp/contents/202603/201676/" target="_blank" rel="noopener">中国大使館侵入事件：現職自衛官の暴挙が中国に与えた「絶好の口実」<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          RKB毎日放送
+           &nbsp;·&nbsp; 
+          2026-03-30
+        </div>
+        
+        <div class="source-desc">陸自えびの駐屯地所属の現職自衛官が刃物を所持して在日中国大使館の敷地に侵入し逮捕された事件の経緯と、本人供述・中国側の反応を解説する記事。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="koizumi-promotes-defense-equipment-export-expansion.html" style="--rel-color: #e25555">
+        <div class="related-date">2025年10月22日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">小泉進次郎が防衛装備品輸出の5類型撤廃に意欲を示した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>継続中
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">軍拡推進</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="koizumi-no-resident-briefing-kumamoto-missile-deployment.html" style="--rel-color: #e25555">
+        <div class="related-date">2025年11月12日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">小泉進次郎が熊本の長射程ミサイル配備で住民説明会を実施しないと表明した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="koizumi-retracts-radar-illumination-notice-claim.html" style="--rel-color: #e25555">
+        <div class="related-date">2025年12月10日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">小泉進次郎防衛相が中国軍機レーダー照射事案で「通告なし」から一夜にして説明を訂正した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="jsdf-soldier-steals-gold-ingot-from-vacant-house.html" style="--rel-color: #e25555">
+        <div class="related-date">2026年1月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">陸上自衛官と会社員が空き家から金のインゴットを盗み罪を認める</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="koizumi-premature-iran-evacuation-post.html" style="--rel-color: #e25555">
+        <div class="related-date">2026年3月5日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">小泉進次郎がイラン情勢緊迫化を受け外務省の正式依頼前に自衛隊機派遣準備着手をX投稿した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">外交問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="threat-letter-to-chinese-embassy-claims-jsdf-link.html" style="--rel-color: #e25555">
+        <div class="related-date">2026年3月5日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">自称元自衛隊員が中国大使館に脅迫状送信</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">排外主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="koizumi-embassy-intrusion-response-no-apology.html" style="--rel-color: #e25555">
+        <div class="related-date">2026年3月27日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">小泉進次郎が中国大使館侵入事件で誠に遺憾と述べたのみで謝罪・再発防止策に触れなかった</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="koizumi-jsdf-singer-ldp-convention.html" style="--rel-color: #e2a855">
+        <div class="related-date">2026年4月12日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">自民党党大会に自衛隊ソプラノ歌手を参加させる</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+</body>
+</html>

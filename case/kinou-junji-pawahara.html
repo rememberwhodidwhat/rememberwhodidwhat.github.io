@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>貴納順二が大阪市代表監査委員として市職員にパワハラを繰り返し是正勧告を受けて辞職した — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e2a855;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/kinou-junji.html">← 貴納順二</a><span class="sep">|</span>
+    
+    <a href="../people/hashimoto-toru.html">← 橋下徹</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>貴納順二が大阪市代表監査委員として市職員にパワハラを繰り返し是正勧告を受けて辞職した</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+      <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+    
+  </div>
+  <div class="event-date">2020年3月24日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">2014年に橋下徹大阪市長に任命された大阪市代表監査委員・貴納順二（元プリマハム社長）が、市職員28人中8人に対して9件のパワハラを繰り返したことが大阪市公正職務審査委員会の調査で認定された。「お前ら職員の分際で、わしの言うことを聞けんのか」「役立たず」「金魚のフンみたいに座っているだけ」などの発言のほか、昼食時間を制限した作業指示も認定。被害職員の1人が突発性難聴を発症した。2020年3月24日、委員会から是正勧告を受けた当日に辞表を提出し受理された。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://ja.wikipedia.org/wiki/%E8%B2%B4%E7%B4%8D%E9%A0%86%E4%BA%8C" target="_blank" rel="noopener">大阪市監査委員がパワハラで辞職 職員に「役立たず」<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          Wikipedia
+           &nbsp;·&nbsp; 
+          2020-03-24
+        </div>
+        
+        <div class="source-desc">橋下徹市長が2014年に任命した大阪市代表監査委員・貴納順二（元プリマハム社長）が、市職員28人中8人に対する9件のパワハラを市公正職務審査委員会に認定され是正勧告を受け、同日辞表を提出したことを伝えるWikipedia記事。</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://mainichi.jp/articles/20200324/k00/00m/040/224000c" target="_blank" rel="noopener">「役立たず」「金魚のふん」大阪市代表監査委員がパワハラ発言　審査委が勧告<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          毎日新聞
+           &nbsp;·&nbsp; 
+          2020-03-24
+        </div>
+        
+        <div class="source-desc">大阪市公正職務審査委員会は24日、市の行財政運営を監査する貴納順二・市代表監査委員（75）が、複数の市監査課職員に対し、「役立たず」「金魚のふんみたい」とののしるパワーハラスメントを繰り返していたとして、松井一郎市長に改善を勧告した。貴納氏は同日、辞職届を提出し、受理された。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="hashimoto-toru-koyousha-gym.html" style="--rel-color: #e2a855">
+        <div class="related-date">2008年7月14日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪府知事時代に府議会予算委員会審議中に公用車でフィットネスクラブへ向かい批判を受けた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-osaka-suicides.html" style="--rel-color: #e25555">
+        <div class="related-date">2011年3月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪府知事時代に知事部局で7人の自殺者を出した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">パワハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">致死</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-toru-kimigayo-ordinance.html" style="--rel-color: #e25555">
+        <div class="related-date">2011年6月3日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪府の公立学校教職員に君が代斉唱時の起立斉唱を義務付ける条例を制定した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>継続中
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-toru-okushita-jitsujitsu-koyo.html" style="--rel-color: #e25555">
+        <div class="related-date">2012年1月27日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が後援会長の息子・奥下剛光を特別秘書に情実採用し選挙のたびに休職させながら約2087万円の公費を支出した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">公費浪費</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-toru-shiso-chosa-anket.html" style="--rel-color: #e25555">
+        <div class="related-date">2012年2月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪市全職員に政治・組合活動を調査するアンケートを業務命令で強制し違憲と認定された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">市民監視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-toru-furin.html" style="--rel-color: #e2a855">
+        <div class="related-date">2012年7月19日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪府知事就任前の2006年頃に北新地のホステスと不倫関係を持ち市長時代に報道され一部を認めた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="okubo-tatsumi-kerekishousan-sagi.html" style="--rel-color: #e25555">
+        <div class="related-date">2013年4月1日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が主導した公募校長制度で採用された大久保達巳が経歴詐称で懲戒免職となり後に詐欺容疑で逮捕された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="wada-tomonari-nenkin-kaizan.html" style="--rel-color: #e25555">
+        <div class="related-date">2013年4月26日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が最終面接を実施した公募区長・和田智成が経歴詐称・年金記録改ざんで分限免職された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-06-25
+</footer>
+
+</body>
+</html>
