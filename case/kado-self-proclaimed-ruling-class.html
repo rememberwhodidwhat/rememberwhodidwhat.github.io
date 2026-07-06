@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>門ひろこが自らを「支配階級」と発言 — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e25555;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/kado-hiroko.html">← 門ひろこ</a><span class="sep">|</span>
+    
+    <a href="../organization/liberal-democratic-party.html">← 自由民主党</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>門ひろこが自らを「支配階級」と発言</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+      <span class="status-dot" style="background: #e25555"></span>未解決
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+    
+  </div>
+  <div class="event-date">2026年4月14日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">自民党の門ひろこ衆院議員が2026年4月14日のABEMA Prime出演中、暴力革命の是非を巡る全学連の学生らとの討論で発言。学生側は「支配階級」を資本家（生産手段の所有者）、「被支配階級」を労働者とする経済的な軸で定義していたが、門ひろこは学生に「皆さんは支配階級なんですか?」と問うた上で「私はそう（支配階級）だと思いますよ。いや、私が支配階級だと思います。それは衆議院議員だから。」と述べ、資本の所有ではなく衆議院議員という政治的地位を根拠に自身を支配階級だと位置づけた。続けて「でも皆さんは支配階級なんじゃないんですか?」と学生側に問い返しており、討論で設定されていた「支配階級」の定義軸を、資本の所有から政治的地位へとすり替えた発言だった。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.youtube.com/watch?v=PKdIAtlHuak" target="_blank" rel="noopener">【全学連】高市政権の打倒、中国侵略戦争を阻止…その理念は？なぜ暴力革命？｜アベプラ<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          ABEMA Prime #アベプラ【公式】
+           &nbsp;·&nbsp; 
+          2026-04-15
+        </div>
+        
+        <div class="source-desc">.◆ABEMAで無料視聴▷https://abema.go.link/iDF3j◆キャストMC：田村淳矢嶋尋(全学連(矢嶋派)委員長)齋藤晴輝(全学連(矢嶋派)書記長)西村凌風(全学連(矢嶋派)書記次長)岩澤直美(カルモニー代表/東大博士課程)門ひろこ(自民党 衆院議員(東京8区)国会議員歴1カ月)野村泰紀(カリフォルニア大学バークレー校の教授)パックン(お笑い芸人 東京科</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://x.com/justastrawdog/status/2072998839020388688" target="_blank" rel="noopener">Post by @justastrawdog on X<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          @justastrawdog
+           &nbsp;·&nbsp; 
+          2026-07-03
+        </div>
+        
+        <div class="source-desc">門ひろこ、デモに対して「ごっこ遊び」とほざいただけでなく、「私は支配階級、衆議院議員だから」とまで言ってやがったか。こういう愚かな勘違いをした議員は、民主主義の敵、有権者の敵でしかない。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">関連事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="kado-demo-play-pretend.html" style="--rel-color: #e2a855">
+        <div class="related-date">2026年4月14日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">門ひろこが「デモはごっこ遊び」と発言</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="miyazawa-no-arms-export.html" style="--rel-color: #e25555">
+        <div class="related-date">1976年5月14日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">宮沢喜一外務大臣が「武器輸出するほど日本は落ちぶれていない」と発言</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>継続中
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">平和外交</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="takaichi-resume-fabrication.html" style="--rel-color: #e25555">
+        <div class="related-date">1989年</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市早苗が「米連邦議会立法調査官」を騙って経歴詐称</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">虚偽発言</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aso-taro-buraku-discrimination-remark.html" style="--rel-color: #e25555">
+        <div class="related-date">2001年3月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">麻生太郎が野中広務を「部落出身者」と派閥会合で差別的に評した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">差別</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aso-taro-korean-name-change-remark.html" style="--rel-color: #e2a855">
+        <div class="related-date">2003年5月31日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">麻生太郎が創氏改名は朝鮮人の要求だったと発言した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史認識</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">外交問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="inada-unification-church-event-2006.html" style="--rel-color: #e2a855">
+        <div class="related-date">2006年4月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">稲田朋美が世界平和女性連合の春のつどいに出席した（2006年4月）</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">統一教会癒着</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aso-taro-luxury-hotel-bar-habit.html" style="--rel-color: #e2a855">
+        <div class="related-date">2008年10月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">麻生太郎が首相在任中の高級ホテルバー通いを庶民感覚とのズレで批判された</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="aso-taro-kanji-misreading.html" style="--rel-color: #e25555">
+        <div class="related-date">2008年11月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">麻生太郎が首相在任中に国会答弁で漢字の読み間違いを繰り返した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="inada-unification-church-event-2009.html" style="--rel-color: #e2a855">
+        <div class="related-date">2009年11月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">稲田朋美が世界平和連合のイベントに出席した（2009年11月）</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">統一教会癒着</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-07-07
+</footer>
+
+</body>
+</html>
