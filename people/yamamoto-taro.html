@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山本太郎 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>山本太郎 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 12 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>金銭問題
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff8a65"></div>パワハラ
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#66bb6a"></div>エセ科学
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>根拠不明発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>外交問題
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/yamamoto-taro-secretary-salary-allegations-2026.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260311" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月11日</span>
+            <span class="event-title">山本太郎とれいわ新選組が公設秘書給与の詐取疑惑とパワハラを元議員に告発された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2026年3月11日、デイリー新潮（週刊新潮）は、れいわ新選組の前衆院議員・多ケ谷亮氏と山本太郎代表の元私設秘書の証言として、党内で所属国会議員の公設秘書枠を党に「上納」させる慣行があったと報じた。証言によれば、党職員が公設秘書として登録される一方、実際には議員事務所でほとんど勤務せず党本部で勤務しており、公設秘書給与が組織的に詐取されていた実態が指摘された。元スタッフらは、山本代表の機嫌が悪い際に叱責を受けるなどパワーハラスメント的な対応があったとも証言した。れいわ新選組側は記事の内容が党の認識と大きく相違するとして否定しており、2026年7月時点で法的な決着はついていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-speeding-violation-2025.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251009" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月9日</span>
+            <span class="event-title">山本太郎が法定速度を大幅に超える速度違反で罰金と免許停止処分を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+          </div>
+          
+          
+          <div class="event-body">れいわ新選組代表の山本太郎は、2025年10月9日午後2時34分頃、レンタカーで大分市内の東九州自動車道を法定速度時速80キロの区間で時速149キロで走行し、オービスにより摘発された。2026年4月20日付で罰金9万円の略式命令、5月15日付で運転免許停止90日の処分を受けた。党はこの件を2026年7月3日に公表し、山本譲司幹事長による厳重注意処分としたことを明らかにした。副幹事長は「（代表は）大変反省している」とコメントした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-noto-earthquake-curry-controversy-2024.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20240105" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年1月5日</span>
+            <span class="event-title">山本太郎が能登半島地震の被災地で炊き出しカレーを食べたことが批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">能登半島地震（2024年1月1日発生）を受け、れいわ新選組代表の山本太郎は1月5日から6日にかけて石川県輪島市の避難所を訪れた。被災者への配食が終わった後、NPOスタッフに勧められて余った炊き出しのカレーを食べたことをX（旧Twitter）で報告したところ、「食べるのは遠慮すべきだろ」「恥を知れ」といった批判が殺到した。山本は、自身で食料を持参していたこと、配食完了後の余剰分であったことなどを説明し、被災地入り自体は後悔していないとの見解を示した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-immigration-law-vote-scuffle-2023.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20230608" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年6月8日</span>
+            <span class="event-title">山本太郎が入管法採決を実力で阻止しようとし議員を負傷させた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2023年6月8日、参院法務委員会で入管難民法改正案が採決された際、れいわ新選組の山本太郎代表は採決を阻止しようと委員長席後方の机の上から数度にわたって飛びかかろうとし、自民党議員2人が打撲などの怪我を負った。自民、立憲民主、公明などは9日、参院に懲罰動議を提出したが、6月20日に今国会中の懲罰は見送られた。議院運営委員長によれば山本本人から「反省しております」との言葉があったといい、山本は特定の議員に危害を加える意図はなかったとしつつお詫びを述べた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-hpv-vaccine-misinformation-2019.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20191018" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年10月18日</span>
+            <span class="event-title">山本太郎が街頭演説で子宮頸がんワクチンに関する誤情報を発信した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
+            
+          </div>
+          
+          
+          <div class="event-body">れいわ新選組代表の山本太郎は、2019年10月18日、鹿児島市内の街頭演説で子宮頸がんワクチンについて「人体実験してんじゃねーよ」などと発言した。古い厚労省資料を根拠に、他のワクチンと比べ重篤な副反応の割合が高いと主張し、がん予防効果も証明されていないと述べたが、接種者と非接種者を比較した信頼できるデータは示さなかった。日本産科婦人科学会はワクチンで子宮頸がんの60〜70％を予防できるとしており、世界保健機関（WHO）も有効性と安全性を確認しているとして、この演説内容は古い資料に基づくミスリードだと指摘されている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-akkiido-remark-2017.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20170302" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2017年3月2日</span>
+            <span class="event-title">山本太郎が安倍昭恵氏を「アッキード事件」と評し安倍首相から抗議された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2017年3月2日の参議院予算委員会で、当時生活の党共同代表の山本太郎は、学校法人「森友学園」への国有地売却問題を追及する中で、安倍晋三首相の妻・安倍昭恵氏を「ロッキード事件」にかけて「アッキード事件」と呼び、「お騒がせゆるふわ総理夫人がやらかしたこの一件で謝罪は？」などと述べた。安倍首相はこれに対し「その言い方は限度を超えている。人の名誉を傷つけるために委員会を活用することは、極めて不愉快だ」と抗議した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-mourning-dress-performance-2015.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20150918" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2015年9月18日</span>
+            <span class="event-title">山本太郎が安保法制採決時に喪服姿で焼香のしぐさを見せ厳重注意を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">安全保障関連法案が2015年9月17日に参院特別委員会で採決されたのを受け、参議院議員の山本太郎は喪服に着替えて取材に応じ、「自民党が死んだ日」と書いた紙を掲げた。翌18日の参院本会議では喪服姿で出席し、安倍首相への問責決議案の採決の際に数珠を手に焼香のしぐさを見せた。「幼稚なパフォーマンス」との批判が上がり、9月25日には山崎正昭参議院議長が山本を議長室に呼び「参院の権威を損ねた」として厳重注意し、次に同様の行為があれば除名もあり得ると警告した。山本は「正しい振る舞いではなかった」と陳謝した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-emperor-letter-2013.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20131031" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年10月31日</span>
+            <span class="event-title">山本太郎が園遊会で天皇陛下に直接手紙を手渡し厳重注意を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">参議院議員の山本太郎は、2013年10月31日の秋の園遊会で天皇陛下に「原発は労働問題。被曝している子どもが心配です。お力添えをほしい」という趣旨の手紙を直接手渡した。園遊会では陛下の近くでの写真撮影をしないなどの注意事項が事前に示されていたが、山本の行為はこうした慣例を逸脱するものだった。同年11月8日、山崎正昭参議院議長は山本を厳重注意とし、任期中の皇室行事への参加を認めない処分を下した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-berekuteru-remark-2013.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20131024" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年10月24日</span>
+            <span class="event-title">山本太郎が国会弁当を「ベクレてる」と発言し批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">参議院議員の山本太郎は、2013年10月24日、ライブ配信サービス「TwitCasting」で「ベクレてる（放射能汚染されている）んやろなぁ、国会議員に出すお弁当は」と発言した。この映像はニコニコ動画にも転載され大きなバッシングを受け、謝罪や議員辞職を求める声が上がった。山本は2021年3月、この発言を含む過去の被曝関連の発言について公式に謝罪した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-ekiden-cancellation-remark-2011.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20111105" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2011年11月5日</span>
+            <span class="event-title">山本太郎が東日本女子駅伝の中止を求め風評被害と批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          
+          <div class="event-body">俳優だった山本太郎は、2011年11月5日のBSジャパン番組で、福島市で開催予定だった東日本女子駅伝について「中止に追い込みたい」「『復興しましたよ』ってアピールのためだけの行事」などと発言した。主催者の東北陸上競技協会理事長は、放射線量を計測し安全と判断していると反論し、風評被害だと批判した。山本は2021年3月、この発言を含む過去の被曝関連の発言について公式に謝罪した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-saga-prefecture-office-intrusion-2011.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20110711" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2011年7月11日</span>
+            <span class="event-title">山本太郎が佐賀県庁への反原発デモに参加し建造物侵入容疑で告発された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">俳優だった山本太郎は、2011年7月11日、玄海原子力発電所の再稼働中止を求める市民団体のデモに参加し、約200人のデモ隊とともに佐賀県庁舎内に進入した。警備員を押しのけて庁舎内に入るメンバーもいる中、山本は「暴力はなし！」と叫びながら座り込みなどを行い、最終的に職員に要請書を手渡して退去した。同年8月、京都市の行政書士がこの行為を建造物侵入罪等にあたるとして佐賀地検に刑事告発した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/yamamoto-taro-takeshima-remark-2008.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20080720" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2008年7月20日</span>
+            <span class="event-title">山本太郎が竹島を韓国に譲渡すべきと発言し批判を浴びた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+          </div>
+          
+          
+          <div class="event-body">俳優だった山本太郎は、2008年7月20日放送の読売テレビ「たかじんのそこまで言って委員会」で竹島問題の討論中、「竹島は韓国にあげたらよい！」と発言した。視聴者から批判が殺到し、山本は同日ブログで謝罪文を掲載したが、内容が要領を得ないものだったため、かえって騒動が再燃した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-07-07
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>
