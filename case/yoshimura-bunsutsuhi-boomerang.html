@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吉村洋文が新人議員の文通費満額受給を批判しながら自身も辞職時に満額受給していたことが発覚した — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e2a855;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/yoshimura-hiroshi.html">← 吉村洋文</a><span class="sep">|</span>
+    
+    <a href="../organization/ishin.html">← 維新の会</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>吉村洋文が新人議員の文通費満額受給を批判しながら自身も辞職時に満額受給していたことが発覚した</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+      <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+    
+  </div>
+  <div class="event-date">2021年11月16日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">衆院選で初当選した議員らに10月分の文書通信交通滞在費（文通費、月額100万円）が満額支給された問題を巡り、日本維新の会の吉村洋文副代表（大阪府知事）は同僚議員のこの受給を厳しく批判していた。
+しかし吉村氏自身も、大阪市長選出馬のため2015年10月1日付で衆院議員を辞職した際、在職1日にもかかわらず10月分の文通費100万円を満額受け取っていたことが、れいわ新選組の大石晃子衆院議員の指摘で判明した。
+吉村氏は2021年11月16日、記者団に「当時、おかしいと対応できていればよかった」と釈明し、「ブーメランが刺さりました」と述べ、満額の寄付を行う意向を示した。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.yomiuri.co.jp/politics/20211116-OYT1T50239/" target="_blank" rel="noopener">「１日で１００万円」批判の吉村知事、自分も受け取っていた「ブーメラン刺さった」<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          読売新聞オンライン
+           &nbsp;·&nbsp; 
+          2021-11-16
+        </div>
+        
+        <div class="source-desc">【読売新聞】　国会議員に支払われる文書通信交通滞在費（月額１００万円）を巡り、衆院選で初当選した議員らにも１０月分の文通費が満額支給された問題で、日本維新の会の吉村洋文副代表（大阪府知事）は１６日、問題を厳しく批判しながら、自身も衆</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.chosyu-journal.jp/seijikeizai/22145" target="_blank" rel="noopener">政治家はもらった分だけ働け 使途不明な文通費や政党交付金 維新に突き刺さった巨大なブーメラン<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          長周新聞
+           &nbsp;·&nbsp; 
+          2021-11
+        </div>
+        
+        <div class="source-desc">れいわ新選組の大石晃子衆院議員が、吉村洋文副代表が2015年10月1日付で衆院議員を辞職した際に在職1日で文通費100万円を受け取っていた事実を明らかにした。吉村氏は当初「記憶が曖昧」としたが「ケジメがつきませんから、満額寄付いたします」と釈明した。維新全体でも文通費の多くが所属議員の政党支部等に還流していた実態を報じる。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">関連事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="yoshimura-osaka-council-bonus-full-payment.html" style="--rel-color: #e25555">
+        <div class="related-date">2021年12月23日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">吉村洋文が大阪市議を在職2日で辞職しボーナス・歳費316万円を満額受給していた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">金銭問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="fujita-fumitake-koenkai-undisclosed-donation.html" style="--rel-color: #e2a855">
+        <div class="related-date">2023年9月15日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">藤田文武の後援会が文通費からの寄付60万円分を収支報告書に記載していなかった</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">金銭問題</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="yoshimura-bunsutsuhi-donation-deception.html" style="--rel-color: #e25555">
+        <div class="related-date">2021年11月24日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">吉村洋文が文通費「寄付」を表明したが実際は党への還流に過ぎず記憶にないとの説明も虚偽だった</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">矛盾発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff7043 18%, transparent); color: #ff7043; border: 1px solid color-mix(in srgb, #ff7043 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">脱法行為</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="yoshimura-takefuji-slapp.html" style="--rel-color: #e25555">
+        <div class="related-date">2003年5月14日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">吉村洋文が武富士の盗聴犯罪を隠蔽するスラップ訴訟に関与した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">地位濫用</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-toru-koyousha-gym.html" style="--rel-color: #e2a855">
+        <div class="related-date">2008年7月14日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪府知事時代に府議会予算委員会審議中に公用車でフィットネスクラブへ向かい批判を受けた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="okushita-grink-fundraising-warning.html" style="--rel-color: #e2a855">
+        <div class="related-date">2009年1月29日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">奥下剛光が私設秘書時代に知事の名前を使い寄付金集めを行おうとして厳重注意を受けた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">金銭問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">地位濫用</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-osaka-suicides.html" style="--rel-color: #e25555">
+        <div class="related-date">2011年3月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪府知事時代に知事部局で7人の自殺者を出した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">パワハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">致死</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-toru-kimigayo-ordinance.html" style="--rel-color: #e25555">
+        <div class="related-date">2011年6月3日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が大阪府の公立学校教職員に君が代斉唱時の起立斉唱を義務付ける条例を制定した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>継続中
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="nishii-masaru-hikinige.html" style="--rel-color: #e25555">
+        <div class="related-date">2012年1月1日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">西井勝が元旦に飲酒してひき逃げ事故を起こし逮捕され有罪判決を受けたが議員を辞職しなかった</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="hashimoto-toru-okushita-jitsujitsu-koyo.html" style="--rel-color: #e25555">
+        <div class="related-date">2012年1月27日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">橋下徹が後援会長の息子・奥下剛光を特別秘書に情実採用し選挙のたびに休職させながら約2087万円の公費を支出した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">公費浪費</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="sugimura-kotaro-netsuzou-list.html" style="--rel-color: #e2a855">
+        <div class="related-date">2012年2月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">杉村幸太郎が捏造された大阪市交通局職員リストを根拠に市議会で断定的な質問をし後に維新市議団が反省を表明した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-07-10
+</footer>
+
+</body>
+</html>
