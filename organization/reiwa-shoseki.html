@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>令和書籍 行動・事件 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  header {
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #000a18 0%, #0f0f14 100%);
+  }
+
+  .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+  header h1 .subtitle { color: var(--muted); font-weight: 400; }
+  header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 6px; top: 10px; bottom: 10px;
+    width: 2px; background: var(--border);
+  }
+
+  .event {
+    display: block;
+    position: relative; margin-bottom: 20px; padding: 14px 16px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
+  }
+  .event:hover { background: #20202e; }
+  .event::before {
+    content: ''; position: absolute; left: -22px; top: 18px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent, #555); border: 2px solid var(--bg);
+  }
+
+  .event-row { display: flex; align-items: flex-start; gap: 14px; }
+  .event-main { flex: 1; min-width: 0; }
+  .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: #aaaabc; line-height: 1.75; white-space: pre-line; }
+  .event-status { flex-shrink: 0; }
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.66rem; font-weight: 700; padding: 4px 11px;
+    border-radius: 999px; white-space: nowrap;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+  
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-nav"><a href="./">← 団体一覧へ戻る</a></div>
+  <h1>令和書籍 <span class="subtitle">行動・事件 年表</span></h1>
+  <div class="meta">収録件数: 1 件</div>
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>歴史修正主義
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/takeda-tsuneyasu-reiwa-shoseki-kyokasho-ianfu-2024.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240600">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年6月</span>
+            <span class="event-title">竹田恒泰代表の令和書籍の国史教科書が慰安婦の強制連行を否定する記述で批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+          </div>
+          
+          <div class="event-body">竹田恒泰が代表取締役を務める出版社「令和書籍」の中学校歴史教科書『国史教科書』が、文部科学省の検定に過去3回の不合格を経て2024年に初めて合格した。同教科書は「蒸し返された韓国の請求権」というコラムで、「日本軍が朝鮮の女性を強制連行した事実はなく、また彼女らは報酬をもらって働いていました」などと記述している。1993年の河野談話が認めた旧日本軍の関与を否定する内容であるとして、「子どもと教科書全国ネット21」など市民団体が2024年6月25日に記者会見を開き、沖縄戦の集団自決記述なども含め歴史的事実を無視していると批判した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-07-14
+</footer>
+
+
+
+</body>
+</html>

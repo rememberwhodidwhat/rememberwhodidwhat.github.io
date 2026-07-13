@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>竹田恒泰 行動・発言 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+
+  header h1 .subtitle {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  header .meta {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Timeline ── */
+  main {
+    padding: 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Event card ── */
+  .event {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .event:hover { background: #20202e; }
+
+  .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent, #555);
+    border: 2px solid var(--bg);
+  }
+
+  .event-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .event-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .event-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .event-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .event-body {
+    font-size: 0.82rem;
+    color: #aaaabc;
+    line-height: 1.75;
+    white-space: pre-line;
+  }
+
+  .event-status {
+    flex-shrink: 0;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  
+
+  
+
+  .sort-btn {
+    margin-top: 12px;
+    padding: 5px 14px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
+  
+
+  /* ── Footer ── */
+  footer {
+    margin-top: 60px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav"><a href="./">← 人物一覧へ戻る</a></div>
+  <h1>竹田恒泰 <span class="subtitle">行動・発言 年表</span></h1>
+  <div class="meta">収録件数: 10 件</div>
+  
+  
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ce93d8"></div>品格
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>歴史修正主義
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#a5d6a7"></div>差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>弱者攻撃
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>排外主義
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/takeda-tsuneyasu-banpaku-hihansha-bujoku-2025.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251102" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月2日</span>
+            <span class="event-title">竹田恒泰が大阪万博への批判者を心の暗い人さもしい人と侮辱した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">竹田恒泰は自身のYouTubeチャンネルで、大阪・関西万博への批判者について「行って文句言う人は幸薄い」と述べた。さらに2025年11月2日放送の「そこまで言って委員会NP」（吉村洋文大阪府知事も出演）では、万博批判者を「心の暗い人、さもしい人」「人生損してる」と評した。批判者を一律に見下す発言であり、番組内では吉村知事も苦笑いを見せた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-komeito-gedatsu-hatsugen-2025.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251025" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月25日</span>
+            <span class="event-title">竹田恒泰がテレビで公明党の連立離脱を解脱と揶揄し創価学会員らから批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">竹田恒泰は「そこまで言って委員会NP」（読売テレビ）で、自民党との連立を離脱した公明党について「解脱」した、次の選挙で「入滅」するといった仏教用語を用いた揶揄的な表現で論評した。この発言に公明党支持者・創価学会員から批判が殺到し炎上した。竹田はX上で「ご批判は甘んじてお受けします」としつつ、番組や共演者への批判は控えるよう求め、発言内容自体の撤回や謝罪はしなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-reiwa-shoseki-kyokasho-ianfu-2024.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240600" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年6月</span>
+            <span class="event-title">竹田恒泰代表の令和書籍の国史教科書が慰安婦の強制連行を否定する記述で批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+          </div>
+          
+          
+          <div class="event-body">竹田恒泰が代表取締役を務める出版社「令和書籍」の中学校歴史教科書『国史教科書』が、文部科学省の検定に過去3回の不合格を経て2024年に初めて合格した。同教科書は「蒸し返された韓国の請求権」というコラムで、「日本軍が朝鮮の女性を強制連行した事実はなく、また彼女らは報酬をもらって働いていました」などと記述している。1993年の河野談話が認めた旧日本軍の関与を否定する内容であるとして、「子どもと教科書全国ネット21」など市民団体が2024年6月25日に記者会見を開き、沖縄戦の集団自決記述なども含め歴史的事実を無視していると批判した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-miso-unko-hiyu-2022.html" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20220708" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年7月8日</span>
+            <span class="event-title">竹田恒泰が女性天皇容認論を味噌汁に入ったうんこに例え愛子さまへの侮辱と批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">2022年7月、参院選前特番として配信された「上念司チャンネル」で皇位継承問題を語った竹田恒泰は、男系維持を主張しながら女性天皇容認論も唱える論者について「味噌汁にうんこが入ったらもはや味噌汁ではない」という趣旨の比喩で批判した。この発言が後に切り取られて拡散し、「愛子内親王殿下を排泄物に例えた」とする批判がSNS上で広がった。竹田は2024年10月、Xで「『うんこ』が指すのは女性天皇容認論（篠原常一郎氏や神谷宗幣氏の主張）であり、断じて愛子内親王殿下ではない」と釈明し、自身は一貫して内親王を擁護する発言をしてきたと主張したが、比喩表現自体の撤回・謝罪はしていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-meiyokison-haiso-2022.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20220413" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年4月13日</span>
+            <span class="event-title">竹田恒泰が差別主義者と評されたことへの名誉毀損訴訟に敗訴し確定した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+          </div>
+          
+          
+          <div class="event-body">竹田恒泰は、戦史研究家の山崎雅弘が2019年11月にツイッターで「人権侵害常習犯の差別主義者」などと評したことを名誉毀損だとして550万円の損害賠償等を求めて提訴した。裁判では、竹田が過去に「韓国は強請りたかりが得意」「韓国が慰安婦像を作るなら、日本は嘘つき老婆の像を作るべき」などと投稿していたことが認定され、2021年2月の東京地裁、同年8月の東京高裁とも竹田の思想を「自国を優越的に捉え他国民・他民族を劣位に置くもの」と評価する公正な論評であるとして請求を棄却した。2022年4月13日、最高裁が上告を棄却し敗訴が確定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-omura-taikoutenji-yougo-2019.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20191030" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年10月30日</span>
+            <span class="event-title">竹田恒泰が大村知事のヘイト指摘にお前がいうなと反論し排外主義的な対抗展示を擁護した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">日本第一党の桜井誠が企画した対抗展示「あいちトリカエナハーレ2019『表現の自由展』」には、「ライダイハン像」や「犯罪者はいつも韓国人」「日韓断交おめでとう」といった排外主義的な展示物が含まれていた。大村秀章愛知県知事がこの展示を「内容からして明確にヘイトにあたる」と評し法的措置検討を表明したのに対し、竹田恒泰はツイッターで「大村知事、お前がいうな！」と反論した。あいちトリエンナーレの展示を巡る大村知事のダブルスタンダードを批判する趣旨だったが、結果として排外主義的内容を含む展示への批判をかわす形になった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-omura-reipu-hatsugen-2019.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20191016" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年10月16日</span>
+            <span class="event-title">竹田恒泰が大村秀章知事の即位礼参列を日本国がレイプされるに等しいと非難した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">あいちトリエンナーレ2019「表現の不自由展・その後」で昭和天皇の肖像を燃やし踏みつける映像作品が展示されたことについて、竹田恒泰は芸術監督の津田大介を「卑怯の極み」と批判した。その後、同展示を許可した大村秀章愛知県知事が即位礼正殿の儀（2019年10月22日）に参列することについて、ツイッターで「そんな人物が即位礼に参列するのは、日本国がレイプされるに等しい。一生許さない」と投稿した。前日出演したCBCテレビ「ゴゴスマ」でも大村知事について「どの面下げてくるのか」と発言し、司会者が「ちょっと言葉がすぎました」と謝罪する事態となった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-ianfuzo-tsuiito-2018.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20181105" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2018年11月5日</span>
+            <span class="event-title">竹田恒泰が慰安婦像に鼻クソの刑などと侮辱するツイートをした</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">竹田恒泰はサンフランシスコのセント・メリーズ公園に設置された慰安婦像を訪れ、記念碑の説明文について「ありもしないものに献花できる神経がわからない」と歴史修正主義的な主張をツイートした。続けて像に対し「鼻クソの刑を執行」、翌日には「握りっ屁の刑を執行」と投稿し、像への侮辱的な行為をほのめかした。2014年にもソウルの慰安婦像との写真を「ピコピコハンマーを持ってくるのを忘れた」とブログに掲載しており、同様の行為を繰り返していた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-hibakusha-kataribe-hihan-2014.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20140611" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2014年6月11日</span>
+            <span class="event-title">竹田恒泰が長崎の被爆者語り部を反日活動家だと根拠なく批判した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">弱者攻撃</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent);">品格</span>
+            
+          </div>
+          
+          
+          <div class="event-body">長崎で被爆体験を語る森口貢氏が修学旅行中の中学生から暴言を受けたことが報じられた際、竹田恒泰はツイッターで森口氏について「原爆投下を直接見ていないのに被爆者を名乗り、有償で語っているのはおかしい」「反日思想を植え付けている」「筋金入りの反日活動家」などと根拠なく批判した。森口氏は原爆投下の11日後に長崎に入市したことで法的に被爆者と認定されており、竹田の主張は事実に反していた。漫画家の小林よしのりはこの発言を強く批判した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/takeda-tsuneyasu-zainichi-tsumei-hatsugen-2013.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20131020" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2013年10月20日</span>
+            <span class="event-title">竹田恒泰が通名で犯罪歴を消せると事実に反する発言をし読売テレビが謝罪した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #a5d6a7 18%, transparent); color: #a5d6a7; border: 1px solid color-mix(in srgb, #a5d6a7 40%, transparent);">差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+          </div>
+          
+          
+          <div class="event-body">竹田恒泰は「たかじんのそこまで言って委員会」（読売テレビ）で、在日コリアンが通名（日本人名）に変えることで犯罪歴や金融関係の経歴を消し、新たな犯罪ができるという趣旨の発言をした。通名変更で犯罪歴等が消えるという内容は事実に反しており、コリアNGOセンター等の抗議を受け読売テレビが番組冒頭で謝罪した。竹田はツイッターで「事実を述べただけ」と反論し、発言自体の撤回・謝罪はしていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-07-14
+</footer>
+
+<script>
+let currentSort = 'date';
+function sortBy(mode) {
+  if (currentSort === mode) { mode = 'date'; }
+  currentSort = mode;
+  const timeline = document.querySelector('.timeline');
+  const items = Array.from(timeline.querySelectorAll(':scope > .event'));
+  if (mode === 'buzz') {
+    items.sort((a, b) => +b.dataset.buzz - +a.dataset.buzz);
+  } else if (mode === 'amount') {
+    items.sort((a, b) => +b.dataset.amount - +a.dataset.amount);
+  } else {
+    items.sort((a, b) => +b.dataset.sortKey - +a.dataset.sortKey);
+  }
+  items.forEach(e => timeline.appendChild(e));
+  
+  
+}
+</script>
+
+</body>
+</html>
