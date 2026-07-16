@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マスクがペンシルベニア州で有権者に100万ドル抽選配布し選挙法違反を指摘された — 誰が何をしたか覚えていよう</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+    --accent:  #e25555;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a[target="_blank"] { color: #6ab0f5; text-decoration: underline; }
+  a[target="_blank"]:hover { opacity: 0.8; }
+
+  /* ── Header ── */
+  header {
+    position: relative;
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+  }
+
+  .obsidian-link {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 0.72rem;
+    color: var(--muted);
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .obsidian-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-nav {
+    display: flex;
+    gap: 16px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .header-nav a:hover { color: var(--text); }
+  .header-nav .sep { color: var(--border); }
+
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .event-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  
+
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Body ── */
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .section { margin-bottom: 48px; }
+
+  .section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .body-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    white-space: pre-line;
+  }
+
+  /* ── Sources ── */
+  .source-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .source-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .source-card:hover { background: #20202e; }
+
+  .source-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .source-title a:hover { opacity: 0.8; }
+  .source-title .ext-icon { font-size: 0.7rem; margin-left: 4px; opacity: 0.7; }
+
+  .source-meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .source-desc {
+    font-size: 0.8rem;
+    color: #aaaabc;
+    line-height: 1.6;
+  }
+
+  /* ── Related events ── */
+  .related-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .related-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--rel-color, #555);
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: #20202e; }
+
+  .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
+  .related-right { flex: 1; }
+  .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
+  .status-badge-sm .status-dot { width: 6px; height: 6px; }
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="header-nav">
+    
+    <a href="../people/elon-musk.html">← イーロン・マスク</a>
+    
+    
+  </div>
+  <div class="title-row">
+    <h1>マスクがペンシルベニア州で有権者に100万ドル抽選配布し選挙法違反を指摘された</h1>
+    
+    
+    <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+      <span class="status-dot" style="background: #e25555"></span>未解決
+    </span>
+    
+  </div>
+  <div class="tags">
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+    
+    
+    <span class="tag" style="background: color-mix(in srgb, #ff7043 18%, transparent); color: #ff7043; border: 1px solid color-mix(in srgb, #ff7043 40%, transparent);">脱法行為</span>
+    
+  </div>
+  <div class="event-date">2024年10月19日</div>
+  
+</header>
+
+<main>
+
+  
+  <div class="section">
+    <div class="body-text">イーロン・マスクは2024年10月19日、ペンシルベニア州など激戦7州の登録有権者を対象に、憲法修正第1・第2条支持の嘆願書に署名した者の中から毎日1人を無作為に選び100万ドルを贈るキャンペーンを開始した。有権者登録・投票への金銭供与を禁じる連邦法違反の疑いが専門家から指摘され、フィラデルフィア市検察は違法な宝くじだとして中止を求めたが、州裁判所は継続を認め、企画は大統領選当日の11月5日まで続けられた。</div>
+  </div>
+  
+
+  
+  <div class="section">
+    <div class="section-title">出典</div>
+    <div class="source-list">
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.cnn.co.jp/tech/35225140.html" target="_blank" rel="noopener">マスク氏、激戦州の登録有権者に「毎日１億５千万円」配る　違法性の指摘も<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          CNN
+           &nbsp;·&nbsp; 
+          2024-10-21
+        </div>
+        
+        <div class="source-desc">イーロン・マスクが2024年米大統領選の激戦7州の登録有権者を対象に、憲法修正第1・第2条支持の嘆願書署名者から毎日1人を無作為に選び100万ドルを贈るキャンペーンを開始し、選挙法違反の疑いが指摘されたことを伝える記事。</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.cnn.co.jp/usa/35225699.html" target="_blank" rel="noopener">有権者に１００万ドル配るイーロン・マスク氏の「懸賞」、裁判所が継続認める<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          CNN
+           &nbsp;·&nbsp; 
+          2024-11-05
+        </div>
+        
+        <div class="source-desc">ペンシルベニア州検察が違法な宝くじだとして中止を求めていたイーロン・マスクの100万ドル抽選企画について、同州裁判所が11月4日に継続を認めたことを伝える記事。</div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+
+  
+  <div class="section">
+    <div class="section-title">類似事件</div>
+    <div class="related-list">
+      
+      <a class="related-card" href="musk-spacex-flight-attendant-harassment-settlement.html" style="--rel-color: #e25555">
+        <div class="related-date">2018年1月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">イーロン・マスクがSpaceX元客室乗務員へのセクハラ疑惑で25万ドルの和解金を支払う</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #f06292 18%, transparent); color: #f06292; border: 1px solid color-mix(in srgb, #f06292 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">セクハラ</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">地位濫用</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="musk-pedo-guy-unsworth-defamation-lawsuit.html" style="--rel-color: #e2a855">
+        <div class="related-date">2018年7月15日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">マスクがタイ洞窟救助ダイバーを「ペド野郎」と中傷し名誉毀損訴訟に発展</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">根拠不明発言</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="musk-paul-pelosi-attack-conspiracy-tweet.html" style="--rel-color: #e2a855">
+        <div class="related-date">2022年10月30日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">マスクがポール・ペロシ襲撃事件について根拠のない陰謀論をXに投稿</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="musk-x-trust-safety-layoffs-hate-speech-surge.html" style="--rel-color: #e25555">
+        <div class="related-date">2022年11月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">イーロン・マスクが信頼安全チームを大量解雇しX上のヘイト対応が悪化した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="musk-x-csam-team-cuts.html" style="--rel-color: #e25555">
+        <div class="related-date">2022年11月</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">イーロン・マスクが児童性的虐待対策を最優先と述べた直後に担当チームを半減させた</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">矛盾発言</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="musk-twitter-mass-layoffs-severance-lawsuit.html" style="--rel-color: #e25555">
+        <div class="related-date">2022年11月4日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">イーロン・マスクがTwitter買収直後に大量解雇し退職金未払いで提訴される</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="musk-x-accessibility-team-layoffs.html" style="--rel-color: #e25555">
+        <div class="related-date">2022年11月4日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">イーロン・マスクがXのアクセシビリティチームを解体し障害者ユーザーに悪影響が出た</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">障害者差別</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="musk-x-twitter-blue-eli-lilly-impersonation.html" style="--rel-color: #e2a855">
+        <div class="related-date">2022年11月10日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">イーロン・マスクが有料認証バッジ導入でなりすましを招きEli Lilly株価が下落した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">メタクソ化</span>
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
+</main>
+
+<footer>
+  最終更新: 2026-07-17
+</footer>
+
+</body>
+</html>
