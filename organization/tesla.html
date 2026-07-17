@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesla 行動・事件 年表</title>
+<style>
+  :root {
+    --bg:      #0f0f14;
+    --surface: #1a1a24;
+    --border:  #2a2a3a;
+    --text:    #e8e8f0;
+    --muted:   #888899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  header {
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, #000a18 0%, #0f0f14 100%);
+  }
+
+  .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+  header h1 .subtitle { color: var(--muted); font-weight: 400; }
+  header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 6px; top: 10px; bottom: 10px;
+    width: 2px; background: var(--border);
+  }
+
+  .event {
+    display: block;
+    position: relative; margin-bottom: 20px; padding: 14px 16px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
+  }
+  .event:hover { background: #20202e; }
+  .event::before {
+    content: ''; position: absolute; left: -22px; top: 18px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent, #555); border: 2px solid var(--bg);
+  }
+
+  .event-row { display: flex; align-items: flex-start; gap: 14px; }
+  .event-main { flex: 1; min-width: 0; }
+  .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: #aaaabc; line-height: 1.75; white-space: pre-line; }
+  .event-status { flex-shrink: 0; }
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.66rem; font-weight: 700; padding: 4px 11px;
+    border-radius: 999px; white-space: nowrap;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+  
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-nav"><a href="./">← 団体一覧へ戻る</a></div>
+  <h1>Tesla <span class="subtitle">行動・事件 年表</span></h1>
+  <div class="meta">収録件数: 2 件</div>
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>根拠不明発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>利権・癒着
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>金銭問題
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../case/tesla-optimus-remote-operation-demo-controversy.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20241021">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年10月21日</span>
+            <span class="event-title">テスラの人型ロボットOptimusのデモが遠隔操作によるものだったと判明</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+          </div>
+          
+          <div class="event-body">2024年10月10日、テスラは自社イベントで人型ロボット「Optimus」の最新デモを披露し、ロボットがダンスや接客、来場者との会話をこなす様子を見せた。しかし複数の報道機関の取材により、これらの動作の多くが自律動作ではなく人間の遠隔操作によるものだったことが判明した。
+投資家やアナリストからは、自律型ロボットであるかのように演出したデモについて「不誠実」「誤解を招く」との批判が上がった。マスクには過去にも実現しなかった約束を誇張して発表してきた経緯があり、疑念が増幅された。
+テスラ側や擁護的な立場のエヌビディア幹部は、遠隔操作自体にも高度な技術が必要であり将来の自律化への一歩だと説明したが、自律動作であるかのように見せた演出手法への批判は解消されなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../case/tesla-musk-56-billion-pay-package-voided.html" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240130">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年1月30日</span>
+            <span class="event-title">テスラのマスクへの560億ドル報酬パッケージがデラウェア州裁判所により無効判決を受ける</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+          </div>
+          
+          <div class="event-body">2018年にテスラ取締役会が承認したイーロン・マスクへの株式報酬パッケージ（当初評価額約560億ドル）について、デラウェア州衡平法裁判所のキャスリーン・マコーミック判事は2024年1月30日、株主に対する適切な開示がなく取締役会に利益相反があったとして無効と判断した。判事はマスクと取締役会の関係が近すぎ、報酬プランが公正であることを証明する責務を果たせていないと指摘した。
+テスラは2024年6月の株主総会で報酬案を再承認したが、マコーミック判事は同年12月2日、株主の再承認後も懸念は払拭されないとして無効判断を維持し、「株主過半数の承認が株主利益を意味するわけではない」と述べた。テスラ側はこれを不服として上訴した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  最終更新: 2026-07-17
+</footer>
+
+
+
+</body>
+</html>
