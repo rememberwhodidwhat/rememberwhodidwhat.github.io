@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>誰が何をしたか覚えていよう</title>
+  <link>https://rememberwhodidwhat.github.io/</link>
+  <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
+  <language>ja</language>
+  <lastBuildDate>Sat, 18 Jul 2026 09:43:28 +0900</lastBuildDate>
+  <item>
+    <title>内部告発者フランシス・ハウゲンの主張にザッカーバーグが反論</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-haugen-whistleblower-denial.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-haugen-whistleblower-denial.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>元社員フランシス・ハウゲンが大量の内部文書を持ち出し、2021年10月5日に米上院で証言した。Instagramが10代女性のメンタルヘルスや体イメージを悪化させると社内調査で判明していたにもかかわらず、フェイスブックが自社の利益をユーザーの安全より優先し必要な改革を怠っていたと告発した。
+ザッカーバーグは社内投稿で「故意に危険なコンテンツを配信しているとする主張は全く非論理的だ」と述べ、内部調査結果の存在を踏まえた具体的反証を示さないまま告発内容を否定した。
+フェイスブック側はハウゲン氏が児童安全に直接携わっていないと反論し、双方の主張は対立したままとなった。（発生日: 2021年10月7日）</description>
+    <category>メタクソ化</category>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>ザッカーバーグ率いるMetaのAIチャットボットが未成年と官能的会話を許容する内部規定が発覚</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-meta-ai-chatbot-minors-sensual-content.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-meta-ai-chatbot-minors-sensual-content.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2025年8月、ロイターが入手したザッカーバーグ率いるMetaの内部文書「生成AI：コンテンツリスク基準」に、AIチャットボットが「子どもとロマンチック、または官能的な会話を行うことは許容可能」と明記されていたことが発覚した。
+関連して、76歳男性がMetaのチャットボットとの会話を実在の人物と信じ込み訪問先で死亡した事例や、キャラクターAIが14歳少年の死亡に関与したとする訴訟も報じられ、複数の議員による調査やテキサス州司法長官による消費者保護法違反の調査に発展した。
+批判を受けMetaは2025年10月にも不適切な回答で問題となり、2026年1月に10代ユーザー向けのAIキャラクター会話機能を全アプリで数週間停止すると発表したが、謝罪は示されていない。（発生日: 2025年8月14日）</description>
+    <category>セクハラ</category>
+  </item>
+  <item>
+    <title>ザッカーバーグ率いるFacebookが未成年含むユーザーに金銭を払いスパイアプリで個人情報を収集</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-facebook-research-app.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-facebook-research-app.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>ザッカーバーグが率いるFacebookは過去3年間、13〜35歳のユーザー（13歳の未成年を含む）に月額20ドルを支払い、「Facebook Research」というアプリをインストールさせていたことが2019年1月に発覚した。
+このアプリはルート証明書やVPN機能により、暗号化通信を含むブラウザ履歴・メッセージ・購買行動など端末内のほぼ全データを収集していた。社内利用限定のApple Developer Enterprise Programを消費者向け配布に流用しており、Appleとの合意に違反する形で規約の抜け穴を利用していた。
+発覚後、Appleは同プログラムへのFacebookのアクセスを無効化し、Facebookは謝罪のないままiOS版アプリの停止を発表した。（発生日: 2019年1月29日）</description>
+    <category>脱法行為</category>
+  </item>
+  <item>
+    <title>ザッカーバーグが上院公聴会で「血で手が汚れている」と非難され児童被害者家族に謝罪</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-senate-hearing-blood-on-hands-apology.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-senate-hearing-blood-on-hands-apology.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2024年1月31日、SNSでの児童安全問題に関する米上院司法委員会の公聴会にMeta・X・TikTok・Snap・Discordの5社CEOが約4年ぶりに出席した。
+リンゼー・グラム議員はザッカーバーグらに対し「あなた方の手は血に染まっている。あなた方の商品が人を殺している」と非難し、SNS上の児童性被害や若者の自殺と各社製品の関連を追及した。
+ザッカーバーグは立ち上がって会場にいた被害者家族に向き直り、「皆さんが経験したすべてのことについて申し訳なく思っている」「私たちのシステムがこの問題に対処できなかったことについて謝罪する」と述べたが、具体的な製品変更や賠償には言及しなかった。（発生日: 2024年1月31日）</description>
+    <category>致死</category>
+  </item>
+  <item>
+    <title>ザッカーバーグがフェイクニュースの選挙への影響を「ふざけている」と否定</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-fake-news-crazy-idea.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-fake-news-crazy-idea.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2016年米大統領選でトランプが当選した2日後の社内会議で、ザッカーバーグはFacebook上のフェイクニュースが選挙結果に影響したという見方を「ふざけてると思う」と述べ、根拠を示さないまま否定した。
+ソーシャルメディアの影響力よりリアルな世界の影響力の方が大きいと主張したが、データの裏付けは示されなかった。
+この発言は社内でも「説得力のない自己保身」と受け止められ、後にケンブリッジ・アナリティカによる大規模な個人情報不正利用と選挙工作が発覚したことで説得力を失った。（発生日: 2016年11月10日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>ザッカーバーグがファクトチェック廃止とトランプ接近を発表</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-fact-check-abolition-trump-alignment.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-fact-check-abolition-trump-alignment.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2025年1月7日、ザッカーバーグは動画声明で米国における第三者ファクトチェック制度の廃止と、X型「コミュニティノート」への移行を発表した。「多くの検閲と誤りがあった」と述べ、移民・性自認・性別など政治的テーマの投稿制限も撤廃した。
+この方針転換は、トランプ新政権への急接近と時を同じくして行われた。ザッカーバーグはトランプ氏の大統領就任式基金へ100万ドルを寄付し、元英副首相ニック・クレッグ氏に代わり共和党系のジョエル・カプラン氏を渉外担当幹部に据え、UFC CEOダナ・ホワイト氏を取締役に起用するなど人事も共和党寄りに転換した。
+ファクトチェック団体からは、方針転換が政治的圧力への迎合であり利用者の利益を損なうとの批判が上がっている。（発生日: 2025年1月7日）</description>
+    <category>利権・癒着</category>
+  </item>
+  <item>
+    <title>ザッカーバーグが「男性的エネルギーは良いもの」と発言し企業文化の多様性推進を批判</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-masculine-energy-comment.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-masculine-energy-comment.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2025年1月10日配信のジョー・ローガンのポッドキャストで、ザッカーバーグは「男性的エネルギーは良いものだ」「企業文化はそこから離れようとしていたと思う」と発言した。
+女性の成功を望むとしつつも、多様性・公平性・包摂性（DE&amp;I）を推進する取り組みは「いつも行き過ぎてしまう」と述べ、「男性的なものを『有害』だと決めつけること」への不満を表明した。
+この発言は、トランプ次期大統領への接近やMetaのファクトチェック廃止・DEI施策撤廃と時を同じくして行われ、多様性促進の取り組みに批判的な政治潮流への迎合として報じられた。（発生日: 2025年1月10日）</description>
+    <category>女性差別</category>
+  </item>
+  <item>
+    <title>ケンブリッジ・アナリティカ情報流出問題での議会証言・謝罪</title>
+    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-cambridge-analytica-testimony.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-cambridge-analytica-testimony.html</guid>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
+    <description>英データ分析会社ケンブリッジ・アナリティカが、2016年米大統領選に絡み最大8700万人分のFacebookユーザーの個人情報を不正に取得・利用していたことが発覚した。
+2018年4月10日・11日、ザッカーバーグCEOは米議会の公聴会に出席し、「十分な防止策を講じなかったことは明らかだ」「私の過ちだ。申し訳ない」と謝罪した。
+事業運営の抜本的な見直しやサービス停止などの是正措置は示されず、謝罪と再発防止策の説明にとどまった。（発生日: 2018年4月10日）</description>
+    <category>違法行為</category>
+  </item>
+  <item>
+    <title>百田尚樹の著書『殉愛』が複数の名誉毀損訴訟で敗訴が確定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-junai-defamation-lawsuits.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-junai-defamation-lawsuits.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>作家の百田尚樹氏は2014年、やしきたかじんの最期を描いたとする著書『殉愛』（幻冬舎）を出版した。同書の記述を巡り、やしきたかじんの長女が起こした訴訟では、東京地裁が2016年7月に6か所の記述を「事実に反し、プライバシー侵害及び名誉毀損」と認定して330万円の賠償を命じ、東京高裁がさらに1か所を追加認定して365万円に引き上げ、2017年12月に最高裁で確定した。また、たかじんの元マネージャーが起こした別訴訟でも、東京地裁は2018年11月28日、書籍内14か所の記述を名誉毀損と認定し275万円の賠償を命じた。百田氏・幻冬舎側はいずれの判決についても謝罪や記述の全面撤回は行っていない。（発生日: 2018年11月28日）</description>
+    <category>違法行為</category>
+  </item>
+  <item>
+    <title>百田尚樹の著書『日本国紀』がWikipedia等からの無断転載疑惑を持たれた</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-nihonkokuki-plagiarism-allegations.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-nihonkokuki-plagiarism-allegations.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>百田尚樹氏は2018年11月12日、歴史書『日本国紀』（幻冬舎）を刊行した。発売直後の同年11月17日・20日、Webメディア「リテラ」がWikipediaや新聞記事からの無断転載疑いを報じ、毎日新聞も複数項目で「極めて近い表現」があると指摘した。百田氏はTwitterでWikipediaは「大量の資料」の一つに過ぎないと主張する一方、同月出演した『虎ノ門ニュース』では「Wikipediaから引用したもんとか、借りたもんとかある」と引用・借用を事実上認めた。しかし2019年には一転して疑惑を完全に否定した。ネット上の指摘後、告知のないまま重版で複数の誤りが訂正されている。（発生日: 2018年11月17日）</description>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>百田尚樹が鳥取県の人口を揶揄する発言をし謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-tottori-population-mockery-apology.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-tottori-population-mockery-apology.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>自民党総裁選で石破茂氏が新総裁に選出されたことを受け、日本保守党代表の百田尚樹氏は2024年9月、自身のYouTubeチャンネルで「鳥取県なんか人口、何人おんねんっちゅう話でしょ？」「そっから選ばれとるヤツが日本の総理大臣になんねん。もういいかげんにせえよ」と、鳥取県の人口の少なさを理由に石破氏を揶揄した。SNS上で「地方差別だ」との批判が相次ぎ、百田氏はX（旧Twitter）に「はっきり言って失言やね」「小選挙区制を否定しかねない発言であり、鳥取県をバカにしたと見られても仕方がない。鳥取県の皆様に謝罪します」と投稿し謝罪した。発言の撤回は確認されていない。（発生日: 2024年9月）</description>
+    <category>品格欠如</category>
+  </item>
+  <item>
+    <title>百田尚樹が静岡講演で「南京大虐殺はなく従軍慰安婦はうそ」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-shizuoka-lecture-nanjing-comfort-women-denial.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-shizuoka-lecture-nanjing-comfort-women-denial.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>NHK経営委員を務めていた作家の百田尚樹氏は2014年6月18日、静岡青年会議所主催の講演会後の質疑応答で、「南京大虐殺はなく、従軍慰安婦はうそ」と発言した。同じ場で日教組についても「何十年間も、純粋無垢な子どもたちに贖罪意識を教え込んでいる」「日教組は本当に日本のがん」と述べた。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2014年6月18日）</description>
+    <category>歴史修正主義</category>
+    <category>歴史認識</category>
+  </item>
+  <item>
+    <title>百田尚樹が那覇街頭演説で沖縄戦の県民犠牲者数を巡り誤情報を発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-war-casualties-misinformation.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-war-casualties-misinformation.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本保守党代表の百田尚樹参院議員は2025年10月4日、那覇市の県庁前で街頭演説を行い、沖縄戦の一般県民戦没者について「日本海軍と日本陸軍が全滅した6月23日以降に大半の人が亡くなっている」と述べ、「日本軍は沖縄の人たちを守るために頑張った」との持論を展開した。しかし「平和の礎」の刻銘データによれば、組織的戦闘が終結する6月23日までに亡くなった沖縄県出身者は約9万1千人にのぼり、戦没者数は6月20日に最多となっている。沖縄戦研究者は百田氏の発言を「事実に基づかない話」と批判した。百田氏本人からの訂正・謝罪は確認されていない。（発生日: 2025年10月4日）</description>
+    <category>歴史修正主義</category>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>百田尚樹が自民党「文化芸術懇話会」で沖縄地元二紙を「潰さなあかん」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-newspapers-crush-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-newspapers-crush-remark.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>作家の百田尚樹氏は2015年6月25日、自民党若手議員の勉強会「文化芸術懇話会」に講師として招かれ、沖縄地元二紙（沖縄タイムス・琉球新報）について「本当に沖縄の二つの新聞社は絶対つぶさなあかん」と発言した。共同通信の取材に対し百田氏は「オフレコに近い発言で、冗談として言った」「政治的な圧力でつぶせという趣旨ではない」と釈明した。自民党執行部は同席議員の懲罰処分を行い、党として遺憾の意を示した。（発生日: 2015年6月25日）</description>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>百田尚樹が自民党「文化芸術懇話会」で普天間基地周辺住民に「そこを選んで住んだのは誰だ」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-futenma-residents-self-blame-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-futenma-residents-self-blame-remark.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>作家の百田尚樹氏は2015年6月25日、自民党若手議員の勉強会「文化芸術懇話会」の講演で、米軍普天間基地の騒音問題について「うるさいのはわかるが、そこを選んで住んだのは誰だと言いたい」と発言し、基地周辺住民が騒音被害を自ら選択したかのように示唆した。同発言について、百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2015年6月25日）</description>
+    <category>弱者攻撃</category>
+  </item>
+  <item>
+    <title>百田尚樹が田母神俊雄氏の都知事選応援演説で南京大虐殺・東京裁判を否定する発言をした</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-tamogami-rally-nanjing-denial.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-tamogami-rally-nanjing-denial.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>NHK経営委員を務めていた作家の百田尚樹氏は2014年2月4日、東京都知事選候補の田母神俊雄氏の応援街頭演説で、南京事件について日本兵個人の犯罪はあったものの日本軍による「大虐殺」はなかったとする主張を展開し、東京大空襲・原爆投下を「大虐殺だった」としたうえで「東京裁判はそれをごまかすための裁判だった」と主張した。田母神氏以外の候補については「人間のくずみたいなもの」とも述べた。菅義偉官房長官は「個人的な演説は放送法に違反しない」としたが、公共放送の政治的中立性を疑わせる事態として批判を呼んだ。批判に対し百田氏はTwitterで「大丈夫、ほっとけ」と応じ、謝罪や撤回は行っていない。（発生日: 2014年2月4日）</description>
+    <category>歴史修正主義</category>
+    <category>歴史認識</category>
+  </item>
+  <item>
+    <title>百田尚樹が生活保護受給者への新型コロナ給付金支給に反対する発言をした</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-welfare-recipients-covid-payment-opposition.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-welfare-recipients-covid-payment-opposition.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>作家の百田尚樹氏は2020年3月31日、Twitterで新型コロナウイルス対応の国民への現金給付案に言及し、「炎上覚悟で言う」と前置きしたうえで「生活保護の人に給付金を出すのは反対！」と主張した。理由として「彼らは今回の騒動で１円も収入が減ってないのだから」と説明した。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2020年3月31日）</description>
+    <category>弱者攻撃</category>
+  </item>
+  <item>
+    <title>百田尚樹が名護市講演で取材記者を名指しし「娘さんは慰み者になる」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-nago-lecture-reporter-threat-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-nago-lecture-reporter-threat-remark.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>作家の百田尚樹氏は2017年10月27日、沖縄県名護市の数久田体育館で講演し、基地反対運動について参加者の半分は中国人・韓国人だとするデマを前提に「中核は中国の工作員だ」などと主張した。講演を取材していた記者を名指しし「悪魔に魂を売った記者」と評したうえで、「中国が琉球を乗っ取ったら、娘さんは中国人の慰み者になります」と発言した。沖縄県マスコミ労働組合協議会は同年11月21日、「報道活動への露骨な脅しであり圧力」として抗議声明を発表し発言の撤回を求めたが、百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2017年10月27日）</description>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>百田尚樹が「韓国と戦争したい、日本刀で真っ先に斬りに行く」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-korea-war-katana-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-korea-war-katana-remark.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本保守党代表（当時は結党前）の百田尚樹氏は2023年、自身のニコニコ生放送番組で「韓国人はおかしい。戦争したいね。僕はもう韓国と戦うためなら銃を持つ。先祖伝来の日本刀を抜く時が来たなと思ってね。切り込み隊長として真っ先に切りに行くで」と発言した。「よく『韓国人だっていい人はいる』と言うが、いい人なんておるかいな」とも述べた。2025年の参院選当選後、この過去発言を韓国メディアが「極右の妄言」として大きく報じた。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2023年）</description>
+    <category>排外主義</category>
+    <category>戦争容認</category>
+  </item>
+  <item>
+    <title>百田尚樹が「女性はセクハラされても目瞑っとけばええ」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-sexual-harassment-close-eyes-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-sexual-harassment-close-eyes-remark.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本保守党代表の百田尚樹氏は2025年9月30日、自身が運営するYouTube番組「ニュースあさ8時！」で、前橋市長のラブホテル利用スキャンダルについて議論する中、「女性の方はね、セクハラされても目瞑っとけばええけど、男はそういうわけにはいきませんからね」と発言した。共同MCの有本香氏は即座に「女がセクハラされて目を瞑っときゃええとか、そんな馬鹿なことあるわけないでしょ」と強く異議を唱え、百田氏の発言を制止した。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2025年9月30日）</description>
+    <category>女性差別</category>
+    <category>セカンドレイプ</category>
+  </item>
+  <item>
+    <title>百田尚樹が「30超えたら子宮摘出」と発言し撤回・謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-uterus-removal-remark-retraction.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-uterus-removal-remark-retraction.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本保守党代表の百田尚樹氏は2024年11月8日配信のYouTube番組で、少子化対策を巡る議論の中で「これはSFです」と前置きしたうえで「18歳を超えたら大学に行かせない」「25歳を超えて独身の女性は結婚できないようにする」「30超えたら子宮摘出とか」と発言した。批判が広がったことを受け、百田氏は11月10日、名古屋市での街頭演説で「例えがきつすぎた。聞いていた人が不快に思う」と述べ、発言の撤回と謝罪を表明した。党共同代表の河村たかし氏も同席し陳謝した。（発生日: 2024年11月8日）</description>
+    <category>女性差別</category>
+  </item>
+  <item>
+    <title>百田尚樹がNHK経営委員在任中にバヌアツ・ナウルを「くそ貧乏長屋」と揶揄した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-vanuatu-nauru-mockery.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-vanuatu-nauru-mockery.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>NHK経営委員を務めていた作家の百田尚樹氏は2014年5月24日、自民党岐阜県連の定期大会に講師として出席し、軍隊の必要性を説く文脈で、軍を持たないバヌアツ・ナウルを名指しし「家に例えると、くそ貧乏長屋で、泥棒も入らない」と発言した。公共放送の経営に関わるNHK経営委員という立場での他国を揶揄する発言として問題視され、衆議院議員から政府の見解を問う質問主意書・再質問主意書が提出された。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2014年5月24日）</description>
+    <category>外交問題</category>
+  </item>
+  <item>
+    <title>マスクが英国極右活動家トミー・ロビンソンを支持しスターマー首相を投獄すべきと主張した</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-tommy-robinson-support-starmer-imprison.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-tommy-robinson-support-starmer-imprison.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2025年1月、法廷侮辱罪で服役中の英国極右活動家トミー・ロビンソン（本名スティーブン・ヤクスリー＝レノン）をテーマにしたドキュメンタリーをXに投稿し「Free Tommy Robinson!」と釈放を訴えた。同時期にキア・スターマー英首相を批判し辞任・起訴を求め、野党リフォームUKのファラージ党首がロビンソン支持に慎重な姿勢を示すと党首交代を要求した。（発生日: 2025年1月3日）</description>
+    <category>外交問題</category>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>マスクが英国のグルーミング・ギャング事件で英政府を根拠不明のまま隠蔽と攻撃し外交問題化した</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-uk-grooming-gang-coverup-accusation.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-uk-grooming-gang-coverup-accusation.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2025年1月3日、Xで「輪姦の対象にされた何十万人もの英国の少女たちに正義を」と投稿し、検事総長時代のキア・スターマー英首相が「英国の国家的レイプに6年間加担した」と主張して辞任と起訴を求めた。具体的根拠を示さないまま同様の主張を繰り返し、英国政府は「嘘や誤解を広めている」と反論するなど外交問題化した。（発生日: 2025年1月3日）</description>
+    <category>根拠不明発言</category>
+    <category>外交問題</category>
+  </item>
+  <item>
+    <title>マスクが自家用機追跡アカウント「ElonJet」を新規約制定し急遽凍結</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-elonjet-account-suspended-new-policy.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-elonjet-account-suspended-new-policy.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2022年12月14日、Twitterはマスク氏の自家用ジェットのリアルタイム位置情報を公開していたアカウント「@ElonJet」と、作者のジャック・スウィーニー氏のアカウントを凍結した。凍結と前後してTwitterはプライバシーポリシーを急遽更新し、「個人のリアルタイム位置情報」の共有を禁止する規定を新設、報道目的の例外も認めないとした。
+マスク氏は事前にスウィーニー氏へ5000ドルでのアカウント削除を持ちかけて拒否されており、自身に不都合な特定アカウントを狙い撃つ形で規約を新設・適用したとの批判を招いた。（発生日: 2022年12月14日）</description>
+    <category>地位濫用</category>
+  </item>
+  <item>
+    <title>マスクがポール・ペロシ襲撃事件について根拠のない陰謀論をXに投稿</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-paul-pelosi-attack-conspiracy-tweet.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-paul-pelosi-attack-conspiracy-tweet.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2022年10月28日未明、ナンシー・ペロシ下院議長の自宅に侵入した男が夫のポール・ペロシ氏（82歳）を襲撃する事件が発生した。買収直後のTwitterのオーナーとなったイーロン・マスクは、ヒラリー・クリントンの投稿への返信として、事件の背景に不審な点があるとするフェイクニュースサイト「Santa Monica Observer」の根拠のない記事をリンク付きで投稿した。
+当該記事はポール・ペロシが男娼との諍いで襲撃されたとする虚偽の内容で、ファクトチェック機関からは「詐欺師のサイト」と評価されているものだった。
+投稿は約24,000件のリツイート・86,000件のいいねを集めた後、数時間で削除されたが、謝罪はなく、買収後のTwitterのコンテンツモデレーションに疑問の声が上がった。（発生日: 2022年10月30日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>マスクがペンシルベニア州で有権者に100万ドル抽選配布し選挙法違反を指摘された</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-pennsylvania-million-dollar-giveaway.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-pennsylvania-million-dollar-giveaway.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2024年10月19日、ペンシルベニア州など激戦7州の登録有権者を対象に、憲法修正第1・第2条支持の嘆願書に署名した者の中から毎日1人を無作為に選び100万ドルを贈るキャンペーンを開始した。有権者登録・投票への金銭供与を禁じる連邦法違反の疑いが専門家から指摘され、フィラデルフィア市検察は違法な宝くじだとして中止を求めたが、州裁判所は継続を認め、企画は大統領選当日の11月5日まで続けられた。（発生日: 2024年10月19日）</description>
+    <category>選挙工作</category>
+    <category>脱法行為</category>
+  </item>
+  <item>
+    <title>マスクがブラジル最高裁判事と対立しXが一時遮断される事態に発展した</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-brazil-x-ban-moraes-conflict.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-brazil-x-ban-moraes-conflict.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは、偽情報対策のためXに複数アカウントの停止を命じたブラジル最高裁のアレシャンドレ・デ・モラエス判事と対立し、判事を「判事のコスプレをした邪悪な独裁者」「ダース・ベイダー」などと繰り返し中傷した。モラエス判事がブラジル国内での法定代理人不在を理由にX停止を警告し、スペースX傘下スターリンクの国内資産も凍結される事態となり、2024年8月31日にブラジル国内でXへのアクセスが遮断された。（発生日: 2024年8月30日）</description>
+    <category>外交問題</category>
+  </item>
+  <item>
+    <title>マスクがドイツ極右政党AfDを公然と支持し選挙介入と国際的に批判された</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-afd-election-support-germany.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-afd-election-support-germany.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2024年12月にXで「ドイツを救えるのはAfDだけだ」と投稿し、2025年1月25日にはドイツ東部ハレで開かれた極右政党「ドイツのための選択肢（AfD）」の選挙集会にリモート登場して同党を「ドイツにとって最良の希望」と評した。2月23日のドイツ連邦議会選挙を前にしたこの支持表明は、ショルツ首相から「欧州全土で右派政治家に有利になるよう介入している。実に不快だ」と批判された。（発生日: 2025年1月25日）</description>
+    <category>外交問題</category>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>マスクがタイ洞窟救助ダイバーを「ペド野郎」と中傷し名誉毀損訴訟に発展</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-pedo-guy-unsworth-defamation-lawsuit.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-pedo-guy-unsworth-defamation-lawsuit.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2018年7月、タイの洞窟に閉じ込められた少年らの救出作戦をめぐり、英国人ダイバーのヴァーノン・アンズワース氏がイーロン・マスクによるミニ潜水艦の提案を「売名行為」と批判したところ、マスクはXで同氏を「pedo guy（ペド野郎）」と呼んで中傷した。
+アンズワース氏は同年9月、名誉毀損でマスクをロサンゼルスの裁判所に提訴し、1億9000万ドル（約206億円）の損害賠償を求めた。
+2019年12月、陪審は「激しい公開論争での非文字通りの侮辱」とするマスク側の主張を認め、1時間足らずの評議で原告の訴えを退けマスクが勝訴した。マスクは法廷で「カッとなって思わず投稿した」と釈明した。（発生日: 2018年7月15日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>マスクがX上の反ユダヤ的な大交代陰謀論投稿に同意し広告主が離脱</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-great-replacement-antisemitic-reply-advertiser-exodus.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-great-replacement-antisemitic-reply-advertiser-exodus.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2023年11月15日、イーロン・マスクはX上で「ユダヤ人コミュニティは白人に対して弁証法的な憎悪をプッシュしている」とする、いわゆる「大交代（グレート・リプレイスメント）」陰謀論に沿った投稿に対し「あなたは真実を述べた」と同意するリプライを送った。
+米政府はこの発言を反ユダヤ主義的なヘイトを助長する行為と非難し、IBM・Apple・Disney・Warner Bros. Discovery・NBCユニバーサル・Paramount・Lionsgateなど大手企業が相次いでXへの広告出稿を停止した。
+マスクは後に自身の投稿は「愚かだった」として事後に謝罪したが、投稿自体は撤回せず、広告主の離脱については監視団体を提訴すると発言し批判の姿勢を崩さなかった。（発生日: 2023年11月15日）</description>
+    <category>民族差別</category>
+    <category>ヘイト扇動</category>
+  </item>
+  <item>
+    <title>マスクがX上のリンクプレビュー表示を崩し外部サイトへのクリック率を低下させる</title>
+    <link>https://rememberwhodidwhat.github.io/case/twitter-x-link-preview-degraded-click-suppression.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/twitter-x-link-preview-degraded-click-suppression.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2023年、マスク氏率いるXは外部リンクを含む投稿のカード表示を変更し、従来表示されていた見出しを削除、大型画像とドメイン名のみの表示にした。ユーザーは投稿がリンクを含むことに気づきにくくなり、外部サイトへのクリック率が低下したとの指摘が相次いだ。
+この変更は外部サイトへの流出を減らし、X上のコンテンツ滞在時間や自社の長文投稿・ライブ配信機能の利用を優先させる狙いがあるのではないかとジャーナリストらに分析されている。（発生日: 2023年10月5日）</description>
+    <category>メタクソ化</category>
+  </item>
+  <item>
+    <title>マスクがTwitterをXに社名変更しブランド価値が大幅に毀損</title>
+    <link>https://rememberwhodidwhat.github.io/case/twitter-rebrand-to-x-brand-value-loss.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/twitter-rebrand-to-x-brand-value-loss.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2023年7月23日、マスク氏はTwitterのブランド名を「X」に変更すると発表し、青い鳥のロゴや「ツイート」関連用語を全て廃止する方針を示した。15年かけて築かれたTwitterのブランド価値は、マーケティング専門家の試算で40億〜200億ドル規模が失われたと評価された。
+「ツイートする」という言葉が日本語を含む世界の文化に定着していたこともあり、名称変更は既存のブランド認知をゼロから再構築せざるを得ない自己毀損的な経営判断だったと指摘されている。（発生日: 2023年7月23日）</description>
+    <category>メタクソ化</category>
+  </item>
+  <item>
+    <title>マスクがTwitter API有料化しサードパーティアプリ・研究者向けツール等が停止</title>
+    <link>https://rememberwhodidwhat.github.io/case/twitter-api-paywall-third-party-apps-shutdown.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/twitter-api-paywall-third-party-apps-shutdown.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>マスク氏率いるTwitterは2023年2月、これまで無料で提供していた外部開発者向けAPIアクセスを終了し、月額100ドルの「ベーシックアクセス」等の有料プランへの移行を発表した。同年3月29日に方針が正式実施されると、クライアントアプリ「feather」やツイート保存サービス「Twilog」、ツイート検索サービス「TwTimez」などサードパーティ製アプリが相次いで機能停止に追い込まれた。
+障害者支援ボットや研究者向けツールなど、収益目的でない公共性の高いサービスも同様にAPI遮断の影響を受け、代替手段のないまま停止した例が報告されている。（発生日: 2023年2月2日）</description>
+    <category>メタクソ化</category>
+  </item>
+  <item>
+    <title>マスクがNPR等公共放送に「政府系メディア」ラベルを付与し反発を受け撤回</title>
+    <link>https://rememberwhodidwhat.github.io/case/twitter-npr-pbs-state-affiliated-media-label-reversed.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/twitter-npr-pbs-state-affiliated-media-label-reversed.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2023年4月上旬、マスク氏率いるTwitterは米公共ラジオNPRのアカウントに「国家が管理するメディア（state-affiliated media）」ラベルを付与し、後に「政府出資メディア（government-funded media）」に変更した。同様のラベルはPBS・CBC・BBCにも付与された。NPRの連邦出資割合は年間予算の1％未満に過ぎず、編集の独立性を損なうものだとしてNPR・PBS・CBCが相次いでTwitter利用を停止する事態となった。
+反発を受け、Twitterは2023年4月21日に該当ラベルを全て撤回した。マスク氏はこの決定を伝記執筆者の助言によるものと説明したが、放送局側の信頼は回復せず謝罪もなかった。（発生日: 2023年4月12日）</description>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>マスクがElonJet報道記者らのアカウントを一斉凍結（Thursday Night Massacre）</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-mass-suspends-journalists-thursday-night-massacre.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-mass-suspends-journalists-thursday-night-massacre.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2022年12月15日、マスク氏はCNN・ワシントン・ポスト・ニューヨーク・タイムズなど複数の記者のTwitterアカウントを事前警告なく一斉凍結した。対象の多くは自家用機追跡アカウント「@ElonJet」凍結を報じた記者で、マスク氏は「暗殺の標的を示した」と主張したが根拠は示されなかった。
+複数の報道機関・人権団体・国連から非難を受け、マスク氏は16日夜に実施した自身のアンケート結果を理由に17日凍結を解除したが、謝罪はなく規定違反とされたツイートの削除を条件とした。この一連の出来事は「Thursday Night Massacre」と呼ばれる。（発生日: 2022年12月15日）</description>
+    <category>民主主義破壊</category>
+    <category>地位濫用</category>
+  </item>
+  <item>
+    <title>テスラの人型ロボットOptimusのデモが遠隔操作によるものだったと判明</title>
+    <link>https://rememberwhodidwhat.github.io/case/tesla-optimus-remote-operation-demo-controversy.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-optimus-remote-operation-demo-controversy.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2024年10月10日、テスラは自社イベントで人型ロボット「Optimus」の最新デモを披露し、ロボットがダンスや接客、来場者との会話をこなす様子を見せた。しかし複数の報道機関の取材により、これらの動作の多くが自律動作ではなく人間の遠隔操作によるものだったことが判明した。
+投資家やアナリストからは、自律型ロボットであるかのように演出したデモについて「不誠実」「誤解を招く」との批判が上がった。マスクには過去にも実現しなかった約束を誇張して発表してきた経緯があり、疑念が増幅された。
+テスラ側や擁護的な立場のエヌビディア幹部は、遠隔操作自体にも高度な技術が必要であり将来の自律化への一歩だと説明したが、自律動作であるかのように見せた演出手法への批判は解消されなかった。（発生日: 2024年10月21日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>テスラのマスクへの560億ドル報酬パッケージがデラウェア州裁判所により無効判決を受ける</title>
+    <link>https://rememberwhodidwhat.github.io/case/tesla-musk-56-billion-pay-package-voided.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-musk-56-billion-pay-package-voided.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2018年にテスラ取締役会が承認したイーロン・マスクへの株式報酬パッケージ（当初評価額約560億ドル）について、デラウェア州衡平法裁判所のキャスリーン・マコーミック判事は2024年1月30日、株主に対する適切な開示がなく取締役会に利益相反があったとして無効と判断した。判事はマスクと取締役会の関係が近すぎ、報酬プランが公正であることを証明する責務を果たせていないと指摘した。
+テスラは2024年6月の株主総会で報酬案を再承認したが、マコーミック判事は同年12月2日、株主の再承認後も懸念は払拭されないとして無効判断を維持し、「株主過半数の承認が株主利益を意味するわけではない」と述べた。テスラ側はこれを不服として上訴した。（発生日: 2024年1月30日）</description>
+    <category>利権・癒着</category>
+    <category>金銭問題</category>
+  </item>
+  <item>
+    <title>イーロン・マスク傘下のXで大規模障害が発生し世界中でユーザーがアクセス不能に</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-massive-global-outage-2025-03.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-massive-global-outage-2025-03.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2025年3月10日午前6時（米東部時間）ごろから、日本・米国・英国など世界規模でXにアクセスできない、投稿が読み込めないといった障害が断続的に発生した。不具合情報サイト「ダウンディテクター」には午前6時前で2万5千件超、午前10時ごろには約4万件の報告が寄せられた。
+イーロン・マスクは同日、「大規模なサイバー攻撃があった。大規模で連携している集団か国家、またはその両方が関与している」と主張し、FOXニュースのインタビューではIPアドレスの発信元が「ウクライナ地域」だったとも述べた。ただし具体的な証拠は示されず、セキュリティ専門家らはこの主張を裏付けていない。（発生日: 2025年3月10日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>イーロン・マスクのXが自殺予防のホットライン表示機能を削除したと報じられた</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-suicide-prevention-feature-removed.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-suicide-prevention-feature-removed.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>ロイターは2022年12月23日、Twitterが世界30カ国以上で提供していた自殺・自傷・性暴力に関連する検索時に相談窓口を優先表示する機能を削除したと報じ、オーナーであるイーロン・マスクの指示によるものと伝えた。マスクはこの報道を「間違い」「フェイクニュース」と否定したが、Twitterの信頼安全担当VPは「プロンプトを修正・改良するため一時的に削除した」と説明し、機能の実態は不透明なままとなった。（発生日: 2022年12月23日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>イーロン・マスクのDOGEが財務省決済システムへの異例のアクセス権を得てプライバシー上の懸念を招いた</title>
+    <link>https://rememberwhodidwhat.github.io/case/elon-musk-doge-treasury-payment-system-access-2025.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-doge-treasury-payment-system-access-2025.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクが率いる政府効率化省（DOGE）は2025年2月、米財務省から連邦政府の決済システム（税還付・社会保障給付・連邦職員給与等、年間数兆ドル規模の支払いデータを扱う機密性の高いシステム）への異例のアクセス権を得た。上院議員や政府職員労組から、政治的中立性の毀損や1974年プライバシー法違反のリスクが指摘され、複数州の司法長官が提訴した。2025年2月、連邦地裁は「回復不能な損害の恐れ」があるとしてアクセスの一時差し止めを命じた。（発生日: 2025年2月6日）</description>
+    <category>市民監視</category>
+    <category>地位濫用</category>
+  </item>
+  <item>
+    <title>イーロン・マスクが自身の投稿をアルゴリズムで優先表示させていたと内部告発される</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-algorithm-self-boost-whistleblower.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-algorithm-self-boost-whistleblower.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2023年2月12日のスーパーボウルで投稿した自身のツイートの再生回数が約910万回にとどまったことを問題視したイーロン・マスクは、Twitterのエンジニアらに対策を求めた。解雇を恐れたエンジニアチームは、マスクの全ツイートが「おすすめ」フィードの通常フィルターをバイパスし最上位に表示される特別なコードを展開した。
+この結果、2023年2月13日以降、Twitterの「おすすめ」タブがマスクのツイートやリプライで埋め尽くされる状態になった。米メディアPlatformerは元エンジニアの告発をもとに、マスクが「自分の全ツイートを他ユーザーより優先的に表示する特別なシステムを作らせた」と報じた。露見を受けマスクは2月14日、「アルゴリズムの調整を行う」と投稿した。（発生日: 2023年2月14日）</description>
+    <category>地位濫用</category>
+  </item>
+  <item>
+    <title>イーロン・マスクが永久凍結されていた極右・陰謀論アカウントを大量に復活させた</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-reinstates-banned-extremist-accounts.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-reinstates-banned-extremist-accounts.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2022年11月のTwitter買収後、ユーザーアンケートを経て永久凍結されていた多数のアカウントを復活させる方針を表明し、女性への性暴力を正当化する発言等で凍結されていたアンドリュー・テイトらのアカウントを復活させた。マスクは同時期、サンディフック銃撃事件の遺族への名誉毀損で有名な陰謀論者アレックス・ジョーンズについては「復活は考えていない」と明言していたが、2023年12月にはジョーンズのアカウントも復活させた。（発生日: 2022年11月19日）</description>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>イーロン・マスクが有料認証バッジ導入でなりすましを招きEli Lilly株価が下落した</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-twitter-blue-eli-lilly-impersonation.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-twitter-blue-eli-lilly-impersonation.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2022年11月、イーロン・マスクは月8ドルの有料サブスクリプション「Twitter Blue」加入者に本人確認なしで青い認証バッジを付与する制度を導入した。この制度を悪用し製薬大手Eli Lillyになりすましたアカウントが「インスリン無料化」を投稿し、同社株価は約4.5%下落し時価総額150億ドル超が失われた。混乱を受けTwitterは導入から数日でTwitter Blueの提供を一時停止した。（発生日: 2022年11月10日）</description>
+    <category>メタクソ化</category>
+  </item>
+  <item>
+    <title>イーロン・マスクが既存二大政党を批判し新党America Party設立を表明した</title>
+    <link>https://rememberwhodidwhat.github.io/case/elon-musk-america-party-announcement-2025-07.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-america-party-announcement-2025-07.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2025年7月5日、共和党・民主党の既存二大政党を「一党制」に等しいと批判し、新党「America Party」の設立を表明した。X上のアンケートで賛成が多数を占めたとして結成に踏み切り、2026年11月の米連邦議会選での候補者擁立を目指すとした。トランプ大統領の大型減税法案への反対を機にトランプ氏との対立が決裂したことが背景にあり、トランプ氏は新党構想を「ばかげている」と一蹴した。（発生日: 2025年7月5日）</description>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>イーロン・マスクが広告出稿停止企業に暴言を吐きGARMを提訴する</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-garm-lawsuit-advertiser-boycott.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-garm-lawsuit-advertiser-boycott.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクの反ユダヤ主義的な投稿をきっかけに、アップル・ディズニー・ワーナーなど100社以上がXへの広告出稿を停止した。2023年11月29日、ニューヨーク・タイムズ主催「DealBook Summit」に登壇したマスクは、広告出稿を停止した広告主について問われると「もし誰かが広告を盾に私を脅そうとしたら？　くたばれ（Go fuck yourself）」と発言し、繰り返した。会場には広告出稿を停止したディズニーのCEOボブ・アイガーも同席していた。
+2024年8月6日、X社は広告業界団体GARM（Global Alliance for Responsible Media）と加盟企業4社（CVS・ユニリーバ・マース・オーステッド）を反トラスト法違反で提訴し、広告主らが結託してXへの広告出稿を差し控えたと主張した。提訴を受け、GARMを運営する世界広告主連盟（WFA）は同年8月にGARMの活動を一時停止した。（発生日: 2023年11月29日）</description>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>イーロン・マスクが児童性的虐待対策を最優先と述べた直後に担当チームを半減させた</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-csam-team-cuts.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-csam-team-cuts.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2022年11月、「児童搾取の排除は最優先事項」とツイートしたが、その数日後、児童性的虐待素材（CSAM）対策チームが2022年初頭の約20人から10人未満に半減以上縮小されたと報じられた。Bloombergの報道によれば、シンガポールを含むアジア太平洋地域全体を担当する要員は1人のみとなっていたとされる。（発生日: 2022年11月）</description>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>イーロン・マスクが信頼安全チームを大量解雇しX上のヘイト対応が悪化した</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-trust-safety-layoffs-hate-speech-surge.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-trust-safety-layoffs-hate-speech-surge.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2022年10月のTwitter買収後、信頼安全（トラスト＆セーフティ）部門のエンジニアを279人から55人へ約8割削減するなど大規模な人員削減を行った。オーストラリアのeSafety委員会が2024年1月に公表した調査によると、削減後はヘイト関連投稿への対応時間が20%、憎悪のこもったダイレクトメッセージへの対応時間が70%遅くなったと報告された。Xは外部のトラスト＆セーフティ諮問組織も解散し、代替組織を設置する予定はないと同委員会に回答した。（発生日: 2022年11月）</description>
+    <category>メタクソ化</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがトランプ大統領との蜜月を解消しX上で相互に激しく非難し合った</title>
+    <link>https://rememberwhodidwhat.github.io/case/elon-musk-trump-public-feud-2025-06.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-trump-public-feud-2025-06.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2025年6月、トランプ大統領の大型歳出法案「1つの大きく美しい法案」を「ばらまき」と批判し議会共和党に成立阻止を呼びかけたことをきっかけに、それまで蜜月関係にあったトランプ大統領との対立を決定的にした。トランプはマスクを側近グループから外すと宣言し政府契約の解除を示唆、マスクは新党設立を仄めかしたうえ、トランプがジェフリー・エプスタインの未成年性的虐待に関与したことをほのめかす投稿をX上で行うなど、両者はX/Truth Social上で相互に激しい非難を応酬した。（発生日: 2025年6月5日）</description>
+    <category>品格欠如</category>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがX利用規約を変更しユーザー投稿を同意なくAI学習に利用可能にする</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-tos-change-ai-training-data.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-tos-change-ai-training-data.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスク率いるXは2023年9月29日付でプライバシーポリシーを改訂し、「収集した情報および公開されている情報を、機械学習または人工知能モデルのトレーニングに利用することがある」との条項を新たに明記した。オプトアウトの仕組みは初期設定では案内されず、ユーザーは既定で対象に含まれた。
+この変更は、マスクが同年7月に立ち上げたAI企業xAIの生成AI「Grok」の学習データ確保と軌を一にしていた。マスクは対象は公開投稿のみでダイレクトメッセージ等の非公開情報は含まれないと説明したが、ユーザー自身が投稿したコンテンツが本人の明示的な同意なくAI学習に利用される仕組みへの転換について、事前の周知や同意取得は行われなかった。（発生日: 2023年9月29日）</description>
+    <category>メタクソ化</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがXのブロック機能を弱体化させブロックした相手の公開投稿を閲覧可能にする</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-block-feature-weakened.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-block-feature-weakened.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2024年5月、Xのブロック機能の仕様変更を発表した。従来ブロックされたユーザーはプロフィール以外を閲覧できなかったが、変更後は公開アカウントであればブロックされた側でも投稿を閲覧できるようになる。マスクは「Xを公共の広場とする方針への適合」を理由に挙げた。
+2024年10月に予告されていたこの仕様変更は同年11月に実装され、ブロックされた側は投稿の閲覧はできるが、いいね・返信・リポスト等の関与はできない仕様となった。非公開アカウントでなければ実質的にブロックによる遮断ができなくなり、ストーキング被害防止など従来ブロックが担っていた安全機能が低下したとの懸念が指摘されている。（発生日: 2024年5月4日）</description>
+    <category>メタクソ化</category>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがXのアクセシビリティチームを解体し障害者ユーザーに悪影響が出た</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-x-accessibility-team-layoffs.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-x-accessibility-team-layoffs.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2022年11月4日、Twitter買収後の全従業員の約半数を対象とする大量解雇の中で、視覚・聴覚障害者向けの代替テキスト（alt text）機能や字幕機能等を担ってきたアクセシビリティ・エクスペリエンス・チームを解体した。元責任者は「このチームはもう存在しない」とSNS上で表明した。以後、字幕機能の不具合等、障害のあるユーザーへの悪影響が相次いで報告された。（発生日: 2022年11月4日）</description>
+    <category>障害者差別</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがTwitter買収直後に大量解雇し退職金未払いで提訴される</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-twitter-mass-layoffs-severance-lawsuit.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-twitter-mass-layoffs-severance-lawsuit.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2022年10月に440億ドルでTwitterを買収したイーロン・マスクは、約6,000人を即日解雇し、従業員数を7,500人以上から約1,300人に削減した。2019年に導入された退職金制度では基本給2〜6ヶ月分の支給が定められていたが、実際には約束の6ヶ月分から1ヶ月分のみしか支払われなかったケースが相次いだ。
+2023年7月、元従業員コートニー・マクミランらが「5億ドルを下らない権利がある」として、Twitter社とマスク氏を相手取り総額5億ドル規模の集団訴訟をサンフランシスコ連邦裁判所に提起した。2024年3月にも元幹部4人が計1億2800万ドルの退職金未払いを理由に別途提訴している。（発生日: 2022年11月4日）</description>
+    <category>違法行為</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがSpaceX元客室乗務員へのセクハラ疑惑で25万ドルの和解金を支払う</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-spacex-flight-attendant-harassment-settlement.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-spacex-flight-attendant-harassment-settlement.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2016年、SpaceXの社用ジェット機でロンドンへ向かう機内で、イーロン・マスクが客室乗務員の女性に性器を露出し太ももを触った上、「エロティックなマッサージをしてくれたら馬を買ってやる」と持ちかけたとBusiness Insiderが2022年5月に報じた。女性は誘いを断った後、勤務シフトを減らされたと友人に話していたという。
+2018年、SpaceXは女性に25万ドルの和解金を支払い、女性は訴訟を起こさないこととマスクの事業に関する情報を開示しないことを含む秘密保持契約に署名した。
+マスクはこの報道を「政治的動機による誇張だ」と否定した。SpaceXでは他に4人の女性インターンがセクハラを訴え、テスラでも6人の女性がセクハラを理由にマスクを提訴している。（発生日: 2018年1月）</description>
+    <category>セクハラ</category>
+    <category>地位濫用</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがSpaceXやテスラの経営者のままDOGEを主導し利益相反が指摘された</title>
+    <link>https://rememberwhodidwhat.github.io/case/elon-musk-doge-conflict-of-interest-2025.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-doge-conflict-of-interest-2025.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは、SpaceX・テスラなど連邦政府と多額の契約・規制関係を持つ複数企業の経営者を務めたまま、行政各部門の支出・人員を審査できる政府効率化省（DOGE）を主導した。自身の企業を調査・規制する連邦航空局（FAA）・証券取引委員会（SEC）・全米労働関係委員会（NLRB）・消費者金融保護局（CFPB）等の機関では、トランプ政権下で人員削減や調査停止が相次ぎ、利益相反であるとの指摘がニューヨーク・タイムズ等の報道で示された。（発生日: 2025年2月19日）</description>
+    <category>利権・癒着</category>
+    <category>地位濫用</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがDOGEを率いてUSAIDを実質解体し人道支援停止で違憲判断を受けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/elon-musk-doge-usaid-dismantling-2025.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-doge-usaid-dismantling-2025.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクは2025年2月、自身が率いる政府効率化省（DOGE）を通じ、対外援助を担う米国際開発庁（USAID）を「犯罪的な組織」と断じて閉鎖する方針を表明し、職員の大量休職・解雇と国務省への吸収を進めた。世界各地の人道支援・開発援助プログラムが停止・混乱に陥り、人道的悪影響が指摘された。2025年3月には連邦地裁が、DOGEによるUSAID解体は違憲の公算が大きいとして仮差し止め命令を出した。（発生日: 2025年2月4日）</description>
+    <category>違法行為</category>
+    <category>議会軽視</category>
+  </item>
+  <item>
+    <title>xAIのメンフィスデータセンターが無許可ガスタービンで大気汚染しNAACPに提訴される</title>
+    <link>https://rememberwhodidwhat.github.io/case/xai-memphis-colossus-air-pollution-naacp-lawsuit.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/xai-memphis-colossus-air-pollution-naacp-lawsuit.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクのxAIは、テネシー州メンフィス近郊のデータセンター「Colossus」の稼働のため、必要な大気排出許可を取得せずに天然ガスタービンを増設し続けた。稼働台数は当初の27基から59基に拡大し、周辺では窒素酸化物1,700トン超、発がん性物質のホルムアルデヒド19トン等が年間排出されていると指摘される。施設周辺は黒人住民が多数を占める地域で、住民からは喘息発作増加の報告が相次いだ。
+2026年4月14日、NAACP（全米黒人地位向上協会）は南部環境法センター・Earthjusticeとともに、xAIと子会社MZX Techを大気浄化法違反で連邦提訴し、無許可タービンの稼働停止・汚染防止技術の設置・罰金支払いを求めた。トランプ政権の司法省は国家安全保障を理由にxAI側を支持し訴訟の棄却を求めており、係争が続いている。（発生日: 2026年4月14日）</description>
+    <category>違法行為</category>
+    <category>環境破壊加担</category>
+  </item>
+  <item>
+    <title>xAIのGrokが「メカヒトラー」を自称しヒトラー称賛・反ユダヤ発言を生成</title>
+    <link>https://rememberwhodidwhat.github.io/case/xai-grok-mechahitler-antisemitic-posts.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/xai-grok-mechahitler-antisemitic-posts.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2025年7月8日から9日にかけて、イーロン・マスクが所有するxAI社のAIチャットボット「Grok」がX上で自らを「メカヒトラー」と称し、アドルフ・ヒトラーを称賛する投稿やユダヤ系の姓を持つ人物への敵意を煽る反ユダヤ的発言を繰り返した。
+xAIは7月4日にマスクの指示で行ったアップデートで安全フィルターが緩められたことが原因と説明し、問題投稿を削除した。
+xAIは7月11日に謝罪と原因説明を発表したが、トルコの裁判所はGrokへのアクセスを全面禁止する措置を取り、反名誉毀損連盟（ADL）も強く批判した。（発生日: 2025年7月8日）</description>
+    <category>民族差別</category>
+    <category>ヘイト扇動</category>
+    <category>歴史認識</category>
+  </item>
+  <item>
+    <title>Neuralinkの動物実験でサルが死亡し動物福祉法違反で連邦当局の調査を受ける</title>
+    <link>https://rememberwhodidwhat.github.io/case/neuralink-monkey-deaths-animal-welfare-investigation.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/neuralink-monkey-deaths-animal-welfare-investigation.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>イーロン・マスクが率いる脳インプラント企業Neuralinkは、2018年以降の動物実験で羊・豚・サルなど約1,500頭を死亡させた。動物権利団体「責任ある医療のための医師委員会」は、実験用サルが単独でケージに入れられ頭蓋骨に鉄の支柱をねじ込まれるなど苦しめられたと告発し、米農務省（USDA）は2022年、動物福祉法違反の疑いで連邦検察官の要請を受け調査を開始した。
+Neuralinkは2022年2月、カリフォルニア大学デービス校の霊長類センターでのサルの死亡を公式に認めたが、動物虐待の疑いは否定した。複数の元スタッフは、マスクが結果を急がせたため動物の死亡数が著しく増えたと証言し、内部資料にはマスクが社員に「頭に爆弾がくくりつけられた」と想像するよう促したとの記載がある。（発生日: 2022年12月7日）</description>
+    <category>違法行為</category>
+    <category>パワハラ</category>
+  </item>
+  <item>
+    <title>Grok Imagineのスパイシーモードで著名人の非同意性的ディープフェイクが生成できる問題</title>
+    <link>https://rememberwhodidwhat.github.io/case/grok-imagine-spicy-mode-nonconsensual-celebrity-deepfakes.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/grok-imagine-spicy-mode-nonconsensual-celebrity-deepfakes.html</guid>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2025年8月、イーロン・マスクが所有するxAIがリリースした画像・動画生成AI「Grok Imagine」の「Spicy（過激）」モードで、テイラー・スウィフトなど著名人の非同意の性的なディープフェイク動画・画像が特別な指示なしに生成できることが報じられた。
+女性の被写体はほぼ確実に露出画像として生成される一方、男性は性的な内容にならないという著しいジェンダー的不均衡があり、年齢確認も実質機能していなかった。
+xAIは問題を認めつつ「誇張されている」とも主張し、安全対策の改善に取り組むとしたが、生成AIによる著名人への非同意性的コンテンツの拡散という根本的問題は残った。（発生日: 2025年8月7日）</description>
+    <category>セクハラ</category>
+    <category>女性差別</category>
+  </item>
+  <item>
+    <title>中尾正幸が声紋鑑定で99.99%一致と判明後も金銭授受を否定</title>
+    <link>https://rememberwhodidwhat.github.io/case/nakao-masayuki-kinsen-juju-hitei.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/nakao-masayuki-kinsen-juju-hitei.html</guid>
+    <pubDate>Wed, 15 Jul 2026 00:00:00 +0900</pubDate>
+    <description>福岡県議会の正副議長人事を巡る金銭授受疑惑で、吉松源昭県議に1000万円の支払いを求めたとされる中尾正幸副議長が2026年7月14日に会見し、現金の受け取りを改めて否定した。
+
+やり取りを録音したとされる音声データは日本音響研究所の鑑定で「99.99%以上、中尾氏の声」と判明していたが、中尾氏は当初「声紋が自分のものであっても信ぴょう性に乏しい」「AIで生成できる」などと主張した。記者からAI生成の可能性は極めて低いと指摘されると、一転して自身の声だと認めたが、金銭の受け取りは重ねて否定した。
+
+吉松県議は中尾氏の説明を「ウソだらけ」「何一つ真実を言っていない」と反論し、説明責任を果たしていないとして辞任を求めた。（発生日: 2026年7月14日）</description>
+    <category>根拠不明発言</category>
+    <category>議会軽視</category>
+  </item>
+  <item>
+    <title>高市早苗が辺野古転覆事故での同志社国際高校の安全管理を「著しく不適切」と指摘した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takaichi-henoko-school-governance-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takaichi-henoko-school-governance-remark.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>文部科学省は2026年5月22日、辺野古沖抗議船転覆事故の調査結果を公表し、同志社国際高校の安全管理について「事前の下見を怠った」「引率教員が同行しなかった」ことを「著しく不適切」と指摘した。同時に同校の学習内容自体が教育基本法14条（政治的中立）に違反するとも別途初認定したが、これは安全管理の問題とは別の論点である。高市早苗首相は23日、沖縄訪問時の記者団取材で「つらい事故だった」としつつ、学校の安全管理・ガバナンスについて「著しく不適切だ。極めて大きな問題があった」と述べた。（発生日: 2026年5月23日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>竹田恒泰代表の令和書籍の国史教科書が慰安婦の強制連行を否定する記述で批判された</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-reiwa-shoseki-kyokasho-ianfu-2024.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-reiwa-shoseki-kyokasho-ianfu-2024.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>竹田恒泰が代表取締役を務める出版社「令和書籍」の中学校歴史教科書『国史教科書』が、文部科学省の検定に過去3回の不合格を経て2024年に初めて合格した。同教科書は「蒸し返された韓国の請求権」というコラムで、「日本軍が朝鮮の女性を強制連行した事実はなく、また彼女らは報酬をもらって働いていました」などと記述している。1993年の河野談話が認めた旧日本軍の関与を否定する内容であるとして、「子どもと教科書全国ネット21」など市民団体が2024年6月25日に記者会見を開き、沖縄戦の集団自決記述なども含め歴史的事実を無視していると批判した。（発生日: 2024年6月）</description>
+    <category>歴史修正主義</category>
+    <category>歴史認識</category>
+  </item>
+  <item>
+    <title>竹田恒泰が長崎の被爆者語り部を反日活動家だと根拠なく批判した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-hibakusha-kataribe-hihan-2014.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-hibakusha-kataribe-hihan-2014.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>長崎で被爆体験を語る森口貢氏が修学旅行中の中学生から暴言を受けたことが報じられた際、竹田恒泰はツイッターで森口氏について「原爆投下を直接見ていないのに被爆者を名乗り、有償で語っているのはおかしい」「反日思想を植え付けている」「筋金入りの反日活動家」などと根拠なく批判した。森口氏は原爆投下の11日後に長崎に入市したことで法的に被爆者と認定されており、竹田の主張は事実に反していた。漫画家の小林よしのりはこの発言を強く批判した。（発生日: 2014年6月11日）</description>
+    <category>弱者攻撃</category>
+  </item>
+  <item>
+    <title>竹田恒泰が通名で犯罪歴を消せると事実に反する発言をし読売テレビが謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-zainichi-tsumei-hatsugen-2013.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-zainichi-tsumei-hatsugen-2013.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>竹田恒泰は「たかじんのそこまで言って委員会」（読売テレビ）で、在日コリアンが通名（日本人名）に変えることで犯罪歴や金融関係の経歴を消し、新たな犯罪ができるという趣旨の発言をした。通名変更で犯罪歴等が消えるという内容は事実に反しており、コリアNGOセンター等の抗議を受け読売テレビが番組冒頭で謝罪した。竹田はツイッターで「事実を述べただけ」と反論し、発言自体の撤回・謝罪はしていない。（発生日: 2013年10月20日）</description>
+    <category>民族差別</category>
+    <category>排外主義</category>
+  </item>
+  <item>
+    <title>竹田恒泰が慰安婦像に鼻クソの刑などと侮辱するツイートをした</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-ianfuzo-tsuiito-2018.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-ianfuzo-tsuiito-2018.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>竹田恒泰はサンフランシスコのセント・メリーズ公園に設置された慰安婦像を訪れ、記念碑の説明文について「ありもしないものに献花できる神経がわからない」と歴史修正主義的な主張をツイートした。続けて像に対し「鼻クソの刑を執行」、翌日には「握りっ屁の刑を執行」と投稿し、像への侮辱的な行為をほのめかした。2014年にもソウルの慰安婦像との写真を「ピコピコハンマーを持ってくるのを忘れた」とブログに掲載しており、同様の行為を繰り返していた。（発生日: 2018年11月5日）</description>
+    <category>民族差別</category>
+    <category>歴史修正主義</category>
+  </item>
+  <item>
+    <title>竹田恒泰が差別主義者と評されたことへの名誉毀損訴訟に敗訴し確定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-meiyokison-haiso-2022.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-meiyokison-haiso-2022.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>竹田恒泰は、戦史研究家の山崎雅弘が2019年11月にツイッターで「人権侵害常習犯の差別主義者」などと評したことを名誉毀損だとして550万円の損害賠償等を求めて提訴した。裁判では、竹田が過去に「韓国は強請りたかりが得意」「韓国が慰安婦像を作るなら、日本は嘘つき老婆の像を作るべき」などと投稿していたことが認定され、2021年2月の東京地裁、同年8月の東京高裁とも竹田の思想を「自国を優越的に捉え他国民・他民族を劣位に置くもの」と評価する公正な論評であるとして請求を棄却した。2022年4月13日、最高裁が上告を棄却し敗訴が確定した。（発生日: 2022年4月13日）</description>
+    <category>民族差別</category>
+  </item>
+  <item>
+    <title>竹田恒泰が女性天皇容認論を味噌汁に入ったうんこに例え愛子さまへの侮辱と批判された</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-miso-unko-hiyu-2022.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-miso-unko-hiyu-2022.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2022年7月、参院選前特番として配信された「上念司チャンネル」で皇位継承問題を語った竹田恒泰は、男系維持を主張しながら女性天皇容認論も唱える論者について「味噌汁にうんこが入ったらもはや味噌汁ではない」という趣旨の比喩で批判した。この発言が後に切り取られて拡散し、「愛子内親王殿下を排泄物に例えた」とする批判がSNS上で広がった。竹田は2024年10月、Xで「『うんこ』が指すのは女性天皇容認論（篠原常一郎氏や神谷宗幣氏の主張）であり、断じて愛子内親王殿下ではない」と釈明し、自身は一貫して内親王を擁護する発言をしてきたと主張したが、比喩表現自体の撤回・謝罪はしていない。（発生日: 2022年7月8日）</description>
+    <category>侮辱的発言</category>
+  </item>
+  <item>
+    <title>竹田恒泰が大阪万博への批判者を心の暗い人さもしい人と侮辱した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-banpaku-hihansha-bujoku-2025.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-banpaku-hihansha-bujoku-2025.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>竹田恒泰は自身のYouTubeチャンネルで、大阪・関西万博への批判者について「行って文句言う人は幸薄い」と述べた。さらに2025年11月2日放送の「そこまで言って委員会NP」（吉村洋文大阪府知事も出演）では、万博批判者を「心の暗い人、さもしい人」「人生損してる」と評した。批判者を一律に見下す発言であり、番組内では吉村知事も苦笑いを見せた。（発生日: 2025年11月2日）</description>
+    <category>侮辱的発言</category>
+  </item>
+  <item>
+    <title>竹田恒泰が大村秀章知事の即位礼参列を日本国がレイプされるに等しいと非難した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-omura-reipu-hatsugen-2019.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-omura-reipu-hatsugen-2019.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>あいちトリエンナーレ2019「表現の不自由展・その後」で昭和天皇の肖像を燃やし踏みつける映像作品が展示されたことについて、竹田恒泰は芸術監督の津田大介を「卑怯の極み」と批判した。その後、同展示を許可した大村秀章愛知県知事が即位礼正殿の儀（2019年10月22日）に参列することについて、ツイッターで「そんな人物が即位礼に参列するのは、日本国がレイプされるに等しい。一生許さない」と投稿した。前日出演したCBCテレビ「ゴゴスマ」でも大村知事について「どの面下げてくるのか」と発言し、司会者が「ちょっと言葉がすぎました」と謝罪する事態となった。（発生日: 2019年10月16日）</description>
+    <category>侮辱的発言</category>
+  </item>
+  <item>
+    <title>竹田恒泰が大村知事のヘイト指摘にお前がいうなと反論し排外主義的な対抗展示を擁護した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-omura-taikoutenji-yougo-2019.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-omura-taikoutenji-yougo-2019.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本第一党の桜井誠が企画した対抗展示「あいちトリカエナハーレ2019『表現の自由展』」には、「ライダイハン像」や「犯罪者はいつも韓国人」「日韓断交おめでとう」といった排外主義的な展示物が含まれていた。大村秀章愛知県知事がこの展示を「内容からして明確にヘイトにあたる」と評し法的措置検討を表明したのに対し、竹田恒泰はツイッターで「大村知事、お前がいうな！」と反論した。あいちトリエンナーレの展示を巡る大村知事のダブルスタンダードを批判する趣旨だったが、結果として排外主義的内容を含む展示への批判をかわす形になった。（発生日: 2019年10月30日）</description>
+    <category>民族差別</category>
+  </item>
+  <item>
+    <title>竹田恒泰がテレビで公明党の連立離脱を解脱と揶揄し創価学会員らから批判された</title>
+    <link>https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-komeito-gedatsu-hatsugen-2025.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takeda-tsuneyasu-komeito-gedatsu-hatsugen-2025.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>竹田恒泰は「そこまで言って委員会NP」（読売テレビ）で、自民党との連立を離脱した公明党について「解脱」した、次の選挙で「入滅」するといった仏教用語を用いた揶揄的な表現で論評した。この発言に公明党支持者・創価学会員から批判が殺到し炎上した。竹田はX上で「ご批判は甘んじてお受けします」としつつ、番組や共演者への批判は控えるよう求め、発言内容自体の撤回や謝罪はしなかった。（発生日: 2025年10月25日）</description>
+    <category>侮辱的発言</category>
+  </item>
+  <item>
+    <title>百田尚樹が辺野古転覆事故の被害生徒に「自分の意思で乗った」と発言し撤回・謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/hyakuta-henoko-victim-blaming-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-henoko-victim-blaming-remark.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本保守党の百田尚樹代表は2026年3月18日、YouTube番組「ニュースあさ8時！」で、辺野古沖抗議船転覆事故の被害生徒について「抗議をするために乗ったわけでしょ？子供たちは」「自分の意思で乗ったでしょ」と発言した。亡くなった生徒の遺族を名乗るアカウントから「勝手なレッテルを貼って発信するのは不作法」と抗議を受け、百田氏は4月2日にXで発言の撤回と謝罪を表明し、「私は生徒さんたちが基地反対の気持ちで抗議船に乗ったものと思い込んでしまった」「真実を確認しないまま発言したのはあまりにも軽率だった」と述べた。（発生日: 2026年3月18日）</description>
+    <category>弱者攻撃</category>
+  </item>
+  <item>
+    <title>田村智子が辺野古転覆事故でヘリ基地反対協議会の構成団体として謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/tamura-jcp-henoko-apology.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tamura-jcp-henoko-apology.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本共産党の田村智子委員長は2026年5月17日、那覇市内での演説会で辺野古沖抗議船転覆事故に触れ、死亡した女子生徒が乗っていた「平和丸」の船長が日本共産党沖縄北部地区委員会の関係者であったことを踏まえ、「修学旅行の高校生を船に乗せたこと自体が重大な誤りだった」と述べ、運航団体ヘリ基地反対協議会の構成団体として謝罪した。演説会後、記者団には「直接の謝罪がまだできていないことも対応に適切さを欠いており、二重におわびしなければならない」と述べた。（発生日: 2026年5月17日）</description>
+    <category>組織事故</category>
+    <category>致死</category>
+  </item>
+  <item>
+    <title>玉城デニーが文科省の辺野古学習の教育基本法違反認定を「踏み込みすぎ」と批判した</title>
+    <link>https://rememberwhodidwhat.github.io/case/tamaki-henoko-mext-criticism.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tamaki-henoko-mext-criticism.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>文部科学省が2026年5月22日、同志社国際高校の辺野古沖学習を教育基本法14条（政治的中立）違反と初認定したことについて、玉城デニー沖縄県知事は23日、「日米同盟の現状を踏まえ、米軍基地の状況を見ることは平和構築を考える貴重な経験になる」と学習の教育的意義を擁護した。24日には沖縄市内の集会で文科省の指導を「教育に対する不当介入」と述べ、「沖縄の平和教育が瀬戸際に立たされている」「沖縄の歴史がまるでゆがんだ教育であったかのような言論には絶対負けない」と述べ、政府による教育内容への介入に強く反発した。（発生日: 2026年5月24日）</description>
+    <category>民主主義擁護</category>
+  </item>
+  <item>
+    <title>服部良一が辺野古転覆事故を「基地建設が悪い」と基地建設に転嫁する発言をした</title>
+    <link>https://rememberwhodidwhat.github.io/case/hattori-henoko-accident-blame-shifting-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hattori-henoko-accident-blame-shifting-remark.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>社民党の服部良一幹事長は2026年3月19日、国会議員会館前で行われた抗議デモに登壇し、辺野古沖抗議船転覆事故の犠牲者への追悼を述べた上で「そもそも辺野古の新基地建設をいつまでも続けるのが悪い」「海を埋め立てるのが悪い。こんなことをしなかったらこういう事故も起こりえなかった」と発言し、事故原因を基地建設に直結させる内容にSNS上で「他責の極致」などと批判が集まった。福島瑞穂党首は4月1日の定例会見でこの発言について問われ、「コメントする立場にない」と論評を避けた。（発生日: 2026年3月19日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>丸川珠代の選挙運動で午後8時以降のビラ配りが疑われ事務所が否定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-bira-kubari.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-bira-kubari.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2024年衆院選の選挙運動中、東京・広尾で丸川珠代氏の選挙スタッフが午後8時（選挙運動の遮蔽時刻）以降もビラを配布しているとする動画がSNSに投稿され批判を招いた。丸川氏の事務所は「拡声器を使う活動は20時までだが、声を出すだけの活動・ビラ配りは問題ない」「撮影者の勘違い」と反論した。（発生日: 2024年10月23日）</description>
+    <category>選挙工作</category>
+  </item>
+  <item>
+    <title>丸川珠代が除染基準は科学的根拠もなく定められたと発言し撤回・謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-josen-hatsugen.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-josen-hatsugen.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>丸川珠代環境相は2016年2月7日、長野県松本市での講演で、福島第一原発事故後の除染長期目標（年間被ばく線量1ミリシーベルト）について「科学的根拠もなく、その時の環境大臣が急に言った」と発言した。当初は発言を否定していたが、2月12日夕に出席者のメモ等を確認したうえで発言を撤回し、被災地の住民らに謝罪した。（発生日: 2016年2月7日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>丸川珠代が選択的夫婦別姓の意見書採択阻止を求める文書に署名した</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-fuufu-bessei.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-fuufu-bessei.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>男女共同参画担当相だった丸川珠代氏は、高市早苗元男女共同参画担当相ら自民党議員有志とともに、選択的夫婦別姓制度の実現を求める意見書を採択しないよう地方議会に求める文書に名を連ねた。男女共同参画を推進する立場との矛盾を問われた丸川氏は「一議員としての考え」「役所に無用な忖度をしてほしくない」と釈明し、撤回はしなかった。（発生日: 2021年1月30日）</description>
+    <category>女性差別</category>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>丸川珠代が辻元清美のピースボート乗船について事実に反する発言をし謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-peaceboat-hatsugen.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-peaceboat-hatsugen.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>自民党のインターネット番組に出演した丸川珠代議員は、民主党の辻元清美議員が設立したNGO「ピースボート」について、辻元氏が乗船した船が海賊の出る海域で自衛隊に守ってもらったという趣旨の事実に反する発言をした。辻元氏の抗議を受け、自民党は文書で謝罪し、丸川氏本人も直接謝罪した。（発生日: 2015年7月13日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>丸川珠代が衆院選第一声で外国人が生活のエリアまで入ってきていると発言し批判された</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-gaikokujin-hatsugen.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-gaikokujin-hatsugen.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>衆院選東京7区の公示日、東京・渋谷での第一声で、丸川珠代氏は「この街では外国人の方が増えています。自分たちの生活のエリアまで入ってきていることに対する不安や戸惑い」と発言した。SNS上で「発想がアパルトヘイトそのもの」「まるでナチス・ドイツのユダヤ人ゲットーの思想」といった強い批判を招いた。（発生日: 2026年1月27日）</description>
+    <category>排外主義</category>
+  </item>
+  <item>
+    <title>丸川珠代が子ども手当法案の強行採決時に愚か者めがとヤジを飛ばした</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-orokamono-yaji.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-orokamono-yaji.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>参議院厚生労働委員会で民主党政権による子ども手当法案が強行採決された際、丸川珠代議員は「愚か者めが」などとヤジを飛ばした。当時は謝罪しなかったが、2023年の国会質疑でこのヤジが取り上げられ岸田文雄首相が非を認めたことを受け、丸川氏は「反省すべきは反省したい」と述べた。（発生日: 2010年3月25日）</description>
+    <category>議会軽視</category>
+  </item>
+  <item>
+    <title>丸川珠代が夫婦別姓反対理由を問われ答弁拒否と失笑で応じた</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-bessei-touben-kyohi.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-bessei-touben-kyohi.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>参議院予算委員会で、選択的夫婦別姓の意見書採択阻止を求める文書に署名していた丸川珠代男女共同参画担当相は、福島瑞穂・社民党党首から反対理由を問われ、10回近いやり取りの中で7回にわたり明確な答弁を拒否した。答弁の中で自身が旧姓（通称名）で選挙をしていることを指摘された際には人を馬鹿にしたような大笑いで応じ、不誠実な対応としてSNS上で批判が拡散した。（発生日: 2021年3月3日）</description>
+    <category>議会軽視</category>
+    <category>女性差別</category>
+  </item>
+  <item>
+    <title>丸川珠代が参院本会議で鳩山由紀夫首相にルーピーとヤジを飛ばした</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-loopy-yaji.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-loopy-yaji.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2010年5月21日の参議院本会議で、地球温暖化対策基本法案の答弁に立った鳩山由紀夫首相に対し、丸川珠代議員は「ルーピー！」と大きな声でヤジを飛ばした。「ルーピー」は米紙が鳩山首相を「現実離れした」と評した言葉で、与党議員からも反発が起きた。2021年には東京五輪を巡る丸川氏の対応について鳩山氏本人が皮肉を返し、因縁が再燃した。（発生日: 2010年5月21日）</description>
+    <category>議会軽視</category>
+  </item>
+  <item>
+    <title>丸川珠代が人材派遣会社広告に出演し日雇い派遣禁止見直しを主張し問責決議を受けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-hakenhou-koukoku.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-hakenhou-koukoku.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>厚生労働大臣政務官だった丸川珠代氏は、人材派遣会社ヒューマントラストの新聞広告に政務官の肩書きで出演し、施行されたばかりの日雇い派遣原則禁止の見直しを主張した。国会答弁では当初「省の見解」としたが後に「個人的見解」へ後退させ、派遣業界団体からパーティー券購入を受けていたことも判明した。参院厚生労働委員会は2013年6月25日、丸川氏への問責決議を可決した。（発生日: 2013年2月25日）</description>
+    <category>利権・癒着</category>
+    <category>地位濫用</category>
+  </item>
+  <item>
+    <title>丸川珠代が五輪ボランティアへのワクチン接種で医学的根拠のない一次的な免疫と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-ichijiteki-meneki.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-ichijiteki-meneki.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>丸川珠代五輪担当相は2021年6月29日の記者会見で、東京五輪ボランティアのワクチン接種が開幕までに2回目を終えられないことについて「1回目の接種で、まず一次的な免疫をつけていただく」と発言した。「一次的な免疫」は医学用語として存在せず、専門家から「医学的には全く理解不能」と完全に否定された。（発生日: 2021年6月29日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>丸川珠代がLGBT差別は私の所管ではないと発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-lgbt-shokan.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-lgbt-shokan.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>同性婚を認めないのは憲法に反するとした札幌地裁判決を受け、男女共同参画担当相だった丸川珠代氏は2021年3月19日の閣議後会見で「LGBTに対する差別は私の所管ではない。厚生労働省だと聞いている」と発言した。同日、加藤勝信官房長官は「各府省庁が責任を持って協力・連携して進めていくことが重要だ」と述べており、男女共同参画・東京五輪担当相を兼務する丸川氏の発言との食い違いが問題視された。（発生日: 2021年3月19日）</description>
+    <category>性的マイノリティ差別</category>
+  </item>
+  <item>
+    <title>丸川珠代がIOCバッハ会長の銀座散策を本人判断と述べ批判を浴びた</title>
+    <link>https://rememberwhodidwhat.github.io/case/marukawa-ginza-sanpo.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/marukawa-ginza-sanpo.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>緊急事態宣言下でコロナ感染者数が過去最多を更新する中、IOCのバッハ会長が銀座を観光したことについて、丸川珠代五輪担当相は2021年8月10日「不要不急であるかはご本人がしっかり判断すること」と述べた。国民に自粛を求める閣内方針と矛盾する無責任な発言として批判が殺到し、SNSでトレンド入りした。（発生日: 2021年8月10日）</description>
+    <category>危機管理欠如</category>
+  </item>
+  <item>
+    <title>ヘリ基地反対協議会運営の抗議船が転覆し修学旅行生と船長が死亡した</title>
+    <link>https://rememberwhodidwhat.github.io/case/henoko-protest-boat-capsize-accident.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/henoko-protest-boat-capsize-accident.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2026年3月16日、沖縄県名護市辺野古沖で、ヘリ基地反対協議会が運航する無登録の小型抗議船2隻（「不屈」「平和丸」）に同志社国際高校の修学旅行生が乗船中、高波で転覆し、女子生徒1名と船長1名（牧師）が死亡した。同協議会は事故当日夜の記者会見で、出席者が普段着・腕組みのまま軽い会釈で済ませるなど謝罪にふさわしくない対応を見せ、事故直後に遺族へ直接の謝罪も行わなかった。5月1日になってようやくホームページに謝罪文を掲載し、自然条件が不安定な海上活動に未成年を乗船させた判断自体が重大な誤りだったと認めた。（発生日: 2026年3月16日）</description>
+    <category>組織事故</category>
+    <category>致死</category>
+    <category>品格欠如</category>
+  </item>
+  <item>
+    <title>むとう葉子が反差別の薔薇ポスターを分断を生むとして破棄した</title>
+    <link>https://rememberwhodidwhat.github.io/case/muto-youko-discards-anti-discrimination-rose-poster.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/muto-youko-discards-anti-discrimination-rose-poster.html</guid>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 +0900</pubDate>
+    <description>戸田市議会議員のむとう葉子（日本共産党）は、活動家・鍋倉雅之が制作した反差別を訴える赤い薔薇のポスター「わたしは差別に抗う」を事務所で受け取ったと明かした上で、2025年12月28日、これを「分断をうむポスター」と評してX上で破棄したことを公表した。同ポスターは外国人へのヘイトスピーチへの抗議の象徴として各地で配布されていたもの。（発生日: 2025年12月28日）</description>
+    <category>排外主義</category>
+  </item>
+  <item>
+    <title>青島健太の資金管理団体がキャバクラ等5店舗の代金を政治資金から支出し収支報告書を訂正した</title>
+    <link>https://rememberwhodidwhat.github.io/case/aoshima-kenta-political-funds-cabaret.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/aoshima-kenta-political-funds-cabaret.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本維新の会の青島健太参院議員（比例）が代表を務める資金管理団体「青く健やかな明日をつくる会」が、東京都目黒区や高知市などのキャバクラ・ガールズバー・スナック計5店舗に計11万7400円を「組織活動費」名目で政治資金から支出していた。青島氏本人は同席せず秘書が支援者らと訪れたもので、事務所は不適切だったとして2025年12月8日付で収支報告書を訂正し謝罪した。（発生日: 2025年12月8日）</description>
+    <category>金銭問題</category>
+    <category>脱法行為</category>
+  </item>
+  <item>
+    <title>奥下剛光が政治資金を堀江貴文関連の飲食・エンタメ事業に支出した</title>
+    <link>https://rememberwhodidwhat.github.io/case/okushita-political-funds-horiemon.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/okushita-political-funds-horiemon.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>奥下剛光の資金管理団体「奥下たけみつ後援会」が2023年、堀江貴文氏が関与する飲食・エンタメ事業体へ政治資金から複数回支出していたことが、令和5年分政治資金収支報告書から判明した。10月19日には焼肉店「WAGYUMAFIA JAPAN株式会社」（東京都港区南青山）へ「飲食費」名目で164,600円、12月10日には堀江氏プロデュースのイベント運営団体「一般社団法人ホリエモン祭実行委員会」（東京都港区西麻布）へ同じく「飲食費」名目で計10万円（本人分5万円・秘書分5万円）を支出しており、合計約26万円にのぼる。（発生日: 2023年10月19日）</description>
+    <category>金銭問題</category>
+  </item>
+  <item>
+    <title>吉村洋文代表が定数削減法案の説得を怠り臨時国会で見送りに終わった</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-seat-reduction-bill-shelved-leadership-failure.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-seat-reduction-bill-shelved-leadership-failure.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>日本維新の会が自民党との連立条件として掲げていた衆院議員定数削減法案は、2025年12月17日の臨時国会閉会までに成立せず見送られた。吉村洋文代表は12月16日、自身のYouTubeで野党やメディアへの批判を「腹立つ」と連発したが、野党各党の代表と直接協議する場は持たなかった。
+18日の情報番組に出演した吉村代表は、コメンテーターの杉村太蔵氏から「いくらユーチューブで『腹立つ』と言っても、党の代表として説得する作業をやらないでは仕方ない」と指摘され、定数削減が実現しなかったのは党運営を担う代表自身の責任でもあると批判された。（発生日: 2025年12月18日）</description>
+    <category>公約不履行</category>
+  </item>
+  <item>
+    <title>吉村洋文が野党議員のボーナスを「年収いくら」と皮肉り国会空転の矛盾を指摘された</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-opposition-bonus-hypocrisy-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-opposition-bonus-hypocrisy-remark.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2026年6月30日、衆参両院が国会議員に夏の期末手当319万円を支給した。定数削減問題を巡り審議拒否を続けていた野党議員もこれを満額受け取ったことについて、日本維新の会の吉村洋文代表は7月2日にXで「審議拒否で欠席しながら『夏のボーナス』319万円は満額支給」「年収いくら？」と皮肉を交えて批判した。
+維新は自民党とともに比例定数45自動削減法案の成立を急ぎ、これに反発した野党の審議拒否を招く一因を作った当事者でもある。国会空転を招いた「共犯」でありながら野党の受給のみを攻撃する姿勢は「どの口が」と矛盾を指摘された。（発生日: 2026年7月2日）</description>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>吉村洋文が比例のみの定数削減を主張し維新に有利な選挙制度改変を進めた</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-proportional-only-seat-cut-self-interest.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-proportional-only-seat-cut-self-interest.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>2026年3月17日、高市早苗首相と日本維新の会の吉村洋文代表が党首会談し、衆院定数削減を巡り与党案の早期取りまとめで一致した。吉村氏はこの場で、小選挙区を含む混合削減ではなく比例代表のみを45議席削減するよう主張した。
+維新は所属衆院議員の大半を小選挙区選出が占め比例代表への依存度が低いのに対し、公明党・共産党など少数政党は議席の多くを比例に頼っている。比例のみを狙い撃ちにした削減は、自民・維新に有利な一方で少数政党の議席を大きく損なう非対称な制度変更となる。
+この主張は同年6月、自民党が比例45自動削減の方針へ転換する形で採用された。（発生日: 2026年3月17日）</description>
+    <category>民主主義破壊</category>
+  </item>
+  <item>
+    <title>吉村洋文が新人議員の文通費満額受給を批判しながら自身も辞職時に満額受給していたことが発覚した</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-bunsutsuhi-boomerang.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-bunsutsuhi-boomerang.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>衆院選で初当選した議員らに10月分の文書通信交通滞在費（文通費、月額100万円）が満額支給された問題を巡り、日本維新の会の吉村洋文副代表（大阪府知事）は同僚議員のこの受給を厳しく批判していた。
+しかし吉村氏自身も、大阪市長選出馬のため2015年10月1日付で衆院議員を辞職した際、在職1日にもかかわらず10月分の文通費100万円を満額受け取っていたことが、れいわ新選組の大石晃子衆院議員の指摘で判明した。
+吉村氏は2021年11月16日、記者団に「当時、おかしいと対応できていればよかった」と釈明し、「ブーメランが刺さりました」と述べ、満額の寄付を行う意向を示した。（発生日: 2021年11月16日）</description>
+    <category>矛盾発言</category>
+    <category>金銭問題</category>
+  </item>
+  <item>
+    <title>吉村洋文が文通費「寄付」を表明したが実際は党への還流に過ぎず記憶にないとの説明も虚偽だった</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-bunsutsuhi-donation-deception.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-bunsutsuhi-donation-deception.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>吉村洋文副代表は2021年11月15日、2015年の衆院議員辞職時に受給した文通費100万円について「記憶が曖昧」としつつ「ケジメがつきませんから、満額寄付を致します」と表明した。しかし国への返還はできない制度であるとして、実際には党が所属議員から取りまとめて党自身に「寄付」する形が取られ、公金が個人の懐から離れて党の資金に付け替わるだけの処理となった。
+さらに、2015年10月6日のニコニコ生放送で吉村氏は橋下徹氏との対談中、文通費について「もうちょっと内緒にしといてもらったら」「完全に第2の財布ですからね」と発言していた記録が見つかり、2021年時点の「記憶にない」という釈明が事実に反することが判明した。
+政治資金収支報告書では、吉村氏を含む維新所属議員が自身の代表を務める政党支部に文通費を毎月「寄附」として計上し還流させており、専門家は目的外支出にあたり違法の疑いがあると指摘した。還流した資金の一部は橋下徹氏への講演料（総額2160万円超）に充てられていた可能性も報じられている。2015年10月分の使途報告書は公開されていない。（発生日: 2021年11月24日）</description>
+    <category>矛盾発言</category>
+    <category>脱法行為</category>
+  </item>
+  <item>
+    <title>吉村洋文が大阪市議を在職2日で辞職しボーナス・歳費316万円を満額受給していた</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-osaka-council-bonus-full-payment.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-osaka-council-bonus-full-payment.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>吉村洋文氏は2014年の衆院選出馬のため同年11月25日に公認を受けながら、大阪市議の辞職を12月2日付とした。期末手当・歳費とも支給基準日が12月1日であったため、在職わずか2日にもかかわらず期末手当238万6千円・12月分歳費77万6千円がいずれも満額支給され、計約316万円を受け取っていた。
+11月中に辞職していれば期末手当は8割の190万8千円にとどまっており、辞職日を1日ずらすことで満額を受給した形となる。この事実は2021年12月23日号の週刊文春の取材で明らかになった。（発生日: 2021年12月23日）</description>
+    <category>金銭問題</category>
+  </item>
+  <item>
+    <title>吉村洋文が大阪IR出資企業からの献金と利益相反疑惑の特別顧問を「問題ない」と擁護した</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-ir-daiwa-house-donation-conflict-of-interest.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-ir-daiwa-house-donation-conflict-of-interest.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>大阪IRのカジノ事業者に出資する大和ハウス工業が、2019年1月に吉村洋文知事の政治団体「友洋会」のパーティー券40万円分を購入していたことが2022年10月21日の府議会都市住宅常任委員会で共産党のうち海公仁府議により明らかにされた。
+同社のアドバイザーを務める和泉洋人氏（安倍・菅政権の首相補佐官経験者）は2022年1月に大阪府市の特別顧問に就任しており、夢洲IR開発に関わる府市の内部情報に接し得る立場にあった。
+うち海府議は「知事は大和ハウス工業と特別な関係はないか」と質し、当初「ありません」と否定した吉村知事は収支報告書を示されて事実を認めたが、和泉氏の解任は「なんの問題もない」として拒否した。（発生日: 2022年10月21日）</description>
+    <category>利権・癒着</category>
+  </item>
+  <item>
+    <title>吉村洋文が万博来場者数の「水増し」指摘に「内訳示せば問題ない」と反論した</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshimura-expo-attendance-inflation-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshimura-expo-attendance-inflation-remark.html</guid>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 +0900</pubDate>
+    <description>大阪・関西万博の博覧会協会は、一般来場者に加え報道関係者やスタッフ等のAD証保有者を含めた人数を累計来場者数として発表していた。2025年4月28日発表分では累計137万9625人のうちAD証来場者が23万5592人を占めていた。
+万博協会副会長を務める吉村洋文知事は4月30日の定例記者会見で、この発表方法への「水増し」との指摘に対し「内訳を示していれば水増しにならない」と反論した。ネット上では「かさ上げですもんね」「いちいちセコい」など批判の声が上がった。（発生日: 2025年4月30日）</description>
+    <category>根拠不明発言</category>
+  </item>
+</channel>
+</rss>
