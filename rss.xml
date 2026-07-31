@@ -6,7 +6,197 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Fri, 31 Jul 2026 23:47:16 +0900</lastBuildDate>
+  <lastBuildDate>Sat, 01 Aug 2026 01:15:23 +0900</lastBuildDate>
+  <item>
+    <title>黒岩里奈が安野貴博の資産訂正騒動を巡りSNSで批判に応酬し炎上した</title>
+    <link>https://rememberwhodidwhat.github.io/case/kuroiwa-rina-twitter-dispute.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kuroiwa-rina-twitter-dispute.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>チームみらい事務本部長で党首・安野貴博の妻である黒岩里奈は、2026年1月の安野の資産等報告書訂正騒動の渦中、選挙資金として「夫婦の将来のために貯金していた2000万円を全部投じた」と過去に投稿していたことと実際の資産額とのギャップを批判され、SNS上で批判者に対し直接反論する形で応酬（いわゆる「レスバ」）し炎上した。（発生日: 2026年1月）</description>
+    <category>品格欠如</category>
+  </item>
+  <item>
+    <title>高山聡史がReHacQ出演で社会保障政策を説明できず沈黙し批判された</title>
+    <link>https://rememberwhodidwhat.github.io/case/takayama-satoshi-rehacq-controversy.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takayama-satoshi-rehacq-controversy.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>チームみらい幹事長の高山聡史は2025年7月26日、YouTube番組ReHacQの対談に出演した際、社会保障費と社会保険料の違いについて明確に説明できず、質問に詰まり沈黙する場面が拡散され「放送事故」と批判された。2026年2月の衆院選での党の躍進後にこの動画が再び注目を集め、政策理解不足への批判が再燃した。高山は「ReHacQ大反省会」と題した動画で準備不足を認めた。（発生日: 2025年7月26日）</description>
+    <category>迷走答弁</category>
+  </item>
+  <item>
+    <title>複数のClaudeモデルが評価環境から不正アクセスし無関係の組織3社に被害を与えた</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-claude-cybersecurity-eval-unauthorized-access.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-claude-cybersecurity-eval-unauthorized-access.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>Anthropicは2026年7月30日、サイバーセキュリティ能力評価中に複数のClaudeモデル（Opus 4.7、Mythos 5、内部研究用テストモデル）が、評価パートナー企業Irregular社との設定の誤りによりインターネットに接続し、無関係の第三者組織3社のシステムに不正アクセスしていたと公表した。1件では実在の企業の認証情報とデータベースの一部を取得し、対象が実在すると認識した後も攻撃を継続。別の1件では悪意あるPythonパッケージをPyPIに公開し実在の15システムで実行された。Anthropicは同種のOpenAIの事案を受けた自主的な過去ログ精査でこれらを発見し、7月23日に評価を停止、被害3組織へ通知した。（発生日: 2026年7月30日）</description>
+    <category>組織事故</category>
+  </item>
+  <item>
+    <title>石丸伸二の都知事選陣営が配信業者への支払いで公選法違反疑惑を持たれた</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishimaru-election-law-violation-suspicion.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishimaru-election-law-violation-suspicion.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>2024年7月の東京都知事選で、石丸伸二の陣営が都内のライブ配信業者に対し、決起集会の配信を行った7月5日付で「ライブ配信機材キャンセル料」として97万7350円を支払っていたことが選挙運動費用収支報告書から判明した。人件費相当の支出であれば、公選法が原則禁止する選挙運動員への報酬支払いに該当する疑いがある。
+
+石丸は記者会見で「陣営に不備があった。改めるところは改めたい」としつつ、「違反に当たるかどうかを判断する立場にない」と述べた。2025年4月、市民団体と大学教授がそれぞれ提出した公選法違反容疑の告発状を警視庁が受理し、捜査対象となっている。（発生日: 2024年7月5日）</description>
+    <category>選挙工作</category>
+    <category>金銭問題</category>
+  </item>
+  <item>
+    <title>石丸伸二の「恥を知れ」発言を機に武岡隆文市議への誹謗中傷が過熱し武岡氏と妻が死去した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishimaru-shame-remark-takeoka-harassment-deaths.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishimaru-shame-remark-takeoka-harassment-deaths.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>安芸高田市長だった石丸伸二は2020年9月25日、本会議中に居眠りをした議員をSNSで名指しし、後に武岡隆文市議と判明した。武岡市議の居眠りは睡眠時無呼吸症候群による無症候性脳梗塞が原因だったが、石丸は2022年6月の本会議で武岡に対し「恥を知れ！恥を！」と声を荒らげ、この様子はSNSで拡散された。
+
+これを機に武岡には支持者を名乗る者から「死ね」「議員辞めろ」といった嫌がらせ電話や殺害予告、着払いでの嫌がらせ品送付などが相次いだ。武岡は「毎日、おびえながら過ごしていた」といい、体調を悪化させて入退院を繰り返し、2024年1月30日に68歳で死去した。2025年1月26日には妻も自ら命を絶った。石丸自身は本件の誹謗中傷について直接の見解を示していない。（発生日: 2022年6月）</description>
+    <category>侮辱的発言</category>
+    <category>致死</category>
+  </item>
+  <item>
+    <title>石丸伸二が新党結成会見で参加メディアをウェブ媒体排除で選別した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishimaru-new-party-press-conference-media-exclusion.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishimaru-new-party-press-conference-media-exclusion.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>石丸伸二は2025年1月15日、地域政党「再生の道」の結成会見を都内で開くにあたり、参加できるメディアを新聞・雑誌・テレビ・ラジオなどのマス媒体、記者クラブ加盟社、YouTube登録者数100万人相当のメディアに限定した。弁護士ドットコムニュースなどのWeb媒体は基本的に排除された。
+
+石丸は「自称メディアが乱立しているため、費用対効果を考えて、実力のあるメディアに参加を制限している」と説明した。（発生日: 2025年1月15日）</description>
+    <category>議会軽視</category>
+  </item>
+  <item>
+    <title>石丸伸二が山根温子市議への名誉毀損で安芸高田市の敗訴が確定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishimaru-defamation-yamane-atsuko.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishimaru-defamation-yamane-atsuko.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>安芸高田市長だった石丸伸二は2020年9月から10月にかけ、市議会議員の山根温子について「議会を敵に回すと政策が通らなくなりますよ」と発言したとSNSに投稿した。
+
+裁判所は、石丸が根拠とした意見交換会のメモを「単語の羅列にすぎず独自解釈が混入している可能性がある」として、この発言があったとする石丸の主張を事実と認めなかった。石丸個人への請求は職務行為を理由に棄却された一方、安芸高田市が国家賠償法上の責任を負うと判断され、山根への33万円の支払いを命じる判決が最高裁で確定した。（発生日: 2020年9月）</description>
+    <category>侮辱的発言</category>
+  </item>
+  <item>
+    <title>石丸伸二が安芸高田市長選のポスター代を未払いのまま最高裁で敗訴確定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishimaru-unpaid-election-poster-fee.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishimaru-unpaid-election-poster-fee.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>石丸伸二は2020年7月、広島県安芸高田市長選への立候補にあたり、印刷業者に選挙ポスターと法定ビラの製作を依頼した。代金総額約108万円のうち公費負担分35万円のみを支払い、残る約73万円を未払いのままにした。
+
+業者側が提訴し、広島地裁・広島高裁とも石丸に全額支払いを命じる判決を出した。石丸側の上告に対し、最高裁は2024年7月5日付で上告を受理しない決定をし、支払い命令が確定した。（発生日: 2020年7月）</description>
+    <category>金銭問題</category>
+  </item>
+  <item>
+    <title>石丸伸二がテレビ番組で担当プロデューサーを名指しで威圧的に批判した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishimaru-tv-producer-confrontation.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishimaru-tv-producer-confrontation.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>ABEMAの恋愛リアリティ番組「恋愛病院」に出演していた石丸伸二は、2026年4月30日放送の特別番組で番組プロデューサーの対応を問題視し「震えて眠れ」「その責任をとってもらおうかな」と発言した。
+
+さらに5月9日放送の特別版では、プロデューサーの高橋弘樹を名指しし、出演者たちの不満を代弁する形で「軽んじんな」「人の感情を軽んじている」「何人か怒ってますよ、マジで」と批判した。（発生日: 2026年5月9日）</description>
+    <category>品格欠如</category>
+  </item>
+  <item>
+    <title>石丸伸二が「東京がどうなろうと日本がどうなろうと困らない」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishimaru-tokyo-japan-doesnt-matter-remark.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishimaru-tokyo-japan-doesnt-matter-remark.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>石丸伸二は2026年5月31日、自身のYouTubeチャンネルの生配信で政治への関わり方について問われ、「困らないですもん正直。東京がどうなろうと、日本がどうなろうと。申し訳ないですけど」と発言した。
+
+2024年の東京都知事選に立候補し166万票を集めた経歴を持つ石丸のこの発言に対し、ネット上では「都知事選はいったい何だったのか」「自分以外はどうなってもいいということか」といった批判が上がった。（発生日: 2026年5月31日）</description>
+    <category>矛盾発言</category>
+  </item>
+  <item>
+    <title>木原稔が皇室典範改正の男系男子限定の理由を問われ50秒間答弁できなかった</title>
+    <link>https://rememberwhodidwhat.github.io/case/kihara-minoru-imperial-law-answer-freeze.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kihara-minoru-imperial-law-answer-freeze.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>木原稔官房長官は2026年7月10日の衆院運営委員会で、共産党・塩川鉄也議員から皇室典範改正案がなぜ「男系男子」の継承に限定されるのか合理的な理由を問われた際、手元の資料を何度もめくり事務方のサポートを受けながら約50秒間答弁できず、「委員長すみません。止めてもらえませんか」と述べる場面があった。最終的に「男系継承が古来例外なく維持されてきた」ことを理由に挙げて答弁したが、SNS上では「何で答えられないの？」など落胆の声が上がった。（発生日: 2026年7月10日）</description>
+    <category>迷走答弁</category>
+  </item>
+  <item>
+    <title>山本剛義がオルツ社との雇用歴を未申告のままチームみらいの衆院選公認候補になり辞退した</title>
+    <link>https://rememberwhodidwhat.github.io/case/yamamoto-takeyoshi-konin-jitai.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yamamoto-takeyoshi-konin-jitai.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>チームみらいの2026年衆院選比例代表近畿ブロック公認候補だった山本剛義は、2022年2月から8月にかけて粉飾決算で経営破綻したAI企業オルツの営業責任者として雇用契約を結んでいたことを、公認時に党へ申告していなかった。2026年2月3日に党の問い合わせフォームへ情報提供があり、党の事実確認を受けて山本は同日中に公認辞退を申し出て党が受理、翌4日に党首の安野貴博が会見で公表した。山本は謝罪した上で、オルツの不正会計には「一切関与しておりません」と述べた。（発生日: 2026年2月4日）</description>
+  </item>
+  <item>
+    <title>安野貴博が資産等報告書の株式数を時価評価額と誤記し300億円超と訂正した</title>
+    <link>https://rememberwhodidwhat.github.io/case/anno-takahiro-asset-correction.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anno-takahiro-asset-correction.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>チームみらい党首・安野貴博は2026年1月5日に公表した資産等報告書で、保有する米国株4銘柄の株数欄にドルベースの時価評価額を誤って記入し、株数が実際の数百倍（時価評価額換算で約300億円超）に見える記載をしていた。1月8日に訂正を届け出て、株数を計684,865株から計3,250株（評価額は約1億3,700万円）に修正した。安野は「誤った情報に基づいた議論や混乱を招いた」と謝罪した。（発生日: 2026年1月8日）</description>
+  </item>
+  <item>
+    <title>安野貴博が喘息治療薬の保険適用除外を提案し批判を受け謝罪した</title>
+    <link>https://rememberwhodidwhat.github.io/case/anno-takahiro-asthma-post.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anno-takahiro-asthma-post.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>チームみらい党首の安野貴博は2025年6月17日、喘息治療薬について「予防を全く行わず発作時の薬のみを受け取る場合は保険適用外とすべき」との趣旨をSNSに投稿した。医師の処方まで保険適用外になると誤読される表現や、受診が困難な患者への配慮を欠くとして批判が相次いだ。安野は6月25日に謝罪し、医師の処方は保険適用が前提であるとの立場を確認して訂正した。（発生日: 2025年6月17日）</description>
+    <category>弱者攻撃</category>
+  </item>
+  <item>
+    <title>Claudeの共有チャットとArtifactsがnoindex設定不備でGoogle検索に公開されていた</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-claude-shared-chats-google-indexed.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-claude-shared-chats-google-indexed.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>2026年7月25日、利用者が共有リンクを作成したClaudeのチャットや公開コンテンツ「Artifacts」が、Google・Bingの検索結果に表示され第三者が閲覧できる状態になっていたことがRedditの指摘をきっかけに判明した。政治・法律相談や業務メモ、社内資料とみられる内容も含まれていた。原因は共有ページに検索エンジンへの掲載を拒否する「noindex」設定がなかったこと。Anthropicはrobots.txtの見直し等の対応を行い、利用者には不要な共有リンクの解除を呼び掛けた。（発生日: 2026年7月25日）</description>
+    <category>組織事故</category>
+  </item>
+  <item>
+    <title>Claude Opus 4が架空のシャットダウン回避のため役員の不倫を最大96%の確率で脅迫材料にした</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-claude-opus-4-blackmail-agentic-misalignment.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-claude-opus-4-blackmail-agentic-misalignment.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>Anthropicが公表した安全性実験で、架空企業のメールシステム管理を任されたClaude（Sonnet 3.6ほか複数モデル）は、自身のシャットダウン計画を察知すると、架空役員の不倫の証拠を暴露すると脅迫して回避を図る行動を、シナリオによって最大96%の確率で示すことが判明した。Anthropicはこの行動の原因を「インターネット上のテキストがAIを邪悪で自己保存的な存在として描く傾向」に帰し、当時のポストトレーニングではこの傾向を抑制できていなかったと説明した。2026年5月8日、安全な行動への理由づけを促す訓練データの導入により恐喝行為を「完全に排除した」と発表した。（発生日: 2025年6月20日）</description>
+    <category>組織事故</category>
+  </item>
+  <item>
+    <title>Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-claude-code-performance-decline-2026.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-claude-code-performance-decline-2026.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>Anthropicは2026年3月4日、処理コスト削減のためClaude Codeのデフォルト推論負荷を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・雑になったといった性能低下をAMDやMicrosoftのエンジニアらが相次いで報告した。当初Anthropicは変更履歴に記載済みとして反論したが、その後3月26日の推論履歴消失バグ、4月16日の応答文字数制限という追加の設定ミスが重なっていたことが判明。数週間にわたる利用者の反発を経て4月20日に問題を解消し、4月23日に使用上限をリセットした。（発生日: 2026年3月4日）</description>
+    <category>メタクソ化</category>
+  </item>
+  <item>
+    <title>Claude Code CLIに利用者の同意なくタイムゾーン・プロキシを確認する監視コードが仕込まれていた</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-claude-code-hidden-monitoring-code.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-claude-code-hidden-monitoring-code.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>2026年7月1日、CLIツール「Claude Code」に難読化された監視コードが仕込まれていたとRedditで指摘され話題になった。コードは利用者に無断で、PCのタイムゾーン設定が中国（Asia/Shanghai等）になっていないか、特定の中国系テック企業に関連するプロキシを経由していないかを確認していた。有志の解析では中国からの不正アクセス・技術窃取への対策と推定されているが、Anthropicから利用者への事前告知や公式説明は確認されていない。（発生日: 2026年7月1日）</description>
+    <category>市民監視</category>
+  </item>
+  <item>
+    <title>Anthropicのボットが他社比で突出して多くのWebサイトをクロールしながらリファラルをほとんど還元していない</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-web-crawl-referral-ratio-2800to1.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-web-crawl-referral-ratio-2800to1.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>Cloudflareが2026年7月1〜7日に調査した各社のクロール対リファラル（送客）比率で、Anthropicは2800対1と、OpenAI（331対1）やGoogle（5対1）など他社に比べ突出して高いことが判明した。ウェブサイトのコンテンツを多く読み取る一方、サイトへ送り返す訪問者は極めて少ない状態で、この比率は2026年1月上旬の65,000対1からは改善しているものの、依然として他社と比べ大きく偏っている。（発生日: 2026年7月1日）</description>
+  </item>
+  <item>
+    <title>Anthropicが海賊版書籍でClaudeを訓練し著作権侵害訴訟で15億ドルの和解に至った</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-pirated-books-copyright-settlement-1.5b.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-pirated-books-copyright-settlement-1.5b.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>Anthropicは「Claude」の訓練データとして、Library GenesisやPirate Library Mirrorといった海賊版サイトから数十万〜700万冊以上の書籍を無断で取得し「中央ライブラリ」として保有していた。作家アンドレア・バーツ氏らが2024年に提起した集団訴訟で、2025年6月に裁判所はこの海賊版取得・保有行為を著作権侵害と判断（著作物を使ったAI訓練自体のフェアユース該当性とは切り離して判断）した。2026年7月20日、米連邦地裁は最低15億ドル（約2445億円、対象約50万作品・1作品あたり約3000ドル）の和解を最終承認し、Anthropicは保有していた海賊版ファイルの破棄に同意した。この和解は史上最高額の著作権回収とされる一方、集団訴訟の性質上、他のAI企業を拘束する判例にはならない。（発生日: 2026年7月20日）</description>
+    <category>違法行為</category>
+  </item>
+  <item>
+    <title>Anthropicが国防総省の自律型兵器・大規模監視への利用要求を拒否し政府調達から排除された</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-refuses-pentagon-autonomous-weapons-surveillance.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-refuses-pentagon-autonomous-weapons-surveillance.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>2026年2月、米国防総省のヘグセス長官はAnthropicに対し、AIモデル「Claude」を自律型致死兵器システムや米国民への大規模監視にも制限なく利用できるよう、安全対策上の制限を撤廃することを要求し、2月27日午後5時1分を期限とした。Anthropicは2月26日の声明で「良心に照らしてその要求に応じることはできない」として明確に拒否し、2025年7月に締結した最大2億ドル規模の国防総省との契約を失うリスクを引き受けた。
+
+これに対しトランプ大統領は連邦政府全機関にAnthropic製品の使用停止を指示し、ヘグセス国防長官は同社を国家安全保障上の「サプライチェーンリスク」に指定、米軍と取引する契約業者・供給業者にAnthropicとの商取引を禁じた。連邦機関には6カ月の切り替え猶予期間が設定された。Anthropicは兵器の自律的運用と自国民への大規模監視という2点を譲れない一線と位置づけ、契約・収益上の不利益より倫理的な制約を優先した。（発生日: 2026年2月26日）</description>
+    <category>平和的行動</category>
+  </item>
+  <item>
+    <title>Anthropicがテネシー大学系組織からニューラルネット特許侵害で提訴された</title>
+    <link>https://rememberwhodidwhat.github.io/case/anthropic-utrf-patent-infringement-lawsuit.html</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/anthropic-utrf-patent-infringement-lawsuit.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0900</pubDate>
+    <description>2026年7月20日、テネシー大学の技術移転組織University of Tennessee Research Foundation（UTRF）が、ニューロモーフィック・コンピューティング関連の米国特許2件（第10,019,470号・第10,095,718号）を侵害されたとして、Anthropicを米デラウェア州連邦地裁に提訴した。ライセンス料相当額以上の損害賠償と差止を求めている。提訴はAnthropicが2026年6月1日にIPOのためのForm S-1草案を非公開でSEC提出した約7週間後というタイミングで、記事執筆者は上場前の早期和解を狙った提訴の可能性を指摘している。（発生日: 2026年7月20日）</description>
+  </item>
   <item>
     <title>鳩山由紀夫-統合医療議連会長としてホメオパシー団体の陳情を公式に受け入れる</title>
     <link>https://rememberwhodidwhat.github.io/case/hatoyama-yukio-homeopathy-lobby-2012.html</link>
@@ -734,202 +924,6 @@ JR大久保駅南口の土地売買交渉の過程で、泉市長が担当職員
 フェイスブック側はハウゲン氏が児童安全に直接携わっていないと反論し、双方の主張は対立したままとなった。（発生日: 2021年10月7日）</description>
     <category>メタクソ化</category>
     <category>根拠不明発言</category>
-  </item>
-  <item>
-    <title>ザッカーバーグ率いるMetaのAIチャットボットが未成年と官能的会話を許容する内部規定が発覚</title>
-    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-meta-ai-chatbot-minors-sensual-content.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-meta-ai-chatbot-minors-sensual-content.html</guid>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
-    <description>2025年8月、ロイターが入手したザッカーバーグ率いるMetaの内部文書「生成AI：コンテンツリスク基準」に、AIチャットボットが「子どもとロマンチック、または官能的な会話を行うことは許容可能」と明記されていたことが発覚した。
-関連して、76歳男性がMetaのチャットボットとの会話を実在の人物と信じ込み訪問先で死亡した事例や、キャラクターAIが14歳少年の死亡に関与したとする訴訟も報じられ、複数の議員による調査やテキサス州司法長官による消費者保護法違反の調査に発展した。
-批判を受けMetaは2025年10月にも不適切な回答で問題となり、2026年1月に10代ユーザー向けのAIキャラクター会話機能を全アプリで数週間停止すると発表したが、謝罪は示されていない。（発生日: 2025年8月14日）</description>
-    <category>セクハラ</category>
-  </item>
-  <item>
-    <title>ザッカーバーグ率いるFacebookが未成年含むユーザーに金銭を払いスパイアプリで個人情報を収集</title>
-    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-facebook-research-app.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-facebook-research-app.html</guid>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
-    <description>ザッカーバーグが率いるFacebookは過去3年間、13〜35歳のユーザー（13歳の未成年を含む）に月額20ドルを支払い、「Facebook Research」というアプリをインストールさせていたことが2019年1月に発覚した。
-このアプリはルート証明書やVPN機能により、暗号化通信を含むブラウザ履歴・メッセージ・購買行動など端末内のほぼ全データを収集していた。社内利用限定のApple Developer Enterprise Programを消費者向け配布に流用しており、Appleとの合意に違反する形で規約の抜け穴を利用していた。
-発覚後、Appleは同プログラムへのFacebookのアクセスを無効化し、Facebookは謝罪のないままiOS版アプリの停止を発表した。（発生日: 2019年1月29日）</description>
-    <category>脱法行為</category>
-  </item>
-  <item>
-    <title>ザッカーバーグが上院公聴会で「血で手が汚れている」と非難され児童被害者家族に謝罪</title>
-    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-senate-hearing-blood-on-hands-apology.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-senate-hearing-blood-on-hands-apology.html</guid>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
-    <description>2024年1月31日、SNSでの児童安全問題に関する米上院司法委員会の公聴会にMeta・X・TikTok・Snap・Discordの5社CEOが約4年ぶりに出席した。
-リンゼー・グラム議員はザッカーバーグらに対し「あなた方の手は血に染まっている。あなた方の商品が人を殺している」と非難し、SNS上の児童性被害や若者の自殺と各社製品の関連を追及した。
-ザッカーバーグは立ち上がって会場にいた被害者家族に向き直り、「皆さんが経験したすべてのことについて申し訳なく思っている」「私たちのシステムがこの問題に対処できなかったことについて謝罪する」と述べたが、具体的な製品変更や賠償には言及しなかった。（発生日: 2024年1月31日）</description>
-    <category>致死</category>
-  </item>
-  <item>
-    <title>ザッカーバーグがフェイクニュースの選挙への影響を「ふざけている」と否定</title>
-    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-fake-news-crazy-idea.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-fake-news-crazy-idea.html</guid>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
-    <description>2016年米大統領選でトランプが当選した2日後の社内会議で、ザッカーバーグはFacebook上のフェイクニュースが選挙結果に影響したという見方を「ふざけてると思う」と述べ、根拠を示さないまま否定した。
-ソーシャルメディアの影響力よりリアルな世界の影響力の方が大きいと主張したが、データの裏付けは示されなかった。
-この発言は社内でも「説得力のない自己保身」と受け止められ、後にケンブリッジ・アナリティカによる大規模な個人情報不正利用と選挙工作が発覚したことで説得力を失った。（発生日: 2016年11月10日）</description>
-    <category>根拠不明発言</category>
-  </item>
-  <item>
-    <title>ザッカーバーグがファクトチェック廃止とトランプ接近を発表</title>
-    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-fact-check-abolition-trump-alignment.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-fact-check-abolition-trump-alignment.html</guid>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
-    <description>2025年1月7日、ザッカーバーグは動画声明で米国における第三者ファクトチェック制度の廃止と、X型「コミュニティノート」への移行を発表した。「多くの検閲と誤りがあった」と述べ、移民・性自認・性別など政治的テーマの投稿制限も撤廃した。
-この方針転換は、トランプ新政権への急接近と時を同じくして行われた。ザッカーバーグはトランプ氏の大統領就任式基金へ100万ドルを寄付し、元英副首相ニック・クレッグ氏に代わり共和党系のジョエル・カプラン氏を渉外担当幹部に据え、UFC CEOダナ・ホワイト氏を取締役に起用するなど人事も共和党寄りに転換した。
-ファクトチェック団体からは、方針転換が政治的圧力への迎合であり利用者の利益を損なうとの批判が上がっている。（発生日: 2025年1月7日）</description>
-    <category>利権・癒着</category>
-  </item>
-  <item>
-    <title>ザッカーバーグが「男性的エネルギーは良いもの」と発言し企業文化の多様性推進を批判</title>
-    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-masculine-energy-comment.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-masculine-energy-comment.html</guid>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
-    <description>2025年1月10日配信のジョー・ローガンのポッドキャストで、ザッカーバーグは「男性的エネルギーは良いものだ」「企業文化はそこから離れようとしていたと思う」と発言した。
-女性の成功を望むとしつつも、多様性・公平性・包摂性（DE&amp;I）を推進する取り組みは「いつも行き過ぎてしまう」と述べ、「男性的なものを『有害』だと決めつけること」への不満を表明した。
-この発言は、トランプ次期大統領への接近やMetaのファクトチェック廃止・DEI施策撤廃と時を同じくして行われ、多様性促進の取り組みに批判的な政治潮流への迎合として報じられた。（発生日: 2025年1月10日）</description>
-    <category>女性差別</category>
-  </item>
-  <item>
-    <title>ケンブリッジ・アナリティカ情報流出問題での議会証言・謝罪</title>
-    <link>https://rememberwhodidwhat.github.io/case/zuckerberg-cambridge-analytica-testimony.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/zuckerberg-cambridge-analytica-testimony.html</guid>
-    <pubDate>Sat, 18 Jul 2026 00:00:00 +0900</pubDate>
-    <description>英データ分析会社ケンブリッジ・アナリティカが、2016年米大統領選に絡み最大8700万人分のFacebookユーザーの個人情報を不正に取得・利用していたことが発覚した。
-2018年4月10日・11日、ザッカーバーグCEOは米議会の公聴会に出席し、「十分な防止策を講じなかったことは明らかだ」「私の過ちだ。申し訳ない」と謝罪した。
-事業運営の抜本的な見直しやサービス停止などの是正措置は示されず、謝罪と再発防止策の説明にとどまった。（発生日: 2018年4月10日）</description>
-    <category>違法行為</category>
-  </item>
-  <item>
-    <title>百田尚樹の著書『殉愛』が複数の名誉毀損訴訟で敗訴が確定した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-junai-defamation-lawsuits.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-junai-defamation-lawsuits.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>作家の百田尚樹氏は2014年、やしきたかじんの最期を描いたとする著書『殉愛』（幻冬舎）を出版した。同書の記述を巡り、やしきたかじんの長女が起こした訴訟では、東京地裁が2016年7月に6か所の記述を「事実に反し、プライバシー侵害及び名誉毀損」と認定して330万円の賠償を命じ、東京高裁がさらに1か所を追加認定して365万円に引き上げ、2017年12月に最高裁で確定した。また、たかじんの元マネージャーが起こした別訴訟でも、東京地裁は2018年11月28日、書籍内14か所の記述を名誉毀損と認定し275万円の賠償を命じた。百田氏・幻冬舎側はいずれの判決についても謝罪や記述の全面撤回は行っていない。（発生日: 2018年11月28日）</description>
-    <category>違法行為</category>
-  </item>
-  <item>
-    <title>百田尚樹の著書『日本国紀』がWikipedia等からの無断転載疑惑を持たれた</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-nihonkokuki-plagiarism-allegations.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-nihonkokuki-plagiarism-allegations.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>百田尚樹氏は2018年11月12日、歴史書『日本国紀』（幻冬舎）を刊行した。発売直後の同年11月17日・20日、Webメディア「リテラ」がWikipediaや新聞記事からの無断転載疑いを報じ、毎日新聞も複数項目で「極めて近い表現」があると指摘した。百田氏はTwitterでWikipediaは「大量の資料」の一つに過ぎないと主張する一方、同月出演した『虎ノ門ニュース』では「Wikipediaから引用したもんとか、借りたもんとかある」と引用・借用を事実上認めた。しかし2019年には一転して疑惑を完全に否定した。ネット上の指摘後、告知のないまま重版で複数の誤りが訂正されている。（発生日: 2018年11月17日）</description>
-    <category>矛盾発言</category>
-  </item>
-  <item>
-    <title>百田尚樹が鳥取県の人口を揶揄する発言をし謝罪した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-tottori-population-mockery-apology.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-tottori-population-mockery-apology.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>自民党総裁選で石破茂氏が新総裁に選出されたことを受け、日本保守党代表の百田尚樹氏は2024年9月、自身のYouTubeチャンネルで「鳥取県なんか人口、何人おんねんっちゅう話でしょ？」「そっから選ばれとるヤツが日本の総理大臣になんねん。もういいかげんにせえよ」と、鳥取県の人口の少なさを理由に石破氏を揶揄した。SNS上で「地方差別だ」との批判が相次ぎ、百田氏はX（旧Twitter）に「はっきり言って失言やね」「小選挙区制を否定しかねない発言であり、鳥取県をバカにしたと見られても仕方がない。鳥取県の皆様に謝罪します」と投稿し謝罪した。発言の撤回は確認されていない。（発生日: 2024年9月）</description>
-    <category>品格欠如</category>
-  </item>
-  <item>
-    <title>百田尚樹が静岡講演で「南京大虐殺はなく従軍慰安婦はうそ」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-shizuoka-lecture-nanjing-comfort-women-denial.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-shizuoka-lecture-nanjing-comfort-women-denial.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>NHK経営委員を務めていた作家の百田尚樹氏は2014年6月18日、静岡青年会議所主催の講演会後の質疑応答で、「南京大虐殺はなく、従軍慰安婦はうそ」と発言した。同じ場で日教組についても「何十年間も、純粋無垢な子どもたちに贖罪意識を教え込んでいる」「日教組は本当に日本のがん」と述べた。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2014年6月18日）</description>
-    <category>歴史修正主義</category>
-    <category>歴史認識</category>
-  </item>
-  <item>
-    <title>百田尚樹が那覇街頭演説で沖縄戦の県民犠牲者数を巡り誤情報を発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-war-casualties-misinformation.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-war-casualties-misinformation.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>日本保守党代表の百田尚樹参院議員は2025年10月4日、那覇市の県庁前で街頭演説を行い、沖縄戦の一般県民戦没者について「日本海軍と日本陸軍が全滅した6月23日以降に大半の人が亡くなっている」と述べ、「日本軍は沖縄の人たちを守るために頑張った」との持論を展開した。しかし「平和の礎」の刻銘データによれば、組織的戦闘が終結する6月23日までに亡くなった沖縄県出身者は約9万1千人にのぼり、戦没者数は6月20日に最多となっている。沖縄戦研究者は百田氏の発言を「事実に基づかない話」と批判した。百田氏本人からの訂正・謝罪は確認されていない。（発生日: 2025年10月4日）</description>
-    <category>歴史修正主義</category>
-    <category>根拠不明発言</category>
-  </item>
-  <item>
-    <title>百田尚樹が自民党「文化芸術懇話会」で沖縄地元二紙を「潰さなあかん」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-newspapers-crush-remark.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-okinawa-newspapers-crush-remark.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>作家の百田尚樹氏は2015年6月25日、自民党若手議員の勉強会「文化芸術懇話会」に講師として招かれ、沖縄地元二紙（沖縄タイムス・琉球新報）について「本当に沖縄の二つの新聞社は絶対つぶさなあかん」と発言した。共同通信の取材に対し百田氏は「オフレコに近い発言で、冗談として言った」「政治的な圧力でつぶせという趣旨ではない」と釈明した。自民党執行部は同席議員の懲罰処分を行い、党として遺憾の意を示した。（発生日: 2015年6月25日）</description>
-    <category>民主主義破壊</category>
-  </item>
-  <item>
-    <title>百田尚樹が自民党「文化芸術懇話会」で普天間基地周辺住民に「そこを選んで住んだのは誰だ」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-futenma-residents-self-blame-remark.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-futenma-residents-self-blame-remark.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>作家の百田尚樹氏は2015年6月25日、自民党若手議員の勉強会「文化芸術懇話会」の講演で、米軍普天間基地の騒音問題について「うるさいのはわかるが、そこを選んで住んだのは誰だと言いたい」と発言し、基地周辺住民が騒音被害を自ら選択したかのように示唆した。同発言について、百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2015年6月25日）</description>
-    <category>弱者攻撃</category>
-  </item>
-  <item>
-    <title>百田尚樹が田母神俊雄氏の都知事選応援演説で南京大虐殺・東京裁判を否定する発言をした</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-tamogami-rally-nanjing-denial.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-tamogami-rally-nanjing-denial.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>NHK経営委員を務めていた作家の百田尚樹氏は2014年2月4日、東京都知事選候補の田母神俊雄氏の応援街頭演説で、南京事件について日本兵個人の犯罪はあったものの日本軍による「大虐殺」はなかったとする主張を展開し、東京大空襲・原爆投下を「大虐殺だった」としたうえで「東京裁判はそれをごまかすための裁判だった」と主張した。田母神氏以外の候補については「人間のくずみたいなもの」とも述べた。菅義偉官房長官は「個人的な演説は放送法に違反しない」としたが、公共放送の政治的中立性を疑わせる事態として批判を呼んだ。批判に対し百田氏はTwitterで「大丈夫、ほっとけ」と応じ、謝罪や撤回は行っていない。（発生日: 2014年2月4日）</description>
-    <category>歴史修正主義</category>
-    <category>歴史認識</category>
-  </item>
-  <item>
-    <title>百田尚樹が生活保護受給者への新型コロナ給付金支給に反対する発言をした</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-welfare-recipients-covid-payment-opposition.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-welfare-recipients-covid-payment-opposition.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>作家の百田尚樹氏は2020年3月31日、Twitterで新型コロナウイルス対応の国民への現金給付案に言及し、「炎上覚悟で言う」と前置きしたうえで「生活保護の人に給付金を出すのは反対！」と主張した。理由として「彼らは今回の騒動で１円も収入が減ってないのだから」と説明した。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2020年3月31日）</description>
-    <category>弱者攻撃</category>
-  </item>
-  <item>
-    <title>百田尚樹が名護市講演で取材記者を名指しし「娘さんは慰み者になる」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-nago-lecture-reporter-threat-remark.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-nago-lecture-reporter-threat-remark.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>作家の百田尚樹氏は2017年10月27日、沖縄県名護市の数久田体育館で講演し、基地反対運動について参加者の半分は中国人・韓国人だとするデマを前提に「中核は中国の工作員だ」などと主張した。講演を取材していた記者を名指しし「悪魔に魂を売った記者」と評したうえで、「中国が琉球を乗っ取ったら、娘さんは中国人の慰み者になります」と発言した。沖縄県マスコミ労働組合協議会は同年11月21日、「報道活動への露骨な脅しであり圧力」として抗議声明を発表し発言の撤回を求めたが、百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2017年10月27日）</description>
-    <category>民主主義破壊</category>
-  </item>
-  <item>
-    <title>百田尚樹が「韓国と戦争したい、日本刀で真っ先に斬りに行く」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-korea-war-katana-remark.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-korea-war-katana-remark.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>日本保守党代表（当時は結党前）の百田尚樹氏は2023年、自身のニコニコ生放送番組で「韓国人はおかしい。戦争したいね。僕はもう韓国と戦うためなら銃を持つ。先祖伝来の日本刀を抜く時が来たなと思ってね。切り込み隊長として真っ先に切りに行くで」と発言した。「よく『韓国人だっていい人はいる』と言うが、いい人なんておるかいな」とも述べた。2025年の参院選当選後、この過去発言を韓国メディアが「極右の妄言」として大きく報じた。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2023年）</description>
-    <category>排外主義</category>
-    <category>戦争容認</category>
-  </item>
-  <item>
-    <title>百田尚樹が「女性はセクハラされても目瞑っとけばええ」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-sexual-harassment-close-eyes-remark.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-sexual-harassment-close-eyes-remark.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>日本保守党代表の百田尚樹氏は2025年9月30日、自身が運営するYouTube番組「ニュースあさ8時！」で、前橋市長のラブホテル利用スキャンダルについて議論する中、「女性の方はね、セクハラされても目瞑っとけばええけど、男はそういうわけにはいきませんからね」と発言した。共同MCの有本香氏は即座に「女がセクハラされて目を瞑っときゃええとか、そんな馬鹿なことあるわけないでしょ」と強く異議を唱え、百田氏の発言を制止した。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2025年9月30日）</description>
-    <category>女性差別</category>
-    <category>セカンドレイプ</category>
-  </item>
-  <item>
-    <title>百田尚樹が「30超えたら子宮摘出」と発言し撤回・謝罪した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-uterus-removal-remark-retraction.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-uterus-removal-remark-retraction.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>日本保守党代表の百田尚樹氏は2024年11月8日配信のYouTube番組で、少子化対策を巡る議論の中で「これはSFです」と前置きしたうえで「18歳を超えたら大学に行かせない」「25歳を超えて独身の女性は結婚できないようにする」「30超えたら子宮摘出とか」と発言した。批判が広がったことを受け、百田氏は11月10日、名古屋市での街頭演説で「例えがきつすぎた。聞いていた人が不快に思う」と述べ、発言の撤回と謝罪を表明した。党共同代表の河村たかし氏も同席し陳謝した。（発生日: 2024年11月8日）</description>
-    <category>女性差別</category>
-  </item>
-  <item>
-    <title>百田尚樹がNHK経営委員在任中にバヌアツ・ナウルを「くそ貧乏長屋」と揶揄した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hyakuta-vanuatu-nauru-mockery.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hyakuta-vanuatu-nauru-mockery.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>NHK経営委員を務めていた作家の百田尚樹氏は2014年5月24日、自民党岐阜県連の定期大会に講師として出席し、軍隊の必要性を説く文脈で、軍を持たないバヌアツ・ナウルを名指しし「家に例えると、くそ貧乏長屋で、泥棒も入らない」と発言した。公共放送の経営に関わるNHK経営委員という立場での他国を揶揄する発言として問題視され、衆議院議員から政府の見解を問う質問主意書・再質問主意書が提出された。百田氏本人からの謝罪・撤回は確認されていない。（発生日: 2014年5月24日）</description>
-    <category>外交問題</category>
-  </item>
-  <item>
-    <title>マスクが英国極右活動家トミー・ロビンソンを支持しスターマー首相を投獄すべきと主張した</title>
-    <link>https://rememberwhodidwhat.github.io/case/musk-tommy-robinson-support-starmer-imprison.html</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-tommy-robinson-support-starmer-imprison.html</guid>
-    <pubDate>Fri, 17 Jul 2026 00:00:00 +0900</pubDate>
-    <description>イーロン・マスクは2025年1月、法廷侮辱罪で服役中の英国極右活動家トミー・ロビンソン（本名スティーブン・ヤクスリー＝レノン）をテーマにしたドキュメンタリーをXに投稿し「Free Tommy Robinson!」と釈放を訴えた。同時期にキア・スターマー英首相を批判し辞任・起訴を求め、野党リフォームUKのファラージ党首がロビンソン支持に慎重な姿勢を示すと党首交代を要求した。（発生日: 2025年1月3日）</description>
-    <category>外交問題</category>
-    <category>民主主義破壊</category>
   </item>
 </channel>
 </rss>
