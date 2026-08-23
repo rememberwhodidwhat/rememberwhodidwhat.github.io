@@ -81,9 +81,11 @@
   <div class="section-label">カードゲーム本文</div>
   <div class="section-body">
 <style>
+  /* 横に広げすぎるとaspect-ratio固定のカードが縦にも伸びてページが縦長になりすぎるため、
+     本文セクション（.section-body、mainのmax-width内）の幅は超えない。 */
   .mg-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
   .mg-status { font-size: 0.85rem; color: var(--muted); }
-  .mg-board { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; max-width: 900px; margin: 0 auto; }
+  .mg-board { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 100%; margin: 0 auto; }
   @media (max-width: 700px) { .mg-board { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 420px) { .mg-board { grid-template-columns: repeat(2, 1fr); } }
   .mg-card { aspect-ratio: 3 / 4; perspective: 800px; cursor: pointer; }
@@ -118,6 +120,18 @@
   @keyframes mg-badge-pop {
     to { opacity: 1; transform: scale(1); }
   }
+
+  /* ── 不一致時のエフェクト。時間待機で自動的には裏返さず、次のカードをクリック
+     (タップ)するまでこのまま表向きで留まる。 ── */
+  .mg-card.mismatch .mg-front { border: 2px solid #e53935; box-shadow: 0 0 0 1px #e53935 inset; }
+  .mg-card.mismatch .mg-inner { animation: mg-mismatch-shake 0.4s ease; }
+  @keyframes mg-mismatch-shake {
+    0%, 100% { transform: rotateY(180deg) translateX(0); }
+    20%      { transform: rotateY(180deg) translateX(-6px); }
+    40%      { transform: rotateY(180deg) translateX(6px); }
+    60%      { transform: rotateY(180deg) translateX(-4px); }
+    80%      { transform: rotateY(180deg) translateX(4px); }
+  }
 </style>
 <div class="mg-controls">
   <span id="cardgame-status" class="mg-status"></span>
@@ -133,9 +147,9 @@
   var status = document.getElementById('cardgame-status');
   var resetBtn = document.getElementById('cardgame-reset');
   var flipped = [];
+  var pendingMismatch = [];
   var matchedCount = 0;
   var moves = 0;
-  var locked = false;
 
   function shuffle(arr) {
     var a = arr.slice();
@@ -168,41 +182,52 @@
     front.appendChild(link);
   }
 
+  function dismissMismatch() {
+    pendingMismatch.forEach(function(c) {
+      c.el.classList.remove('flipped');
+      c.el.classList.remove('mismatch');
+    });
+    pendingMismatch = [];
+    updateStatus();
+  }
+
   function onCardClick(el, cardIndex) {
-    if (locked || el.classList.contains('flipped') || el.classList.contains('matched')) return;
+    // 不一致のペアが表示されたままなら、このクリックは裏返すためだけに使い、
+    // 前のターンを終わらせる（クリックしたカードをそのまま次のターンの1枚目には
+    // せず、次のクリックから新しいターンを始める）。
+    if (pendingMismatch.length === 2) {
+      dismissMismatch();
+      return;
+    }
+
+    if (el.classList.contains('flipped') || el.classList.contains('matched')) return;
     el.classList.add('flipped');
     flipped.push({ el: el, cardIndex: cardIndex });
     if (flipped.length === 2) {
       moves++;
-      locked = true;
-      (function(a, b) {
-        var same = cards[a.cardIndex].slug === cards[b.cardIndex].slug;
-        if (same) {
-          markMatched(a.el, a.cardIndex);
-          markMatched(b.el, b.cardIndex);
-          matchedCount++;
-          flipped = [];
-          locked = false;
-          updateStatus();
-        } else {
-          setTimeout(function() {
-            a.el.classList.remove('flipped');
-            b.el.classList.remove('flipped');
-            flipped = [];
-            locked = false;
-          }, 900);
-        }
-      })(flipped[0], flipped[1]);
-      updateStatus();
+      var a = flipped[0], b = flipped[1];
+      flipped = [];
+      var same = cards[a.cardIndex].slug === cards[b.cardIndex].slug;
+      if (same) {
+        markMatched(a.el, a.cardIndex);
+        markMatched(b.el, b.cardIndex);
+        matchedCount++;
+        updateStatus();
+      } else {
+        a.el.classList.add('mismatch');
+        b.el.classList.add('mismatch');
+        pendingMismatch = [a, b];
+        status.textContent = '❌ 不一致 - 次のカードをタップすると裏返ります';
+      }
     }
   }
 
   function render() {
     board.innerHTML = '';
     flipped = [];
+    pendingMismatch = [];
     matchedCount = 0;
     moves = 0;
-    locked = false;
     updateStatus();
     var order = shuffle(cards.map(function(_, i) { return i; }));
     order.forEach(function(cardIndex) {
