@@ -3,16 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
 <title>廃棄困難な国旗損壊罪チラシ | 誰が何をしたか覚えていよう</title>
-<meta name="description" content="2026年8月13日に施行された「国旗の損壊等の処罰に関する法律」について、配布用に作成したチラシです。Web版では関連する事件・出典へのリンクがあります。">
+<meta name="description" content="2026年に可決された「国旗の損壊等の処罰に関する法律」について、配布用に作成したチラシです。Web版では関連する事件・出典へのリンクがあります。">
 <style>
-  :root { --bg: #0f0f14; --surface: #1a1a24; --border: #2a2a3a; --text: #e8e8f0; --muted: #888899; --accent: #d00; }
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
+  :root {
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --link:           light-dark(#6ab0f5, #1868c9);
+    --header-tint:    light-dark(#0a0014, #f1e9fb);
+    --accent: #d00;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; line-height: 1.7; }
   a { color: inherit; }
-  a.link { color: #6ab0f5; text-decoration: underline; text-underline-offset: 2px; }
+  a.link { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
   a.link:hover { opacity: 0.8; }
   /* .rb-wrap/.rb-baseはdisplay:inline-blockなので、祖先のa.linkが引く下線が
      ルビ付き文字の部分だけ描画されない（atomic inline boxは祖先のtext-decorationが
@@ -20,13 +50,13 @@
      (.rb-rt)には下線を引かない。 */
   a.link .rb-wrap, a.link .rb-base { text-decoration: inherit; }
   a.link .rb-rt { text-decoration: none; }
-  header { padding: 40px 40px 32px; border-bottom: 1px solid var(--border); border-left: 4px solid var(--accent); background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%); }
+  header { padding: 40px 40px 32px; border-bottom: 1px solid var(--border); border-left: 4px solid var(--accent); background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%); }
   .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
   .header-nav a:hover { color: var(--text); }
-  header h1 { font-size: 1.5rem; font-weight: 700; color: #fff; line-height: 1.4; margin-bottom: 8px; }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-strong); line-height: 1.4; margin-bottom: 8px; }
   header p.lead { font-size: 0.88rem; color: var(--muted); max-width: 640px; }
   main { max-width: 1100px; margin: 0 auto; padding: 40px 40px 60px; }
-  .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .section-label { font-size: 1.2rem; font-weight: 700; color: var(--text-strong); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 
   /* ── チラシ本体: PDFと同一構造・同一デザインをコンテナクエリ単位で比例縮小して再現 ── */
   .flyer-sheet { container-type: inline-size; width: 100%; margin: 0 auto 20px; }
@@ -71,23 +101,25 @@
      YAMLメタデータで body-size を指定する（.box に直接style="font-size:…"が付き、
      p/ulはinheritで追従する）。 */
   .box { position: absolute; z-index: 1; font-size: 1.0690cqw; }
-  h2 { margin: 0 0 1.0101cqw; border-left: 0.5051cqw solid #d00; padding-left: 1.0101cqw; }
-  .rank-1 h2 { font-size: 2.6132cqw; }
-  .rank-2 h2 { font-size: 2.2568cqw; }
-  .rank-3 h2 { font-size: 1.9005cqw; }
-  .rank-4 h2 { font-size: 1.5441cqw; }
-  h2.todo { color: #666; border-left-color: #bbb; font-weight: 400; }
+  /* 以下のh2/ul/blockquote/aはチラシ本体(.frame)の内部だけに適用する。ページ側の
+     見出し(.section-label等)を巻き込まないよう、必ず.frameの子孫セレクタとして書く。 */
+  .frame h2 { margin: 0 0 1.0101cqw; border-left: 0.5051cqw solid #d00; padding-left: 1.0101cqw; }
+  .frame .rank-1 h2 { font-size: 2.6132cqw; }
+  .frame .rank-2 h2 { font-size: 2.2568cqw; }
+  .frame .rank-3 h2 { font-size: 1.9005cqw; }
+  .frame .rank-4 h2 { font-size: 1.5441cqw; }
+  .frame h2.todo { color: #666; border-left-color: #bbb; font-weight: 400; }
   .todo-mark { color: #999; font-weight: 400; font-size: 0.7em; }
   /* 本文のフォントサイズは.box（節ごとにコラム/*.mdのbody-sizeで上書き可）からinheritで追従する */
   .box p, .box ul { font-size: inherit; line-height: 1.75; margin: 0 0 1.0101cqw; }
-  ul { padding-left: 1.6835cqw; }
-  blockquote { font-size: 0.9502cqw; line-height: 1.6; background: #f4f4f4; border-left: 0.3367cqw solid #999; margin: 0.6734cqw 0 1.3468cqw; padding: 0.6734cqw 1.3468cqw; }
-  a { color: inherit; text-decoration: none; }
+  .frame ul { padding-left: 1.6835cqw; }
+  .frame blockquote { font-size: 0.9502cqw; line-height: 1.6; background: #f4f4f4; border-left: 0.3367cqw solid #999; margin: 0.6734cqw 0 1.3468cqw; padding: 0.6734cqw 1.3468cqw; }
+  .frame a { color: inherit; text-decoration: none; }
   .oppose-list { line-height: 1.5; }
   /* 結びの問いかけの下、ページ右下にQRを置く（問いかけ文は折り返さないよう横幅を占有させない）。
      結びの見出し自体は「本文の無いセクション」の見出しと同じ扱い（左の赤棒つき）。 */
   .closing-row { margin-top: 2.6936cqw; }
-  h2.closing { font-size: 1.3066cqw; margin: 0; white-space: nowrap; }
+  .frame h2.closing { font-size: 1.3066cqw; margin: 0; white-space: nowrap; }
   .qr-corner { position: absolute; right: 0; bottom: -4.7138cqw; display: flex; align-items: flex-end; gap: 0.6734cqw; }
   .qr-corner img { width: 7.4074cqw; height: 7.4074cqw; display: block; }
   .qr-corner .qr-label { font-size: 1.0690cqw; font-weight: 600; line-height: 1.3; margin-bottom: 0.3367cqw; color: #333; white-space: nowrap; }
@@ -97,20 +129,20 @@
   .section-body p { font-size: 0.88rem; color: var(--text); line-height: 1.85; margin-bottom: 12px; }
   .actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .btn { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); text-decoration: none; color: var(--text); transition: background 0.15s, border-color 0.15s; }
-  .btn:hover { background: #20202e; border-color: var(--accent); }
+  .btn:hover { background: var(--surface-hover); border-color: var(--accent); }
   .btn.primary { background: color-mix(in srgb, var(--accent) 18%, var(--surface)); border-color: color-mix(in srgb, var(--accent) 50%, transparent); }
   .case-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
   .case-card { display: block; padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; transition: background 0.15s, border-color 0.15s; }
-  .case-card:hover { background: #20202e; border-color: var(--accent); }
+  .case-card:hover { background: var(--surface-hover); border-color: var(--accent); }
   .case-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
-  .case-title { font-size: 0.85rem; font-weight: 600; color: #fff; line-height: 1.5; }
+  .case-title { font-size: 0.85rem; font-weight: 600; color: var(--text-strong); line-height: 1.5; }
   footer { padding: 24px 20px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
   .share-buttons { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 14px; }
   .share-label { font-size: 0.8rem; color: var(--muted); margin-right: 4px; }
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -124,32 +156,78 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 </style>
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   <div class="header-nav"><a href="../../">← トップページ</a></div>
   <h1>廃棄困難な国旗損壊罪チラシ</h1>
-  <p class="lead">2026年8月13日に施行された「国旗の損壊等の処罰に関する法律」について、配布用に作成したチラシです。Web版では関連する事件・出典へのリンクがあります。</p>
+  <p class="lead">2026年に可決された「国旗の損壊等の処罰に関する法律」について、配布用に作成したチラシです。Web版では関連する事件・出典へのリンクがあります。</p>
 </header>
 
 <main>
 
-  <div class="section-label">コンセプト</div>
+  <h2 class="section-label">コンセプト</h2>
   <div class="section-body">
 <p>　チラシという媒体は面白いです。他人の敷地に勝手に投函しても良いような慣習があります。一方で、不特定多数に頑張って配布したとしても、どのくらい読まれるか分からない問題があります。</p>
 <p>　国旗損壊罪は多くの問題が指摘されていましたが、与党の強行採決によって可決されてしまいました。この法律の問題の一つに「国旗を所有することすらリスクになる」というものがあります。</p>
 <p>　「廃棄困難な国旗損壊罪チラシ」は、これらの問題に向き合います。日の丸を模したチラシを受け取った者は、その所有リスクも受け取ったことになります。チラシが読まれれば、国旗損壊罪の問題点を伝えます。チラシが読まれずに捨てられれば、国旗損壊を誘発します。すべての国民が対象読者であり、すべての廃棄が抗議になりえる——そのように設計しました。</p>
   </div>
 
-  <div class="section-label">チラシ本文</div>
+  <h2 class="section-label">チラシ本文</h2>
   <div class="flyer-sheet">
     <div class="flyer-page"><div class="frame"><div class="circle"></div><div class="warning-band"><span class="line"><span class="rb-wrap"><span class="rb-rt">れいわ</span><span class="rb-base">令和</span></span>8<span class="rb-wrap"><span class="rb-rt">ねん</span><span class="rb-base">年</span></span>8<span class="rb-wrap"><span class="rb-rt">がつ</span><span class="rb-base">月</span></span>13<span class="rb-wrap"><span class="rb-rt">か</span><span class="rb-base">日</span></span><span class="rb-wrap"><span class="rb-rt">いこう</span><span class="rb-base">以降</span></span>に、このチラシを<span class="rb-wrap"><span class="rb-rt">やぶ</span><span class="rb-base">破</span></span>いたり<span class="rb-wrap"><span class="rb-rt">す</span><span class="rb-base">捨</span></span>てたりすると</span><span class="line"><span class="rb-wrap"><span class="rb-rt">こっき</span><span class="rb-base">国旗</span></span><span class="rb-wrap"><span class="rb-rt">そんかい</span><span class="rb-base">損壊</span></span><span class="rb-wrap"><span class="rb-rt">ざい</span><span class="rb-base">罪</span></span>に<span class="rb-wrap"><span class="rb-rt">と</span><span class="rb-base">問</span></span>われて<span class="rb-wrap"><span class="rb-rt">けいじ</span><span class="rb-base">刑事</span></span><span class="rb-wrap"><span class="rb-rt">こくそ</span><span class="rb-base">告訴</span></span>される<span class="rb-wrap"><span class="rb-rt">かのう</span><span class="rb-base">可能</span></span><span class="rb-wrap"><span class="rb-rt">せい</span><span class="rb-base">性</span></span>があります。ご<span class="rb-wrap"><span class="rb-rt">ちゅうい</span><span class="rb-base">注意</span></span>ください。</span></div></div></div>
     <div class="flyer-page"><div class="frame"><div class="box rank-1" style="left:2.6936cqw; top:2.6936cqw; width:43.0976cqw;"><h2><span class="rb-wrap"><span class="rb-rt">こっき</span><span class="rb-base">国旗</span></span><span class="rb-wrap"><span class="rb-rt">そんかい</span><span class="rb-base">損壊</span></span><span class="rb-wrap"><span class="rb-rt">ざい</span><span class="rb-base">罪</span></span>とは<span class="rb-wrap"><span class="rb-rt">なに</span><span class="rb-base">何</span></span>か？</h2><p>　<span class="rb-wrap"><span class="rb-rt">せいしき</span><span class="rb-base">正式</span></span>には<a class="link" href="https://www.moj.go.jp/content/001467768.pdf" target="_blank" rel="noopener">「<span class="rb-wrap"><span class="rb-rt">こっき</span><span class="rb-base">国旗</span></span>の<span class="rb-wrap"><span class="rb-rt">そんかい</span><span class="rb-base">損壊</span></span><span class="rb-wrap"><span class="rb-rt">とう</span><span class="rb-base">等</span></span>の<span class="rb-wrap"><span class="rb-rt">しょばつ</span><span class="rb-base">処罰</span></span>に<span class="rb-wrap"><span class="rb-rt">かん</span><span class="rb-base">関</span></span>する<span class="rb-wrap"><span class="rb-rt">ほうりつ</span><span class="rb-base">法律</span></span>」</a>と<span class="rb-wrap"><span class="rb-rt">よ</span><span class="rb-base">呼</span></span>ばれる<span class="rb-wrap"><span class="rb-rt">ほうりつ</span><span class="rb-base">法律</span></span>が、<span class="rb-wrap"><span class="rb-rt">れいわ</span><span class="rb-base">令和</span></span>8<span class="rb-wrap"><span class="rb-rt">ねん</span><span class="rb-base">年</span></span>7<span class="rb-wrap"><span class="rb-rt">がつ</span><span class="rb-base">月</span></span>17<span class="rb-wrap"><span class="rb-rt">か</span><span class="rb-base">日</span></span>に<a class="link" href="../../case/flag-desecration-crime-law-enacted/" target="_blank" rel="noopener"><span class="rb-wrap"><span class="rb-rt">さんぎ</span><span class="rb-base">参議</span></span><span class="rb-wrap"><span class="rb-rt">いん</span><span class="rb-base">院</span></span>で<span class="rb-wrap"><span class="rb-rt">かけつ</span><span class="rb-base">可決</span></span>されました</a>。<span class="rb-wrap"><span class="rb-rt">ほん</span><span class="rb-base">本</span></span><span class="rb-wrap"><span class="rb-rt">ほうりつ</span><span class="rb-base">法律</span></span>の<span class="rb-wrap"><span class="rb-rt">だいにじょう</span><span class="rb-base">第二条</span></span>では<span class="rb-wrap"><span class="rb-rt">いか</span><span class="rb-base">以下</span></span>のように<span class="rb-wrap"><span class="rb-rt">ばっそく</span><span class="rb-base">罰則</span></span>が<span class="rb-wrap"><span class="rb-rt">きてい</span><span class="rb-base">規定</span></span>されています。</p>
@@ -165,7 +243,7 @@
 <p>　しかし<span class="rb-wrap"><span class="rb-rt">はんたい</span><span class="rb-base">反対</span></span><span class="rb-wrap"><span class="rb-rt">いけん</span><span class="rb-base">意見</span></span>に<span class="rb-wrap"><span class="rb-rt">たい</span><span class="rb-base">対</span></span>する<span class="rb-wrap"><span class="rb-rt">じゅうぶん</span><span class="rb-base">十分</span></span>な<span class="rb-wrap"><span class="rb-rt">せつめい</span><span class="rb-base">説明</span></span>は<span class="rb-wrap"><span class="rb-rt">な</span><span class="rb-base">無</span></span>く、この<span class="rb-wrap"><span class="rb-rt">ほうりつ</span><span class="rb-base">法律</span></span>は<span class="rb-wrap"><span class="rb-rt">きょうこう</span><span class="rb-base">強行</span></span><span class="rb-wrap"><span class="rb-rt">さいけつ</span><span class="rb-base">採決</span></span>されてしまいました。</p></div><div class="closing-row"><h2 class="closing">あなたは、<span class="rb-wrap"><span class="rb-rt">こっき</span><span class="rb-base">国旗</span></span><span class="rb-wrap"><span class="rb-rt">そんかい</span><span class="rb-base">損壊</span></span><span class="rb-wrap"><span class="rb-rt">ざい</span><span class="rb-base">罪</span></span>が<span class="rb-wrap"><span class="rb-rt">そんざい</span><span class="rb-base">存在</span></span>するべきだと<span class="rb-wrap"><span class="rb-rt">おも</span><span class="rb-base">思</span></span>いますか？</h2></div><a class="qr-corner" href="https://rememberwhodidwhat.github.io/column/flag_desecration/"><div class="qr-label">詳細なWeb版はこちら→</div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAV4AAAFeCAIAAABCSeBNAAAHCUlEQVR4nO3dwYpbORBA0fEw///LmXXgIgcUterZ52xD/Gx390WLovT69evXPwC/+/f2GwAmkgYgSAMQpAEI0gAEaQCCNABBGoAgDUD4b/3Pr9frZ97Hj1lPf577vDvPvTWxuvNt7LznW89d+7a/BacGIEgDEKQBCNIABGkAgjQAQRqAIA1AkAYgvJmGXJu5V/LcLN25mcVzM5rnPtHOu7o1WXjrJ3jLzvfs1AAEaQCCNABBGoAgDUCQBiBIAxCkAQjSAIStaci1W3sWd5yb8Js577h26xPt+Lwtm2vnPpFTAxCkAQjSAARpAII0AEEagCANQJAGIEgDEA5OQz7RzG2I5ybedj7vzAlO/hanBiBIAxCkAQjSAARpAII0AEEagCANQJAGIJiG/CE7E41PnDu8tYVx5o3VT+TUAARpAII0AEEagCANQJAGIEgDEKQBCNIAhIPTkE+cS5s5d3jrldeeuCnz1j3aT/xbcGoAgjQAQRqAIA1AkAYgSAMQpAEI0gAEaQDC1jTkt91ovDOVOPNu6FvTgWvnvudzPu9vwakBCNIABGkAgjQAQRqAIA1AkAYgSAMQpAEIrydurbvl1sTbzFu2d5577rfu1uf9PE4NQJAGIEgDEKQBCNIABGkAgjQAQRqAIA1AeDMNeW7foXm4Cc79jGb+FG593luvvPN/nRqAIA1AkAYgSAMQpAEI0gAEaQCCNABBGoBw7absc9Njt2b4djzxDu5brzzz886cpNzh1AAEaQCCNABBGoAgDUCQBiBIAxCkAQjSAIStaci1nam1czNtT5yzPDcP9227MG/99HfcmtB1agCCNABBGoAgDUCQBiBIAxCkAQjSAARpAMKbachzE40zb9k+Z+buwFsbOmc+d6ZbM7hODUCQBiBIAxCkAQjSAARpAII0AEEagCANQBi6G3Lt1kzbzBucb5k5z3puB+fM7Z7nfq+cGoAgDUCQBiBIAxCkAQjSAARpAII0AEEagPBmGvLWfscnzrTd2uB4y7l51m+7GXzmz9epAQjSAARpAII0AEEagCANQJAGIEgDEKQBCEN3Q868/XnmK9/aWXhrFvbW93xrktJN2cAg0gAEaQCCNABBGoAgDUCQBiBIAxCkAQgHpyFvmTk7eG7/387nnbn789ad4zPvwt6x866cGoAgDUCQBiBIAxCkAQjSAARpAII0AEEagPBmGvKJdxbfuoV5x8zbvW+98s5z185NYd76rTv3XKcGIEgDEKQBCNIABGkAgjQAQRqAIA1AkAYgvJmGvDUt98TNgmvn7qReu/V5z7Eb8s+fu/OX4tQABGkAgjQAQRqAIA1AkAYgSAMQpAEI0gCEobshb807nnvlJ05wrs38nneeu+PcjsZbWyedGoAgDUCQBiBIAxCkAQjSAARpAII0AEEagLC1G/KJt06vfd6E38znztwMem5/58wdq2tODUCQBiBIAxCkAQjSAARpAII0AEEagCANQHjd2pa39sQJv3OeOB249sTnPvEebTdlA3+ZNABBGoAgDUCQBiBIAxCkAQjSAARpAMKb3ZBrT9x4t+PW1sk1t3v/rec+8UZyN2UDP0oagCANQJAGIEgDEKQBCNIABGkAgjQAYeum7LWZ+/B2zLxJece5267PmblzdOat8TucGoAgDUCQBiBIAxCkAQjSAARpAII0AEEagPCBN2U/8Zbtc1snZ07pfdtN2Ttu/V45NQBBGoAgDUCQBiBIAxCkAQjSAARpAII0AGHobshbU2sz78K+9cozv41znvie3ZQN/ChpAII0AEEagCANQJAGIEgDEKQBCNIAhIO7IZ9o5jzcEzdHPnEz6MydlDuvvLZ+rlMDEKQBCNIABGkAgjQAQRqAIA1AkAYgSAMQDu6GnOncxNvMe5bXZr6rtVvzu0+caNx5ZacGIEgDEKQBCNIABGkAgjQAQRqAIA1AkAYgvJmGXJu5V/Lzbsre8W17Fs+59du+89yd/+vUAARpAII0AEEagCANQJAGIEgDEKQBCNIAhK1pyLVzU2szpzDXvm3Ocm3mNsQnzlmem0l1agCCNABBGoAgDUCQBiBIAxCkAQjSAARpAMLBacjPc25abua849qtaddbk5RPnMLc+URODUCQBiBIAxCkAQjSAARpAII0AEEagCANQDAN+Ztz83C37qSeOaV36/bnmVOnMz+RUwMQpAEI0gAEaQCCNABBGoAgDUCQBiBIAxAOTkN+233WO6987r7jJ85Z3vqunujc53VqAII0AEEagCANQJAGIEgDEKQBCNIABGkAwtY05MxNezvOTdrdmuG7NWe5du626x3npj/XZv7WOTUAQRqAIA1AkAYgSAMQpAEI0gAEaQCCNADh9W279IA/4dQABGkAgjQAQRqAIA1AkAYgSAMQpAEI0gCE/wF3CdwG73peIAAAAABJRU5ErkJggg=="></a></div></div></div>
   </div>
 
-  <div class="section-label">ダウンロード</div>
+  <h2 class="section-label">ダウンロード</h2>
   <div class="section-body">
 <p>　以下のリンクからチラシがダウンロードできます。ライセンスは <a class="link" href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener">CC BY</a> です。勝手に印刷して勝手に配布してもらって問題ありません。</p>
 <div class="actions">
@@ -173,7 +251,7 @@
     </div>
   </div>
 
-  <div class="section-label">関連する事件</div>
+  <h2 class="section-label">関連する事件</h2>
   <div class="section-body">
 <div class="case-grid">
     <a class="case-card" href="../../case/flag-desecration-crime-law-enacted/" target="_blank" rel="noopener">
@@ -259,7 +337,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 </body>

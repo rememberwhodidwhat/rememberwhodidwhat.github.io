@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>令和書籍 行動・事件 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="令和書籍が行動主体となった事件の記録。1件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="令和書籍が行動主体となった事件の記録。7件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/organization/reiwa-shoseki/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="令和書籍 行動・事件 年表">
-<meta property="og:description" content="令和書籍が行動主体となった事件の記録。1件を年表で掲載。">
+<meta property="og:description" content="令和書籍が行動主体となった事件の記録。7件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/organization/reiwa-shoseki/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="令和書籍 行動・事件 年表">
-<meta name="twitter:description" content="令和書籍が行動主体となった事件の記録。1件を年表で掲載。">
+<meta name="twitter:description" content="令和書籍が行動主体となった事件の記録。7件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "令和書籍", "url": "https://rememberwhodidwhat.github.io/organization/reiwa-shoseki/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#000a18, #e8f1fc);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,13 +66,13 @@
   header {
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #000a18 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
   .header-nav a:hover { color: var(--text); }
 
-  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-strong); }
   header h1 .subtitle { color: var(--muted); font-weight: 400; }
   header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
 
@@ -58,7 +82,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -72,11 +96,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -97,7 +121,7 @@
     background: var(--surface); border: 1px solid var(--border);
     border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
   }
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
   .event::before {
     content: ''; position: absolute; left: -22px; top: 18px;
     width: 10px; height: 10px; border-radius: 50%;
@@ -108,10 +132,11 @@
   .event-main { flex: 1; min-width: 0; }
   .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
   .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
-  .event-title { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.4; }
-  .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: var(--text-strong); line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 6px; }
   .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
-  .event-body { font-size: 0.82rem; color: #aaaabc; line-height: 1.75; white-space: pre-line; }
+  .actor-tag-label { font-size: 0.68rem; color: var(--muted); margin-right: 2px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: var(--text-dim); line-height: 1.75; white-space: pre-line; }
   .event-status { flex-shrink: 0; }
   .status-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -127,20 +152,74 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   <div class="header-nav"><a href="../">← 団体一覧へ戻る</a></div>
   <h1>令和書籍 <span class="subtitle">行動・事件 年表</span></h1>
-  <div class="meta">収録件数: 1 件</div>
+  <div class="meta">収録件数: 7 件</div>
   
   
   <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>侮辱的発言
+    </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>歴史修正主義
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+      <div class="legend-dot" style="background:#888899"></div>歴史認識欠如
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>民族差別
     </div>
     
   </div>
@@ -149,6 +228,74 @@
 
 <main>
   <div class="timeline">
+    
+    <a class="event" href="../../case/takeda-tsuneyasu-banpaku-hihansha-bujoku-2025/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251102">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月2日</span>
+            <span class="event-title">竹田恒泰が大阪万博への批判者を心の暗い人さもしい人と侮辱した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">竹田恒泰:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">侮辱的発言</span>
+            
+            
+          </div>
+          
+          <div class="event-body">竹田恒泰は自身のYouTubeチャンネルで、大阪・関西万博への批判者について「行って文句言う人は幸薄い」と述べた。さらに2025年11月2日放送の「そこまで言って委員会NP」（吉村洋文大阪府知事も出演）では、万博批判者を「心の暗い人、さもしい人」「人生損してる」と評した。批判者を一律に見下す発言であり、番組内では吉村知事も苦笑いを見せた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takeda-tsuneyasu-komeito-gedatsu-hatsugen-2025/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251025">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月25日</span>
+            <span class="event-title">竹田恒泰がテレビで公明党の連立離脱を解脱と揶揄し創価学会員らから批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">竹田恒泰:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">侮辱的発言</span>
+            
+            
+          </div>
+          
+          <div class="event-body">竹田恒泰は「そこまで言って委員会NP」（読売テレビ）で、自民党との連立を離脱した公明党について「解脱」した、次の選挙で「入滅」するといった仏教用語を用いた揶揄的な表現で論評した。この発言に公明党支持者・創価学会員から批判が殺到し炎上した。竹田はX上で「ご批判は甘んじてお受けします」としつつ、番組や共演者への批判は控えるよう求め、発言内容自体の撤回や謝罪はしなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
     
     <a class="event" href="../../case/takeda-tsuneyasu-reiwa-shoseki-kyokasho-ianfu-2024/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20240600">
@@ -161,14 +308,154 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">竹田恒泰:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
             
             
-            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史認識欠如</span>
+            
             
           </div>
           
           <div class="event-body">竹田恒泰が代表取締役を務める出版社「令和書籍」の中学校歴史教科書『国史教科書』が、文部科学省の検定に過去3回の不合格を経て2024年に初めて合格した。同教科書は「蒸し返された韓国の請求権」というコラムで、「日本軍が朝鮮の女性を強制連行した事実はなく、また彼女らは報酬をもらって働いていました」などと記述している。1993年の河野談話が認めた旧日本軍の関与を否定する内容であるとして、「子どもと教科書全国ネット21」など市民団体が2024年6月25日に記者会見を開き、沖縄戦の集団自決記述なども含め歴史的事実を無視していると批判した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takeda-tsuneyasu-miso-unko-hiyu-2022/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20220708">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年7月8日</span>
+            <span class="event-title">竹田恒泰が女性天皇容認論を味噌汁に入ったうんこに例え愛子さまへの侮辱と批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">竹田恒泰:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">侮辱的発言</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2022年7月、参院選前特番として配信された「上念司チャンネル」で皇位継承問題を語った竹田恒泰は、男系維持を主張しながら女性天皇容認論も唱える論者について「味噌汁にうんこが入ったらもはや味噌汁ではない」という趣旨の比喩で批判した。この発言が後に切り取られて拡散し、「愛子内親王殿下を排泄物に例えた」とする批判がSNS上で広がった。竹田は2024年10月、Xで「『うんこ』が指すのは女性天皇容認論（篠原常一郎氏や神谷宗幣氏の主張）であり、断じて愛子内親王殿下ではない」と釈明し、自身は一貫して内親王を擁護する発言をしてきたと主張したが、比喩表現自体の撤回・謝罪はしていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takeda-tsuneyasu-meiyokison-haiso-2022/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20220413">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年4月13日</span>
+            <span class="event-title">竹田恒泰が差別主義者と評されたことへの名誉毀損訴訟に敗訴し確定した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">竹田恒泰:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">民族差別</span>
+            
+            
+          </div>
+          
+          <div class="event-body">竹田恒泰は、戦史研究家の山崎雅弘が2019年11月にツイッターで「人権侵害常習犯の差別主義者」などと評したことを名誉毀損だとして550万円の損害賠償等を求めて提訴した。裁判では、竹田が過去に「韓国は強請りたかりが得意」「韓国が慰安婦像を作るなら、日本は嘘つき老婆の像を作るべき」などと投稿していたことが認定され、2021年2月の東京地裁、同年8月の東京高裁とも竹田の思想を「自国を優越的に捉え他国民・他民族を劣位に置くもの」と評価する公正な論評であるとして請求を棄却した。2022年4月13日、最高裁が上告を棄却し敗訴が確定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takeda-tsuneyasu-omura-taikoutenji-yougo-2019/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20191030">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年10月30日</span>
+            <span class="event-title">竹田恒泰が大村知事のヘイト指摘にお前がいうなと反論し排外主義的な対抗展示を擁護した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">竹田恒泰:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">民族差別</span>
+            
+            
+          </div>
+          
+          <div class="event-body">日本第一党の桜井誠が企画した対抗展示「あいちトリカエナハーレ2019『表現の自由展』」には、「ライダイハン像」や「犯罪者はいつも韓国人」「日韓断交おめでとう」といった排外主義的な展示物が含まれていた。大村秀章愛知県知事がこの展示を「内容からして明確にヘイトにあたる」と評し法的措置検討を表明したのに対し、竹田恒泰はツイッターで「大村知事、お前がいうな！」と反論した。あいちトリエンナーレの展示を巡る大村知事のダブルスタンダードを批判する趣旨だったが、結果として排外主義的内容を含む展示への批判をかわす形になった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takeda-tsuneyasu-omura-reipu-hatsugen-2019/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20191016">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年10月16日</span>
+            <span class="event-title">竹田恒泰が大村秀章知事の即位礼参列を日本国がレイプされるに等しいと非難した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">竹田恒泰:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">侮辱的発言</span>
+            
+            
+          </div>
+          
+          <div class="event-body">あいちトリエンナーレ2019「表現の不自由展・その後」で昭和天皇の肖像を燃やし踏みつける映像作品が展示されたことについて、竹田恒泰は芸術監督の津田大介を「卑怯の極み」と批判した。その後、同展示を許可した大村秀章愛知県知事が即位礼正殿の儀（2019年10月22日）に参列することについて、ツイッターで「そんな人物が即位礼に参列するのは、日本国がレイプされるに等しい。一生許さない」と投稿した。前日出演したCBCテレビ「ゴゴスマ」でも大村知事について「どの面下げてくるのか」と発言し、司会者が「ちょっと言葉がすぎました」と謝罪する事態となった。</div>
           
           
         </div>
@@ -228,7 +515,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 

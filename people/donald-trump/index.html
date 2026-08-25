@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>ドナルド・トランプ 行動・発言 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="ドナルド・トランプが行動主体となった事件・発言の記録。6件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="ドナルド・トランプが行動主体となった事件・発言の記録。13件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/people/donald-trump/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="ドナルド・トランプ 行動・発言 年表">
-<meta property="og:description" content="ドナルド・トランプが行動主体となった事件・発言の記録。6件を年表で掲載。">
+<meta property="og:description" content="ドナルド・トランプが行動主体となった事件・発言の記録。13件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/people/donald-trump/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ドナルド・トランプ 行動・発言 年表">
-<meta name="twitter:description" content="ドナルド・トランプが行動主体となった事件・発言の記録。6件を年表で掲載。">
+<meta name="twitter:description" content="ドナルド・トランプが行動主体となった事件・発言の記録。13件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "ドナルド・トランプ", "url": "https://rememberwhodidwhat.github.io/people/donald-trump/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#0a0018, #f1e9fb);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,12 +68,12 @@
     position: relative;
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .obsidian-link {
     position: absolute;
-    top: 20px;
+    top: 66px;
     right: 24px;
     font-size: 0.72rem;
     color: var(--muted);
@@ -73,7 +97,7 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: var(--text-strong);
   }
 
   header h1 .subtitle {
@@ -93,7 +117,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -107,11 +131,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend {
@@ -171,7 +195,7 @@
     transition: background 0.15s;
   }
 
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
 
   .event::before {
     content: '';
@@ -214,7 +238,7 @@
   .event-title {
     font-size: 0.92rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-strong);
     line-height: 1.4;
   }
 
@@ -237,7 +261,7 @@
 
   .event-body {
     font-size: 0.82rem;
-    color: #aaaabc;
+    color: var(--text-dim);
     line-height: 1.75;
     white-space: pre-line;
   }
@@ -279,7 +303,7 @@
     cursor: pointer;
     transition: color 0.15s, border-color 0.15s;
   }
-  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn:hover { color: var(--text); border-color: var(--border-hover); }
   .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
   
 
@@ -296,11 +320,57 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   
   <div class="header-nav"><a href="../">← 人物一覧へ戻る</a></div>
   <h1>ドナルド・トランプ <span class="subtitle">行動・発言 年表</span></h1>
-  <div class="meta">収録件数: 6 件</div>
+  <div class="meta">収録件数: 13 件</div>
   
   
   
@@ -312,6 +382,10 @@
     </div>
     
     <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>陰謀論
+    </div>
+    
+    <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>戦争容認
     </div>
     
@@ -320,11 +394,23 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>矛盾発言
+      <div class="legend-dot" style="background:#888899"></div>著作権侵害
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>地位濫用
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>批判者報復
     </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#4fc3f7"></div>国際司法
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
     </div>
     
   </div>
@@ -345,7 +431,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">陰謀論</span>
+            
             
           </div>
           
@@ -376,7 +467,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
             
           </div>
           
@@ -407,7 +500,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">著作権侵害</span>
+            
             
           </div>
           
@@ -427,6 +525,36 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/elon-musk-america-party-announcement-2025-07/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250705" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年7月5日</span>
+            <span class="event-title">イーロン・マスクが既存二大政党を批判し新党America Party設立を表明した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">イーロン・マスクは2025年7月5日、共和党・民主党の既存二大政党を「一党制」に等しいと批判し、新党「America Party」の設立を表明した。X上のアンケートで賛成が多数を占めたとして結成に踏み切り、2026年11月の米連邦議会選での候補者擁立を目指すとした。トランプ大統領の大型減税法案への反対を機にトランプ氏との対立が決裂したことが背景にあり、トランプ氏は新党構想を「ばかげている」と一蹴した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/elon-musk-trump-public-feud-2025-06/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20250605" data-amount="0">
       <div class="event-row">
@@ -438,10 +566,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
             
-            
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
           </div>
           
@@ -472,7 +599,12 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #4fc3f7 18%, transparent); color: #4fc3f7; border: 1px solid color-mix(in srgb, #4fc3f7 40%, transparent);">国際司法</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -480,6 +612,36 @@
           <div class="event-body">2025年2月にトランプ大統領がICCへの制裁大統領令に署名し、これを受けてMicrosoftが2025年5月にICC主任検察官カリム・カーンのMicrosoftメールアカウントを停止した。
 カーン氏はスイスのProtonメールに切り替え、英国の銀行口座も凍結される事態となった。
 米国テクノロジー企業が政治的命令でICCを攻撃したことに衝撃を受けたEUは、米国企業への依存脱却を加速させた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/ishiba-shigeru-kariteno-shitsumon-trump-kaiken/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250207" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年2月7日</span>
+            <span class="event-title">石破茂が日米首脳会談の共同記者会見で報復関税について「仮定のご質問にはお答えしかねる」と国会答弁の定型句で対応した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2025年2月7日、ホワイトハウスでの日米首脳会談後の共同記者会見で、米国人記者から「米国が日本に関税を課した場合、日本は報復関税をとるか」と問われた。石破首相は「仮定のご質問にはお答えしかねるというのが、日本のだいたい定番の国会答弁でございます」と返答し、圧力下でも報復関税への即答を避けた。トランプ大統領は「ベリー・グッド・アンサー」と3回繰り返した。</div>
           
           
         </div>
@@ -505,7 +667,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #4fc3f7 18%, transparent); color: #4fc3f7; border: 1px solid color-mix(in srgb, #4fc3f7 40%, transparent);">国際司法</span>
+            
             
           </div>
           
@@ -521,6 +685,168 @@
         <div class="event-status">
           <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
             <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/elon-musk-doge-usaid-dismantling-2025/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250204" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年2月4日</span>
+            <span class="event-title">イーロン・マスクがDOGEを率いてUSAIDを実質解体し人道支援停止で違憲判断を受けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">イーロン・マスクは2025年2月、自身が率いる政府効率化省（DOGE）を通じ、対外援助を担う米国際開発庁（USAID）を「犯罪的な組織」と断じて閉鎖する方針を表明し、職員の大量休職・解雇と国務省への吸収を進めた。世界各地の人道支援・開発援助プログラムが停止・混乱に陥り、人道的悪影響が指摘された。2025年3月には連邦地裁が、DOGEによるUSAID解体は違憲の公算が大きいとして仮差し止め命令を出した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/musk-nazi-salute-inauguration/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20250120" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年1月20日</span>
+            <span class="event-title">イーロン・マスクがドナルド・トランプの大統領就任イベントの演説でナチス敬礼を披露</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2025年1月20日のトランプ大統領就任祝賀会（ワシントンD.C.）で、イーロン・マスクが手のひらを下に右腕を斜め上に伸ばすジェスチャーをしたとして「ナチス式敬礼」との指摘が世界的に広まった。
+ミュンヘンのドイツ博物館はマスクの肖像画を即日撤去し、名誉毀損防止同盟（ADL）も強く非難した。
+マスクは「ヒトラーに例える手法にはうんざり」と反論したが、就任式の場での歴史的な連想を持つポーズが国際的な批判を招いた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/zuckerberg-fact-check-abolition-trump-alignment/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250107" data-amount="150000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年1月7日</span>
+            <span class="event-title">ザッカーバーグがファクトチェック廃止とトランプ接近を発表</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2025年1月7日、ザッカーバーグは動画声明で米国における第三者ファクトチェック制度の廃止と、X型「コミュニティノート」への移行を発表した。「多くの検閲と誤りがあった」と述べ、移民・性自認・性別など政治的テーマの投稿制限も撤廃した。
+この方針転換は、トランプ新政権への急接近と時を同じくして行われた。ザッカーバーグはトランプ氏の大統領就任式基金へ100万ドルを寄付し、元英副首相ニック・クレッグ氏に代わり共和党系のジョエル・カプラン氏を渉外担当幹部に据え、UFC CEOダナ・ホワイト氏を取締役に起用するなど人事も共和党寄りに転換した。
+ファクトチェック団体からは、方針転換が政治的圧力への迎合であり利用者の利益を損なうとの批判が上がっている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/x-algorithm-boosts-musk-republicans-after-trump-endorsement-2024/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240713" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年7月13日</span>
+            <span class="event-title">Xのアルゴリズムがマスクのトランプ支持表明を境に自身と共和党系アカウントを優遇するようになったと研究で指摘された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">クイーンズランド工科大学とモナッシュ大学の研究者は、マスクが2024年米大統領選でトランプ氏への支持を正式表明した7月13日を境に、マスク自身の投稿の表示回数が138%、リツイート数が238%急増する「構造的な断絶」が生じたと分析した。同時期から共和党系アカウント全体も左派系アカウントより表示面で優遇されるようになったとされる。
+別のボッコーニ大学主導の実験研究では、2023年に実施された7週間の比較実験で、「おすすめ」アルゴリズムに晒された利用者は共和党の政策課題を優先する傾向が強まり、親ロシア的な世論に傾き、その効果はフィードを元に戻した後も持続することが確認された。X（旧Twitter）は2023年3月に一部ソースコードを公開した際にもマスク専用の優先表示コードの存在が発覚しており、選挙を控えた時期のアルゴリズム偏向として改めて懸念が示された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/musk-reinstates-trump-twitter-account-2022/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20221119" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年11月19日</span>
+            <span class="event-title">マスクがユーザー投票で議事堂襲撃事件により永久凍結されていたトランプのアカウントを復活させた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">トランプ前大統領のTwitterアカウントは、2021年1月6日の連邦議会議事堂襲撃事件を受け「さらなる暴力煽動のリスクがある」として永久凍結されていた。マスクは買収前から既にこの措置を「道徳的に悪く、極めて愚かだ」と批判していた。
+2022年11月19日、マスクは復活の是非を問うユーザー投票（1500万票以上、賛成51.8%）を実施し、「The people have spoken（民衆の声だ）」としてアカウントを復活させた。全米黒人地位向上協会（NAACP）会長は「この投票は民主主義を代表していない」と警告し、複数の大企業がTwitterへの広告出稿を一時停止した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
           </span>
         </div>
         
@@ -572,7 +898,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 <script>

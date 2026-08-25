@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>高市早苗 行動・発言 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="高市早苗が行動主体となった事件・発言の記録。87件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="高市早苗が行動主体となった事件・発言の記録。98件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/people/takaichi-sanae/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="高市早苗 行動・発言 年表">
-<meta property="og:description" content="高市早苗が行動主体となった事件・発言の記録。87件を年表で掲載。">
+<meta property="og:description" content="高市早苗が行動主体となった事件・発言の記録。98件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/people/takaichi-sanae/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高市早苗 行動・発言 年表">
-<meta name="twitter:description" content="高市早苗が行動主体となった事件・発言の記録。87件を年表で掲載。">
+<meta name="twitter:description" content="高市早苗が行動主体となった事件・発言の記録。98件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "高市早苗", "url": "https://rememberwhodidwhat.github.io/people/takaichi-sanae/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#0a0018, #f1e9fb);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,12 +68,12 @@
     position: relative;
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .obsidian-link {
     position: absolute;
-    top: 20px;
+    top: 66px;
     right: 24px;
     font-size: 0.72rem;
     color: var(--muted);
@@ -73,7 +97,7 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: var(--text-strong);
   }
 
   header h1 .subtitle {
@@ -93,7 +117,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -107,11 +131,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend {
@@ -171,7 +195,7 @@
     transition: background 0.15s;
   }
 
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
 
   .event::before {
     content: '';
@@ -214,7 +238,7 @@
   .event-title {
     font-size: 0.92rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-strong);
     line-height: 1.4;
   }
 
@@ -237,7 +261,7 @@
 
   .event-body {
     font-size: 0.82rem;
-    color: #aaaabc;
+    color: var(--text-dim);
     line-height: 1.75;
     white-space: pre-line;
   }
@@ -279,7 +303,7 @@
     cursor: pointer;
     transition: color 0.15s, border-color 0.15s;
   }
-  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn:hover { color: var(--text); border-color: var(--border-hover); }
   .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
   
 
@@ -296,16 +320,70 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   
   <div class="header-nav"><a href="../">← 人物一覧へ戻る</a></div>
   <h1>高市早苗 <span class="subtitle">行動・発言 年表</span></h1>
-  <div class="meta">収録件数: 87 件</div>
+  <div class="meta">収録件数: 98 件</div>
   
   
   
   
   <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>矛盾発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>虚偽発言・印象操作
+    </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>歴史修正主義
@@ -336,11 +414,19 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>矛盾発言
+      <div class="legend-dot" style="background:#888899"></div>管理不行き届き
     </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#ff8a65"></div>パワハラ
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>プライバシー侵害
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ef5350"></div>民主主義破壊
     </div>
     
     <div class="legend-item">
@@ -376,11 +462,11 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>表現規制立法
+      <div class="legend-dot" style="background:#888899"></div>情報隠蔽
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#ef5350"></div>民主主義破壊
+      <div class="legend-dot" style="background:#888899"></div>表現規制立法
     </div>
     
     <div class="legend-item">
@@ -388,11 +474,15 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#bcaaa4"></div>歴史認識
+      <div class="legend-dot" style="background:#888899"></div>歴史認識欠如
     </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>女性差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>家父長制肯定
     </div>
     
     <div class="legend-item">
@@ -416,7 +506,7 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>虚偽発言
+      <div class="legend-dot" style="background:#888899"></div>経歴詐称
     </div>
     
   </div>
@@ -425,6 +515,106 @@
 
 <main>
   <div class="timeline">
+    
+    <a class="event" href="../../case/takaichi-icc-akane-sanctions-muted-response/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260819" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年8月19日</span>
+            <span class="event-title">高市がICC赤根氏への米制裁を批判せずロシアの北方領土訪問時と対応を使い分けた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">トランプ米政権が2026年8月、日本出身の国際刑事裁判所（ICC）赤根智子所長を制裁対象とした。高市早苗首相は「大変残念に思っている」と述べるにとどめ、米国への非難は避けた。
+これに対し、同月13日にロシアのプーチン大統領が北方領土・択捉島を訪問した際には、高市首相は「強く抗議する。断じて許容できない」と厳しい言葉で非難しており、対応の落差が指摘された。
+日本はICC最大の分担金拠出国であり、2025年にトランプ大統領がICC関係者への制裁を発動した際にも、日本政府は79カ国・地域による共同非難声明に加わらなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takaichi-kumamoto-earthquake-inspection-site-choice/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260803" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年8月3日</span>
+            <span class="event-title">高市早苗が熊本地震視察で被害が比較的軽微な避難所を訪問した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2026年8月3日、高市早苗首相は熊本地震の被災地視察で、被害が最も甚大だった八代市鏡地区（避難所はクーラーのない体育館）ではなく、隣接する氷川町の氷川中学校（冷房完備の教室、段ボールベッド設置済み）を訪れた。校長室での被災住民との意見交換の様子はNHKが報じたが、実際に避難所となっている教室への視察は約3分間にとどまり、記録したのは官邸の公式カメラマンのみだった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takaichi-secretary-statement-contradicted-by-evidence/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260729" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年7月29日</span>
+            <span class="event-title">高市秘書の陳述書による中傷動画関与否定が客観的証拠と矛盾すると判明した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">高市早苗首相の公設第一秘書・木下剛志氏が2026年7月22日に提出した陳述書は、他候補を誹謗中傷する動画の作成・発信を否定していた。
+しかし週刊文春の取材によると、木下氏はサナエトークン開発責任者・松井健氏と2025年9月25日にZoom会議を行い、小泉進次郎・林芳正両氏を中傷する動画の作成・投稿を依頼したとされ、67通に及ぶメッセージのやり取りや、Signalで林氏の動画データを送信した記録、投稿された動画自体などの証拠が残されていた。
+高市氏はこれまで国会答弁で中傷動画の作成・依頼を一貫して否定しており、陳述書の説明は客観的証拠と食い違うことが判明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
     
     <a class="event" href="../../case/takaichi-secretary-statement-submitted-denial/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260722" data-amount="0">
@@ -437,10 +627,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -471,10 +663,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公約不履行</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -505,7 +699,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -536,7 +732,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -569,10 +767,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
             
           </div>
           
@@ -603,7 +803,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -634,7 +836,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -665,7 +869,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -696,7 +902,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公約不履行</span>
+            
             
           </div>
           
@@ -727,7 +935,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -747,6 +957,36 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
       </div>
     </a>
     
+    <a class="event" href="../../case/ishin-fukutosho-bill-osaka-metropolis-clause-retracted/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260623" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月23日</span>
+            <span class="event-title">維新が副首都法案に大阪都構想住民投票を府域全体に広げる条項を盛り込み自民の要求で修正した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">日本維新の会は「副首都」制度創設法案に、大阪都構想の賛否を問う住民投票を大阪府域全体で実施できる規定を盛り込んでいた。吉村洋文代表は大阪市域のみを対象とすると「可決が難しくなる」と認め、府域拡大の勝算を狙ったものだと明かした。高市早苗首相（自民党総裁）が2026年6月22日の党首会談でこの規定の削除を要求し、維新は2026年6月24日に同条項を削除した修正案を了承した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/takaichi-secretary-statement-instead-of-diet-answer/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260622" data-amount="0">
       <div class="event-row">
@@ -758,7 +998,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -789,7 +1031,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -820,10 +1064,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
             
           </div>
           
@@ -843,6 +1089,41 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
       </div>
     </a>
     
+    <a class="event" href="../../case/saiki-g7-isolation-photo-spin/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260617" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月17日</span>
+            <span class="event-title">佐伯耕三が高市のG7孤立場面を歓談と偽って広報した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">管理不行き届き</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">G7サミットのファミリーフォト撮影前、高市早苗首相が他国首脳の歓談に加われず孤立していた場面が、SNS上で「珍場面」として話題になった。
+内閣広報官の佐伯耕三が運用するX公式アカウント「内閣広報官（色々投稿試し中）」（@PressSec_JP）は、この孤立場面を切り取った画像に「撮影前に近くの首脳たちと歓談」というキャプションを付けて投稿した。
+X上では実態と異なる説明だとして「印象操作」との批判が相次いだが、同アカウントはリプライを制限しており直接の批判には応じなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/takaichi-2026-g7-isolation/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260616" data-amount="0">
       <div class="event-row">
@@ -854,16 +1135,51 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
           
           <div class="event-body">2026年6月16日、フランス・エビアン・レ・バンで開催されたG7サミットのファミリーフォト撮影前、高市早苗首相がマクロン仏大統領とカーニー加首相の間に立つ場面が映像に収められた。
 高市首相は一瞬首を振りながら口を開閉させていたが、そこに話し相手は誰も居なかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/cabinet-office-vehicle-daishinto-repeated-accidents/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260616" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月16日</span>
+            <span class="event-title">内閣府公用車が委託先大新東の運転手により1月の死亡事故に続き6月にも事故を起こした</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">管理不行き届き</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">内閣府が公用車の運行管理を委託する「大新東」の運転手が起こす事故が相次いだ。2026年1月22日、内閣府庁舎近くの交差点で公用車が赤信号を無視し時速130キロで交差点に進入、車両6台を巻き込み7人が死傷し、タクシー乗客の男性1人が死亡した。事故車には高市早苗首相肝煎りの「日本成長戦略本部」に名を連ねる官僚2人が同乗し重傷を負った。大新東の運転手は2024年6月にも財務省の公用車で死亡ひき逃げ事故を起こしており、内閣府は同年4月28日に大新東と契約主体「永田町PFI」に9カ月間の指名停止措置を科していた。それにもかかわらず、2026年6月16日夕方には内閣府本府の車寄せで別の大新東運転手がアクセルとブレーキを踏み間違え自転車複数台をなぎ倒し柵に衝突する物損事故を起こした。内閣府はこの事故発生を認めたが原因への言及は避けた。</div>
           
           
         </div>
@@ -889,10 +1205,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -912,6 +1230,38 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
       </div>
     </a>
     
+    <a class="event" href="../../case/murakami-criticizes-kokuryoku-kenkyukai/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260607" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月7日</span>
+            <span class="event-title">村上誠一郎が高市政権の「国力研究会」を「大政翼賛会」と批判し財政規律と民主主義の守護を訴えた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2026年5月21日、高市早苗首相（自民党総裁）を支持する議員連盟「国力研究会」が発足し、麻生太郎副総裁・萩生田光一幹事長代行らが主導、自民党国会議員の8割超が参加した。
+村上誠一郎前総務相は同年6月7日のインタビューで、この動きを「大政翼賛会」と批判し、「財政規律と民主主義を守ることは政治家の使命」と述べた。
+「あの会は将来の日本を真剣に考える場ではない」と断じ、数の力で政策論争を押し切ろうとする自民党内の空気に強い懸念を示した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/takaichi-secretary-cancer-disclosure-diet/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260605" data-amount="0">
       <div class="event-row">
@@ -923,10 +1273,15 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">プライバシー侵害</span>
+            
             
           </div>
           
@@ -957,10 +1312,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
             
           </div>
           
@@ -980,6 +1337,39 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
       </div>
     </a>
     
+    <a class="event" href="../../case/jimin-ishin-hirei-45-jidou-sakugen/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260605" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月5日</span>
+            <span class="event-title">自民・維新、衆院比例45議席自動削減法案の基本方針策定</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">自民党政治制度改革本部は、与野党協議会で1年以内に結論が出なかった場合に衆院比例代表定数を自動的に45削減する内容を法案の「基本的な考え方」案に明記した。この方針転換は高市早苗首相が主導し、比例区のみの削減という維新の主張に沿った案でまとめるよう鈴木俊一幹事長に指示した。維新の吉村洋文代表は、参院で否決された場合でも衆院の3分の2以上での再可決により成立させるべきだと述べた。自民と日本維新の会は前年の臨時国会にも小選挙区25・比例20を自動削減する同様の法案を提出したが廃案となっており、今回は削減対象を比例のみに絞った形となっている。比例代表は少数政党の議席確保に機能しており、その自動削減は事実上の与党有利な制度変更にあたる。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/takaichi-audio-data-confirmation-excuse/" style="--accent: #e2a855"
        data-buzz="0" data-sort-key="20260604" data-amount="0">
       <div class="event-row">
@@ -991,7 +1381,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -1022,7 +1414,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
             
           </div>
           
@@ -1054,12 +1448,47 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
           
           <div class="event-body">文部科学省は2026年5月22日、辺野古沖抗議船転覆事故の調査結果を公表し、同志社国際高校の安全管理について「事前の下見を怠った」「引率教員が同行しなかった」ことを「著しく不適切」と指摘した。同時に同校の学習内容自体が教育基本法14条（政治的中立）に違反するとも別途初認定したが、これは安全管理の問題とは別の論点である。高市早苗首相は23日、沖縄訪問時の記者団取材で「つらい事故だった」としつつ、学校の安全管理・ガバナンスについて「著しく不適切だ。極めて大きな問題があった」と述べた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takaichi-calbee-baimeikoi-hangan/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260512" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年5月12日</span>
+            <span class="event-title">高市政権がカルビーのナフサ不足対応を「売名行為」と批判し官邸内で犯人探し</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">ナフサ不足を受けてカルビーが2026年5月12日に主力14商品のパッケージを白黒に変更すると発表したのに対し、官邸幹部は「売名行為だろう」と批判し、首相周辺も「過剰反応だ」と述べた。高市早苗首相は党首討論でも「総量は足りている」との立場を維持し続け、企業の正当なリスク対応を否定した。5月21日の朝日新聞報道後、官邸内では発言した官邸幹部を特定しようとする犯人探しが行われ、内閣広報官が「朝日の作文だ」と報道を否定するなど、異論を封じる恐怖支配的な空気が報じられた。</div>
           
           
         </div>
@@ -1085,7 +1514,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
             
           </div>
           
@@ -1116,10 +1547,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -1150,7 +1583,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
             
           </div>
           
@@ -1184,7 +1619,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -1215,7 +1652,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
             
           </div>
           
@@ -1246,7 +1685,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
             
           </div>
           
@@ -1279,10 +1720,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
             
           </div>
           
@@ -1313,7 +1756,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
             
           </div>
           
@@ -1321,6 +1766,41 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-body">高市早苗首相は2026年3月17日の参院予算委員会で、1976年に宮沢喜一外相が国会で述べた「武器輸出して金を稼ぐほど落ちぶれていない」という答弁について「もう時代が変わった」「落ちぶれたことだとは思わない」と否定した。
 安全保障環境の変化と同志国との連携を理由に武器輸出拡大を正当化し、「防衛装備移転は日本経済の成長にもつながる」と述べた。
 4月21日には「5類型」を撤廃し殺傷武器の輸出を事実上全面解禁した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/yoshimura-proportional-only-seat-cut-self-interest/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260317" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月17日</span>
+            <span class="event-title">吉村洋文が比例のみの定数削減を主張し維新に有利な選挙制度改変を進めた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2026年3月17日、高市早苗首相と日本維新の会の吉村洋文代表が党首会談し、衆院定数削減を巡り与党案の早期取りまとめで一致した。吉村氏はこの場で、小選挙区を含む混合削減ではなく比例代表のみを45議席削減するよう主張した。
+維新は所属衆院議員の大半を小選挙区選出が占め比例代表への依存度が低いのに対し、公明党・共産党など少数政党は議席の多くを比例に頼っている。比例のみを狙い撃ちにした削減は、自民・維新に有利な一方で少数政党の議席を大きく損なう非対称な制度変更となる。
+この主張は同年6月、自民党が比例45自動削減の方針へ転換する形で採用された。</div>
           
           
         </div>
@@ -1346,7 +1826,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
             
           </div>
           
@@ -1379,10 +1861,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
             
           </div>
           
@@ -1414,7 +1898,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
             
           </div>
           
@@ -1445,10 +1931,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ff7043 18%, transparent); color: #ff7043; border: 1px solid color-mix(in srgb, #ff7043 40%, transparent);">脱法行為</span>
+            
             
           </div>
           
@@ -1479,7 +1967,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -1511,10 +2001,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
             
           </div>
           
@@ -1546,7 +2038,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -1579,10 +2073,12 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -1615,7 +2111,9 @@ X上では「命懸けで頑張っている」と共感する声がある一方�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
             
           </div>
           
@@ -1648,7 +2146,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -1681,10 +2181,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -1717,6 +2219,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
             
             
@@ -1724,6 +2227,10 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">情報隠蔽</span>
+            
             
           </div>
           
@@ -1756,7 +2263,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">表現規制立法</span>
+            
             
           </div>
           
@@ -1788,7 +2297,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
             
           </div>
           
@@ -1820,10 +2331,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
             
           </div>
           
@@ -1855,10 +2368,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -1890,10 +2405,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -1925,7 +2442,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -1958,10 +2477,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -1994,10 +2515,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">市民監視</span>
+            
             
           </div>
           
@@ -2029,7 +2552,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -2062,6 +2587,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
             
             
@@ -2070,11 +2596,49 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
             
+            
           </div>
           
           
           <div class="event-body">高市早苗首相は2026年1月5日の年頭記者会見で、米国によるベネズエラへの軍事攻撃とマドゥロ大統領らの拘束について問われ、「ベネズエラにおける民主主義の回復、情勢の安定化に向けた外交努力を進めていく」と述べるにとどめ、米軍事行動の国際法上の正当性についての評価や懸念の表明を避けた。
 記事は、この対応が日米同盟を外交安全保障の基軸とする日本政府の、同盟国アメリカへの配慮を最優先する姿勢を反映したものだと指摘している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/opaque-nara-religious-corporation-30-million-yen-donation/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251219" data-amount="30000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年12月19日</span>
+            <span class="event-title">奈良の実態不明の宗教法人から高市の党支部に3000万円の献金</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">奈良県の宗教法人「神ながら」が、高市早苗首相が代表を務める党支部に対し、政治資金収支報告書上で3000万円を献金していたことが報じられた。
+政治資金規正法上、宗教法人が3000万円を政党支部へ献金するには前年の経費が6000万円以上必要となるが、当該宗教法人が所有する神社は人の出入りがほとんどない一室のような施設で、年間来場者数はわずか21人にとどまり、多額の経費をどう捻出しているのか実態が不透明だと指摘されている。</div>
           
           
         </div>
@@ -2100,7 +2664,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
             
           </div>
           
@@ -2133,7 +2699,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -2165,7 +2733,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -2196,6 +2766,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
             
             
@@ -2203,6 +2774,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
             
             
             <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
             
           </div>
           
@@ -2234,7 +2806,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -2266,10 +2840,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
             
           </div>
           
@@ -2301,6 +2877,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
             
             
@@ -2311,6 +2888,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
             
             
             <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
             
           </div>
           
@@ -2342,10 +2920,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
             
           </div>
           
@@ -2376,7 +2956,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
             
           </div>
           
@@ -2408,10 +2990,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
             
           </div>
           
@@ -2442,7 +3026,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
             
           </div>
           
@@ -2474,7 +3060,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
             
           </div>
           
@@ -2506,10 +3094,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史認識欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
             
           </div>
           
@@ -2541,10 +3131,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
             
           </div>
           
@@ -2576,7 +3168,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">女性差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">家父長制肯定</span>
+            
             
           </div>
           
@@ -2609,7 +3206,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">性的マイノリティ差別</span>
+            
             
           </div>
           
@@ -2642,7 +3241,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -2674,10 +3275,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -2708,10 +3311,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
             
           </div>
           
@@ -2743,6 +3348,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">民族差別</span>
             
             
@@ -2750,6 +3356,7 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -2781,10 +3388,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
             
           </div>
           
@@ -2816,10 +3425,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
             
           </div>
           
@@ -2851,7 +3462,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
             
           </div>
           
@@ -2884,7 +3497,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -2917,7 +3532,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -2948,10 +3565,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -2983,7 +3602,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -3015,7 +3636,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
             
           </div>
           
@@ -3048,10 +3671,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
             
             
-            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史認識欠如</span>
+            
             
           </div>
           
@@ -3083,10 +3708,15 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">女性差別</span>
             
             
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">家父長制肯定</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -3117,10 +3747,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史修正主義</span>
+            
             
           </div>
           
@@ -3153,10 +3785,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -3188,7 +3822,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史認識欠如</span>
+            
             
           </div>
           
@@ -3220,7 +3856,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">弱者攻撃</span>
+            
             
           </div>
           
@@ -3251,10 +3889,12 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent);">歴史認識</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史認識欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">戦争容認</span>
+            
             
           </div>
           
@@ -3285,7 +3925,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
+            
             
           </div>
           
@@ -3316,7 +3958,9 @@ YOASOBIの「アイドル」（35日）など音楽動画の記録を大幅に�
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">経歴詐称</span>
+            
             
           </div>
           
@@ -3382,7 +4026,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 <script>

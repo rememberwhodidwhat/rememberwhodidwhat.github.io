@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>国民民主党 行動・事件 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="国民民主党が行動主体となった事件の記録。13件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="国民民主党が行動主体となった事件の記録。15件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/organization/democratic-party-for-the-people/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="国民民主党 行動・事件 年表">
-<meta property="og:description" content="国民民主党が行動主体となった事件の記録。13件を年表で掲載。">
+<meta property="og:description" content="国民民主党が行動主体となった事件の記録。15件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/organization/democratic-party-for-the-people/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="国民民主党 行動・事件 年表">
-<meta name="twitter:description" content="国民民主党が行動主体となった事件の記録。13件を年表で掲載。">
+<meta name="twitter:description" content="国民民主党が行動主体となった事件の記録。15件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "国民民主党", "url": "https://rememberwhodidwhat.github.io/organization/democratic-party-for-the-people/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#000a18, #e8f1fc);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,13 +66,13 @@
   header {
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #000a18 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
   .header-nav a:hover { color: var(--text); }
 
-  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-strong); }
   header h1 .subtitle { color: var(--muted); font-weight: 400; }
   header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
 
@@ -58,7 +82,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -72,11 +96,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -97,7 +121,7 @@
     background: var(--surface); border: 1px solid var(--border);
     border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
   }
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
   .event::before {
     content: ''; position: absolute; left: -22px; top: 18px;
     width: 10px; height: 10px; border-radius: 50%;
@@ -108,10 +132,11 @@
   .event-main { flex: 1; min-width: 0; }
   .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
   .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
-  .event-title { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.4; }
-  .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: var(--text-strong); line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 6px; }
   .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
-  .event-body { font-size: 0.82rem; color: #aaaabc; line-height: 1.75; white-space: pre-line; }
+  .actor-tag-label { font-size: 0.68rem; color: var(--muted); margin-right: 2px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: var(--text-dim); line-height: 1.75; white-space: pre-line; }
   .event-status { flex-shrink: 0; }
   .status-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -127,24 +152,74 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   <div class="header-nav"><a href="../">← 団体一覧へ戻る</a></div>
   <h1>国民民主党 <span class="subtitle">行動・事件 年表</span></h1>
-  <div class="meta">収録件数: 13 件</div>
+  <div class="meta">収録件数: 15 件</div>
   
   
   <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>表現規制立法
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>民意軽視
+      <div class="legend-dot" style="background:#ffca28"></div>議会軽視
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+      <div class="legend-dot" style="background:#888899"></div>民意軽視
     </div>
     
     <div class="legend-item">
@@ -153,6 +228,10 @@
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>品格欠如
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff8a65"></div>パワハラ
     </div>
     
     <div class="legend-item">
@@ -172,7 +251,7 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#ff8a65"></div>パワハラ
+      <div class="legend-dot" style="background:#888899"></div>統一教会癒着
     </div>
     
   </div>
@@ -182,21 +261,26 @@
 <main>
   <div class="timeline">
     
-    <a class="event" href="../../case/tamaki-yuichiro-shohizei-gensai-bure-sodo/" style="--accent: #e25555"
-       data-buzz="0" data-sort-key="20260726">
+    <a class="event" href="../../case/irie-nobuko-campaign-volunteer-bribery/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260727">
       <div class="event-row">
         <div class="event-main">
           <div class="event-title-row">
-            <span class="event-date">2026年7月26日</span>
-            <span class="event-title">玉木雄一郎が食料品消費税減税をめぐる発信でSNS上の批判を受けた</span>
+            <span class="event-date">2026年7月27日</span>
+            <span class="event-title">入江伸子陣営が運動員大学生に報酬を支払い公選法違反でスタッフが有罪判決を受けた</span>
           </div>
           <div class="event-tags">
             
+            
+            <span class="actor-tag-label">入江伸子:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
           </div>
           
-          <div class="event-body">消費税減税を党の看板政策としてきた国民民主党の玉木雄一郎代表は2026年7月26日、水戸市で記者団に対し「食料品の消費税減税はデメリットが大きい」と述べ、住民税減税や給付による負担軽減を代替案として主張した。7月28日の会見では、政府・与党が検討していた食料品消費税を2年間限定で1％に引き下げる案について「経済への悪影響が大きい」「離農促進減税、飲食店倒産促進減税になりかねない」と反対を表明し、所得税・住民税減税を代替案として提示した。8月9日にはXで「飲食料品だけ消費税減税すると、讃岐のうどん屋はピンチに」と述べ、店内・持ち帰りの税率差による外食産業への影響を重ねて説明した。
-
-一連の発信について、SNS上では「回りくどい」「ブレている」との批判が相次いだ一方、玉木氏は7月31日、衆院選前に「食料品消費税ゼロ」に異議を唱えたのは当時国民民主党だけだったとXで述べ、党の立場に一貫性があると主張した。</div>
+          <div class="event-body">2026年2月の衆院選で国民民主党公認候補として立候補し落選した入江伸子被告の陣営で、SNS運用担当の菅原京香被告と会計担当の佐藤芳子被告が、選挙運動ボランティアの大学生ら11人に報酬計46万円を支払ったとして公職選挙法違反（買収）の罪に問われた。東京地裁は2026年7月27日、菅原被告に拘禁刑1年・執行猶予3年、佐藤被告に拘禁刑8カ月・執行猶予3年の判決を言い渡した。入江被告も同罪に問われており、今後裁判が開かれる予定。</div>
           
           
         </div>
@@ -204,7 +288,7 @@
         
         <div class="event-status">
           <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
-            <span class="status-dot" style="background: #e25555"></span>未解決
+            <span class="status-dot" style="background: #e25555"></span>継続中
           </span>
         </div>
         
@@ -222,12 +306,52 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">表現規制立法</span>
+            
+            
             
           </div>
           
           <div class="event-body">自民党・日本維新の会・国民民主党・参政党が共同提出した国旗損壊罪法が2026年7月17日、参議院本会議で与党などの賛成多数により可決・成立した。国旗を「人に著しい不快感や嫌悪感を抱かせるような態様で」損壊・除去・汚損する行為を公然と行った場合、2年以下の拘禁刑または20万円以下の罰金で処罰する内容。
 中央大の橋本基弘教授は「後出しじゃんけん的な解釈による適用を許すような刑罰法規は法の支配の全面的な否定を意味する」と違憲の可能性を指摘し、野党からも「表現の自由を萎縮させる」との懸念が示された。法律の付則には3年をめどとした検討条項が盛り込まれた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/flag-desecration-bill-passes-lower-house/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260630">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月30日</span>
+            <span class="event-title">国旗損壊罪法案が衆院本会議で可決した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">表現規制立法</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">国旗損壊罪法案は2026年6月30日、衆議院本会議で採決され、自民党・日本維新の会などの賛成多数で可決された。
+法案の共同提出者である国民民主党・参政党を含む全ての野党が本会議を欠席するという異例の事態が生じ、反対票が投じられないまま可決に至った。法案はその後、参議院に送付された。</div>
           
           
         </div>
@@ -253,7 +377,10 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">表現規制立法</span>
+            
+            
             
           </div>
           
@@ -283,7 +410,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">岡野純子:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">民意軽視</span>
+            
             
           </div>
           
@@ -313,7 +444,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">岡野純子:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
             
           </div>
           
@@ -343,7 +478,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">玉木雄一郎:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">女性差別</span>
+            
             
           </div>
           
@@ -373,7 +512,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">玉木雄一郎:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -392,19 +535,26 @@
       </div>
     </a>
     
-    <a class="event" href="../../case/tamaki-yuichiro-yamao-shiori-yotate-sodo/" style="--accent: #e25555"
-       data-buzz="0" data-sort-key="20250514">
+    <a class="event" href="../../case/tamaki-yuichiro-moto-hisho-power-harassment/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250328">
       <div class="event-row">
         <div class="event-main">
           <div class="event-title-row">
-            <span class="event-date">2025年5月14日</span>
-            <span class="event-title">玉木雄一郎が山尾志桜里氏を参院選候補に擁立し批判を受け公認を取り消した</span>
+            <span class="event-date">2025年3月28日</span>
+            <span class="event-title">玉木雄一郎の元秘書らが高圧的な言動によるパワハラ被害を証言した</span>
           </div>
           <div class="event-tags">
             
+            
+            <span class="actor-tag-label">玉木雄一郎:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
+            
+            
           </div>
           
-          <div class="event-body">国民民主党は2025年5月14日、過去に不倫疑惑のあった山尾志桜里氏を参院選比例代表候補として擁立すると発表し、党支持率低下を招く猛反発を受けた。6月10日、山尾氏は疑惑を否定する会見を開いたが詳細説明は避け、6月11日に党は両院議員総会で公認見送りを決定。山尾氏は玉木代表ら執行部が自らの責任で判断せず両院議員総会の決定という形をとったことに違和感を示し、6月12日に離党届を提出した。玉木代表は都議選告示日の6月13日、街頭演説で騒動への説明・謝罪をほぼ避け、政策アピールに軸足を移した。</div>
+          <div class="event-body">2025年3月28日、AERA dot.が玉木雄一郎代表の元秘書・元ボランティアスタッフの証言を報道。選挙期間中の車内で秘書を怒鳴りつけ後部座席から前席を蹴る様子や、市議・秘書への人格否定ととられかねない発言が「見るに堪えない光景」だったと複数証言された。2010年代前半に香川県内の事務所で市議に「次はないからな。徹底的に落とすからな」などと12〜13分にわたり怒りをぶつけた音声も報じられた。</div>
           
           
         </div>
@@ -430,7 +580,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">玉木雄一郎:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
             
           </div>
           
@@ -460,7 +614,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">玉木雄一郎:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">私生活スキャンダル</span>
+            
             
           </div>
           
@@ -490,7 +648,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">岡野純子:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
             
           </div>
           
@@ -520,7 +682,16 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
+            
+            
+            
+            <span class="actor-tag-label">玉木雄一郎:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
+            
             
           </div>
           
@@ -554,11 +725,49 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">岡野純子:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
+            
             
           </div>
           
           <div class="event-body">岡野純子衆院議員（比例南関東）が、選挙活動に誘った工藤由紀子浦安市議らに対して「みっともない演説しないでくれる」などの罵倒・叱責を繰り返したとして、工藤氏が適応障害を発症して離党。2024年から2年間で4人の地方議員が国民民主党千葉県連を離党した。2025年11月27日、党のハラスメント対策委員会・倫理委員会合同調査は「ハラスメント行為は確認できなかった」と結論づけたが、工藤氏は「断固として受け入れられない」と反論した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/tamaki-yuichiro-sekainippo-kenkin/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20220720">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年7月20日</span>
+            <span class="event-title">玉木雄一郎が世界日報元社長から献金を受けていたことが判明した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">玉木雄一郎:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">統一教会癒着</span>
+            
+            
+          </div>
+          
+          <div class="event-body">玉木雄一郎氏（当時民進党）は2016年、旧統一教会を母体とする新聞「世界日報」の元社長から医療関係の勉強会の場で2万円、その後さらに1万円の計3万円の献金を受けていたことが政治資金収支報告書で判明した。2022年に報道されると、玉木氏はTwitterで「いずれも適正に処理され、公開もされている」と述べ、旧統一教会からの支援や依頼、加盟・参加の事実を否定した。</div>
           
           
         </div>
@@ -618,7 +827,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 

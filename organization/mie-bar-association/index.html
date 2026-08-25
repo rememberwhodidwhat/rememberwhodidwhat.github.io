@@ -3,9 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>三重弁護士会 行動・事件 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
 <meta name="description" content="三重弁護士会が行動主体となった事件の記録。1件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/organization/mie-bar-association/">
 <meta property="og:type" content="website">
@@ -19,12 +31,24 @@
 <meta name="twitter:description" content="三重弁護士会が行動主体となった事件の記録。1件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "三重弁護士会", "url": "https://rememberwhodidwhat.github.io/organization/mie-bar-association/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#000a18, #e8f1fc);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,13 +66,13 @@
   header {
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #000a18 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
   .header-nav a:hover { color: var(--text); }
 
-  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-strong); }
   header h1 .subtitle { color: var(--muted); font-weight: 400; }
   header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
 
@@ -58,7 +82,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -72,11 +96,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -97,7 +121,7 @@
     background: var(--surface); border: 1px solid var(--border);
     border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
   }
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
   .event::before {
     content: ''; position: absolute; left: -22px; top: 18px;
     width: 10px; height: 10px; border-radius: 50%;
@@ -108,10 +132,11 @@
   .event-main { flex: 1; min-width: 0; }
   .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
   .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
-  .event-title { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.4; }
-  .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: var(--text-strong); line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 6px; }
   .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
-  .event-body { font-size: 0.82rem; color: #aaaabc; line-height: 1.75; white-space: pre-line; }
+  .actor-tag-label { font-size: 0.68rem; color: var(--muted); margin-right: 2px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: var(--text-dim); line-height: 1.75; white-space: pre-line; }
   .event-status { flex-shrink: 0; }
   .status-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -126,6 +151,52 @@
 </style>
 </head>
 <body>
+
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
 
 <header>
   <div class="header-nav"><a href="../">← 団体一覧へ戻る</a></div>
@@ -157,7 +228,10 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">表現の自由の保護</span>
+            
+            
             
           </div>
           
@@ -222,7 +296,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 

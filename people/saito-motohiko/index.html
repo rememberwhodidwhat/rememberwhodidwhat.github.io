@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>斎藤元彦 行動・発言 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="斎藤元彦が行動主体となった事件・発言の記録。9件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="斎藤元彦が行動主体となった事件・発言の記録。13件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/people/saito-motohiko/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="斎藤元彦 行動・発言 年表">
-<meta property="og:description" content="斎藤元彦が行動主体となった事件・発言の記録。9件を年表で掲載。">
+<meta property="og:description" content="斎藤元彦が行動主体となった事件・発言の記録。13件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/people/saito-motohiko/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斎藤元彦 行動・発言 年表">
-<meta name="twitter:description" content="斎藤元彦が行動主体となった事件・発言の記録。9件を年表で掲載。">
+<meta name="twitter:description" content="斎藤元彦が行動主体となった事件・発言の記録。13件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "斎藤元彦", "url": "https://rememberwhodidwhat.github.io/people/saito-motohiko/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#0a0018, #f1e9fb);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,12 +68,12 @@
     position: relative;
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .obsidian-link {
     position: absolute;
-    top: 20px;
+    top: 66px;
     right: 24px;
     font-size: 0.72rem;
     color: var(--muted);
@@ -73,7 +97,7 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: var(--text-strong);
   }
 
   header h1 .subtitle {
@@ -93,7 +117,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -107,11 +131,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend {
@@ -171,7 +195,7 @@
     transition: background 0.15s;
   }
 
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
 
   .event::before {
     content: '';
@@ -214,7 +238,7 @@
   .event-title {
     font-size: 0.92rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-strong);
     line-height: 1.4;
   }
 
@@ -237,7 +261,7 @@
 
   .event-body {
     font-size: 0.82rem;
-    color: #aaaabc;
+    color: var(--text-dim);
     line-height: 1.75;
     white-space: pre-line;
   }
@@ -279,7 +303,7 @@
     cursor: pointer;
     transition: color 0.15s, border-color 0.15s;
   }
-  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn:hover { color: var(--text); border-color: var(--border-hover); }
   .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
   
 
@@ -296,11 +320,57 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   
   <div class="header-nav"><a href="../">← 人物一覧へ戻る</a></div>
   <h1>斎藤元彦 <span class="subtitle">行動・発言 年表</span></h1>
-  <div class="meta">収録件数: 9 件</div>
+  <div class="meta">収録件数: 13 件</div>
   
   
   
@@ -365,10 +435,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -399,15 +471,47 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
+            
           </div>
           
           
           <div class="event-body">兵庫県議会の百条委員会最終尋問で、斎藤元彦知事は元局長への懲戒処分の時期について「『風向きを変えたい』という発言をしたことは全くない」と述べたが、井ノ本知明元総務部長は「知事から『風向きを変えたい』と意見があり、処分日を協議した」と証言し食い違った。視察先で職員が理不尽な叱責を受けたとする県幹部の証言に対しても、知事は「業務上必要な範囲で指導をした」と主張し対立したままとなった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/yoshimura-hyogo-gikai-jishukaisan-yokyu/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20241124" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年11月24日</span>
+            <span class="event-title">吉村洋文が斎藤元彦知事再選を受け兵庫県議会の自主解散を求めた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">兵庫県知事選で斎藤元彦氏が出直し再選したのを受け、日本維新の会代表の吉村洋文大阪府知事は、兵庫県議会に対し「自主解散に向けて動く」か、職員の政治活動を制限する条例制定などの再発防止策を講じるかの二択を促した。県政混乱の責任が県議会にあるとする論法だったが、他県知事が他県議会の解散を求める前例のない要求として、百条委員会による疑惑追及を妨げる狙いではないかとの批判を招いた。維新県議団幹部も「自主解散は無理かなあ」と困惑を示した。</div>
           
           
         </div>
@@ -433,10 +537,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -467,7 +573,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -498,7 +606,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
             
           </div>
           
@@ -518,6 +628,40 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/izumi-fusaho-saito-hihan-shazai/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20241030" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年10月30日</span>
+            <span class="event-title">泉房穂-斎藤知事への批判発言と当選後のテレビ謝罪</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2024年10月30日、コメンテーターとして活動していた泉房穂氏はX（旧Twitter）に「兵庫県民として、今の兵庫県の状況が恥ずかしい」との声が大半だとし、斎藤元彦・前知事（当時候補）への支持はSNS上で作られたものに過ぎないと投稿した。
+
+これに対しネット上では、斎藤氏の周辺に多くの支持者が集まっている映像や写真が示された。
+
+2024年11月17日、兵庫県知事選で斎藤氏の当選確実が報じられると、泉氏はフジテレビ「Mr.サンデー」の生中継で「一面的な見方でかなり厳しいトーンでこの間対応してきたことに尽きまして、今回民意を見て私も反省するところが多く、お詫び申し上げたい」と述べた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/saito-motohiko-onedari-gizoku/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20240800" data-amount="0">
       <div class="event-row">
@@ -529,10 +673,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -563,6 +709,7 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
             
             
@@ -570,6 +717,7 @@
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -600,10 +748,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff8a65 18%, transparent); color: #ff8a65; border: 1px solid color-mix(in srgb, #ff8a65 40%, transparent);">パワハラ</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -634,6 +784,7 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
             
             
@@ -641,6 +792,7 @@
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -654,6 +806,70 @@
         <div class="event-status">
           <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
             <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/hanshin-orix-parade-seijiriyo-tada-doin/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20231015" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年10月15日</span>
+            <span class="event-title">吉村洋文と横山英幸が阪神オリックス優勝パレードを万博宣伝に利用し府市職員をボランティア動員した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">阪神タイガース・オリックス・バファローズの優勝を受け、吉村洋文知事は斎藤元彦兵庫県知事らと記者会見を開き「兵庫・大阪連携パレード〜2025年大阪関西万博500日前！〜」の名称でパレード開催を発表した。会見場には球団旗がなく万博の横断幕とキャラクターのみが並び「政治利用」と非難が殺到、記者会見でも両球団のロゴがほとんど映らなかった。パレード費用のクラウドファンディングは目標5億円に対し1億円強しか集まらなかった。さらに大阪府・市は約3000人の職員を無給の「ボランティア」として動員する計画を進め、兵庫県・神戸市が公務（出勤）扱いとしたのとは対照的な対応が批判され、大阪府は教職員に3000円以上の寄付協力も呼びかけていた。批判を受けた横山英幸市長は「開催しないこともあり得る」と述べた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/izumi-fusaho-saito-chiji-kyogen-toucho/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20230911" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年9月11日</span>
+            <span class="event-title">泉房穂-斎藤知事の謝罪電話を虚偽投稿し盗聴器調査騒動に</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">兵庫県立明石公園内の旧明石市立図書館の活用問題を巡り、2023年9月11日、泉房穂前明石市長はX（旧Twitter）に「斎藤知事から明石市に本日、お詫びの電話があったとのこと」「悪いのは、明石ではありません」と投稿した。
+
+斎藤元彦知事は即座に文書で抗議し、「お詫びやお礼をした事実はございません。誤った内容でSNSを通じて数十万人の方に拡散した」と否定した。情報の出どころをめぐり、明石市庁舎に盗聴器が仕掛けられているのではないかという疑惑が生じ、9月15日の委員会で市庁舎の盗聴器調査を実施する事態にまで発展した。
+
+泉前市長は後に「電話内容を取材した複数のマスコミ関係者から聞いた」「直接話を聞いたわけちゃうから、不確かな情報だったっていうのは反省しています」と述べた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
           </span>
         </div>
         
@@ -705,7 +921,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 <script>

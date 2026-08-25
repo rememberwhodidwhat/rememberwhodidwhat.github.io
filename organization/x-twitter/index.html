@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>X (Twitter) 行動・事件 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="X (Twitter)が行動主体となった事件の記録。38件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="X (Twitter)が行動主体となった事件の記録。48件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/organization/x-twitter/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="X (Twitter) 行動・事件 年表">
-<meta property="og:description" content="X (Twitter)が行動主体となった事件の記録。38件を年表で掲載。">
+<meta property="og:description" content="X (Twitter)が行動主体となった事件の記録。48件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/organization/x-twitter/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="X (Twitter) 行動・事件 年表">
-<meta name="twitter:description" content="X (Twitter)が行動主体となった事件の記録。38件を年表で掲載。">
+<meta name="twitter:description" content="X (Twitter)が行動主体となった事件の記録。48件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "X (Twitter)", "url": "https://rememberwhodidwhat.github.io/organization/x-twitter/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#000a18, #e8f1fc);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,13 +66,13 @@
   header {
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #000a18 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
   .header-nav a:hover { color: var(--text); }
 
-  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-strong); }
   header h1 .subtitle { color: var(--muted); font-weight: 400; }
   header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
 
@@ -58,7 +82,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -72,11 +96,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -97,7 +121,7 @@
     background: var(--surface); border: 1px solid var(--border);
     border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
   }
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
   .event::before {
     content: ''; position: absolute; left: -22px; top: 18px;
     width: 10px; height: 10px; border-radius: 50%;
@@ -108,10 +132,11 @@
   .event-main { flex: 1; min-width: 0; }
   .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
   .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
-  .event-title { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.4; }
-  .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: var(--text-strong); line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 6px; }
   .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
-  .event-body { font-size: 0.82rem; color: #aaaabc; line-height: 1.75; white-space: pre-line; }
+  .actor-tag-label { font-size: 0.68rem; color: var(--muted); margin-right: 2px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: var(--text-dim); line-height: 1.75; white-space: pre-line; }
   .event-status { flex-shrink: 0; }
   .status-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -127,10 +152,56 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   <div class="header-nav"><a href="../">← 団体一覧へ戻る</a></div>
   <h1>X (Twitter) <span class="subtitle">行動・事件 年表</span></h1>
-  <div class="meta">収録件数: 38 件</div>
+  <div class="meta">収録件数: 48 件</div>
   
   
   <div class="legend">
@@ -140,7 +211,19 @@
     </div>
     
     <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>排外主義
+    </div>
+    
+    <div class="legend-item">
       <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>歴史認識欠如
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>品格欠如
     </div>
     
     <div class="legend-item">
@@ -156,7 +239,7 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>地位濫用
+      <div class="legend-dot" style="background:#888899"></div>外交問題
     </div>
     
     <div class="legend-item">
@@ -164,7 +247,11 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>性的マイノリティ差別
+      <div class="legend-dot" style="background:#888899"></div>無断学習
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>地位濫用
     </div>
     
     <div class="legend-item">
@@ -172,11 +259,31 @@
     </div>
     
     <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>性的マイノリティ差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>民族差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>ヘイト扇動
+    </div>
+    
+    <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>矛盾発言
     </div>
     
     <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>陰謀論
+    </div>
+    
+    <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>障害者差別
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>プライバシー侵害
     </div>
     
   </div>
@@ -197,11 +304,120 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
           <div class="event-body">2026年7月28日に発生した熊本地震の際、X（旧Twitter）の「おすすめ」タイムラインには災害関連情報が流れず、インプレッション目当ての偽情報ばかりが表示されるとの不満がユーザーから相次いだ。X社日本法人代表はデフォルトの「おすすめ」表示を維持したまま、ユーザー側に「フォロー中」かつ「新しい順」への手動切り替えを呼び掛けるにとどめた。広告収入最大化を狙ったアルゴリズム変更が、東日本大震災時に果たしていたような災害時の情報インフラとしての機能を損なわせている実態が改めて浮き彫りになった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/x-grok-csam-file-sharing-proliferation/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260717">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年7月17日</span>
+            <span class="event-title">Xで児童性的搾取・盗撮画像の取引投稿が15カ月で66万件超拡散しGrokが収集に悪用された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
+            
+          </div>
+          
+          <div class="event-body">Tansaと株式会社Japan Nexus Intelligenceの共同調査で、X上に児童ポルノや盗撮画像を含む可能性のある投稿が2025年1月から2026年3月の約15カ月間で66万831件確認された。投稿者は外部ファイル共有サービスへのリンクと隠語を組み合わせ、Xのおすすめアルゴリズムやコミュニティ機能を悪用して拡散しており、Xに搭載された対話型AI「Grok」が該当投稿の収集・整理に利用されていたことも判明した。
+Xの日本法人代表への質問状に回答はなく、総務省も個別サービスへの対応を「差し控える」としている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/elon-musk-belfast-anti-immigration-riots-amplification/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260612">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月12日</span>
+            <span class="event-title">イーロン・マスクがベルファストの反移民暴動を煽る投稿を拡散した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">排外主義</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2026年6月、スーダン国籍の男による刃物襲撃事件を発端に北アイルランド・ベルファストで反移民暴動が発生した。イーロン・マスク氏は自身のX（旧ツイッター）で、反移民活動家トミー・ロビンソン氏の抗議呼びかけを拡散し、「繰り返し声高に抗議することでしか変化は起きない」と2億4000万人のフォロワーに投稿した。極右政党代表ルパート・ロウ氏の反移民投稿も拡散した。
+調査団体CCDHによると、3人の関連投稿は合計1億1500万回以上閲覧され、うちマスク氏が55％を占めた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/musk-misleading-tweets-twitter-stock-jury-verdict-2026/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260320">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月20日</span>
+            <span class="event-title">マスクがTwitter買収交渉中の虚偽投稿で株価を下落させたと陪審に認定された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2022年5月、Twitter買収交渉中だったマスクは「取引は一時的に保留」「偽アカウントが20%以上のため取引は進められない」とするツイートを投稿し、株価を約18%下落させた。元株主は、これが買収価格を意図的に引き下げるための虚偽陳述だったとして証券集団訴訟を提起した。
+2026年3月20日、サンフランシスコの連邦陪審団は4日間の評議の末、この2件のツイートが投資家を誤導したと認定しマスクの責任を認めた（「詐欺スキーム全体」の主張は立証不十分として退けられた）。損害賠償額は最大26億ドルに達する可能性があるとされ、マスク側代理人は控訴する方針を示した。</div>
           
           
         </div>
@@ -227,7 +443,17 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">歴史認識欠如</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -258,12 +484,50 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
             
           </div>
           
           <div class="event-body">2025年12月5日、欧州委員会はX社に対し、デジタルサービス法（DSA）の透明性義務違反を理由に1億2000万ユーロの制裁金を科した。DSA施行後初めての非遵守決定となる。
 違反内容は、有料課金のみで有意な本人確認なしに取得できる「認証」バッジが利用者を欺く設計になっている点、広告リポジトリの情報不足で研究者が詐欺・プロパガンダを検出できない点、研究者による公開データへのアクセスを禁止しEU域内のシステムリスク研究を阻害している点の3点。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/elon-musk-trump-public-feud-2025-06/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250605">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年6月5日</span>
+            <span class="event-title">イーロン・マスクがトランプ大統領との蜜月を解消しX上で相互に激しく非難し合った</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
+            
+          </div>
+          
+          <div class="event-body">イーロン・マスクは2025年6月、トランプ大統領の大型歳出法案「1つの大きく美しい法案」を「ばらまき」と批判し議会共和党に成立阻止を呼びかけたことをきっかけに、それまで蜜月関係にあったトランプ大統領との対立を決定的にした。トランプはマスクを側近グループから外すと宣言し政府契約の解除を示唆、マスクは新党設立を仄めかしたうえ、トランプがジェフリー・エプスタインの未成年性的虐待に関与したことをほのめかす投稿をX上で行うなど、両者はX/Truth Social上で相互に激しい非難を応酬した。</div>
           
           
         </div>
@@ -289,7 +553,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -320,12 +588,130 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
             
           </div>
           
           <div class="event-body">2025年3月10日午前6時（米東部時間）ごろから、日本・米国・英国など世界規模でXにアクセスできない、投稿が読み込めないといった障害が断続的に発生した。不具合情報サイト「ダウンディテクター」には午前6時前で2万5千件超、午前10時ごろには約4万件の報告が寄せられた。
 イーロン・マスクは同日、「大規模なサイバー攻撃があった。大規模で連携している集団か国家、またはその両方が関与している」と主張し、FOXニュースのインタビューではIPアドレスの発信元が「ウクライナ地域」だったとも述べた。ただし具体的な証拠は示されず、セキュリティ専門家らはこの主張を裏付けていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/musk-afd-election-support-germany/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250125">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年1月25日</span>
+            <span class="event-title">マスクがドイツ極右政党AfDを公然と支持し選挙介入と国際的に批判された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+          </div>
+          
+          <div class="event-body">イーロン・マスクは2024年12月にXで「ドイツを救えるのはAfDだけだ」と投稿し、2025年1月25日にはドイツ東部ハレで開かれた極右政党「ドイツのための選択肢（AfD）」の選挙集会にリモート登場して同党を「ドイツにとって最良の希望」と評した。2月23日のドイツ連邦議会選挙を前にしたこの支持表明は、ショルツ首相から「欧州全土で右派政治家に有利になるよう介入している。実に不快だ」と批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/musk-tommy-robinson-support-starmer-imprison/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250103">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年1月3日</span>
+            <span class="event-title">マスクが英国極右活動家トミー・ロビンソンを支持しスターマー首相を投獄すべきと主張した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+          </div>
+          
+          <div class="event-body">イーロン・マスクは2025年1月、法廷侮辱罪で服役中の英国極右活動家トミー・ロビンソン（本名スティーブン・ヤクスリー＝レノン）をテーマにしたドキュメンタリーをXに投稿し「Free Tommy Robinson!」と釈放を訴えた。同時期にキア・スターマー英首相を批判し辞任・起訴を求め、野党リフォームUKのファラージ党首がロビンソン支持に慎重な姿勢を示すと党首交代を要求した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/musk-uk-grooming-gang-coverup-accusation/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250103">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年1月3日</span>
+            <span class="event-title">マスクが英国のグルーミング・ギャング事件で英政府を根拠不明のまま隠蔽と攻撃し外交問題化した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+            
+          </div>
+          
+          <div class="event-body">イーロン・マスクは2025年1月3日、Xで「輪姦の対象にされた何十万人もの英国の少女たちに正義を」と投稿し、検事総長時代のキア・スターマー英首相が「英国の国家的レイプに6年間加担した」と主張して辞任と起訴を求めた。具体的根拠を示さないまま同様の主張を繰り返し、英国政府は「嘘や誤解を広めている」と反論するなど外交問題化した。</div>
           
           
         </div>
@@ -351,12 +737,50 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
             
           </div>
           
           <div class="event-body">2025年1月、ハッカーフォーラム上に投稿者「ThinkingOne」を名乗る人物が、Xユーザー約28億7000万件分とされる400GB規模のデータを投稿したと主張した。投稿者自身は流出への直接関与を否定しつつ、マスク体制下の大量レイオフに不満を持つ内部関係者による犯行と「ほぼ間違いない」との見方を示した。
 セキュリティ研究者は一部サンプルの真正性を部分的に確認したと報じられているが、主張された28億件という件数は当時のXの利用者数（約3億3570万人）を大きく上回っており、過去の流出データや削除済みアカウントの履歴が重複・統合されている可能性が指摘されるなど、流出の正確な規模・実態は完全には確認されていない。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/musk-brazil-x-ban-moraes-conflict/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240830">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年8月30日</span>
+            <span class="event-title">マスクがブラジル最高裁判事と対立しXが一時遮断される事態に発展した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">外交問題</span>
+            
+            
+          </div>
+          
+          <div class="event-body">イーロン・マスクは、偽情報対策のためXに複数アカウントの停止を命じたブラジル最高裁のアレシャンドレ・デ・モラエス判事と対立し、判事を「判事のコスプレをした邪悪な独裁者」「ダース・ベイダー」などと繰り返し中傷した。モラエス判事がブラジル国内での法定代理人不在を理由にX停止を警告し、スペースX傘下スターリンクの国内資産も凍結される事態となり、2024年8月31日にブラジル国内でXへのアクセスが遮断された。</div>
           
           
         </div>
@@ -382,7 +806,13 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">無断学習</span>
+            
+            
             
           </div>
           
@@ -413,7 +843,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -444,7 +878,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -475,10 +913,14 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
             
           </div>
           
@@ -507,6 +949,13 @@
             <span class="event-title">Xが豪当局の暴力動画削除命令を拒否し法廷闘争の末に豪側が撤回した</span>
           </div>
           <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -537,7 +986,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -568,7 +1021,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">性的マイノリティ差別</span>
+            
             
           </div>
           
@@ -599,7 +1056,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -619,6 +1080,45 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/musk-great-replacement-antisemitic-reply-advertiser-exodus/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20231115">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年11月15日</span>
+            <span class="event-title">マスクがX上の反ユダヤ的な大交代陰謀論投稿に同意し広告主が離脱</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">民族差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">ヘイト扇動</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2023年11月15日、イーロン・マスクはX上で「ユダヤ人コミュニティは白人に対して弁証法的な憎悪をプッシュしている」とする、いわゆる「大交代（グレート・リプレイスメント）」陰謀論に沿った投稿に対し「あなたは真実を述べた」と同意するリプライを送った。
+米政府はこの発言を反ユダヤ主義的なヘイトを助長する行為と非難し、IBM・Apple・Disney・Warner Bros. Discovery・NBCユニバーサル・Paramount・Lionsgateなど大手企業が相次いでXへの広告出稿を停止した。
+マスクは後に自身の投稿は「愚かだった」として事後に謝罪したが、投稿自体は撤回せず、広告主の離脱については監視団体を提訴すると発言し批判の姿勢を崩さなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/twitter-x-link-preview-degraded-click-suppression/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20231005">
       <div class="event-row">
@@ -630,7 +1130,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -661,7 +1165,14 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">無断学習</span>
+            
             
           </div>
           
@@ -692,7 +1203,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -723,7 +1238,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -754,7 +1273,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
             
           </div>
           
@@ -774,6 +1297,42 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/musk-zuckerberg-cage-match/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230621">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年6月21日</span>
+            <span class="event-title">イーロンとザッカーバーグが決闘すると宣言</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2023年6月20日にイーロン・マスクがXでザッカーバーグとの「ケージマッチ」（格闘試合）を提案し、翌21日にザッカーバーグがInstagramで「場所を教えて」と受けて立つことを表明した。
+マスクはラスベガスのオクタゴンでの開催とX上でのライブ配信を宣言し、ザッカーバーグは柔術大会で金・銀メダルを持つことから本気と受け止められた。
+しかし具体的な日程調整が進まず、ザッカーバーグが8月に「前に進む時」と宣言して対決は実現しなかった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/twitter-npr-pbs-state-affiliated-media-label-reversed/" style="--accent: #e2a855"
        data-buzz="0" data-sort-key="20230412">
       <div class="event-row">
@@ -785,7 +1344,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -816,7 +1379,11 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
             
           </div>
           
@@ -836,34 +1403,6 @@
       </div>
     </a>
     
-    <a class="event" href="../../case/twitter-logo-changed-to-doge-during-dogecoin-lawsuit/" style="--accent: #e25555"
-       data-buzz="0" data-sort-key="20230403">
-      <div class="event-row">
-        <div class="event-main">
-          <div class="event-title-row">
-            <span class="event-date">2023年4月3日</span>
-            <span class="event-title">マスクがTwitterのロゴをドージコインの柴犬画像に変更し訴訟中の価格を急騰させた</span>
-          </div>
-          <div class="event-tags">
-            
-          </div>
-          
-          <div class="event-body">2023年4月3日、マスク氏率いるTwitterはウェブサイトのロゴを象徴的な青い鳥から、暗号資産ドージコインの顔として知られる柴犬（doge）のミーム画像に変更した。変更後30分あまりでドージコインの価格は30%超急騰した。
-当時マスク氏は、ドージコインの価格を「ピラミッド商法」により2年間で36,000%以上操作し暴落させ投資家に損失を与えたとして、投資家から2580億ドル規模の訴訟（RICO訴訟）を提起されていた。ロゴ変更はこの訴訟の係争中に行われ、マスク氏の弁護団は変更の前日に訴訟却下を求める申立てを行っていた。</div>
-          
-          
-        </div>
-        
-        
-        <div class="event-status">
-          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
-            <span class="status-dot" style="background: #e25555"></span>未解決
-          </span>
-        </div>
-        
-      </div>
-    </a>
-    
     <a class="event" href="../../case/x-open-source-algorithm-author-is-elon-hardcode/" style="--accent: #e2a855"
        data-buzz="0" data-sort-key="20230331">
       <div class="event-row">
@@ -875,10 +1414,14 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -909,7 +1452,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -940,7 +1487,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -971,7 +1522,10 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
             
           </div>
           
@@ -991,7 +1545,7 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
       </div>
     </a>
     
-    <a class="event" href="../../case/musk-x-suicide-prevention-feature-removed/" style="--accent: #e2a855"
+    <a class="event" href="../../case/musk-x-suicide-prevention-feature-removed/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20221223">
       <div class="event-row">
         <div class="event-main">
@@ -1002,7 +1556,14 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -1013,8 +1574,8 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
         
         
         <div class="event-status">
-          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
           </span>
         </div>
         
@@ -1032,10 +1593,14 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -1066,7 +1631,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -1097,7 +1666,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -1128,7 +1701,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
             
           </div>
           
@@ -1159,7 +1736,14 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">陰謀論</span>
+            
             
           </div>
           
@@ -1189,7 +1773,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -1219,7 +1807,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">障害者差別</span>
+            
             
           </div>
           
@@ -1249,7 +1841,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
             
           </div>
           
@@ -1280,7 +1876,14 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -1310,7 +1913,11 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">メタクソ化</span>
+            
             
           </div>
           
@@ -1329,6 +1936,42 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
       </div>
     </a>
     
+    <a class="event" href="../../case/musk-paul-pelosi-attack-conspiracy-tweet/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20221030">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2022年10月30日</span>
+            <span class="event-title">マスクがポール・ペロシ襲撃事件について根拠のない陰謀論をXに投稿</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">イーロン・マスク:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2022年10月28日未明、ナンシー・ペロシ下院議長の自宅に侵入した男が夫のポール・ペロシ氏（82歳）を襲撃する事件が発生した。買収直後のTwitterのオーナーとなったイーロン・マスクは、ヒラリー・クリントンの投稿への返信として、事件の背景に不審な点があるとするフェイクニュースサイト「Santa Monica Observer」の根拠のない記事をリンク付きで投稿した。
+当該記事はポール・ペロシが男娼との諍いで襲撃されたとする虚偽の内容で、ファクトチェック機関からは「詐欺師のサイト」と評価されているものだった。
+投稿は約24,000件のリツイート・86,000件のいいねを集めた後、数時間で削除されたが、謝罪はなく、買収後のTwitterのコンテンツモデレーションに疑問の声が上がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/twitter-private-list-add-notification-bug-2019/" style="--accent: #e2a855"
        data-buzz="0" data-sort-key="20191213">
       <div class="event-row">
@@ -1340,7 +1983,13 @@ Twitterのシニアエンジニアマネージャーは「統計追跡目的の�
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">プライバシー侵害</span>
+            
+            
             
           </div>
           
@@ -1405,7 +2054,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 

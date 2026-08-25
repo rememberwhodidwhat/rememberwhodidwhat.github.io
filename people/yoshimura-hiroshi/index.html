@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>吉村洋文 行動・発言 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="吉村洋文が行動主体となった事件・発言の記録。46件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="吉村洋文が行動主体となった事件・発言の記録。55件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/people/yoshimura-hiroshi/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="吉村洋文 行動・発言 年表">
-<meta property="og:description" content="吉村洋文が行動主体となった事件・発言の記録。46件を年表で掲載。">
+<meta property="og:description" content="吉村洋文が行動主体となった事件・発言の記録。55件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/people/yoshimura-hiroshi/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="吉村洋文 行動・発言 年表">
-<meta name="twitter:description" content="吉村洋文が行動主体となった事件・発言の記録。46件を年表で掲載。">
+<meta name="twitter:description" content="吉村洋文が行動主体となった事件・発言の記録。55件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "吉村洋文", "url": "https://rememberwhodidwhat.github.io/people/yoshimura-hiroshi/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#0a0018, #f1e9fb);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,12 +68,12 @@
     position: relative;
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .obsidian-link {
     position: absolute;
-    top: 20px;
+    top: 66px;
     right: 24px;
     font-size: 0.72rem;
     color: var(--muted);
@@ -73,7 +97,7 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: var(--text-strong);
   }
 
   header h1 .subtitle {
@@ -93,7 +117,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -107,11 +131,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend {
@@ -171,7 +195,7 @@
     transition: background 0.15s;
   }
 
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
 
   .event::before {
     content: '';
@@ -214,7 +238,7 @@
   .event-title {
     font-size: 0.92rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-strong);
     line-height: 1.4;
   }
 
@@ -237,7 +261,7 @@
 
   .event-body {
     font-size: 0.82rem;
-    color: #aaaabc;
+    color: var(--text-dim);
     line-height: 1.75;
     white-space: pre-line;
   }
@@ -279,7 +303,7 @@
     cursor: pointer;
     transition: color 0.15s, border-color 0.15s;
   }
-  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn:hover { color: var(--text); border-color: var(--border-hover); }
   .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
   
 
@@ -296,11 +320,57 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   
   <div class="header-nav"><a href="../">← 人物一覧へ戻る</a></div>
   <h1>吉村洋文 <span class="subtitle">行動・発言 年表</span></h1>
-  <div class="meta">収録件数: 46 件</div>
+  <div class="meta">収録件数: 55 件</div>
   
   
   
@@ -316,11 +386,11 @@
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>公約不履行
+      <div class="legend-dot" style="background:#ef5350"></div>民主主義破壊
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#ef5350"></div>民主主義破壊
+      <div class="legend-dot" style="background:#888899"></div>公約不履行
     </div>
     
     <div class="legend-item">
@@ -333,6 +403,10 @@
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>根拠不明発言
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>管理不行き届き
     </div>
     
     <div class="legend-item">
@@ -352,11 +426,15 @@
     </div>
     
     <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>弱者攻撃
+    </div>
+    
+    <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>利権・癒着
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>嘘・デマ・印象操作
+      <div class="legend-dot" style="background:#888899"></div>虚偽発言・印象操作
     </div>
     
     <div class="legend-item">
@@ -369,6 +447,10 @@
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>セカンドレイプ
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>不正人事
     </div>
     
     <div class="legend-item">
@@ -387,12 +469,47 @@
       <div class="legend-dot" style="background:#ff5252"></div>違法行為
     </div>
     
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>情報隠蔽
+    </div>
+    
   </div>
   
 </header>
 
 <main>
   <div class="timeline">
+    
+    <a class="event" href="../../case/yoshimura-hirofumi-same-day-vote-defies-supplementary-resolution/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260727" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年7月27日</span>
+            <span class="event-title">吉村洋文が副首都法案の付帯決議に反し知事選と都構想住民投票の同日実施を目指す考えを示した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2026年7月24日に成立した副首都法案には、知事選など地方選挙と大阪都構想の住民投票が「重複しないよう最大限調整する」との付帯決議が付いた。日本維新の会の吉村洋文代表（大阪府知事）は27日、来年春の統一地方選と都構想住民投票の同日実施を目指す考えを改めて示し、「付帯決議は禁止を明確にしていない」と主張した。
+また、同日実施を禁止する法案が国会で否決されていたことを挙げ、「同日選禁止の行動を取る方が国会の意思に反するのではないか」と述べ、付帯決議の趣旨よりも自らの解釈を優先する姿勢を示した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
     
     <a class="event" href="../../case/yoshimura-opposition-bonus-hypocrisy-remark/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260702" data-amount="0">
@@ -405,7 +522,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -437,7 +556,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
+            
             
           </div>
           
@@ -457,6 +578,39 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/jimin-ishin-hirei-45-jidou-sakugen/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260605" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年6月5日</span>
+            <span class="event-title">自民・維新、衆院比例45議席自動削減法案の基本方針策定</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">自民党政治制度改革本部は、与野党協議会で1年以内に結論が出なかった場合に衆院比例代表定数を自動的に45削減する内容を法案の「基本的な考え方」案に明記した。この方針転換は高市早苗首相が主導し、比例区のみの削減という維新の主張に沿った案でまとめるよう鈴木俊一幹事長に指示した。維新の吉村洋文代表は、参院で否決された場合でも衆院の3分の2以上での再可決により成立させるべきだと述べた。自民と日本維新の会は前年の臨時国会にも小選挙区25・比例20を自動削減する同様の法案を提出したが廃案となっており、今回は削減対象を比例のみに絞った形となっている。比例代表は少数政党の議席確保に機能しており、その自動削減は事実上の与党有利な制度変更にあたる。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/yoshimura-metro-plan-third-attempt/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260517" data-amount="0">
       <div class="event-row">
@@ -468,10 +622,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公約不履行</span>
+            
             
           </div>
           
@@ -504,7 +660,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent);">民主主義破壊</span>
+            
             
           </div>
           
@@ -537,10 +695,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffa726 18%, transparent); color: #ffa726; border: 1px solid color-mix(in srgb, #ffa726 40%, transparent);">選挙工作</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
             
           </div>
           
@@ -573,10 +733,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -598,6 +760,39 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/satake-matsuda-kokuho-nogare/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260114" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年1月14日</span>
+            <span class="event-title">佐竹璃保と松田昌利が国民健康保険料を免れるため一般社団法人の理事に就任していた疑いが浮上した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">管理不行き届き</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">日本維新の会所属の地方議員が一般社団法人の理事に就任し、国民健康保険から保険料負担の軽い社会保険に切り替えることで保険料支払いを免れているとの疑惑を受け、党は全議員を対象に調査を実施した。当初、兵庫県内の地方議員4人が「国保逃れ」の脱法的行為と認定されたのに続き、大阪市議の佐竹璃保・松田昌利の両氏にも同様の疑いがあることが判明した。佐竹議員は取材に「質問には一切答えられない」と回答した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/ishin-insurance-evasion-scheme-revealed/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260100" data-amount="291200000">
       <div class="event-row">
@@ -609,6 +804,7 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff7043 18%, transparent); color: #ff7043; border: 1px solid color-mix(in srgb, #ff7043 40%, transparent);">脱法行為</span>
             
             
@@ -616,6 +812,7 @@
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
             
           </div>
           
@@ -648,10 +845,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -684,13 +883,45 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公約不履行</span>
+            
             
           </div>
           
           
           <div class="event-body">日本維新の会が自民党との連立条件として掲げていた衆院議員定数削減法案は、2025年12月17日の臨時国会閉会までに成立せず見送られた。吉村洋文代表は12月16日、自身のYouTubeで野党やメディアへの批判を「腹立つ」と連発したが、野党各党の代表と直接協議する場は持たなかった。
 18日の情報番組に出演した吉村代表は、コメンテーターの杉村太蔵氏から「いくらユーチューブで『腹立つ』と言っても、党の代表として説得する作業をやらないでは仕方ない」と指摘され、定数削減が実現しなかったのは党運営を担う代表自身の責任でもあると批判された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/takeda-tsuneyasu-banpaku-hihansha-bujoku-2025/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251102" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月2日</span>
+            <span class="event-title">竹田恒泰が大阪万博への批判者を心の暗い人さもしい人と侮辱した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">竹田恒泰は自身のYouTubeチャンネルで、大阪・関西万博への批判者について「行って文句言う人は幸薄い」と述べた。さらに2025年11月2日放送の「そこまで言って委員会NP」（吉村洋文大阪府知事も出演）では、万博批判者を「心の暗い人、さもしい人」「人生損してる」と評した。批判者を一律に見下す発言であり、番組内では吉村知事も苦笑いを見せた。</div>
           
           
         </div>
@@ -716,7 +947,15 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">弱者攻撃</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -749,7 +988,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
             
           </div>
           
@@ -780,7 +1021,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -812,10 +1055,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -846,7 +1091,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -867,6 +1114,36 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/baba-nobuyuki-seisaku-katsudohi-kurozuri-goi/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240531" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年5月31日</span>
+            <span class="event-title">馬場伸幸が政策活動費の黒塗り10年後公開を容認する裏金規正法改正に単独合意した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">自民党派閥の裏金事件を受けた政治資金規正法改正を巡り、日本維新の会の馬場伸幸代表は自民党側から「政策活動費の領収書10年後公開」等の提案を受け「わが党の考えが100％通った」と単独で合意した。馬場氏自身、政党から政治団体経由で自身に「政策活動費」相当の資金を還流させる手法を利用しているとされ、10年後公開・時効成立後の開示では実効性がないと野党から批判された。改正案成立後には領収書の「黒塗り」公開も容認する考えを示し、吉村洋文共同代表がこれに異論を唱える一幕もあった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/yoshimura-expo-suji-misleading-posts/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20240529" data-amount="0">
       <div class="event-row">
@@ -878,7 +1155,9 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
@@ -909,7 +1188,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -940,7 +1221,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -973,10 +1256,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -1009,10 +1294,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -1043,10 +1330,12 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -1077,10 +1366,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
             
           </div>
           
@@ -1088,6 +1379,36 @@
           <div class="event-body">大阪・関西万博の会場に建設費約2億円の「デザイナーズトイレ」が設置されることが話題になる中、吉村洋文知事は2024年2月20日、関西テレビの番組で「建築家がトイレにも魂を吹き込んでいる」と発言した。
 高額なトイレ建設を擁護するこの発言に対し、ネット上で「たましい吹き込んだらトイレが2億円に値上がりするんか」など批判・揶揄が広がった。
 番組MCの谷原章介氏からも「具体性をもって話をしてほしい」との要望が出された。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/matsui-ichiro-kujira-kaiyotoki-hyohon-kyohi/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240219" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年2月19日</span>
+            <span class="event-title">松井一郎がクジラ死骸の無償標本化提案を退け高額な海洋投棄を選んだ</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2023年1月、淀川河口で見つかったマッコウクジラ（愛称「淀ちゃん」）の死亡確認当日、大阪市立自然史博物館は市に対し「学術的価値が高く、費用も安く済む」として埋設・標本化を要望していた。しかし松井一郎市長（当時）は「標本の引き取り希望がない」「海に返してあげたい」として要望を退け、沖合への海洋投棄を選択。最終的な処理費用は当初試算の2倍を超える約8000万円に膨らんだ。翌2024年2月に別のクジラが死亡した際は、吉村洋文知事が「埋設場所が確保でき費用もかからない」として埋設を選択しており、2023年に埋設できなかった説明との整合性が問われている。</div>
           
           
         </div>
@@ -1113,10 +1434,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
             
           </div>
           
@@ -1147,10 +1470,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">セカンドレイプ</span>
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">不正人事</span>
+            
             
           </div>
           
@@ -1181,7 +1506,9 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
@@ -1212,7 +1539,9 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
@@ -1243,10 +1572,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -1277,7 +1608,9 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
@@ -1308,15 +1641,47 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
             
+            
           </div>
           
           
           <div class="event-body">吉村洋文大阪府知事は、コロナ死者数について「若者と高齢者の距離の近さがあるという見方がある」と発言していたが、毎日新聞記者から「端的にどなたが発言されたのか」と根拠を問われても具体的に回答できなかった。記者が丁寧なコミュニケーションを求めると、吉村知事は「知事としての考え方を言うときに、部局で組織として形成されていない意見でも言うことは当然あり得る」「毎日新聞のやり方なら知事会見は要らなくなる」などと開き直り、根拠を示せないまま質問を打ち切ろうとする姿勢を見せた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/matsui-ichiro-bijutsuhin-chikachushajo-hochi/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230922" data-amount="3128000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年9月22日</span>
+            <span class="event-title">松井一郎が2億円超の府所有美術品を6年以上施錠せず地下駐車場に放置した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">大阪府が所蔵する評価額2億円超の現代美術作品105点が、6年以上にわたり施錠もされずブルーシートで覆われただけの状態で地下駐車場に保管されていたことが判明した。松井一郎氏はX投稿で「地下駐車場は気温、湿度も安定してるし、家賃もかからないからここにした」と述べ、以前から状況を認識していたことを明らかにした。府の専門家チームは保管環境が原因とみられる劣化を指摘し、府は2024年度当初予算に修復費3128万円を計上した。</div>
           
           
         </div>
@@ -1342,12 +1707,50 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
           
           <div class="event-body">吉村洋文大阪府知事は国会議員の海外視察の不透明さを批判する文脈で「維新だけが行ってない」とX（旧Twitter）に投稿した。しかし衆参両院のホームページを確認すると、馬場伸幸代表、足立康史氏、丸山穂高氏、浅田均氏、清水貴之氏、松沢成文氏ら日本維新の会所属議員も海外視察に参加しており、投稿は事実に反することが判明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/shimoji-ir-expulsion-reversal/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230906" data-amount="1000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年9月6日</span>
+            <span class="event-title">下地幹郎がIR汚職事件を巡る除名処分を維新から撤回された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">不正人事</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">[[下地幹郎がIR汚職事件で中国企業から現金100万円を受領し離党届を提出後に維新が除名|2020年にIR汚職事件を巡って除名処分を受けた下地幹郎前衆院議員]]について、日本維新の会の藤田文武幹事長は2023年9月6日、除名処分を撤回すると発表した。下地氏は当該事件で不起訴となっており、藤田氏は撤回の理由について沖縄での党勢拡大への貢献を評価したと説明した。復党や公認については「積極的に勧誘や促すこともない」とした。</div>
           
           
         </div>
@@ -1373,7 +1776,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -1404,7 +1809,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
             
           </div>
           
@@ -1437,10 +1844,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">民意軽視</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent);">議会軽視</span>
+            
             
           </div>
           
@@ -1473,7 +1882,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
             
           </div>
           
@@ -1505,10 +1916,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ff7043 18%, transparent); color: #ff7043; border: 1px solid color-mix(in srgb, #ff7043 40%, transparent);">脱法行為</span>
+            
             
           </div>
           
@@ -1541,10 +1954,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
+            
             
           </div>
           
@@ -1577,15 +1992,47 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
             
+            
           </div>
           
           
           <div class="event-body">関西経済連合会の提言を受け、吉村洋文知事はコロナ患者向けの臨時医療施設「野戦病院」をインテックス大阪に開設する方針を主導した。府の健康医療部は設備・防寒面での不適切さや人材不足を事前に指摘し反対していたが、吉村知事はトップダウンで方針を決定した。結果、大規模医療・療養センターの利用者はわずか303人（最大稼働1日70人）にとどまり、投入された税金は78億円、1人あたり約2600万円に上った。療養者からは「寒すぎて失敗」との声も上がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/osaka-gikai-chijishitsumon-uchikiri/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20210624" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2021年6月24日</span>
+            <span class="event-title">大阪維新の会が議会での知事質問を数の力で打ち切りコロナ対策の責任追及を阻止した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">第4波でのコロナ対策失敗を受け、2021年6月の大阪府議会健康福祉常任委員会で自民・共産・民主ネットの3会派が知事質問を求めたが、大阪維新の会のおきた浩之委員が質問終結の動議を提出、起立多数で可決され知事質問は実施されないまま終了した。他会派からは「知事質問潰し」「民主主義の危機」「大阪府議会が機能不全」との批判が上がった。横山英幸議員（大阪維新の会）は会派を代表し謝意のみを述べるにとどめた。</div>
           
           
         </div>
@@ -1611,10 +2058,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+            
             
           </div>
           
@@ -1645,10 +2094,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
+            
             
           </div>
           
@@ -1679,7 +2130,9 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
@@ -1710,7 +2163,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
+            
             
           </div>
           
@@ -1743,7 +2198,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -1774,10 +2231,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -1808,10 +2267,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -1844,7 +2305,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -1875,10 +2338,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
@@ -1909,6 +2374,7 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
             
             
@@ -1916,6 +2382,10 @@
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">情報隠蔽</span>
+            
             
           </div>
           
@@ -1982,7 +2452,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 <script>

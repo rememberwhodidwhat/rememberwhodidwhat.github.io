@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>社会民主党 行動・事件 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="社会民主党が行動主体となった事件の記録。1件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="社会民主党が行動主体となった事件の記録。4件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/organization/social-democratic-party/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="社会民主党 行動・事件 年表">
-<meta property="og:description" content="社会民主党が行動主体となった事件の記録。1件を年表で掲載。">
+<meta property="og:description" content="社会民主党が行動主体となった事件の記録。4件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/organization/social-democratic-party/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="社会民主党 行動・事件 年表">
-<meta name="twitter:description" content="社会民主党が行動主体となった事件の記録。1件を年表で掲載。">
+<meta name="twitter:description" content="社会民主党が行動主体となった事件の記録。4件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "社会民主党", "url": "https://rememberwhodidwhat.github.io/organization/social-democratic-party/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#000a18, #e8f1fc);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,13 +66,13 @@
   header {
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #000a18 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
   .header-nav a:hover { color: var(--text); }
 
-  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-strong); }
   header h1 .subtitle { color: var(--muted); font-weight: 400; }
   header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
 
@@ -58,7 +82,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -72,11 +96,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -97,7 +121,7 @@
     background: var(--surface); border: 1px solid var(--border);
     border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
   }
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
   .event::before {
     content: ''; position: absolute; left: -22px; top: 18px;
     width: 10px; height: 10px; border-radius: 50%;
@@ -108,10 +132,11 @@
   .event-main { flex: 1; min-width: 0; }
   .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
   .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
-  .event-title { font-size: 0.92rem; font-weight: 600; color: #fff; line-height: 1.4; }
-  .event-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: var(--text-strong); line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 6px; }
   .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
-  .event-body { font-size: 0.82rem; color: #aaaabc; line-height: 1.75; white-space: pre-line; }
+  .actor-tag-label { font-size: 0.68rem; color: var(--muted); margin-right: 2px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: var(--text-dim); line-height: 1.75; white-space: pre-line; }
   .event-status { flex-shrink: 0; }
   .status-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -127,13 +152,71 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   <div class="header-nav"><a href="../">← 団体一覧へ戻る</a></div>
   <h1>社会民主党 <span class="subtitle">行動・事件 年表</span></h1>
-  <div class="meta">収録件数: 1 件</div>
+  <div class="meta">収録件数: 4 件</div>
   
   
   <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>環境破壊加担
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>地位濫用
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>被害
+    </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>根拠不明発言
@@ -146,6 +229,84 @@
 <main>
   <div class="timeline">
     
+    <a class="event" href="../../case/fukushima-mizuho-neko-gairaishu-shitei-hantai/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260706">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年7月6日</span>
+            <span class="event-title">福島瑞穂がイエネコの外来生物リスト追加・駆除対象化に反対</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">福島瑞穂:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">環境破壊加担</span>
+            
+            
+          </div>
+          
+          <div class="event-body">環境省と農林水産省が外来生物のリスト改定にあたり、従来は野生個体に限っていた対象を広げ、野良猫や飼い猫を含むイエネコを「防除推進外来種」として駆除対象に加える方向で最終調整していることが明らかになった。
+社民党党首の福島瑞穂参議院議員は2026年7月6日、Xで「とんでもない」と投稿し、ノネコ・野良猫・地域猫・飼い猫はいずれもイエネコという同一種であり動物愛護管理法上の愛護動物であるとして、駆除対象化への反対を表明した。
+イエネコは在来生態系を脅かす外来種として国内外で防除の必要性が指摘されており、この投稿は当該規制強化に反対する立場を示すものだった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/sdp-leadership-press-conf-no-speaking-chance/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260406">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年4月6日</span>
+            <span class="event-title">福島瑞穂が社民党党首選後の会見で他候補に発言機会を与えなかった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">福島瑞穂:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
+            
+            <span class="actor-tag-label">大椿ゆうこ:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">被害</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2026年4月6日の社民党党首選決選投票で福島瑞穂氏が再選された際の会見で、対立候補の大椿ゆうこ氏とラサール石井氏に発言機会が与えられなかった。
+司会者が記者からの候補者へのコメント要請を「党首への質問に限る」として拒否し、大椿氏は「候補者を平等に扱うべき」と苦言を呈して途中退席した。
+福島氏は4月8日の記者会見で「配慮が足りなかった」として謝罪した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/hattori-henoko-accident-blame-shifting-remark/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20260319">
       <div class="event-row">
@@ -157,11 +318,49 @@
           <div class="event-tags">
             
             
+            <span class="actor-tag-label">服部良一:</span>
+            
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
             
           </div>
           
           <div class="event-body">社民党の服部良一幹事長は2026年3月19日、国会議員会館前で行われた抗議デモに登壇し、辺野古沖抗議船転覆事故の犠牲者への追悼を述べた上で「そもそも辺野古の新基地建設をいつまでも続けるのが悪い」「海を埋め立てるのが悪い。こんなことをしなかったらこういう事故も起こりえなかった」と発言し、事故原因を基地建設に直結させる内容にSNS上で「他責の極致」などと批判が集まった。福島瑞穂党首は4月1日の定例会見でこの発言について問われ、「コメントする立場にない」と論評を避けた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/yayama-taro-fukushima-mizuho-defamation-lawsuit/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20191129">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年11月29日</span>
+            <span class="event-title">屋山太郎が福島瑞穂の妹が北朝鮮にいると虚偽記述し名誉毀損で敗訴</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">福島瑞穂:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">被害</span>
+            
+            
+          </div>
+          
+          <div class="event-body">政治評論家の屋山太郎氏は静岡新聞のコラムで、福島瑞穂氏について「実妹が北朝鮮に生存している」という事実に反する記述をした。福島氏に妹は存在せず、東京地裁は真偽を確認しないまま多数の読者を持つ新聞紙面に掲載したとして、屋山氏に330万円（請求満額）の賠償を命じた。</div>
           
           
         </div>
@@ -221,7 +420,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 

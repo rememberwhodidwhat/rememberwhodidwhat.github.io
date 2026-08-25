@@ -3,9 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>高市が円安を「ホクホク」と表現し批判された — 誰が何をしたか覚えていよう</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
 <meta name="description" content="高市早苗首相が2026年1月31日の衆院選遊説（川崎）で「外為特会の運用は今すごくホクホク状態」と発言し、円安が輸出産業にとって「大きなチャンス」だと強調した。 円安による輸入物価上昇で家計が苦しむ中、政府の外為特会の運用益を「ホクホク」…">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/case/takaichi-yen-depreciation-hokuhoku/">
 <meta property="og:type" content="article">
@@ -19,12 +31,24 @@
 <meta name="twitter:description" content="高市早苗首相が2026年1月31日の衆院選遊説（川崎）で「外為特会の運用は今すごくホクホク状態」と発言し、円安が輸出産業にとって「大きなチャンス」だと強調した。 円安による輸入物価上昇で家計が苦しむ中、政府の外為特会の運用益を「ホクホク」…">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "高市が円安を「ホクホク」と表現し批判された", "description": "高市早苗首相が2026年1月31日の衆院選遊説（川崎）で「外為特会の運用は今すごくホクホク状態」と発言し、円安が輸出産業にとって「大きなチャンス」だと強調した。 円安による輸入物価上昇で家計が苦しむ中、政府の外為特会の運用益を「ホクホク」…", "url": "https://rememberwhodidwhat.github.io/case/takaichi-yen-depreciation-hokuhoku/", "startDate": "2026-01-31"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#0a0014, #f1e9fb);
     --accent:  #e2a855;
   }
 
@@ -48,12 +72,12 @@
     padding: 48px 40px 36px;
     border-bottom: 1px solid var(--border);
     border-left: 4px solid var(--accent);
-    background: linear-gradient(135deg, #0a0014 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .obsidian-link {
     position: absolute;
-    top: 20px;
+    top: 66px;
     right: 24px;
     font-size: 0.72rem;
     color: var(--muted);
@@ -88,11 +112,18 @@
   header h1 {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-strong);
     line-height: 1.4;
   }
 
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+  .actors { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .actor-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 0.82rem; }
+  .actor-name { font-weight: 700; color: var(--text-strong); }
+  .actor-affiliation { font-weight: 400; color: var(--muted); font-size: 0.78rem; margin-left: 2px; }
+  .actor-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .no-tag { font-size: 0.7rem; color: var(--muted); }
 
   .event-date {
     font-size: 0.8rem;
@@ -106,7 +137,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -120,11 +151,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   
@@ -164,11 +195,9 @@
   .section { margin-bottom: 48px; }
 
   .section-title {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    text-transform: uppercase;
+    color: var(--text-strong);
     margin-bottom: 16px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
@@ -191,12 +220,12 @@
     border-radius: 6px;
     transition: background 0.15s;
   }
-  .source-card:hover { background: #20202e; }
+  .source-card:hover { background: var(--surface-hover); }
 
   .source-title {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-strong);
     margin-bottom: 4px;
   }
   .source-title a:hover { opacity: 0.8; }
@@ -210,7 +239,7 @@
 
   .source-desc {
     font-size: 0.8rem;
-    color: #aaaabc;
+    color: var(--text-dim);
     line-height: 1.6;
   }
 
@@ -228,12 +257,12 @@
     border-radius: 6px;
     transition: background 0.15s;
   }
-  .related-card:hover { background: #20202e; }
+  .related-card:hover { background: var(--surface-hover); }
 
   .related-date { font-size: 0.68rem; font-weight: 700; color: var(--muted); white-space: nowrap; padding-top: 2px; min-width: 80px; }
   .related-right { flex: 1; }
   .related-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
-  .related-title { font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.4; }
+  .related-title { font-size: 0.88rem; font-weight: 600; color: var(--text-strong); line-height: 1.4; }
   .related-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 
   .status-badge-sm { font-size: 0.6rem; padding: 2px 9px; }
@@ -243,6 +272,52 @@
 </style>
 </head>
 <body>
+
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
 
 <header>
   
@@ -263,13 +338,21 @@
     </span>
     
   </div>
-  <div class="tags">
+  <div class="actors">
     
+    <div class="actor-row">
+      <span class="actor-name">高市早苗<span class="actor-affiliation">（自由民主党）</span></span>
+      <span class="actor-tags">
+        
+        
+        <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
+        
+        
+        <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+        
+      </span>
+    </div>
     
-    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">品格欠如</span>
-    
-    
-    <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
     
   </div>
   <div class="event-date">2026年1月31日</div>
@@ -288,7 +371,7 @@
 
   
   <div class="section">
-    <div class="section-title">出典</div>
+    <h2 class="section-title">出典</h2>
     <div class="source-list">
       
       <div class="source-card">
@@ -315,71 +398,8 @@
 
   
   <div class="section">
-    <div class="section-title">類似事件</div>
+    <h2 class="section-title">類似事件</h2>
     <div class="related-list">
-      
-      <a class="related-card" href="../miyazawa-no-arms-export/" style="--rel-color: #e25555">
-        <div class="related-date">1976年5月14日</div>
-        <div class="related-right">
-          <div class="related-title-row">
-            <div class="related-title">宮沢喜一外務大臣が「武器輸出するほど日本は落ちぶれていない」と発言</div>
-            
-            
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
-              <span class="status-dot" style="background: #e25555"></span>継続中
-            </span>
-            
-          </div>
-          <div class="related-tags">
-            
-            
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">平和的行動</span>
-            
-          </div>
-        </div>
-      </a>
-      
-      <a class="related-card" href="../aso-taro-shimojimo-remark/" style="--rel-color: #e25555">
-        <div class="related-date">1979年10月</div>
-        <div class="related-right">
-          <div class="related-title-row">
-            <div class="related-title">麻生太郎が初出馬時の演説で有権者を「下々の皆さん」と呼んだ</div>
-            
-            
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
-              <span class="status-dot" style="background: #e25555"></span>未解決
-            </span>
-            
-          </div>
-          <div class="related-tags">
-            
-            
-            <span class="tag" style="background: color-mix(in srgb, #ce93d8 18%, transparent); color: #ce93d8; border: 1px solid color-mix(in srgb, #ce93d8 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">品格</span>
-            
-          </div>
-        </div>
-      </a>
-      
-      <a class="related-card" href="../aso-taro-womens-suffrage-remark/" style="--rel-color: #e25555">
-        <div class="related-date">1983年2月9日</div>
-        <div class="related-right">
-          <div class="related-title-row">
-            <div class="related-title">麻生太郎が婦人参政権を与えたのが最大の失敗と発言した</div>
-            
-            
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
-              <span class="status-dot" style="background: #e25555"></span>未解決
-            </span>
-            
-          </div>
-          <div class="related-tags">
-            
-            
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">女性差別</span>
-            
-          </div>
-        </div>
-      </a>
       
       <a class="related-card" href="../takaichi-resume-fabrication/" style="--rel-color: #e25555">
         <div class="related-date">1989年</div>
@@ -396,7 +416,7 @@
           <div class="related-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">虚偽発言</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">経歴詐称</span>
             
           </div>
         </div>
@@ -438,7 +458,7 @@
           <div class="related-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史認識</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史認識欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">戦争容認</span>
@@ -447,11 +467,11 @@
         </div>
       </a>
       
-      <a class="related-card" href="../aso-taro-buraku-discrimination-remark/" style="--rel-color: #e25555">
-        <div class="related-date">2001年3月</div>
+      <a class="related-card" href="../takaichi-welfare-scrounger-remark/" style="--rel-color: #e25555">
+        <div class="related-date">2012年</div>
         <div class="related-right">
           <div class="related-title-row">
-            <div class="related-title">麻生太郎が野中広務を「部落出身者」と派閥会合で差別的に評した</div>
+            <div class="related-title">高市の「さもしい顔をして」発言</div>
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
@@ -462,31 +482,103 @@
           <div class="related-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">部落差別</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">弱者攻撃</span>
             
           </div>
         </div>
       </a>
       
-      <a class="related-card" href="../aso-taro-korean-name-change-remark/" style="--rel-color: #e2a855">
-        <div class="related-date">2003年5月31日</div>
+      <a class="related-card" href="../takaichi-praised-nazi-glorifying-book/" style="--rel-color: #e25555">
+        <div class="related-date">2014年9月</div>
         <div class="related-right">
           <div class="related-title-row">
-            <div class="related-title">麻生太郎が創氏改名は朝鮮人の要求だったと発言した</div>
+            <div class="related-title">高市がナチス礼賛本に推薦文を寄せた</div>
             
             
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+              <span class="status-dot" style="background: #e25555"></span>未解決
             </span>
             
           </div>
           <div class="related-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #bcaaa4 18%, transparent); color: #bcaaa4; border: 1px solid color-mix(in srgb, #bcaaa4 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史認識</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史認識欠如</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="../takaichi-broadcast-suspension-remark/" style="--rel-color: #e2a855">
+        <div class="related-date">2016年2月8日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市の停波処分発言</div>
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">外交問題</span>
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ef5350 18%, transparent); color: #ef5350; border: 1px solid color-mix(in srgb, #ef5350 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">民主主義破壊</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ffca28 18%, transparent); color: #ffca28; border: 1px solid color-mix(in srgb, #ffca28 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">議会軽視</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="../takaichi-flag-desecration-defeated-nation-claim-false/" style="--rel-color: #e2a855">
+        <div class="related-date">2021年1月27日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">高市早苗が国旗損壊罪不在の理由を「敗戦国だから」と誤って説明し記述を削除</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">根拠不明発言</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">歴史修正主義</span>
+            
+          </div>
+        </div>
+      </a>
+      
+      <a class="related-card" href="../marukawa-fuufu-bessei/" style="--rel-color: #e2a855">
+        <div class="related-date">2021年1月30日</div>
+        <div class="related-right">
+          <div class="related-title-row">
+            <div class="related-title">丸川珠代が選択的夫婦別姓の意見書採択阻止を求める文書に署名した</div>
+            
+            
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+            </span>
+            
+          </div>
+          <div class="related-tags">
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">女性差別</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">家父長制肯定</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent); font-size: 0.58rem; padding: 1px 5px;">矛盾発言</span>
             
           </div>
         </div>
@@ -540,7 +632,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 </body>

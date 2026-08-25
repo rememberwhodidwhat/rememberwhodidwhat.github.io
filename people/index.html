@@ -3,28 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>人物一覧 — 誰が何をしたか覚えていよう</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="事件記録に登場する人物一覧（427人）。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="事件記録に登場する人物一覧（461人）。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/people/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="人物一覧 — 誰が何をしたか覚えていよう">
-<meta property="og:description" content="事件記録に登場する人物一覧（427人）。">
+<meta property="og:description" content="事件記録に登場する人物一覧（461人）。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/people/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人物一覧 — 誰が何をしたか覚えていよう">
-<meta name="twitter:description" content="事件記録に登場する人物一覧（427人）。">
+<meta name="twitter:description" content="事件記録に登場する人物一覧（461人）。">
 
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --muted:          light-dark(#888899, #6b6b80);
     --accent:  #7c6ff7;
   }
 
@@ -46,7 +65,7 @@
   .nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 24px; }
   .nav a:hover { color: var(--text); }
 
-  h1 { font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  h1 { font-size: 1.6rem; font-weight: 700; color: var(--text-strong); margin-bottom: 6px; }
 
   .meta { font-size: 0.82rem; color: var(--muted); margin-bottom: 32px; }
 
@@ -68,13 +87,25 @@
     transition: background 0.15s, border-color 0.15s;
   }
 
-  .list li a:hover { background: #20202e; border-color: var(--accent); }
+  .list li a:hover { background: var(--surface-hover); border-color: var(--accent); }
 
   .name { font-size: 1rem; font-weight: 600; }
 
-  .count {
-    font-size: 0.75rem;
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .org {
+    font-size: 0.8rem;
     color: var(--muted);
+  }
+
+  .count {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
     background: var(--bg);
     padding: 2px 10px;
     border-radius: 12px;
@@ -86,3005 +117,4672 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <div class="nav"><a href="../">← トップへ戻る</a></div>
 <h1>人物一覧</h1>
-<div class="meta">427 人 収録</div>
+<div class="meta">461 人 収録</div>
 
 <ul class="list">
   
   <li>
     <a href="takaichi-sanae/">
       <span class="name">高市早苗</span>
-      <span class="count">87 件</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">98 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="elon-musk/">
       <span class="name">イーロン・マスク</span>
-      <span class="count">62 件</span>
+      <span class="right">
+        <span class="org">X (Twitter)、Tesla、…</span>
+        <span class="count">77 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="yoshimura-hiroshi/">
       <span class="name">吉村洋文</span>
-      <span class="count">46 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">55 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="koizumi-shinjiro/">
       <span class="name">小泉進次郎</span>
-      <span class="count">26 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="aso-taro/">
-      <span class="name">麻生太郎</span>
-      <span class="count">23 件</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">27 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="hashimoto-toru/">
       <span class="name">橋下徹</span>
-      <span class="count">22 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">24 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="aso-taro/">
+      <span class="name">麻生太郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">23 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="matsui-ichiro/">
       <span class="name">松井一郎</span>
-      <span class="count">15 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hyakuta-naoki/">
-      <span class="name">百田尚樹</span>
-      <span class="count">15 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="marukawa-tamayo/">
-      <span class="name">丸川珠代</span>
-      <span class="count">13 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamamoto-taro/">
-      <span class="name">山本太郎</span>
-      <span class="count">12 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="koike-yuriko/">
-      <span class="name">小池百合子</span>
-      <span class="count">11 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">20 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="baba-nobuyuki/">
       <span class="name">馬場伸幸</span>
-      <span class="count">11 件</span>
+      <span class="right">
+        <span class="org">維新の会、自由民主党</span>
+        <span class="count">17 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="izumi-fusaho/">
-      <span class="name">泉房穂</span>
-      <span class="count">10 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tachibana-takashi/">
-      <span class="name">立花孝志</span>
-      <span class="count">10 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takeda-tsuneyasu/">
-      <span class="name">竹田恒泰</span>
-      <span class="count">10 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mark-zuckerberg/">
-      <span class="name">ザッカーバーグ</span>
-      <span class="count">9 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="saito-motohiko/">
-      <span class="name">斎藤元彦</span>
-      <span class="count">9 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kawai-yusuke/">
-      <span class="name">河合悠祐</span>
-      <span class="count">9 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tamaki-yuichiro/">
-      <span class="name">玉木雄一郎</span>
-      <span class="count">9 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hezuma-ryu/">
-      <span class="name">へずまりゅう</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="henmi-junichi/">
-      <span class="name">へんみ純一</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="watanabe-tomoki/">
-      <span class="name">わたなべ友貴</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="owada-shin/">
-      <span class="name">大和田伸</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yokoyama-hideyuki/">
-      <span class="name">横山英幸</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="asai-kunio/">
-      <span class="name">浅井くにお</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yaguchi-yasuyuki/">
-      <span class="name">矢口やすゆき</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="wakisaka-tatsuya/">
-      <span class="name">脇坂たつや</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fujimoto-naoya/">
-      <span class="name">藤本なおや</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="suzuki-muneo/">
-      <span class="name">鈴木宗男</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="otokita-shun/">
-      <span class="name">音喜多駿</span>
-      <span class="count">8 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yoshida-ai-suginami/">
-      <span class="name">吉田あい</span>
-      <span class="count">7 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="umemura-mizuho/">
-      <span class="name">梅村みずほ</span>
-      <span class="count">7 件</span>
+    <a href="hyakuta-naoki/">
+      <span class="name">百田尚樹</span>
+      <span class="right">
+        <span class="org">日本保守党、NHK</span>
+        <span class="count">15 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="donald-trump/">
       <span class="name">ドナルド・トランプ</span>
-      <span class="count">6 件</span>
+      <span class="right">
+        
+        <span class="count">13 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="abe-shinzo/">
-      <span class="name">安倍晋三</span>
-      <span class="count">6 件</span>
+    <a href="marukawa-tamayo/">
+      <span class="name">丸川珠代</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">13 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="sugita-mio/">
-      <span class="name">杉田水脈</span>
-      <span class="count">6 件</span>
+    <a href="saito-motohiko/">
+      <span class="name">斎藤元彦</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">13 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="ishimaru-shinji/">
-      <span class="name">石丸伸二</span>
-      <span class="count">6 件</span>
+    <a href="yamamoto-taro/">
+      <span class="name">山本太郎</span>
+      <span class="right">
+        <span class="org">れいわ新選組</span>
+        <span class="count">12 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="koike-yuriko/">
+      <span class="name">小池百合子</span>
+      <span class="right">
+        
+        <span class="count">11 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tachibana-takashi/">
+      <span class="name">立花孝志</span>
+      <span class="right">
+        <span class="org">NHKから国民を守る党</span>
+        <span class="count">11 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mark-zuckerberg/">
+      <span class="name">ザッカーバーグ</span>
+      <span class="right">
+        <span class="org">Meta、Facebook、…</span>
+        <span class="count">10 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yokoyama-hideyuki/">
+      <span class="name">横山英幸</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">10 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="izumi-fusaho/">
+      <span class="name">泉房穂</span>
+      <span class="right">
+        
+        <span class="count">10 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takeda-tsuneyasu/">
+      <span class="name">竹田恒泰</span>
+      <span class="right">
+        <span class="org">令和書籍</span>
+        <span class="count">10 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hezuma-ryu/">
+      <span class="name">へずまりゅう</span>
+      <span class="right">
+        
+        <span class="count">9 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kawai-yusuke/">
+      <span class="name">河合悠祐</span>
+      <span class="right">
+        <span class="org">日本大和党</span>
+        <span class="count">9 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="asai-kunio/">
+      <span class="name">浅井くにお</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">9 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tamaki-yuichiro/">
+      <span class="name">玉木雄一郎</span>
+      <span class="right">
+        <span class="org">国民民主党</span>
+        <span class="count">9 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="henmi-junichi/">
+      <span class="name">へんみ純一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="watanabe-tomoki/">
+      <span class="name">わたなべ友貴</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="owada-shin/">
+      <span class="name">大和田伸</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="umemura-mizuho/">
+      <span class="name">梅村みずほ</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yaguchi-yasuyuki/">
+      <span class="name">矢口やすゆき</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="wakisaka-tatsuya/">
+      <span class="name">脇坂たつや</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fujimoto-naoya/">
+      <span class="name">藤本なおや</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">8 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="fujita-fumitake/">
       <span class="name">藤田文武</span>
-      <span class="count">6 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suzuki-muneo/">
+      <span class="name">鈴木宗男</span>
+      <span class="right">
+        <span class="org">自由民主党、維新の会</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="otokita-shun/">
+      <span class="name">音喜多駿</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">8 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yoshida-ai-suginami/">
+      <span class="name">吉田あい</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">7 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="abe-shinzo/">
+      <span class="name">安倍晋三</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">7 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ishimaru-shinji/">
+      <span class="name">石丸伸二</span>
+      <span class="right">
+        
+        <span class="count">7 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sugita-mio/">
+      <span class="name">杉田水脈</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">6 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="okushita-takemitsu/">
       <span class="name">奥下剛光</span>
-      <span class="count">5 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">5 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="ikeshita-suguru/">
       <span class="name">池下卓</span>
-      <span class="count">5 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">5 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="nishida-kaoru/">
       <span class="name">西田薫</span>
-      <span class="count">5 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="okano-junko/">
-      <span class="name">岡野純子</span>
-      <span class="count">4 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="unemoto-naomi/">
-      <span class="name">畝本直美</span>
-      <span class="count">4 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="inada-tomomi/">
-      <span class="name">稲田朋美</span>
-      <span class="count">4 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hasegawa-yutaka/">
-      <span class="name">長谷川豊</span>
-      <span class="count">4 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="inoue-hidetaka/">
-      <span class="name">井上英孝</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kobayashi-yumi-suginami/">
-      <span class="name">小林ゆみ</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="onoda-kimi/">
-      <span class="name">小野田紀美</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="iwata-ikuma/">
-      <span class="name">岩田いくま</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="misaki-maki/">
-      <span class="name">岬麻紀</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hayasaka-atsushi/">
-      <span class="name">早坂敦</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takemura-nobuhide/">
-      <span class="name">武村展英</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="katayama-yasutaka/">
-      <span class="name">片山安孝</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ishii-akira/">
-      <span class="name">石井章</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="adachi-yasushi/">
-      <span class="name">足立康史</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kado-hiroko/">
-      <span class="name">門ひろこ</span>
-      <span class="count">3 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ueshima-kazuhiko/">
-      <span class="name">上島一彦</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ueno-hotaru/">
-      <span class="name">上野蛍</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shimoji-mikio/">
-      <span class="name">下地幹郎</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shimomura-hakubun/">
-      <span class="name">下村博文</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fuwa-tadayuki/">
-      <span class="name">不破忠幸</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakatsukasa-hiroshi/">
-      <span class="name">中司宏</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakajo-kiyoshi/">
-      <span class="name">中条きよし</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="maruyama-hodaka/">
-      <span class="name">丸山穂高</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ido-masatoshi/">
-      <span class="name">井戸正利</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="imai-yutaka/">
-      <span class="name">今井豊</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="imamura-hirofumi/">
-      <span class="name">今村洋史</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ito-nobuhisa/">
-      <span class="name">伊東信久</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fushimi-takashi/">
-      <span class="name">伏見隆</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="satake-riho/">
-      <span class="name">佐竹璃保</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mitsumoto-keisuke/">
-      <span class="name">光本圭佑</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tomita-yuki/">
-      <span class="name">冨田裕樹</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="furuya-keiji/">
-      <span class="name">古屋圭司</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="wada-yuichiro/">
-      <span class="name">和田有一朗</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ohno-yasumasa/">
-      <span class="name">大野泰正</span>
-      <span class="count">2 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">5 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="anno-takahiro/">
       <span class="name">安野貴博</span>
-      <span class="count">2 件</span>
+      <span class="right">
+        <span class="org">チームみらい</span>
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="miyauchi-hideki/">
-      <span class="name">宮内秀樹</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kojima-yuichiro/">
-      <span class="name">小島雄一郎</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="onodera-itsunori/">
-      <span class="name">小野寺五典</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shida-yoko/">
-      <span class="name">志田陽子</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="aikyo-koji/">
-      <span class="name">愛敬浩二</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="horii-kenji/">
-      <span class="name">掘井健智</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kihara-minoru/">
-      <span class="name">木原稔</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sugimoto-kazumi/">
-      <span class="name">杉本和巳</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsumiya-takaaki/">
-      <span class="name">松宮孝明</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsukawa-rui/">
-      <span class="name">松川るい</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsuno-hirokazu/">
-      <span class="name">松野博一</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shibata-takumi/">
-      <span class="name">柴田巧</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="morikawa-akira/">
-      <span class="name">森川央</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hashimoto-kazumasa/">
-      <span class="name">橋本和昌</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hashimoto-motohiro/">
-      <span class="name">橋本基弘</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nagano-kohei/">
-      <span class="name">永野耕平</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="inose-naoki/">
-      <span class="name">猪瀬直樹</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ishiba-shigeru/">
-      <span class="name">石破茂</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kamiya-sohei/">
-      <span class="name">神谷宗幣</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fukushima-mizuho/">
-      <span class="name">福島瑞穂</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sasagawa-osamu/">
-      <span class="name">笹川理</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tsutsuizumi-hisakazu/">
-      <span class="name">筒泉寿一</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="akasaka-daisuke/">
-      <span class="name">赤坂大輔</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="akagi-masayuki/">
-      <span class="name">赤木正幸</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shigematsu-yuko/">
-      <span class="name">重松雄子</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kanazawa-yui/">
-      <span class="name">金澤ゆい</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kado-takashi/">
-      <span class="name">門隆志</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="aoshima-kenta/">
-      <span class="name">青島健太</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="aoyagi-hitoshi/">
-      <span class="name">青柳仁士</span>
-      <span class="count">2 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="muto-youko/">
-      <span class="name">むとう葉子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="lasalle-ishii/">
-      <span class="name">ラサール石井</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mitsubayashi-hiromi/">
-      <span class="name">三ッ林裕巳</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mishima-satoshi/">
-      <span class="name">三島聡</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="miki-kee/">
-      <span class="name">三木けえ</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="miura-kazunari/">
-      <span class="name">三浦一成</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="miura-emi/">
-      <span class="name">三浦恵美</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kamikura-toshitaka/">
-      <span class="name">上倉淑敬</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="uesugi-kentaro/">
-      <span class="name">上杉謙太郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kaminishi-sayuri/">
-      <span class="name">上西小百合</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ueno-hiroshi/">
-      <span class="name">上野宏史</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ueno-michiko/">
-      <span class="name">上野通子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sekou-hiroshige/">
-      <span class="name">世耕弘成</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakahara-toru/">
-      <span class="name">中原徹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakao-masayuki/">
-      <span class="name">中尾正幸</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakayama-yasuhide/">
-      <span class="name">中山泰秀</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakagawa-masaharu/">
-      <span class="name">中川雅治</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakamura-chikara/">
-      <span class="name">中村力</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakamura-rika/">
-      <span class="name">中村梨香</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakamura-mika/">
-      <span class="name">中村美香</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakane-kazuyuki/">
-      <span class="name">中根一幸</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakatsugawa-masateru/">
-      <span class="name">中津川将照</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakatani-yasunori/">
-      <span class="name">中谷恭典</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakatani-hiroyuki/">
-      <span class="name">中谷裕之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nakano-takashi/">
-      <span class="name">中野隆司</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kubota-masaki/">
-      <span class="name">久保田正紀</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kameoka-yoshitami/">
-      <span class="name">亀岡偉民</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nikai-toshihiro/">
-      <span class="name">二階俊博</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="inoue-tetsuya/">
-      <span class="name">井上哲也</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="inoue-yoshiyuki/">
-      <span class="name">井上義行</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ihara-takumi/">
-      <span class="name">井原巧</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kyoden-shingo/">
-      <span class="name">京田伸吾</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ito-makoto/">
-      <span class="name">伊藤真</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ito-yoshika/">
-      <span class="name">伊藤良夏</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sasaki-rie/">
-      <span class="name">佐々木理江</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sasaki-hajime/">
-      <span class="name">佐々木紀</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="saiki-kozo/">
-      <span class="name">佐伯耕三</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sato-kei/">
-      <span class="name">佐藤啓</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sato-eriko/">
-      <span class="name">佐藤恵理子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sato-kaori/">
-      <span class="name">佐藤香</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="motohashi-masahiro/">
-      <span class="name">元橋理浩</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="maekawa-kiyoshige/">
-      <span class="name">前川清成</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="maeda-yoshinari/">
-      <span class="name">前田善成</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kada-hiroyuki/">
-      <span class="name">加田裕之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kano-yonosuke/">
-      <span class="name">加納陽之助</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kato-katsunobu/">
-      <span class="name">加藤勝信</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kato-kanji/">
-      <span class="name">加藤寛治</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kato-ryusho/">
-      <span class="name">加藤竜祥</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kitamura-tsuneo/">
-      <span class="name">北村経夫</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kitakado-hiroki/">
-      <span class="name">北角裕樹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="chida-masahiro/">
-      <span class="name">千田昌寛</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="masuta-sekio/">
-      <span class="name">升田世喜男</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="minamide-kenichi/">
-      <span class="name">南出賢一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="harayama-daisuke/">
-      <span class="name">原山大亮</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="harada-yuta/">
-      <span class="name">原田優太</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="harada-hiromi/">
-      <span class="name">原田博美</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="furuta-keiichi/">
-      <span class="name">古田圭一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yoshikawa-yumi/">
-      <span class="name">吉川有美</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yoshida-takashi/">
-      <span class="name">吉田敬</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yoshida-toyoshi/">
-      <span class="name">吉田豊史</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yoshino-masayoshi/">
-      <span class="name">吉野正芳</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="gomatsu-fukuichi/">
-      <span class="name">呉松福一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="wada-tomonari/">
-      <span class="name">和田智成</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="wada-yoshiaki/">
-      <span class="name">和田義明</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kunimitsu-ayano/">
-      <span class="name">国光文乃</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sonoda-hisashi/">
-      <span class="name">園田寿</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tsuchiie-toshiyuki/">
-      <span class="name">土江俊幸</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="saka-koki/">
-      <span class="name">坂こうき</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sakamoto-michitaka/">
-      <span class="name">坂元倫孝</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sakamoto-masayuki/">
-      <span class="name">坂元正幸</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sakaguchi-chikara/">
-      <span class="name">坂口力</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sakamoto-yuki/">
-      <span class="name">坂本勇基</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="horii-manabu/">
-      <span class="name">堀井学</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="horii-iwao/">
-      <span class="name">堀井巌</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="horimoto-wakako/">
-      <span class="name">堀本和歌子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tsukada-tetsuyuki/">
-      <span class="name">塚田哲之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shionoya-ryu/">
-      <span class="name">塩谷立</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tagaya-ryo/">
-      <span class="name">多ケ谷亮</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="okubo-tatsumi/">
-      <span class="name">大久保達巳</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="otsuka-taku/">
-      <span class="name">大塚拓</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ooka-toshitaka/">
-      <span class="name">大岡敏孝</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ohira-masahiro/">
-      <span class="name">大平真弘</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="omori-kohtaro/">
-      <span class="name">大森恒太朗</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ono-keitaro/">
-      <span class="name">大野敬太郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ota-fusae/">
-      <span class="name">太田房江</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="okuno-yasutoshi/">
-      <span class="name">奥野康俊</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="morishima-tadashi/">
-      <span class="name">守島正</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ando-nanoka/">
-      <span class="name">安藤なの香</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="adachi-koji/">
-      <span class="name">安達光治</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="munekiyo-kouichi/">
-      <span class="name">宗清皇一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="muroi-kunihiko/">
-      <span class="name">室井邦彦</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="miyashita-ichiro/">
-      <span class="name">宮下一郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="miyamoto-kazutaka/">
-      <span class="name">宮本一孝</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="miyamoto-shuji/">
-      <span class="name">宮本周司</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="miyazawa-hiroyuki/">
-      <span class="name">宮澤博行</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tomita-takehiko/">
-      <span class="name">富田武彦</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="terawaki-naoko/">
-      <span class="name">寺脇直子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kosaka-ryutaro/">
-      <span class="name">小坂竜太郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kobayashi-yuka/">
-      <span class="name">小林由佳</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kobayashi-setsu/">
-      <span class="name">小林節</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kobayashi-makoto/">
-      <span class="name">小林誠</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="komori-takuro/">
-      <span class="name">小森卓郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="koizumi-junichiro/">
-      <span class="name">小泉純一郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="obuchi-yuko/">
-      <span class="name">小渕優子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="odawara-kiyoshi/">
-      <span class="name">小田原潔</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="konishi-hikoji/">
-      <span class="name">小西彦治</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ono-taisuke/">
-      <span class="name">小野泰輔</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="omi-asako/">
-      <span class="name">尾身朝子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yayama-taro/">
-      <span class="name">屋山太郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamashita-makoto/">
-      <span class="name">山下真</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamamoto-nobuhiro/">
-      <span class="name">山本のぶひろ</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamamoto-takeyoshi/">
-      <span class="name">山本剛義</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamamoto-hajime/">
-      <span class="name">山本大</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamamoto-kei/">
-      <span class="name">山本景</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamamoto-junzo/">
-      <span class="name">山本順三</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamazoe-taku/">
-      <span class="name">山添拓</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamada-shuji/">
-      <span class="name">山田修路</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamada-hiroshi/">
-      <span class="name">山田宏</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamada-miki/">
-      <span class="name">山田美樹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamada-takeshi/">
-      <span class="name">山田豪</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yamatani-eriko/">
-      <span class="name">山谷えり子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="okazawa-ryuichi/">
-      <span class="name">岡沢龍一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="okada-naoki/">
-      <span class="name">岡田直樹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="iwaki-mitsuhide/">
-      <span class="name">岩城光英</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="iwaya-takeshi/">
-      <span class="name">岩屋毅</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kishi-nobuo/">
-      <span class="name">岸信夫</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shimada-eiji/">
-      <span class="name">嶋田英史</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kudo-satoko/">
-      <span class="name">工藤聖子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ichikawa-masato/">
-      <span class="name">市川正人</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ichise-kenji/">
-      <span class="name">市瀬健治</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hirai-takuya/">
-      <span class="name">平井卓也</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hirakawa-munenobu/">
-      <span class="name">平川宗信</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hirasawa-katsuei/">
-      <span class="name">平沢勝栄</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hirota-kazumi/">
-      <span class="name">広田和美</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tokumura-satoshi/">
-      <span class="name">徳村さとし</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tokumura-satoshi/">
-      <span class="name">徳村聡</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="narisawa-takato/">
-      <span class="name">成澤孝人</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="niihara-hideto/">
-      <span class="name">新原秀人</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hayasaka-chiaki/">
-      <span class="name">早坂千亜紀</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hattori-ryoichi/">
-      <span class="name">服部良一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kinoshita-masahiko/">
-      <span class="name">木下昌彦</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kinoshita-satoshi/">
-      <span class="name">木下智史</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kinoshita-akihiro/">
-      <span class="name">木下章広</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kimoto-kohei/">
-      <span class="name">木本保平</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kimura-mitsuhiro/">
-      <span class="name">木村三浩</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kimura-jiro/">
-      <span class="name">木村次郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="suematsu-shinsuke/">
-      <span class="name">末松信介</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="honjo-takeshi/">
-      <span class="name">本庄武</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="honda-rie/">
-      <span class="name">本田リエ</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sugimura-kotaro/">
-      <span class="name">杉村幸太郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sugie-hidekazu/">
-      <span class="name">杉江秀一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="murakami-tomonobu/">
-      <span class="name">村上智信</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="murakami-seiichiro/">
-      <span class="name">村上誠一郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="murai-masashige/">
-      <span class="name">村井将重</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="murai-toshikuni/">
-      <span class="name">村井敏邦</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="muraoka-tsugumasa/">
-      <span class="name">村岡嗣政</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="murase-shinji/">
-      <span class="name">村瀬進治</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="azuma-toru/">
-      <span class="name">東徹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsui-haruki/">
-      <span class="name">松井春樹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsuo-tosho/">
-      <span class="name">松尾統章</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsuo-shota/">
-      <span class="name">松尾翔太</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsuoka-nobumichi/">
-      <span class="name">松岡信道</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsumoto-tsuyoshi/">
-      <span class="name">松本剛</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsumoto-tsunehiro/">
-      <span class="name">松本常広</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsuzawa-airi/">
-      <span class="name">松澤愛里</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="matsuda-masatoshi/">
-      <span class="name">松田昌利</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hayashi-motoo/">
-      <span class="name">林幹雄</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hayashi-tomohiro/">
-      <span class="name">林朋寛</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hayashi-ryuichi/">
-      <span class="name">林隆一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shibayama-masahiko/">
-      <span class="name">柴山昌彦</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nemoto-yukinori/">
-      <span class="name">根本幸典</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kuwahara-kumiko/">
-      <span class="name">桑原久美子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sakurauchi-fumiki/">
-      <span class="name">桜内文城</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="umezono-makoto/">
-      <span class="name">梅園周</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="umemura-satoshi/">
-      <span class="name">梅村さとし</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="umemura-masaaki/">
-      <span class="name">梅村正明</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mori-karen/">
-      <span class="name">森かれん</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mori-nobuto/">
-      <span class="name">森伸人</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mori-kento/">
-      <span class="name">森健人</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mori-natsue/">
-      <span class="name">森夏枝</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="mori-masako/">
-      <span class="name">森雅子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shiiki-tamotsu/">
-      <span class="name">椎木保</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tarutani-akihito/">
-      <span class="name">樽谷彰人</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hashimoto-seiko/">
-      <span class="name">橋本聖子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="higaki-shinji/">
-      <span class="name">檜垣伸次</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takeda-ryota/">
-      <span class="name">武田良太</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nagafuji-hideki/">
-      <span class="name">永藤英機</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ejima-kiyoshi/">
-      <span class="name">江島潔</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="eto-takayuki/">
-      <span class="name">江藤隆之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ikeda-yoshitaka/">
-      <span class="name">池田佳隆</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sawada-ryo/">
-      <span class="name">沢田良</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kawai-anri/">
-      <span class="name">河井案里</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tsuda-hitomi/">
-      <span class="name">津田ひとみ</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hamada-kazuyuki/">
-      <span class="name">浜田和幸</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="urahira-yoshihiro/">
-      <span class="name">浦平美博</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ebisawa-yuki/">
-      <span class="name">海老沢由紀</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="unno-toru/">
-      <span class="name">海野徹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="shimizu-takayuki/">
-      <span class="name">清水貴之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="seno-kenichi/">
-      <span class="name">瀬野憲一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="katayama-toranosuke/">
-      <span class="name">片山虎之助</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="makishima-karen/">
-      <span class="name">牧島かれん</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="inono-toru/">
-      <span class="name">猪野亨</span>
-      <span class="count">1 件</span>
+    <a href="okano-junko/">
+      <span class="name">岡野純子</span>
+      <span class="right">
+        <span class="org">国民民主党</span>
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="tamaki-denny/">
       <span class="name">玉城デニー</span>
-      <span class="count">1 件</span>
+      <span class="right">
+        
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tanaka-atsushi/">
-      <span class="name">田中厚志</span>
-      <span class="count">1 件</span>
+    <a href="unemoto-naomi/">
+      <span class="name">畝本直美</span>
+      <span class="right">
+        
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tanaka-takahiro/">
-      <span class="name">田中孝博</span>
-      <span class="count">1 件</span>
+    <a href="fukushima-mizuho/">
+      <span class="name">福島瑞穂</span>
+      <span class="right">
+        <span class="org">社会民主党</span>
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tanaka-miyuki/">
-      <span class="name">田中美由紀</span>
-      <span class="count">1 件</span>
+    <a href="inada-tomomi/">
+      <span class="name">稲田朋美</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tasaka-ikuta/">
-      <span class="name">田坂幾太</span>
-      <span class="count">1 件</span>
+    <a href="adachi-yasushi/">
+      <span class="name">足立康史</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tasaki-akira/">
-      <span class="name">田崎明</span>
-      <span class="count">1 件</span>
+    <a href="hasegawa-yutaka/">
+      <span class="name">長谷川豊</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tamura-tomoko/">
-      <span class="name">田村智子</span>
-      <span class="count">1 件</span>
+    <a href="kado-hiroko/">
+      <span class="name">門ひろこ</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">4 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tabata-kazunori/">
-      <span class="name">田畑和紀</span>
-      <span class="count">1 件</span>
+    <a href="miki-kee/">
+      <span class="name">三木けえ</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="tabata-hiroaki/">
-      <span class="name">田畑裕明</span>
-      <span class="count">1 件</span>
+    <a href="maruyama-hodaka/">
+      <span class="name">丸山穂高</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="momota-takahiro/">
-      <span class="name">百谷孝浩</span>
-      <span class="count">1 件</span>
+    <a href="inoue-hidetaka/">
+      <span class="name">井上英孝</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="moriyama-masahito/">
-      <span class="name">盛山正仁</span>
-      <span class="count">1 件</span>
+    <a href="satake-riho/">
+      <span class="name">佐竹璃保</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="naoyama-hitoshi/">
-      <span class="name">直山仁</span>
-      <span class="count">1 件</span>
+    <a href="morishima-tadashi/">
+      <span class="name">守島正</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="ishii-masahiro/">
-      <span class="name">石井正弘</span>
-      <span class="count">1 件</span>
+    <a href="kobayashi-yumi-suginami/">
+      <span class="name">小林ゆみ</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="ishigaki-noriko/">
-      <span class="name">石垣のり子</span>
-      <span class="count">1 件</span>
+    <a href="onoda-kimi/">
+      <span class="name">小野田紀美</span>
+      <span class="right">
+        
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="ishizaki-toru/">
-      <span class="name">石崎徹</span>
-      <span class="count">1 件</span>
+    <a href="iwata-ikuma/">
+      <span class="name">岩田いくま</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="ishikawa-kenji/">
-      <span class="name">石川健治</span>
-      <span class="count">1 件</span>
+    <a href="misaki-maki/">
+      <span class="name">岬麻紀</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="ishida-masahiro/">
-      <span class="name">石田昌宏</span>
-      <span class="count">1 件</span>
+    <a href="hiraki-sho/">
+      <span class="name">平木しょう</span>
+      <span class="right">
+        
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="isozaki-yosuke/">
-      <span class="name">磯崎陽輔</span>
-      <span class="count">1 件</span>
+    <a href="hayasaka-atsushi/">
+      <span class="name">早坂敦</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="kanda-junichi/">
-      <span class="name">神田潤一</span>
-      <span class="count">1 件</span>
+    <a href="takemura-nobuhide/">
+      <span class="name">武村展英</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="kamiya-shuhei/">
-      <span class="name">神谷修平</span>
-      <span class="count">1 件</span>
+    <a href="katayama-yasutaka/">
+      <span class="name">片山安孝</span>
+      <span class="right">
+        
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="fukui-teru/">
-      <span class="name">福井照</span>
-      <span class="count">1 件</span>
+    <a href="ishii-akira/">
+      <span class="name">石井章</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="fukuoka-norihiro/">
-      <span class="name">福岡憲宏</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fukushima-nobuyuki/">
-      <span class="name">福島伸享</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fukunaga-yoshihiro/">
-      <span class="name">福永義洋</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fukuda-tatsuo/">
-      <span class="name">福田達夫</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="akiba-kenya/">
-      <span class="name">秋葉賢也</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="inamori-hiroki/">
-      <span class="name">稲森洋樹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takeda-koji/">
-      <span class="name">竹田匡志</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sasakura-kana/">
-      <span class="name">笹倉香奈</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yana-kazuo/">
-      <span class="name">簗和生</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hosoda-kenichi/">
-      <span class="name">細田健一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hosoda-hiroyuki/">
-      <span class="name">細田博之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="minobe-teruo/">
-      <span class="name">美延映夫</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="yoshiie-hiroyuki/">
-      <span class="name">義家弘介</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hanyuda-takashi/">
-      <span class="name">羽生田俊</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="haneda-tatsuya/">
-      <span class="name">羽田達也</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="gomakubo-ryota/">
-      <span class="name">胡摩窪亮太</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hanazaki-hiroki/">
-      <span class="name">花崎広毅</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hanada-toshiaki/">
-      <span class="name">花田紀凱</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="wakabayashi-kenta/">
-      <span class="name">若林健太</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="motegi-toshimitsu/">
-      <span class="name">茂木敏充</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="arai-isao/">
-      <span class="name">荒井勇雄</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ogino-minoru/">
-      <span class="name">荻野稔</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kanke-ichiro/">
-      <span class="name">菅家一郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="suga-yoshihide/">
-      <span class="name">菅義偉</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hagiwara-kei/">
-      <span class="name">萩原佳</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hagiwara-keiichi/">
-      <span class="name">萩原圭一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hagiuda-koichi/">
-      <span class="name">萩生田光一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="hanashi-yasuhiro/">
-      <span class="name">葉梨康弘</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kuzuno-hiroyuki/">
-      <span class="name">葛野尋之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fujiwara-takashi/">
-      <span class="name">藤原崇</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fujiwara-toshiji/">
-      <span class="name">藤原敏司</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fujimoto-masanobu/">
-      <span class="name">藤本昌信</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="fujima-ryuta/">
-      <span class="name">藤間隆太</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="eto-seishiro/">
-      <span class="name">衛藤征士郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="eto-seiichi/">
-      <span class="name">衛藤晟一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nishii-masaru/">
-      <span class="name">西井勝</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nishimura-yasutoshi/">
-      <span class="name">西村康稔</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nishimura-akihiro/">
-      <span class="name">西村明宏</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="saijo-toshihiro/">
-      <span class="name">西條利洋</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nishida-shoji/">
-      <span class="name">西田昌司</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nishibata-katsuki/">
-      <span class="name">西端勝樹</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="morota-hiroyuki/">
-      <span class="name">諸田洋之</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tanigawa-tomu/">
-      <span class="name">谷川とむ</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tanigawa-yaichi/">
-      <span class="name">谷川弥一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kinou-junji/">
-      <span class="name">貴納順二</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="akaike-masaaki/">
-      <span class="name">赤池誠章</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="akazawa-ryosei/">
-      <span class="name">赤澤亮正</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="ochi-takao/">
-      <span class="name">越智隆雄</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tsuji-yoshitaka/">
-      <span class="name">辻よしたか</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="endo-takashi/">
-      <span class="name">遠藤敬</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="tokura-shogo/">
-      <span class="name">都倉尚吾</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="sakai-ryo/">
-      <span class="name">酒井了</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nogami-kotaro/">
-      <span class="name">野上浩太郎</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="nomura-shuya/">
-      <span class="name">野村修也</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="noda-takeshi/">
-      <span class="name">野田毅</span>
-      <span class="count">1 件</span>
+    <a href="ishiba-shigeru/">
+      <span class="name">石破茂</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="kaneko-michihito/">
       <span class="name">金子道仁</span>
-      <span class="count">1 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">3 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="kanazawa-mari/">
-      <span class="name">金澤真理</span>
-      <span class="count">1 件</span>
+    <a href="lasalle-ishii/">
+      <span class="name">ラサール石井</span>
+      <span class="right">
+        <span class="org">社会民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="suzuki-daichi/">
-      <span class="name">鈴木大地</span>
-      <span class="count">1 件</span>
+    <a href="ueshima-kazuhiko/">
+      <span class="name">上島一彦</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="suzuki-ken/">
-      <span class="name">鈴木憲</span>
-      <span class="count">1 件</span>
+    <a href="ueno-hotaru/">
+      <span class="name">上野蛍</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="suzuki-junji/">
-      <span class="name">鈴木淳司</span>
-      <span class="count">1 件</span>
+    <a href="shimoji-mikio/">
+      <span class="name">下地幹郎</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="suzuki-hidemi/">
-      <span class="name">鈴木秀美</span>
-      <span class="count">1 件</span>
+    <a href="shimomura-hakubun/">
+      <span class="name">下村博文</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="suzuki-eikei/">
-      <span class="name">鈴木英敬</span>
-      <span class="count">1 件</span>
+    <a href="fuwa-tadayuki/">
+      <span class="name">不破忠幸</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="ikata-junji/">
-      <span class="name">鋳方淳治</span>
-      <span class="count">1 件</span>
+    <a href="nakatsukasa-hiroshi/">
+      <span class="name">中司宏</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="nagatsuma-akira/">
-      <span class="name">長妻昭</span>
-      <span class="count">1 件</span>
+    <a href="nakajo-kiyoshi/">
+      <span class="name">中条きよし</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="nagao-takashi/">
-      <span class="name">長尾敬</span>
-      <span class="count">1 件</span>
+    <a href="ido-masatoshi/">
+      <span class="name">井戸正利</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="nagamine-nobuhiko/">
-      <span class="name">長峯信彦</span>
-      <span class="count">1 件</span>
+    <a href="imai-yutaka/">
+      <span class="name">今井豊</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="nagamine-makoto/">
-      <span class="name">長峯誠</span>
-      <span class="count">1 件</span>
+    <a href="imamura-hirofumi/">
+      <span class="name">今村洋史</span>
+      <span class="right">
+        <span class="org">維新の会、自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="nagasaki-koutarou/">
-      <span class="name">長崎幸太郎</span>
-      <span class="count">1 件</span>
+    <a href="ito-nobuhisa/">
+      <span class="name">伊東信久</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="hasebe-yasuo/">
-      <span class="name">長谷部恭男</span>
-      <span class="count">1 件</span>
+    <a href="fushimi-takashi/">
+      <span class="name">伏見隆</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="seki-yoshihiro/">
-      <span class="name">関芳弘</span>
-      <span class="count">1 件</span>
+    <a href="mitsumoto-keisuke/">
+      <span class="name">光本圭佑</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="sakaguchi-shojiro/">
-      <span class="name">阪口正二郎</span>
-      <span class="count">1 件</span>
+    <a href="tomita-yuki/">
+      <span class="name">冨田裕樹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="sakamoto-natsuyo/">
-      <span class="name">阪本菜津代</span>
-      <span class="count">1 件</span>
+    <a href="furuya-keiji/">
+      <span class="name">古屋圭司</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="sakata-masahiro/">
-      <span class="name">阪田雅裕</span>
-      <span class="count">1 件</span>
+    <a href="wada-yuichiro/">
+      <span class="name">和田有一朗</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="abe-toshiko/">
-      <span class="name">阿部俊子</span>
-      <span class="count">1 件</span>
+    <a href="tagaya-ryo/">
+      <span class="name">多ケ谷亮</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="abe-tsukasa/">
-      <span class="name">阿部司</span>
-      <span class="count">1 件</span>
+    <a href="ohno-yasumasa/">
+      <span class="name">大野泰正</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="abe-hiroki/">
-      <span class="name">阿部広樹</span>
-      <span class="count">1 件</span>
+    <a href="miyauchi-hideki/">
+      <span class="name">宮内秀樹</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="aoi-miho/">
-      <span class="name">青井未帆</span>
-      <span class="count">1 件</span>
+    <a href="kojima-yuichiro/">
+      <span class="name">小島雄一郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="aoyama-shuhei/">
-      <span class="name">青山周平</span>
-      <span class="count">1 件</span>
+    <a href="kobayashi-yuka/">
+      <span class="name">小林由佳</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="aoyama-akira/">
-      <span class="name">青山暁</span>
-      <span class="count">1 件</span>
+    <a href="onodera-itsunori/">
+      <span class="name">小野寺五典</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="aoyama-masayuki/">
-      <span class="name">青山雅幸</span>
-      <span class="count">1 件</span>
+    <a href="yamazoe-taku/">
+      <span class="name">山添拓</span>
+      <span class="right">
+        <span class="org">日本共産党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="iida-satoshi/">
-      <span class="name">飯田哲史</span>
-      <span class="count">1 件</span>
+    <a href="hirai-takuya/">
+      <span class="name">平井卓也</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="kouzai-katsusuke/">
-      <span class="name">香西克介</span>
-      <span class="count">1 件</span>
+    <a href="shida-yoko/">
+      <span class="name">志田陽子</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="baba-keijiro/">
-      <span class="name">馬場慶次郎</span>
-      <span class="count">1 件</span>
+    <a href="aikyo-koji/">
+      <span class="name">愛敬浩二</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
-    <a href="baba-takashi/">
-      <span class="name">馬場高志</span>
-      <span class="count">1 件</span>
+    <a href="horii-kenji/">
+      <span class="name">掘井健智</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kihara-minoru/">
+      <span class="name">木原稔</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sugimoto-kazumi/">
+      <span class="name">杉本和巳</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="muraoka-tsugumasa/">
+      <span class="name">村岡嗣政</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsumiya-takaaki/">
+      <span class="name">松宮孝明</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsuo-tosho/">
+      <span class="name">松尾統章</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsukawa-rui/">
+      <span class="name">松川るい</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsuno-hirokazu/">
+      <span class="name">松野博一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="shibata-takumi/">
+      <span class="name">柴田巧</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="morikawa-akira/">
+      <span class="name">森川央</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hashimoto-kazumasa/">
+      <span class="name">橋本和昌</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hashimoto-motohiro/">
+      <span class="name">橋本基弘</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nagano-kohei/">
+      <span class="name">永野耕平</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="shimizu-takayuki/">
+      <span class="name">清水貴之</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="inose-naoki/">
+      <span class="name">猪瀬直樹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tanaka-takahiro/">
+      <span class="name">田中孝博</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ishigaki-noriko/">
+      <span class="name">石垣のり子</span>
+      <span class="right">
+        <span class="org">立憲民主党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kamiya-sohei/">
+      <span class="name">神谷宗幣</span>
+      <span class="right">
+        <span class="org">参政党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sasagawa-osamu/">
+      <span class="name">笹川理</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tsutsuizumi-hisakazu/">
+      <span class="name">筒泉寿一</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="motegi-toshimitsu/">
+      <span class="name">茂木敏充</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="akasaka-daisuke/">
+      <span class="name">赤坂大輔</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="akagi-masayuki/">
+      <span class="name">赤木正幸</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="shigematsu-yuko/">
+      <span class="name">重松雄子</span>
+      <span class="right">
+        <span class="org">参政党</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nomura-shuya/">
+      <span class="name">野村修也</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kanazawa-yui/">
+      <span class="name">金澤ゆい</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kado-takashi/">
+      <span class="name">門隆志</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="aoshima-kenta/">
+      <span class="name">青島健太</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="aoyagi-hitoshi/">
+      <span class="name">青柳仁士</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="hase-hiroshi/">
       <span class="name">馳浩</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takayama-satoshi/">
-      <span class="name">高山聡史</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takagi-kaori/">
-      <span class="name">高木佳保里</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takagi-tsuyoshi/">
-      <span class="name">高木毅</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takahashi-harumi/">
-      <span class="name">高橋はるみ</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takahashi-hinako/">
-      <span class="name">高橋比奈子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takahashi-hideaki/">
-      <span class="name">高橋英明</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takaishi-yasushi/">
-      <span class="name">高石康</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takatori-shuichi/">
-      <span class="name">高鳥修一</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="takayama-kanako/">
-      <span class="name">髙山佳奈子</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="oniki-makoto/">
-      <span class="name">鬼木誠</span>
-      <span class="count">1 件</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="hatoyama-yukio/">
       <span class="name">鳩山由紀夫</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kashima-yusuke/">
-      <span class="name">鹿嶋祐介</span>
-      <span class="count">1 件</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="kuroiwa-rina/">
-      <span class="name">黒岩里奈</span>
-      <span class="count">1 件</span>
+      <span class="right">
+        
+        <span class="count">2 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="kurose-dai/">
       <span class="name">黒瀬大</span>
-      <span class="count">1 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">2 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="jimmy-ba/">
+      <span class="name">Jimmy Ba</span>
+      <span class="right">
+        <span class="org">xAI</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="muto-youko/">
+      <span class="name">むとう葉子</span>
+      <span class="right">
+        <span class="org">日本共産党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="netanyahu/">
+      <span class="name">ネタニヤフ</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mitsubayashi-hiromi/">
+      <span class="name">三ッ林裕巳</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mishima-satoshi/">
+      <span class="name">三島聡</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="miura-kazunari/">
+      <span class="name">三浦一成</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="miura-emi/">
+      <span class="name">三浦恵美</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kamikura-toshitaka/">
+      <span class="name">上倉淑敬</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="uesugi-kentaro/">
+      <span class="name">上杉謙太郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kaminishi-sayuri/">
+      <span class="name">上西小百合</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ueno-hiroshi/">
+      <span class="name">上野宏史</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ueno-michiko/">
+      <span class="name">上野通子</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sekou-hiroshige/">
+      <span class="name">世耕弘成</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakahara-toru/">
+      <span class="name">中原徹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakao-masayuki/">
+      <span class="name">中尾正幸</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakayama-yasuhide/">
+      <span class="name">中山泰秀</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakagawa-masaharu/">
+      <span class="name">中川雅治</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakamura-hito/">
+      <span class="name">中村仁飛</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakamura-chikara/">
+      <span class="name">中村力</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakamura-rika/">
+      <span class="name">中村梨香</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakamura-mika/">
+      <span class="name">中村美香</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakane-kazuyuki/">
+      <span class="name">中根一幸</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakatsugawa-masateru/">
+      <span class="name">中津川将照</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakatani-yasunori/">
+      <span class="name">中谷恭典</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakatani-hiroyuki/">
+      <span class="name">中谷裕之</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakano-takashi/">
+      <span class="name">中野隆司</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="maruo-maki/">
+      <span class="name">丸尾牧</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kubota-masaki/">
+      <span class="name">久保田正紀</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kameoka-yoshitami/">
+      <span class="name">亀岡偉民</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nikai-toshihiro/">
+      <span class="name">二階俊博</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="inoue-tetsuya/">
+      <span class="name">井上哲也</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="inoue-yoshiyuki/">
+      <span class="name">井上義行</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ihara-takumi/">
+      <span class="name">井原巧</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kyoden-shingo/">
+      <span class="name">京田伸吾</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nakagawa-gen/">
+      <span class="name">仲川げん</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ito-makoto/">
+      <span class="name">伊藤真</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ito-yoshika/">
+      <span class="name">伊藤良夏</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sasaki-rie/">
+      <span class="name">佐々木理江</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sasaki-hajime/">
+      <span class="name">佐々木紀</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="saiki-kozo/">
+      <span class="name">佐伯耕三</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sato-kei/">
+      <span class="name">佐藤啓</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sato-eriko/">
+      <span class="name">佐藤恵理子</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sato-kaori/">
+      <span class="name">佐藤香</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="motohashi-masahiro/">
+      <span class="name">元橋理浩</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="irie-nobuko/">
+      <span class="name">入江伸子</span>
+      <span class="right">
+        <span class="org">国民民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="maekawa-kiyoshige/">
+      <span class="name">前川清成</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="maeda-yoshinari/">
+      <span class="name">前田善成</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kada-hiroyuki/">
+      <span class="name">加田裕之</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kano-yonosuke/">
+      <span class="name">加納陽之助</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kato-katsunobu/">
+      <span class="name">加藤勝信</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kato-kanji/">
+      <span class="name">加藤寛治</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kato-ryusho/">
+      <span class="name">加藤竜祥</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kitamura-tsuneo/">
+      <span class="name">北村経夫</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kitakado-hiroki/">
+      <span class="name">北角裕樹</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="chida-masahiro/">
+      <span class="name">千田昌寛</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="masuta-sekio/">
+      <span class="name">升田世喜男</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="minamide-kenichi/">
+      <span class="name">南出賢一</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="harayama-daisuke/">
+      <span class="name">原山大亮</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="harada-yuta/">
+      <span class="name">原田優太</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="harada-hiromi/">
+      <span class="name">原田博美</span>
+      <span class="right">
+        <span class="org">日本共産党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="furuta-keiichi/">
+      <span class="name">古田圭一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yoshikawa-yumi/">
+      <span class="name">吉川有美</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yoshimatsu-motoaki/">
+      <span class="name">吉松源昭</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yoshida-takashi/">
+      <span class="name">吉田敬</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yoshida-toyoshi/">
+      <span class="name">吉田豊史</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yoshino-masayoshi/">
+      <span class="name">吉野正芳</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="gomatsu-fukuichi/">
+      <span class="name">呉松福一</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="wada-tomonari/">
+      <span class="name">和田智成</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="wada-yoshiaki/">
+      <span class="name">和田義明</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kunimitsu-ayano/">
+      <span class="name">国光文乃</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sonoda-hisashi/">
+      <span class="name">園田寿</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="doi-takako/">
+      <span class="name">土井たか子</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tsuchiie-toshiyuki/">
+      <span class="name">土江俊幸</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="saka-koki/">
+      <span class="name">坂こうき</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakamoto-michitaka/">
+      <span class="name">坂元倫孝</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakamoto-masayuki/">
+      <span class="name">坂元正幸</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakaguchi-chikara/">
+      <span class="name">坂口力</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakamoto-yuki/">
+      <span class="name">坂本勇基</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="horii-manabu/">
+      <span class="name">堀井学</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="horii-iwao/">
+      <span class="name">堀井巌</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="horimoto-wakako/">
+      <span class="name">堀本和歌子</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tsukada-tetsuyuki/">
+      <span class="name">塚田哲之</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="shionoya-ryu/">
+      <span class="name">塩谷立</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="masuyama-makoto/">
+      <span class="name">増山誠</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="okubo-tatsumi/">
+      <span class="name">大久保達巳</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="otsuka-taku/">
+      <span class="name">大塚拓</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ooka-toshitaka/">
+      <span class="name">大岡敏孝</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ohira-masahiro/">
+      <span class="name">大平真弘</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="omori-kohtaro/">
+      <span class="name">大森恒太朗</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="otsubaki-yuko/">
+      <span class="name">大椿ゆうこ</span>
+      <span class="right">
+        <span class="org">社会民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="otsu-ayaka/">
+      <span class="name">大津綾香</span>
+      <span class="right">
+        <span class="org">みんなでつくる党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ohama-ichiro/">
+      <span class="name">大浜一郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="oishi-akiko/">
+      <span class="name">大石あきこ</span>
+      <span class="right">
+        <span class="org">れいわ新選組</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ono-keitaro/">
+      <span class="name">大野敬太郎</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ota-fusae/">
+      <span class="name">太田房江</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="okuya-kenichi/">
+      <span class="name">奥谷謙一</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="okuno-shinsuke/">
+      <span class="name">奥野信亮</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="okuno-yasutoshi/">
+      <span class="name">奥野康俊</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ando-nanoka/">
+      <span class="name">安藤なの香</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="adachi-koji/">
+      <span class="name">安達光治</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="munekiyo-kouichi/">
+      <span class="name">宗清皇一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="muroi-kunihiko/">
+      <span class="name">室井邦彦</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="miyashita-ichiro/">
+      <span class="name">宮下一郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="miyamoto-kazutaka/">
+      <span class="name">宮本一孝</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="miyamoto-shuji/">
+      <span class="name">宮本周司</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="miyamoto-toru/">
+      <span class="name">宮本徹</span>
+      <span class="right">
+        <span class="org">日本共産党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="miyazawa-hiroyuki/">
+      <span class="name">宮澤博行</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tomita-takehiko/">
+      <span class="name">富田武彦</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="terawaki-naoko/">
+      <span class="name">寺脇直子</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kosaka-ryutaro/">
+      <span class="name">小坂竜太郎</span>
+      <span class="right">
+        <span class="org">自衛隊</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kobayashi-fumiaki/">
+      <span class="name">小林史明</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kobayashi-setsu/">
+      <span class="name">小林節</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kobayashi-makoto/">
+      <span class="name">小林誠</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kobayashi-takayuki/">
+      <span class="name">小林鷹之</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="komori-takuro/">
+      <span class="name">小森卓郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="koizumi-junichiro/">
+      <span class="name">小泉純一郎</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="obuchi-yuko/">
+      <span class="name">小渕優子</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="odawara-kiyoshi/">
+      <span class="name">小田原潔</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="konishi-hikoji/">
+      <span class="name">小西彦治</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="konishi-hiroyuki/">
+      <span class="name">小西洋之</span>
+      <span class="right">
+        <span class="org">立憲民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ono-taisuke/">
+      <span class="name">小野泰輔</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="omi-asako/">
+      <span class="name">尾身朝子</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yayama-taro/">
+      <span class="name">屋山太郎</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamashita-makoto/">
+      <span class="name">山下真</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamanaka-takeharu/">
+      <span class="name">山中竹春</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamamoto-nobuhiro/">
+      <span class="name">山本のぶひろ</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamamoto-takeyoshi/">
+      <span class="name">山本剛義</span>
+      <span class="right">
+        <span class="org">チームみらい</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamamoto-hajime/">
+      <span class="name">山本大</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamamoto-kozo/">
+      <span class="name">山本幸三</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamamoto-kei/">
+      <span class="name">山本景</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamamoto-junzo/">
+      <span class="name">山本順三</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamada-shuji/">
+      <span class="name">山田修路</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamada-hiroshi/">
+      <span class="name">山田宏</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamada-miki/">
+      <span class="name">山田美樹</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamada-takeshi/">
+      <span class="name">山田豪</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yamatani-eriko/">
+      <span class="name">山谷えり子</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="okazawa-ryuichi/">
+      <span class="name">岡沢龍一</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="okada-naoki/">
+      <span class="name">岡田直樹</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="iwai-kiyotaka/">
+      <span class="name">岩井清隆</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="iwaki-mitsuhide/">
+      <span class="name">岩城光英</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="iwaya-takeshi/">
+      <span class="name">岩屋毅</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kishi-nobuo/">
+      <span class="name">岸信夫</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="shimada-eiji/">
+      <span class="name">嶋田英史</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kudo-satoko/">
+      <span class="name">工藤聖子</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ichikawa-masato/">
+      <span class="name">市川正人</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ichise-kenji/">
+      <span class="name">市瀬健治</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hirakawa-munenobu/">
+      <span class="name">平川宗信</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hirasawa-katsuei/">
+      <span class="name">平沢勝栄</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hirota-kazumi/">
+      <span class="name">広田和美</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tokumura-satoshi/">
+      <span class="name">徳村さとし</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tokumura-satoshi/">
+      <span class="name">徳村聡</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="narisawa-takato/">
+      <span class="name">成澤孝人</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="niihara-hideto/">
+      <span class="name">新原秀人</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hayasaka-chiaki/">
+      <span class="name">早坂千亜紀</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hattori-ryoichi/">
+      <span class="name">服部良一</span>
+      <span class="right">
+        <span class="org">社会民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hattori-seitaro/">
+      <span class="name">服部誠太郎</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kinoshita-masahiko/">
+      <span class="name">木下昌彦</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kinoshita-satoshi/">
+      <span class="name">木下智史</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kinoshita-akihiro/">
+      <span class="name">木下章広</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kimoto-kohei/">
+      <span class="name">木本保平</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kimura-mitsuhiro/">
+      <span class="name">木村三浩</span>
+      <span class="right">
+        <span class="org">一水会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kimura-jiro/">
+      <span class="name">木村次郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suematsu-shinsuke/">
+      <span class="name">末松信介</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="honda-hiranao/">
+      <span class="name">本多平直</span>
+      <span class="right">
+        <span class="org">立憲民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="honjo-takeshi/">
+      <span class="name">本庄武</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="honda-rie/">
+      <span class="name">本田リエ</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sugimura-kotaro/">
+      <span class="name">杉村幸太郎</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sugie-hidekazu/">
+      <span class="name">杉江秀一</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="murakami-tomonobu/">
+      <span class="name">村上智信</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="murakami-seiichiro/">
+      <span class="name">村上誠一郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="murai-masashige/">
+      <span class="name">村井将重</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="murai-toshikuni/">
+      <span class="name">村井敏邦</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="murase-shinji/">
+      <span class="name">村瀬進治</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="azuma-toru/">
+      <span class="name">東徹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsui-haruki/">
+      <span class="name">松井春樹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsuo-shota/">
+      <span class="name">松尾翔太</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsuoka-nobumichi/">
+      <span class="name">松岡信道</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsumoto-tsuyoshi/">
+      <span class="name">松本剛</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsumoto-tsunehiro/">
+      <span class="name">松本常広</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsuzawa-airi/">
+      <span class="name">松澤愛里</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="matsuda-masatoshi/">
+      <span class="name">松田昌利</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hayashi-motoo/">
+      <span class="name">林幹雄</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hayashi-tomohiro/">
+      <span class="name">林朋寛</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hayashi-ryuichi/">
+      <span class="name">林隆一</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="shibayama-masahiko/">
+      <span class="name">柴山昌彦</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nemoto-yukinori/">
+      <span class="name">根本幸典</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kuwahara-kumiko/">
+      <span class="name">桑原久美子</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakurauchi-fumiki/">
+      <span class="name">桜内文城</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="umezono-makoto/">
+      <span class="name">梅園周</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="umemoto-keisuke/">
+      <span class="name">梅本圭介</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="umemura-satoshi/">
+      <span class="name">梅村さとし</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="umemura-masaaki/">
+      <span class="name">梅村正明</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mori-karen/">
+      <span class="name">森かれん</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mori-nobuto/">
+      <span class="name">森伸人</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mori-kento/">
+      <span class="name">森健人</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mori-natsue/">
+      <span class="name">森夏枝</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="mori-masako/">
+      <span class="name">森雅子</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="shiiki-tamotsu/">
+      <span class="name">椎木保</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tarutani-akihito/">
+      <span class="name">樽谷彰人</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hashimoto-seiko/">
+      <span class="name">橋本聖子</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="higaki-shinji/">
+      <span class="name">檜垣伸次</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takeda-ryota/">
+      <span class="name">武田良太</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nagafuji-hideki/">
+      <span class="name">永藤英機</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ejima-kiyoshi/">
+      <span class="name">江島潔</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="eto-takayuki/">
+      <span class="name">江藤隆之</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ikeda-yoshitaka/">
+      <span class="name">池田佳隆</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sawada-ryo/">
+      <span class="name">沢田良</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kawai-anri/">
+      <span class="name">河井案里</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tsuda-hitomi/">
+      <span class="name">津田ひとみ</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hamada-kazuyuki/">
+      <span class="name">浜田和幸</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="urahira-yoshihiro/">
+      <span class="name">浦平美博</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ebisawa-yuki/">
+      <span class="name">海老沢由紀</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="unno-toru/">
+      <span class="name">海野徹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="watanabe-hiroshi-miyagi/">
+      <span class="name">渡辺拓</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="seno-kenichi/">
+      <span class="name">瀬野憲一</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="katayama-toranosuke/">
+      <span class="name">片山虎之助</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="makishima-karen/">
+      <span class="name">牧島かれん</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="inono-toru/">
+      <span class="name">猪野亨</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tanaka-atsushi/">
+      <span class="name">田中厚志</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tanaka-miyuki/">
+      <span class="name">田中美由紀</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tasaka-ikuta/">
+      <span class="name">田坂幾太</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tasaki-akira/">
+      <span class="name">田崎明</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tamura-tomoko/">
+      <span class="name">田村智子</span>
+      <span class="right">
+        <span class="org">日本共産党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tabata-kazunori/">
+      <span class="name">田畑和紀</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tabata-hiroaki/">
+      <span class="name">田畑裕明</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="momota-takahiro/">
+      <span class="name">百谷孝浩</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="moriyama-masahito/">
+      <span class="name">盛山正仁</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="naoyama-hitoshi/">
+      <span class="name">直山仁</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ishii-masahiro/">
+      <span class="name">石井正弘</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ishizaki-toru/">
+      <span class="name">石崎徹</span>
+      <span class="right">
+        <span class="org">自由民主党、維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ishikawa-kenji/">
+      <span class="name">石川健治</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ishida-masahiro/">
+      <span class="name">石田昌宏</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="isozaki-yosuke/">
+      <span class="name">磯崎陽輔</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kanda-junichi/">
+      <span class="name">神田潤一</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kamiya-shuhei/">
+      <span class="name">神谷修平</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fukui-teru/">
+      <span class="name">福井照</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fukuoka-norihiro/">
+      <span class="name">福岡憲宏</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fukushima-nobuyuki/">
+      <span class="name">福島伸享</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fukunaga-yoshihiro/">
+      <span class="name">福永義洋</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fukuda-tatsuo/">
+      <span class="name">福田達夫</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="akiba-kenya/">
+      <span class="name">秋葉賢也</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="inamori-hiroki/">
+      <span class="name">稲森洋樹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takeuchi-hideaki/">
+      <span class="name">竹内英明</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takeda-koji/">
+      <span class="name">竹田匡志</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sasakura-kana/">
+      <span class="name">笹倉香奈</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yana-kazuo/">
+      <span class="name">簗和生</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hosoda-kenichi/">
+      <span class="name">細田健一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hosoda-hiroyuki/">
+      <span class="name">細田博之</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="minobe-teruo/">
+      <span class="name">美延映夫</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="yoshiie-hiroyuki/">
+      <span class="name">義家弘介</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hanyuda-takashi/">
+      <span class="name">羽生田俊</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="haneda-tatsuya/">
+      <span class="name">羽田達也</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="gomakubo-ryota/">
+      <span class="name">胡摩窪亮太</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hanazaki-hiroki/">
+      <span class="name">花崎広毅</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hanada-toshiaki/">
+      <span class="name">花田紀凱</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="wakabayashi-kenta/">
+      <span class="name">若林健太</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="arai-isao/">
+      <span class="name">荒井勇雄</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="arai-shogo/">
+      <span class="name">荒井正吾</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ogino-minoru/">
+      <span class="name">荻野稔</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kanke-ichiro/">
+      <span class="name">菅家一郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suga-yoshihide/">
+      <span class="name">菅義偉</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hagiwara-kei/">
+      <span class="name">萩原佳</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hagiwara-keiichi/">
+      <span class="name">萩原圭一</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hagiuda-koichi/">
+      <span class="name">萩生田光一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hanashi-yasuhiro/">
+      <span class="name">葉梨康弘</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kuzuno-hiroyuki/">
+      <span class="name">葛野尋之</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="renho/">
+      <span class="name">蓮舫</span>
+      <span class="right">
+        <span class="org">立憲民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fujiwara-takashi/">
+      <span class="name">藤原崇</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fujiwara-toshiji/">
+      <span class="name">藤原敏司</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fujimoto-masanobu/">
+      <span class="name">藤本昌信</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="fujima-ryuta/">
+      <span class="name">藤間隆太</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="eto-seishiro/">
+      <span class="name">衛藤征士郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="eto-seiichi/">
+      <span class="name">衛藤晟一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nishii-masaru/">
+      <span class="name">西井勝</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nishimura-yasutoshi/">
+      <span class="name">西村康稔</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nishimura-akihiro/">
+      <span class="name">西村明宏</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="saijo-toshihiro/">
+      <span class="name">西條利洋</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nishida-shoji/">
+      <span class="name">西田昌司</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nishibata-katsuki/">
+      <span class="name">西端勝樹</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="morota-hiroyuki/">
+      <span class="name">諸田洋之</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tanigawa-tomu/">
+      <span class="name">谷川とむ</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tanigawa-yaichi/">
+      <span class="name">谷川弥一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kinou-junji/">
+      <span class="name">貴納順二</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="akaike-masaaki/">
+      <span class="name">赤池誠章</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="akazawa-ryosei/">
+      <span class="name">赤澤亮正</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ochi-takao/">
+      <span class="name">越智隆雄</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tsuji-yoshitaka/">
+      <span class="name">辻よしたか</span>
+      <span class="right">
+        <span class="org">公明党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="endo-takashi/">
+      <span class="name">遠藤敬</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tokura-shogo/">
+      <span class="name">都倉尚吾</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="tsuru-yasutoshi/">
+      <span class="name">都留康敏</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakai-ryo/">
+      <span class="name">酒井了</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nogami-kotaro/">
+      <span class="name">野上浩太郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="noda-takeshi/">
+      <span class="name">野田毅</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kanazawa-mari/">
+      <span class="name">金澤真理</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suzuki-daichi/">
+      <span class="name">鈴木大地</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suzuki-hiroko/">
+      <span class="name">鈴木妃呂子</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suzuki-ken/">
+      <span class="name">鈴木憲</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suzuki-junji/">
+      <span class="name">鈴木淳司</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suzuki-hidemi/">
+      <span class="name">鈴木秀美</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="suzuki-eikei/">
+      <span class="name">鈴木英敬</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="ikata-junji/">
+      <span class="name">鋳方淳治</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nabekura-masayuki/">
+      <span class="name">鍋倉雅之</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nagatsuma-akira/">
+      <span class="name">長妻昭</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nagao-takashi/">
+      <span class="name">長尾敬</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nagamine-nobuhiko/">
+      <span class="name">長峯信彦</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nagamine-makoto/">
+      <span class="name">長峯誠</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="nagasaki-koutarou/">
+      <span class="name">長崎幸太郎</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="hasebe-yasuo/">
+      <span class="name">長谷部恭男</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="seki-yoshihiro/">
+      <span class="name">関芳弘</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakaguchi-shojiro/">
+      <span class="name">阪口正二郎</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakamoto-natsuyo/">
+      <span class="name">阪本菜津代</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="sakata-masahiro/">
+      <span class="name">阪田雅裕</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="abe-toshiko/">
+      <span class="name">阿部俊子</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="abe-tsukasa/">
+      <span class="name">阿部司</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="abe-hiroki/">
+      <span class="name">阿部広樹</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="aoi-miho/">
+      <span class="name">青井未帆</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="aoyama-shuhei/">
+      <span class="name">青山周平</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="aoyama-akira/">
+      <span class="name">青山暁</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="aoyama-masayuki/">
+      <span class="name">青山雅幸</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="iida-satoshi/">
+      <span class="name">飯田哲史</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kouzai-katsusuke/">
+      <span class="name">香西克介</span>
+      <span class="right">
+        <span class="org">日本共産党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="baba-keijiro/">
+      <span class="name">馬場慶次郎</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="baba-takashi/">
+      <span class="name">馬場高志</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takayama-satoshi/">
+      <span class="name">高山聡史</span>
+      <span class="right">
+        <span class="org">チームみらい</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takagi-kaori/">
+      <span class="name">高木佳保里</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takagi-tsuyoshi/">
+      <span class="name">高木毅</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takahashi-harumi/">
+      <span class="name">高橋はるみ</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takahashi-hinako/">
+      <span class="name">高橋比奈子</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takahashi-yoichi/">
+      <span class="name">高橋洋一</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takahashi-hideaki/">
+      <span class="name">高橋英明</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takaishi-yasushi/">
+      <span class="name">高石康</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takatori-shuichi/">
+      <span class="name">高鳥修一</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="takayama-kanako/">
+      <span class="name">髙山佳奈子</span>
+      <span class="right">
+        
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="oniki-makoto/">
+      <span class="name">鬼木誠</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kashima-yusuke/">
+      <span class="name">鹿嶋祐介</span>
+      <span class="right">
+        <span class="org">自由民主党</span>
+        <span class="count">1 件</span>
+      </span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="kuroiwa-rina/">
+      <span class="name">黒岩里奈</span>
+      <span class="right">
+        <span class="org">チームみらい</span>
+        <span class="count">1 件</span>
+      </span>
     </a>
   </li>
   
   <li>
     <a href="kuroda-masaki/">
       <span class="name">黒田征樹</span>
-      <span class="count">1 件</span>
+      <span class="right">
+        <span class="org">維新の会</span>
+        <span class="count">1 件</span>
+      </span>
     </a>
   </li>
   
 </ul>
 
 <footer>
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 </body>

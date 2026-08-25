@@ -3,28 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
 <title>松井一郎 行動・発言 年表</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="松井一郎が行動主体となった事件・発言の記録。15件を年表で掲載。">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="松井一郎が行動主体となった事件・発言の記録。20件を年表で掲載。">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/people/matsui-ichiro/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="松井一郎 行動・発言 年表">
-<meta property="og:description" content="松井一郎が行動主体となった事件・発言の記録。15件を年表で掲載。">
+<meta property="og:description" content="松井一郎が行動主体となった事件・発言の記録。20件を年表で掲載。">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/people/matsui-ichiro/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="松井一郎 行動・発言 年表">
-<meta name="twitter:description" content="松井一郎が行動主体となった事件・発言の記録。15件を年表で掲載。">
+<meta name="twitter:description" content="松井一郎が行動主体となった事件・発言の記録。20件を年表で掲載。">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "松井一郎", "url": "https://rememberwhodidwhat.github.io/people/matsui-ichiro/"}</script>
 <style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
   :root {
-    --bg:      #0f0f14;
-    --surface: #1a1a24;
-    --border:  #2a2a3a;
-    --text:    #e8e8f0;
-    --muted:   #888899;
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#0a0018, #f1e9fb);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,12 +68,12 @@
     position: relative;
     padding: 48px 40px 32px;
     border-bottom: 1px solid var(--border);
-    background: linear-gradient(135deg, #0a0018 0%, #0f0f14 100%);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
   }
 
   .obsidian-link {
     position: absolute;
-    top: 20px;
+    top: 66px;
     right: 24px;
     font-size: 0.72rem;
     color: var(--muted);
@@ -73,7 +97,7 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: var(--text-strong);
   }
 
   header h1 .subtitle {
@@ -93,7 +117,7 @@
   .share-btn {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 9px;
-    background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    background: var(--overlay); border: 1px solid var(--border);
     cursor: pointer; text-decoration: none;
     transition: background 0.15s, border-color 0.15s;
   }
@@ -107,11 +131,11 @@
   .share-btn.share-copy { color: var(--muted); }
   .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
   .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
-  .share-btn.share-threads:hover { background: rgba(255, 255, 255, 0.12); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
   .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
   .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
   .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
-  .share-btn.share-copy:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
   .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
 
   .legend {
@@ -171,7 +195,7 @@
     transition: background 0.15s;
   }
 
-  .event:hover { background: #20202e; }
+  .event:hover { background: var(--surface-hover); }
 
   .event::before {
     content: '';
@@ -214,7 +238,7 @@
   .event-title {
     font-size: 0.92rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-strong);
     line-height: 1.4;
   }
 
@@ -237,7 +261,7 @@
 
   .event-body {
     font-size: 0.82rem;
-    color: #aaaabc;
+    color: var(--text-dim);
     line-height: 1.75;
     white-space: pre-line;
   }
@@ -279,7 +303,7 @@
     cursor: pointer;
     transition: color 0.15s, border-color 0.15s;
   }
-  .sort-btn:hover { color: var(--text); border-color: #4a4a6a; }
+  .sort-btn:hover { color: var(--text); border-color: var(--border-hover); }
   .sort-btn.active-buzz { color: #ff8c42; border-color: #ff8c42; }
   
 
@@ -296,11 +320,57 @@
 </head>
 <body>
 
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
 <header>
   
   <div class="header-nav"><a href="../">← 人物一覧へ戻る</a></div>
   <h1>松井一郎 <span class="subtitle">行動・発言 年表</span></h1>
-  <div class="meta">収録件数: 15 件</div>
+  <div class="meta">収録件数: 20 件</div>
   
   
   
@@ -308,7 +378,7 @@
   <div class="legend">
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#888899"></div>嘘・デマ・印象操作
+      <div class="legend-dot" style="background:#888899"></div>虚偽発言・印象操作
     </div>
     
     <div class="legend-item">
@@ -340,15 +410,23 @@
     </div>
     
     <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>根拠不明発言
+    </div>
+    
+    <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>利権・癒着
     </div>
     
     <div class="legend-item">
-      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+      <div class="legend-dot" style="background:#888899"></div>管理不行き届き
     </div>
     
     <div class="legend-item">
       <div class="legend-dot" style="background:#888899"></div>金銭問題
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
     </div>
     
   </div>
@@ -357,6 +435,36 @@
 
 <main>
   <div class="timeline">
+    
+    <a class="event" href="../../case/yokoyama-hideyuki-aware-na-kyoju-sama/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250419" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年4月19日</span>
+            <span class="event-title">横山英幸が松井一郎の事実誤認投稿に乗じて批判者を「哀れな教授様」などと侮蔑した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">大阪・関西万博の跡地利用を批判した大学教授らに対し、松井一郎元大阪市長が事実誤認に基づく侮蔑投稿をした後、横山英幸大阪市長がこれに乗じて「哀れな教授様」「批判でインプレ増え、ちやほや」「可哀そうな人」と侮蔑する投稿を「大阪市長」の公式アカウントで行った。SNS上では「大阪市長という公人がこんな書き込みをして恥ずかしくないのか」との批判が相次いだ。横山氏は跡地利用についても「夢洲の開発は最適な行政判断で運営されてます」と断言している。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
     
     <a class="event" href="../../case/matsui-ichiro-yumeshima-maishima-confusion/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20250419" data-amount="0">
@@ -369,15 +477,77 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">侮辱的発言</span>
+            
             
           </div>
           
           
           <div class="event-body">元大阪市長の松井一郎氏は万博会場の跡地利用を巡る批判に対し、「夢洲にオリンピックを招致したこともしらないのか。笑止」とSNSに投稿した。しかし実際にオリンピックが招致されたのは夢洲ではなく舞洲であり、事実誤認に基づいて批判者を侮蔑する投稿だった。SNS上では「舞洲と夢洲の区別もつかずに夢洲に万博誘致したのか」など元府知事・元市長としての誤りを指摘する批判が相次いだ。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/hashimoto-toru-hiramatsu-jitaku-gaisen/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240521" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年5月21日</span>
+            <span class="event-title">橋下徹が大阪市長時代に前市長平松邦夫氏の自宅近くで街頭演説を繰り返し名誉を毀損した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">大阪市長時代の橋下徹氏は、既に一般人となっていた前市長・平松邦夫氏の自宅近くで「まったく市長の仕事をしてませんでしたね〜平松さ〜ん」などと2時間にわたり街頭宣伝を行った。平松氏は在宅していなかったが、聞いていた妻がノイローゼになったとされる。橋下氏はこの他にも街頭演説やホームページ動画で平松氏への批判・揶揄を繰り返し、平松氏から名誉毀損で提訴されたが敗訴した。2024年、つばさの党による選挙妨害が問題化した際、橋下氏はテレビで妨害行為の摘発・有罪化を主張したが、自身の過去の行為との整合性が問われた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/nakajo-kiyoshi-koriashi-shussihoihan/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240502" data-amount="10000000">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年5月2日</span>
+            <span class="event-title">中条きよしが知人に年利60%で1000万円を貸し付け出資法違反の疑いが指摘された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">日本維新の会の中条きよし参院議員が知人に1000万円を貸し付けた際、年利60%とする契約書を交わしていたことが週刊ポストの取材で判明した。上限金利（15〜20%）を大幅に超えており、専門家は出資法違反の可能性を指摘した。中条議員は「事実無根」「金利欄は空欄」と反論したが、貸付先の男性は複数回の利息支払い（総額約370万円）を証言し、記者が確認した契約書原本には金利記載があった。中条議員は資産報告書の記載漏れを訂正したが、藤田文武幹事長は「口頭注意」にとどめ、馬場伸幸代表は「コメントしない」とした。松井一郎氏（擁立時の代表）は「事実であれば潔く辞職を」と勧告した。</div>
           
           
         </div>
@@ -403,10 +573,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
             
           </div>
           
@@ -437,10 +609,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
@@ -471,10 +645,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">矛盾発言</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">地位濫用</span>
+            
             
           </div>
           
@@ -505,7 +681,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
+            
             
           </div>
           
@@ -536,7 +714,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -567,7 +747,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -598,10 +780,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
+            
             
           </div>
           
@@ -632,7 +816,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -663,10 +849,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -697,10 +885,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公費浪費</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">危機管理欠如</span>
+            
             
           </div>
           
@@ -720,6 +910,72 @@
       </div>
     </a>
     
+    <a class="event" href="../../case/yoshimura-nishiura-model-hihan-k-chi/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20200316" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2020年3月16日</span>
+            <span class="event-title">吉村洋文が西浦モデルを恣意的に批判し非科学的なK値を対策に持ち込んだ</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #66bb6a 18%, transparent); color: #66bb6a; border: 1px solid color-mix(in srgb, #66bb6a 40%, transparent);">エセ科学</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">根拠不明発言</span>
+            
+            
+          </div>
+          
+          
+          <div class="event-body">2020年3月、西浦博教授の数理モデルに基づく感染拡大シナリオを受けた吉村洋文知事と松井一郎市長は、大阪・兵庫間の往来自粛を要請した。大阪大学・朝野氏によれば、両氏は当時から対策の失敗を見込み後に緩和する戦略を描いていたとされる。同年6月、吉村知事は「西浦モデルの“42万人死亡”試算は実際には合わなかった」と事後検証を要求し批判を開始、代わりに大阪大学中野貴志教授が提唱する非科学的な独自指標「K値」を専門家会議に持ち込んで対策に取り入れた。K値は日を追って現実と乖離し指標として機能しなくなり対策本部会議資料から消えたが、吉村知事は中野教授への批判的検証を行わなかった。2023年の講演でも、この対応を成果として語っている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/hasegawa-buraku-discriminatory-remarks/" style="--accent: #55b07a"
+       data-buzz="0" data-sort-key="20190200" data-amount="0">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2019年2月</span>
+            <span class="event-title">長谷川豊が講演会で部落差別発言をし謝罪・撤回した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+          </div>
+          
+          
+          <div class="event-body">長谷川豊は2019年2月の講演会で、被差別部落について「士農工商の下に、人間以下の存在がいる」「当然、乱暴なども働く」などと発言した。部落解放同盟中央本部の抗議を受け、長谷川豊は5月22日に「弁解の余地のない差別発言」として全面的に謝罪し撤回を表明した。日本維新の会は5月23日、夏の参院選比例区での長谷川豊の公認を当面停止すると決定した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
+            <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
     <a class="event" href="../../case/matsui-ichiro-yumeshima-shian-ir/" style="--accent: #e25555"
        data-buzz="0" data-sort-key="20160812" data-amount="0">
       <div class="event-row">
@@ -731,7 +987,9 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">利権・癒着</span>
+            
             
           </div>
           
@@ -762,7 +1020,9 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">嘘・デマ・印象操作</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">虚偽発言・印象操作</span>
+            
             
           </div>
           
@@ -793,7 +1053,9 @@
           <div class="event-tags">
             
             
-            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">管理不行き届き</span>
+            
             
           </div>
           
@@ -824,10 +1086,12 @@
           <div class="event-tags">
             
             
+            
             <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">金銭問題</span>
             
             
             <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
             
           </div>
           
@@ -892,7 +1156,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-08-23
+  最終更新: 2026-08-25
 </footer>
 
 <script>
