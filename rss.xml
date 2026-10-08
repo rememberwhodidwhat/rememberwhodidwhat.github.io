@@ -6,7 +6,15 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Fri, 09 Oct 2026 01:13:06 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 01:28:18 +0900</lastBuildDate>
+  <item>
+    <title>高市が衆院代表質問で消費税減税の具体的な財源を示さなかった</title>
+    <link>https://rememberwhodidwhat.github.io/case/takaichi-consumption-tax-cut-no-funding-source/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takaichi-consumption-tax-cut-no-funding-source/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>高市早苗首相は2026年10月7日の衆院代表質問で、消費税減税と併せて導入する所得連動型の支援金について「市場の信認を得られるよう、特例公債（赤字国債）に頼らずに財源を確保する」と述べた。一方で、具体的な財源は示さなかった。（発生日: 2026年10月7日）</description>
+    <category>根拠不明発言</category>
+  </item>
   <item>
     <title>改正個人情報保護法がAI開発目的なら病歴等を本人同意なしで提供可能とする内容で成立した</title>
     <link>https://rememberwhodidwhat.github.io/case/personal-information-protection-law-amendment-enacted/</link>
@@ -25,6 +33,15 @@
     <description>古川俊治デジタル相は2026年10月6日の記者会見で、企業で相次ぐ不正アクセスによる個人情報流出について「サイバー攻撃は企業や組織だけの問題ではない」と述べ、国民に「自分の情報は自分で守るという意識を持って」と呼び掛け、パスワードの使い回しをやめる・多要素認証を利用するなどの個人の対策を求めた。
 相次ぐ流出は事業者・行政側のシステムへの侵入によるもので、利用者側の対策では防げないものだった。個人に対策を求めるのは筋違いな発言だった。（発生日: 2026年10月6日）</description>
     <category>公的責任放棄</category>
+  </item>
+  <item>
+    <title>トランプがイランによるロサンゼルスへの攻撃を「ごく小さな代償」と容認するかのような発言をした</title>
+    <link>https://rememberwhodidwhat.github.io/case/trump-iran-attack-los-angeles-small-price/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/trump-iran-attack-los-angeles-small-price/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>トランプ米大統領は2026年10月5日、ネブラスカ州での集会で、イラン戦争に伴うガソリン価格高騰を正当化するなかで、イランが攻撃し得る都市としてロサンゼルスやサンディエゴを挙げ「やらせればいい。ごく小さな代償だ」と発言した。カリフォルニア州のニューサム知事やロサンゼルスのバス市長が反発し、ホワイトハウスは「イランの核攻撃を阻止するために戦っているという意味だ」と反論した。（発生日: 2026年10月5日）</description>
+    <category>戦争容認</category>
+    <category>品格欠如</category>
   </item>
   <item>
     <title>デジタル庁が運用する政府共通基盤GSSがVPNの脆弱性を突かれ約24万6000件の個人情報が漏えいした可能性を公表した</title>
@@ -917,24 +934,6 @@ Twitterは同月16日に「バグであり既に解決済み」とコメント�
     <description>2025年12月5日、欧州委員会はX社に対し、デジタルサービス法（DSA）の透明性義務違反を理由に1億2000万ユーロの制裁金を科した。DSA施行後初めての非遵守決定となる。
 違反内容は、有料課金のみで有意な本人確認なしに取得できる「認証」バッジが利用者を欺く設計になっている点、広告リポジトリの情報不足で研究者が詐欺・プロパガンダを検出できない点、研究者による公開データへのアクセスを禁止しEU域内のシステムリスク研究を阻害している点の3点。（発生日: 2025年12月5日）</description>
     <category>違法行為</category>
-  </item>
-  <item>
-    <title>高知新聞が社説で国旗損壊罪法を拙速な立法化だと批判した</title>
-    <link>https://rememberwhodidwhat.github.io/case/kochi-shimbun-editorial-criticizing-hasty-legislation/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kochi-shimbun-editorial-criticizing-hasty-legislation/</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-    <description>高知新聞は2026年7月19日、成立した国旗損壊罪法を批判する社説を掲載した。
-提出から成立まで1ヶ月に満たない審議期間の短さを「拙速な立法化」と批判し、処罰基準の曖昧さや違憲性への懸念、「愛国心醸成」を立法理由とすることへの問題を指摘した。（発生日: 2026年7月19日）</description>
-    <category>表現の自由の保護</category>
-  </item>
-  <item>
-    <title>静岡県弁護士会が国旗損壊罪法案に反対する会長声明を出した</title>
-    <link>https://rememberwhodidwhat.github.io/case/shizuoka-bar-association-statement-against-flag-desecration-bill/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/shizuoka-bar-association-statement-against-flag-desecration-bill/</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-    <description>静岡県弁護士会は2026年7月8日、山本正幸会長名で「国旗の損壊等の処罰に関する法律案に反対する会長声明」を発表した。
-立法事実の欠如、思想及び良心の自由（憲法19条）侵害のおそれ、表現の自由（憲法21条）への侵害のおそれ、罪刑法定主義（憲法31条）違反を理由に挙げた。（発生日: 2026年7月8日）</description>
-    <category>表現の自由の保護</category>
   </item>
 </channel>
 </rss>
