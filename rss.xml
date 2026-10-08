@@ -6,7 +6,36 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Fri, 09 Oct 2026 00:32:40 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 01:13:06 +0900</lastBuildDate>
+  <item>
+    <title>改正個人情報保護法がAI開発目的なら病歴等を本人同意なしで提供可能とする内容で成立した</title>
+    <link>https://rememberwhodidwhat.github.io/case/personal-information-protection-law-amendment-enacted/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/personal-information-protection-law-amendment-enacted/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>AI開発等を含む「統計作成等」を目的とする場合に、病歴・犯罪歴・人種・信条などの要配慮個人情報を含む個人データを本人の同意なく第三者に提供・取得できるようにする改正個人情報保護法（内閣提出）が、2026年7月10日に参議院本会議で自民・維新・国民民主・チームみらいなどの賛成多数（賛成146・反対94）により可決・成立した。立憲・公明・参政・共産・れいわ・沖縄の風・社民は反対した。
+匿名化・仮名化は義務付けられず、団体訴訟制度は見送られ、同意不要の範囲は個人情報保護委員会規則に委ねられた。専門家からはプロファイリングによるプライバシー権侵害のリスクが指摘された。
+担当の松本尚デジタル相は成立後の7月14日の会見で「個人情報がいろんなところに漏れてしまうという懸念があることは十分承知している」とした上で、規則やガイドラインで透明性を高め懸念を払拭していく考えを示した。（発生日: 2026年7月10日）</description>
+    <category>プライバシー侵害</category>
+  </item>
+  <item>
+    <title>古川俊治デジタル相が民間企業の個人情報流出頻発を受け「自分の情報は自分で守って」と国民に呼び掛けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/furukawa-toshiharu-jibun-no-joho-wa-jibun-de-mamotte/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/furukawa-toshiharu-jibun-no-joho-wa-jibun-de-mamotte/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>古川俊治デジタル相は2026年10月6日の記者会見で、企業で相次ぐ不正アクセスによる個人情報流出について「サイバー攻撃は企業や組織だけの問題ではない」と述べ、国民に「自分の情報は自分で守るという意識を持って」と呼び掛け、パスワードの使い回しをやめる・多要素認証を利用するなどの個人の対策を求めた。
+相次ぐ流出は事業者・行政側のシステムへの侵入によるもので、利用者側の対策では防げないものだった。個人に対策を求めるのは筋違いな発言だった。（発生日: 2026年10月6日）</description>
+    <category>公的責任放棄</category>
+  </item>
+  <item>
+    <title>デジタル庁が運用する政府共通基盤GSSがVPNの脆弱性を突かれ約24万6000件の個人情報が漏えいした可能性を公表した</title>
+    <link>https://rememberwhodidwhat.github.io/case/digital-agency-gss-unauthorized-access-leak/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/digital-agency-gss-unauthorized-access-leak/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>デジタル庁は2026年9月11日、同庁が運用する政府共通の業務基盤「ガバメントソリューションサービス（GSS）」が外部から不正アクセスを受け、政府職員・公務員ら18.9万件、業務に携わった事業者や個人5.7万件の計約24万6000件の個人情報（氏名・メールアドレス・電話番号・住所）が漏えいした可能性があると公表した。
+第三者がネットワーク接続機器（VPN）の脆弱性を利用して5月下旬ごろから保守運用担当者のアカウントで侵入を続けており、同庁は6月25日に大量のファイルへのアクセスを検知、7月9日に第三者による不正アクセスと判明してアカウント停止・外部通信遮断を行ったが、公表は約2か月後となった。
+松本尚デジタル相は記者会見で「関係者の皆さまに多大な迷惑、ご心配をおかけしますことを深くお詫び申し上げます」と陳謝し、脆弱性管理方法の見直しや外部接続方法の改善に取り組むとした。（発生日: 2026年9月11日）</description>
+    <category>組織事故</category>
+  </item>
   <item>
     <title>百田尚樹がトイレ使用後に手を洗わないと発言した</title>
     <link>https://rememberwhodidwhat.github.io/case/hyakuta-no-handwashing-remark/</link>
@@ -905,34 +934,6 @@ Twitterは同月16日に「バグであり既に解決済み」とコメント�
     <pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
     <description>静岡県弁護士会は2026年7月8日、山本正幸会長名で「国旗の損壊等の処罰に関する法律案に反対する会長声明」を発表した。
 立法事実の欠如、思想及び良心の自由（憲法19条）侵害のおそれ、表現の自由（憲法21条）への侵害のおそれ、罪刑法定主義（憲法31条）違反を理由に挙げた。（発生日: 2026年7月8日）</description>
-    <category>表現の自由の保護</category>
-  </item>
-  <item>
-    <title>静岡新聞が社説で国旗損壊罪法案に反対を表明した</title>
-    <link>https://rememberwhodidwhat.github.io/case/shizuoka-shimbun-editorial-against-flag-desecration-bill/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/shizuoka-shimbun-editorial-against-flag-desecration-bill/</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-    <description>静岡新聞は2026年6月3日、社説「国旗損壊罪法案　制定の必要性あるのか」を掲載し、法案の国会提出は見送るべきだと主張した。
-立法根拠の薄弱さ、保護法益の不明確さ、表現の抑制効果を理由に反対し、既存の器物損壊罪で対処可能だと提案した。（発生日: 2026年6月3日）</description>
-    <category>表現の自由の保護</category>
-  </item>
-  <item>
-    <title>青森県弁護士会が国旗損壊罪法案に反対する会長声明を出した</title>
-    <link>https://rememberwhodidwhat.github.io/case/aomori-bar-association-statement-against-flag-desecration-bill/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/aomori-bar-association-statement-against-flag-desecration-bill/</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-    <description>青森県弁護士会は2026年7月1日、森雄亮会長名で「国旗の損壊等の処罰に関する法律の制定に反対する会長声明」を発表した。
-表現の自由（憲法21条）の侵害のおそれ、諸外国の国旗保護法制との比較、罪刑法定主義（憲法31条）に基づく明確性の原則への抵触可能性を理由に挙げた。（発生日: 2026年7月1日）</description>
-    <category>表現の自由の保護</category>
-  </item>
-  <item>
-    <title>阪田雅裕が国旗損壊罪法案の立法事実の乏しさを指摘した</title>
-    <link>https://rememberwhodidwhat.github.io/case/sakata-masahiro-criticizes-flag-desecration-bill-lack-of-legislative-facts/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/sakata-masahiro-criticizes-flag-desecration-bill-lack-of-legislative-facts/</guid>
-    <pubDate>Wed, 19 Aug 2026 00:00:00 +0900</pubDate>
-    <description>元内閣法制局長官の阪田雅裕は2026年6月21日付琉球新報の取材に対し、国旗損壊罪法案について立法の必要性を国民が納得できるかどうかが重要だと述べ、立法事実の乏しさを指摘した。
-「不快」「嫌悪」といった処罰基準を客観的に評価することの難しさも問題視した。
-内閣法制局長官経験者として、法律の要件・目的の明確性という観点から法案に疑問を呈した。（発生日: 2026年6月21日）</description>
     <category>表現の自由の保護</category>
   </item>
 </channel>
