@@ -6,7 +6,7 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Fri, 09 Oct 2026 02:21:36 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 02:24:02 +0900</lastBuildDate>
   <item>
     <title>高市早苗が衆院代表質問で消費税減税の具体的な財源を示さなかった</title>
     <link>https://rememberwhodidwhat.github.io/case/takaichi-consumption-tax-cut-no-funding-source/</link>
@@ -20,10 +20,10 @@
     <link>https://rememberwhodidwhat.github.io/case/takaichi-civil-service-exam-claim/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takaichi-civil-service-exam-claim/</guid>
     <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
-    <description>高市早苗氏の1989年の著書『アズ・ア・タックスペイヤー』には、上級国家公務員試験に合格しながら「高級官僚への道を蹴って」松下政経塾に入ったという趣旨の記述がある。
-2026年8月、1983年度前後の官報の最終合格者名簿に同氏の名前がないとの指摘がSNSで広がり、2025年のWebちくまの記述でも「筆記試験にも合格したものの」とされるにとどまることから、最終合格はしていなかった疑いが報じられた。
+    <description>高市早苗氏の1989年の著書『アズ・ア・タックスペイヤー』には、国家公務員になる予定だったが「高級官僚への道を蹴って」松下政経塾に入ったという趣旨の記述があり、評伝（大下英治『高市早苗　愛国とロック』）では「筆記試験にも合格した」とされている。
+2026年8月、1983年度前後の官報の上級試験最終合格者名簿に同氏の名前がないとの指摘がSNSで広がったが、その確認は生成AIへの照会等によるもので、官報原本による検証は報じられていない。
 高市氏側は筆記合格か最終合格かについて説明していない。（発生日: 1989年）</description>
-    <category>経歴詐称</category>
+    <category>根拠不明発言</category>
   </item>
   <item>
     <title>高市早苗が予算カット発言の簗和生農相を「厳しく注意」にとどめ更迭を否定した</title>
