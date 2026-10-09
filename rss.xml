@@ -6,7 +6,7 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Fri, 09 Oct 2026 21:06:22 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 21:28:10 +0900</lastBuildDate>
   <item>
     <title>麻生太郎が親密な女性の会社に政治資金約8000万円を支出していたと週刊文春が報じた</title>
     <link>https://rememberwhodidwhat.github.io/case/aso-taro-political-funds-80m-to-intimate-womans-company/</link>
@@ -126,6 +126,67 @@
     <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
     <description>日本郵便の郵便物「放棄・隠匿」非公表問題を巡り、朝日新聞記者が2025年9月末に総務省の指導内容に関する文書を開示請求したところ、郵政行政部幹部らのTeamsグループチャットで「特別延長してほとぼりを覚めさせる」「1、2年くらい時間をかけてもよいかと」等の投稿がなされ、チャット削除や口頭連絡への切り替えも相談されていた。
 総務省は特例延長を適用し、約3カ月後に開示した文書は公表済みのものが多く大半が黒塗りで、2回目の開示請求でもチャットは開示されなかった。朝日新聞の2026年8月の問い合わせに対し、同省は「事実関係を確認中」とした。（発生日: 2025年10月2日）</description>
+    <category>情報隠蔽</category>
+  </item>
+  <item>
+    <title>米軍普天間飛行場からPFOSを含む泡消火剤が住宅地に流出した</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-forces-futenma-pfos-foam-leak-2020/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-forces-futenma-pfos-foam-leak-2020/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2020年4月10日、米軍普天間飛行場の格納庫で消火システムが作動し、有機フッ素化合物PFOSを含む泡消火剤など約23万リットルが流出、泡が基地外の住宅地や河川に飛散した。在沖米海兵隊は9月、隊員が「士気高揚のため」格納庫近くで行ったバーベキューの熱で装置が作動し、停止方法を知る者がいなかったため約28分間流出が続いたと明らかにした。基地外へ流れる排水路の水からは環境省の目標値を上回るPFOS・PFOAが検出された。（発生日: 2020年4月10日）</description>
+    <category>組織事故</category>
+  </item>
+  <item>
+    <title>米軍ヘリが沖縄国際大学に墜落し米軍が現場を封鎖して県警の検証を拒否した</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-forces-okinawa-intl-univ-helicopter-crash-site-blockade/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-forces-okinawa-intl-univ-helicopter-crash-site-blockade/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2004年8月13日、米軍普天間飛行場を離陸した米海兵隊CH53D大型輸送ヘリが宜野湾市の沖縄国際大学の本館に接触して墜落・炎上し、乗員3人が負傷した。米軍は現場一帯を封鎖して県警や大学関係者を締め出し、日本の警察による現場検証を拒否したまま機体の残骸を撤去した。県の中止要請にもかかわらず、米軍は墜落から8日目に同型機の飛行を再開した。（発生日: 2004年8月13日）</description>
+    <category>組織事故</category>
+    <category>情報隠蔽</category>
+  </item>
+  <item>
+    <title>米軍ヘリが東村高江の牧草地で炎上し米軍が現場の土壌を持ち去った</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-forces-takae-ch53-fire-soil-removal/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-forces-takae-ch53-fire-soil-removal/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2017年10月11日、米軍普天間飛行場所属のCH53E大型輸送ヘリが沖縄県東村高江の民間の牧草地に不時着し炎上した。米軍は事故直後、トラック5台分の土を現場から持ち去った。その後、現場の土壌からは発がん性物質のベンゼンなどが確認され、汚染された約300立方メートルの土が除去されることになった。（発生日: 2017年10月11日）</description>
+    <category>組織事故</category>
+    <category>情報隠蔽</category>
+  </item>
+  <item>
+    <title>米軍ヘリが普天間第二小学校の運動場に窓を落下させた</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-forces-futenma-daini-elementary-window-drop/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-forces-futenma-daini-elementary-window-drop/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2017年12月13日、米海兵隊普天間飛行場所属のCH53E大型輸送ヘリから重さ約7.7キロの窓が、体育の授業中だった宜野湾市の普天間第二小学校の運動場に落下した。窓は児童約60人から約10メートルの地点に落ち、男児1人が飛んだ小石で腕の痛みを訴えた。米軍は謝罪したが県が求めた全機種の飛行停止には明確に回答せず、県警の機体調査・乗員聴取の要請にも回答しなかった。6日前には近くの緑ヶ丘保育園の屋根で同型機の部品が見つかっていたが、米軍は落下を否定し、県警も米軍機からの落下物とは特定できなかった。（発生日: 2017年12月13日）</description>
+    <category>組織事故</category>
+  </item>
+  <item>
+    <title>米空軍オスプレイが屋久島沖で墜落した後も米軍が日本政府の飛行自粛要請に応じず飛行を続けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-forces-yakushima-osprey-crash-continued-flights/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-forces-yakushima-osprey-crash-continued-flights/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2023年11月29日、米空軍横田基地所属のCV22オスプレイが鹿児島県屋久島沖で墜落し、搭乗していた乗員8人が死亡した。日本政府は30日、防衛省・外務省などから計3度にわたり安全確認までの飛行自粛を米側に要請したが、普天間飛行場では要請後も米海兵隊MV22オスプレイの飛行が続いた。米軍がオスプレイの運用を停止したのは事故から1週間以上たってからだった。（発生日: 2023年11月29日）</description>
+    <category>組織事故</category>
+    <category>致死</category>
+  </item>
+  <item>
+    <title>米海兵隊のFA18とKC130が高知沖で空中給油中に接触し墜落した</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-marines-kochi-kc130-fa18-midair-collision/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-marines-kochi-kc130-fa18-midair-collision/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2018年12月6日未明、岩国基地所属の米海兵隊FA18D戦闘攻撃機とKC130空中給油機が高知県沖で夜間空中給油訓練中に接触して墜落し、乗員6人が死亡した。海兵隊が2019年9月に公表した調査結果は、事故機の操縦士が夜間空中給油の経験がなく習熟度を欠いていたことや、上官の「不適切な見落とし」を原因に挙げ、部隊の隊長ら4人を解任した。米専門誌は、操縦士と教官が飛行記録を偽って資格を得ていたと報じた。（発生日: 2018年12月6日）</description>
+    <category>組織事故</category>
+    <category>致死</category>
+  </item>
+  <item>
+    <title>米原潜ヒューストンが放射性物質を含む冷却水を漏らしながら日本に寄港していた</title>
+    <link>https://rememberwhodidwhat.github.io/case/uss-houston-radioactive-leak-japan-port-calls/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/uss-houston-radioactive-leak-japan-port-calls/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>米海軍は2008年8月1日、原子力潜水艦ヒューストンが同年3〜4月に佐世保基地や沖縄のホワイトビーチに寄港した際、放射性物質を含む水を漏らしていた可能性があると日本政府に通報した。漏れは7月にハワイでの定期点検中に発覚・確認されていたが、日本への通報はその約1週間後だった。外務省から長崎県・佐世保市・沖縄県などへの通報はさらに翌日にずれ込み、町村信孝官房長官が外務省の対応に苦言を呈した。（発生日: 2008年8月1日）</description>
+    <category>組織事故</category>
     <category>情報隠蔽</category>
   </item>
   <item>
@@ -302,6 +363,33 @@
     <description>米兵が強盗殺人容疑で逮捕されたことを受け、在沖縄米軍トップの沖縄地域調整官ワトソン中将とオウ駐沖縄米総領事は2026年10月5日、沖縄県庁で古謝玄太知事から抗議を受けた。両氏は被害者の家族らへの哀悼の意を表明したが、謝罪はしなかった。（発生日: 2026年10月5日）</description>
   </item>
   <item>
+    <title>在沖米海兵隊が日米協議中にPFOSを含む汚染水を普天間飛行場から下水道に放出した</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-marines-futenma-pfos-water-sewer-discharge/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-marines-futenma-pfos-water-sewer-discharge/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2021年8月26日、在沖米海兵隊は、沖縄県・宜野湾市が反対し日本政府も協議中の放出見合わせを求めていたにもかかわらず、PFOS等を含む泡消火剤由来の処理済み汚染水を普天間飛行場から公共下水道に放出した。政府や県への連絡は放出の約30分前のメールだけだった。宜野湾市が放出当日に採取した下水からは国の暫定指針値の13.4倍のPFOS等が検出され、小泉進次郎環境相は「事前通告なしの放流はあってはならない」と米側を非難した。（発生日: 2021年8月26日）</description>
+    <category>公益擁護</category>
+    <category>環境破壊加担</category>
+  </item>
+  <item>
+    <title>在日米軍が横田基地でのPFAS泡消火剤漏出事故を10年以上公表していなかった</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-forces-yokota-pfas-leak-undisclosed/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-forces-yokota-pfas-leak-undisclosed/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>在日米軍は2023年6〜7月、横田基地で2010〜12年に有機フッ素化合物PFASを含む泡消火剤の漏出事故が3件あったことを、防衛省を通じて初めて公式に認めた。英国人ジャーナリストが入手した米軍内部文書では、うち1件は希釈前の原液3000リットル超の漏出とされるが、米軍は漏出量を明らかにせず、基地外への流出は「認識していない」と説明した。東京都と周辺5市1町は、速やかな情報提供がなかったことを「極めて遺憾」として防衛相に要請した。（発生日: 2023年6月29日）</description>
+    <category>組織事故</category>
+    <category>情報隠蔽</category>
+  </item>
+  <item>
+    <title>在日米軍が日本側に通告せず米国出国時のPCR検査を免除しキャンプ・ハンセンでコロナのクラスターが発生した</title>
+    <link>https://rememberwhodidwhat.github.io/case/us-forces-japan-covid-pcr-exemption-camp-hansen/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/us-forces-japan-covid-pcr-exemption-camp-hansen/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>キャンプ・ハンセンで新型コロナの大規模クラスターが発生した後、在日米軍は2021年12月23日、同年9月以降、全在日米軍基地で米国出国時のPCR検査義務を解除していたと認めた。日本政府や沖縄県には通告しておらず、ワクチン接種者には入国後の移動制限中も基地間の移動を認めていた。米軍は米疾病対策センターなどの手引きに従ったと説明し、玉城デニー知事は「言語道断だ」と批判した。（発生日: 2021年12月23日）</description>
+    <category>衛生観念欠如</category>
+    <category>情報隠蔽</category>
+  </item>
+  <item>
     <title>国民民主党が同性婚法制化への賛否を2回の国政選挙で「その他」と回答し公約も「検討を進めます」にとどめた</title>
     <link>https://rememberwhodidwhat.github.io/case/dpfp-same-sex-marriage-no-stance/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/dpfp-same-sex-marriage-no-stance/</guid>
@@ -338,6 +426,39 @@
     <category>外交問題</category>
   </item>
   <item>
+    <title>上川陽子・林芳正らが米兵による少女性的暴行事件の起訴を約3カ月間沖縄県に伝えていなかった</title>
+    <link>https://rememberwhodidwhat.github.io/case/kamikawa-hayashi-us-airman-assault-not-notified-okinawa/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kamikawa-hayashi-us-airman-assault-not-notified-okinawa/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>嘉手納基地所属の米空軍兵が16歳未満の少女に性的暴行を加えたとして2024年3月27日に起訴された事件で、外務省は同日駐日米大使に抗議し、上川陽子外相と首相官邸も情報を共有していたが、沖縄県には約3カ月間伝えず、6月25日の報道で発覚した。林芳正官房長官は県に伝えなかった理由を問われても「捜査機関の活動内容にかかわる」などとして明確に答えなかった。林氏は7月3日、ほかにも報道発表していない米兵の性的暴行事件が2023年以降計5件あったと明らかにした。（発生日: 2024年6月25日）</description>
+    <category>情報隠蔽</category>
+  </item>
+  <item>
+    <title>ローレンス・ニコルソン（在沖米四軍調整官）がオスプレイ墜落に抗議した沖縄県副知事に「感謝されるべき」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/nicholson-osprey-crash-should-be-thanked/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/nicholson-osprey-crash-should-be-thanked/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2016年12月13日、米海兵隊MV22オスプレイが名護市安部沖に墜落した。翌14日、抗議に訪れた安慶田光男副知事に対し、在沖米軍トップのローレンス・ニコルソン四軍調整官は、住宅や県民に被害を与えなかったことについて「感謝されるべきだ」と述べ、「政治問題化するのか」とも発言した。同氏はその後の会見で事故について「誠に遺憾」「申し訳ない」と述べたが、海上に降りたパイロットの判断を称賛した。（発生日: 2016年12月14日）</description>
+    <category>品格欠如</category>
+    <category>組織事故</category>
+  </item>
+  <item>
+    <title>マーカス・ギルら米兵3人が沖縄で12歳の少女を拉致し性的暴行を加え米軍が起訴前の身柄引き渡しを拒否した</title>
+    <link>https://rememberwhodidwhat.github.io/case/1995-okinawa-us-servicemen-rape-handover-refusal/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/1995-okinawa-us-servicemen-rape-handover-refusal/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>1995年9月4日、沖縄県金武町で、キャンプ・ハンセン所属の米海軍水兵マーカス・ギル、米海兵隊員ロドリコ・ハープ、ケンドリック・レデットの3人が12歳の少女を拉致し性的暴行を加えた。県警は逮捕状を取って身柄の引き渡しを求めたが、米側は日米地位協定を理由に起訴まで応じなかった。3人は懲役6年6カ月〜7年の判決を受けた。事件を機に約8万5千人が参加する県民総決起大会が開かれ、日米は凶悪犯罪について起訴前の身柄引き渡しに米側が「好意的考慮を払う」ことで合意したが、引き渡しの決定権は今も米側にある。（発生日: 1995年9月4日）</description>
+    <category>性的暴行</category>
+  </item>
+  <item>
+    <title>ブレノン・ワシントン（米空軍兵）が沖縄で16歳未満の少女を誘拐し性的暴行を加え懲役5年の判決を受けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/washington-okinawa-girl-kidnapping-sexual-assault/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/washington-okinawa-girl-kidnapping-sexual-assault/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>嘉手納基地所属の米空軍兵ブレノン・ワシントンは2023年12月、沖縄本島中部の公園で16歳未満の少女に声をかけ、車で自宅に連れ去って性的暴行を加えた。被告は「18歳と答えた」「同意を得た」として無罪を主張したが、那覇地裁は2024年12月13日、少女の証言を「信用できる」と認め、「悪質さが際立つ」として懲役5年（求刑7年）を言い渡した。控訴審も一審を維持した。（発生日: 2023年12月24日）</description>
+    <category>性的暴行</category>
+  </item>
+  <item>
     <title>トランプがイランによるロサンゼルスへの攻撃を「ごく小さな代償」と容認するかのような発言をした</title>
     <link>https://rememberwhodidwhat.github.io/case/trump-iran-attack-los-angeles-small-price/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/trump-iran-attack-los-angeles-small-price/</guid>
@@ -345,6 +466,16 @@
     <description>トランプ米大統領は2026年10月5日、ネブラスカ州での集会で、イラン戦争に伴うガソリン価格高騰を正当化するなかで、イランが攻撃し得る都市としてロサンゼルスやサンディエゴを挙げ「やらせればいい。ごく小さな代償だ」と発言した。カリフォルニア州のニューサム知事やロサンゼルスのバス市長が反発し、ホワイトハウスは「イランの核攻撃を阻止するために戦っているという意味だ」と反論した。（発生日: 2026年10月5日）</description>
     <category>戦争容認</category>
     <category>品格欠如</category>
+  </item>
+  <item>
+    <title>デビン・バラード（米海兵隊員）が那覇市のホテルで女性を殺害し金品を奪ったとして強盗殺人容疑で逮捕された</title>
+    <link>https://rememberwhodidwhat.github.io/case/ballard-naha-robbery-murder-arrest/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ballard-naha-robbery-murder-arrest/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2026年10月3日未明、那覇市若狭のホテルで女性（39）が首を絞められて殺害され、財布とリュックサックが奪われた。沖縄県警は4日、防犯カメラ映像と身体的特徴が一致したとして、米軍普天間飛行場所属の海兵隊上等兵デビン・バラード（20）を強盗殺人の疑いで逮捕した。容疑者は「私は知りません」と否認している。（発生日: 2026年10月3日）</description>
+    <category>暴行</category>
+    <category>窃盗</category>
+    <category>致死</category>
   </item>
   <item>
     <title>デジタル庁が運用する政府共通基盤GSSがVPNの脆弱性を突かれ約24万6000件の個人情報が漏えいした可能性を公表した</title>
@@ -381,6 +512,35 @@ Marriage For All Japanが政党要件を満たす全政党に送った同性婚�
     <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
     <description>自民・維新提出の副首都法案について、チームみらいは2026年7月14日、情報通信技術の活用と政府による国会への年次報告の規定を追加する修正で与党と合意し、野党で唯一賛成に回った。少数与党の参院では7月24日、同党会派2人（安野貴博・尾辻朋実）の賛成も加わり賛成123・反対121の2票差で可決・成立した。
 野党議員や識者からは、ICT活用はデジタル社会形成基本法等で既に国・自治体の責務とされており修正は実質を伴わないとの指摘が出た。週刊文春・日刊ゲンダイは、ネット上や永田町で同党が「チームけらい」と揶揄されていると報じた。（発生日: 2026年7月24日）</description>
+  </item>
+  <item>
+    <title>ジャメル・クレイトン（米海兵隊員）が読谷村で女性に性的暴行を加え懲役7年の判決を受けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/clayton-yomitan-sexual-assault/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/clayton-yomitan-sexual-assault/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>在沖米海兵隊の上等兵ジャメル・クレイトンは2024年5月、沖縄県読谷村で20代の女性の首を絞めて性的暴行を加えようとし、けがを負わせた。被告は無罪を主張したが、那覇地裁は2025年6月24日、女性の証言に「高い信頼性が認められる」として懲役7年（求刑10年）を言い渡した。事件は逮捕時に公表されず、起訴後に明らかになった。（発生日: 2024年5月26日）</description>
+    <category>性的暴行</category>
+    <category>暴行</category>
+  </item>
+  <item>
+    <title>ケネフ・シンザト（米軍属）がうるま市で女性を暴行・殺害し無期懲役の判決を受けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/shinzato-uruma-murder/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/shinzato-uruma-murder/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2016年4月28日夜、元米海兵隊員で嘉手納基地で働く軍属だったケネフ・シンザトが、うるま市の路上で女性会社員（20）を乱暴しようとして頭を棒で殴り、首付近を刃物で刺して殺害し、遺体を恩納村の雑木林に遺棄した。那覇地裁は2017年12月1日、「動機は身勝手で、およそ酌量の余地はない」として求刑通り無期懲役を言い渡した。被告は殺意を否認していたが、遺族への謝罪はなかった。（発生日: 2016年4月28日）</description>
+    <category>性的暴行</category>
+    <category>暴行</category>
+    <category>致死</category>
+  </item>
+  <item>
+    <title>ウィリアム・オリバー・リース・ジュニア（米海軍）が横須賀で女性を殺害し現金を奪い無期懲役の判決を受けた</title>
+    <link>https://rememberwhodidwhat.github.io/case/reese-yokosuka-robbery-murder/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/reese-yokosuka-robbery-murder/</guid>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2006年1月3日、米空母キティホーク乗組員の上等水兵ウィリアム・オリバー・リース・ジュニアが、米海軍横須賀基地近くの路上で会社員の女性（56）のバッグを奪おうとし、ビルに引きずり込んで約10分間暴行を加えて殺害、現金1万5千円を奪った。横浜地裁は同年6月2日、「残忍極まりなく、冷酷非道な犯行」として求刑通り無期懲役を言い渡した。（発生日: 2006年1月3日）</description>
+    <category>暴行</category>
+    <category>窃盗</category>
+    <category>致死</category>
   </item>
   <item>
     <title>NTTドコモがMNP新規契約約1万6000件でRCSの顧客情報をGoogleに提供する同意を取得していなかった</title>
@@ -742,170 +902,6 @@ Metaはコミュニティ基準に準拠した公開写真を表示しており�
     <description>出入国在留管理庁は2025年10月、外国人が起業する際の在留資格「経営・管理」の許可基準を省令改正で厳格化し、必要な資本金を500万円から3000万円に引き上げたほか、常勤職員1人以上の雇用や日本語能力を求める要件を追加した。同庁は「事業実態のない会社の設立事案が散見される」ことを理由に挙げるが、対象者の約7割は資本金500万〜600万円で在留しており、既存のエスニック料理店経営者らから「やっていけない」と懸念の声が上がっている。
 2026年2月には撤回を求めるオンライン署名運動が始まり、1週間余りで1万人超が賛同した。（発生日: 2025年10月1日）</description>
     <category>排外主義</category>
-  </item>
-  <item>
-    <title>出入国在留管理庁が在留手続き手数料を最大20倍に引き上げる改定案を発表した</title>
-    <link>https://rememberwhodidwhat.github.io/case/immigration-agency-fee-hike-2026/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/immigration-agency-fee-hike-2026/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>出入国在留管理庁は2026年7月3日、在留資格の変更・更新手数料を現行6000円から在留期間に応じて1万〜7万5000円に、永住許可を1万円から20万円に引き上げる政令案を発表した。手数料収入は年間数十億円から690億〜920億円程度に増える見込みで、外国人政策の財源に充てる意向という。
-関東在住の南アジア出身女性は家族3人分の更新手数料が1万8000円から14万4000円に上がり「所得税より重い」と訴え、アフガニスタン出身の難民認定家族も5年ごとの更新手数料が4万2000円から52万5000円になるとして苦悩を語った。10月1日申請分から適用予定。（発生日: 2026年7月3日）</description>
-    <category>排外主義</category>
-  </item>
-  <item>
-    <title>内部告発者がテスラの安全苦情隠蔽を示すデータ100GBを流出させた</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-whistleblower-100gb-safety-complaint-leak/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-whistleblower-100gb-safety-complaint-leak/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2023年5月、独メディアHandelsblattが、内部告発者から提供された約100GBのテスラ内部データを報道した。データには、テスラが隠蔽していたとされる数千件の顧客苦情が含まれ、急加速に関する苦情2,400件超、意図しない急ブレーキ（「ファントムストップ」）に関する苦情約1,500件、事故報告1,000件超などが記録されていた。
-社内文書からは、テスラが従業員に対し情報提供を口頭のみで行い、事故報告書を顧客に送付せず、留守番電話にメッセージを残さないよう指示していたことも判明し、法的責任回避を意図した対応だったとみられる。テスラは不正を否定し、データを入手・報道した側への法的措置を示唆した。（発生日: 2023年5月）</description>
-    <category>情報隠蔽</category>
-  </item>
-  <item>
-    <title>入江伸子（国民）陣営が運動員大学生に報酬を支払い公選法違反でスタッフが有罪判決を受けた</title>
-    <link>https://rememberwhodidwhat.github.io/case/irie-nobuko-campaign-volunteer-bribery/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/irie-nobuko-campaign-volunteer-bribery/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2026年2月の衆院選で国民民主党公認候補として立候補し落選した入江伸子被告の陣営で、SNS運用担当の菅原京香被告と会計担当の佐藤芳子被告が、選挙運動ボランティアの大学生ら11人に報酬計46万円を支払ったとして公職選挙法違反（買収）の罪に問われた。東京地裁は2026年7月27日、菅原被告に拘禁刑1年・執行猶予3年、佐藤被告に拘禁刑8カ月・執行猶予3年の判決を言い渡した。入江被告も同罪に問われており、今後裁判が開かれる予定。（発生日: 2026年7月27日）</description>
-    <category>違法行為</category>
-  </item>
-  <item>
-    <title>三木けえ（維新）が無役ながら万博をVIP待遇で訪問した</title>
-    <link>https://rememberwhodidwhat.github.io/case/miki-kee-expo-vip-visit/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/miki-kee-expo-vip-visit/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>日本維新の会の三木けえ衆院議員（兵庫7区）は、党内で公的な役職を持たないにもかかわらず、国際局のメンバーである守島正議員に同行して大阪・関西万博をVIP待遇で訪れた。「自腹で行かせろ」との批判が上がった。（発生日: 2025年7月9日）</description>
-    <category>地位濫用</category>
-  </item>
-  <item>
-    <title>三木けえ（維新）が旧文通費で寝具・家電を購入していた</title>
-    <link>https://rememberwhodidwhat.github.io/case/miki-kee-bunshihi-misuse/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/miki-kee-bunshihi-misuse/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>日本維新の会の三木けえ衆院議員（三木圭恵、兵庫7区）は、2022年4月、政治活動用の通信費・交通費に充てるための旧文書通信交通滞在費を用いて、議員宿舎用の布団・衣類乾燥機（1万4184円）、布団クリーナーUV除菌（1万480円）、コードレス掃除機（1万1980円）、スチームアイロン（3980円）、羽毛布団セット（2万2686円）、そばまくら（2178円）など計約6.5万円分をまとめ買いしていた。三木氏の事務所は「議員本人が（東京）滞在時に議員宿舎で使用している」と説明している。（発生日: 2022年4月）</description>
-    <category>公費浪費</category>
-  </item>
-  <item>
-    <title>三木けえ（維新）が2022年西宮市長選で増山誠陣営と規定時間前にチラシを配布した疑惑</title>
-    <link>https://rememberwhodidwhat.github.io/case/miki-kee-nishinomiya-election-2022-chirashi/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/miki-kee-nishinomiya-election-2022-chirashi/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2022年の西宮市長選挙で、日本維新の会の三木けえ衆院議員は、増山誠候補（当時日本維新の会、現・躍動の会）の陣営とともに、規定の午前8時より前に証紙チラシを配布するなど公職選挙法に触れる行為をしていたことが西宮市議の撮影した動画で指摘された。三木氏の事務所は増山氏の事務所と同じ住所であることも有権者から疑問視されている。（発生日: 2022年3月21日）</description>
-    <category>選挙工作</category>
-  </item>
-  <item>
-    <title>テスラ従業員が顧客の車載カメラ映像を無断で社内共有していた</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-employees-shared-customer-camera-footage/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-employees-shared-customer-camera-footage/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2023年4月、ロイター通信の取材により、一部の元テスラ従業員が2019年から2022年にかけて、顧客の車の車載カメラで記録された私的な写真・動画（車内の様子や道路上のトラブルなど）を、顧客の同意なく社内メッセージシステムで共有していたことが判明した。一部の従業員は録画の位置情報を表示できるプログラムを使用していたとも証言しており、テスラが「カメラ記録は匿名化され顧客や車両に紐づけられない」としてきた説明と矛盾する可能性が指摘されている。
-報道翌日、カリフォルニア州のプライバシー法違反を主張する集団訴訟が提起された。テスラは、映像は顧客がオプトインした場合のみ車両内に保存されテスラのサーバーには送信されないと説明している。（発生日: 2023年4月8日）</description>
-    <category>プライバシー侵害</category>
-  </item>
-  <item>
-    <title>テスラがロボタクシーの事故報告を企業秘密として非公開にし続けている</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-robotaxi-crash-report-confidentiality/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-robotaxi-crash-report-confidentiality/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>テスラは2025年6月、ロボタクシー運用開始前後にNHTSA（米国運輸保安庁）から受けた質問への回答を機密扱いにするよう要請した。運用初日には対向車線への誤走行や交差点中央での乗客降車など複数の重大ミスが確認されていた。
-2026年5月時点で、テスラがNHTSAに報告したロボタクシー事故18件全てについて、事故の詳細を記すナレーティブ欄が「企業秘密を含む可能性があるため非公開」とされていることが判明した。Waymo・Zoox・Auroraなど競合他社が事故詳細を公開している中、テスラだけが全件を非公開にしている。
-テスラのロボタクシーは安全員同乗にもかかわらず一般ドライバーの平均より事故率が高いとされ、米国に連邦レベルの自動運転安全法が存在しないため、この全件非公開の扱いが合法となっている点が問題視されている。（発生日: 2026年5月）</description>
-    <category>情報隠蔽</category>
-  </item>
-  <item>
-    <title>テスラがフロリダ州オートパイロット死亡事故で2億4300万ドルの賠償を命じられる</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-florida-autopilot-death-verdict-243m/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-florida-autopilot-death-verdict-243m/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2019年4月25日、フロリダ州キー・ラーゴでオートパイロット搭載のテスラModel Sが停止標識と赤色点滅信号を無視して交差点に進入し、時速約113kmで駐車中の車に衝突。ナイベル・ベナビデス氏（22歳）が死亡、ディロン・アングロ氏が脳損傷などの重傷を負った。
-2025年8月1日、フロリダ州の陪審はオートパイロットの設計（高速道路専用に設計しながら他の道路での使用を制限しなかった点）に欠陥があったと認定し、運転手67%・テスラ33%の責任配分のもと、テスラに補償的損害賠償4,300万ドルと懲罰的損害賠償2億ドル、合計2億4300万ドルの支払いを命じた。自動運転技術をめぐる初の陪審評決とされる。
-事故直前3ヶ月間、運転手はオートパイロットから23回の警告（ストライクアウト）を受けており、事故5日前には3時間で9回もの警告が記録されていた。（発生日: 2025年8月1日）</description>
-    <category>致死</category>
-  </item>
-  <item>
-    <title>テスラがウォルター・ファン氏のAutopilot死亡事故訴訟を和解</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-walter-huang-autopilot-death-settlement/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-walter-huang-autopilot-death-settlement/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2018年、元Appleエンジニアのウォルター・ファン氏は、オートパイロット使用中のテスラModel Xがシリコンバレーの高速道路走行車線から逸脱し中央分離帯に衝突したことで死亡した。米国家運輸安全委員会は事故原因を「システムの限界」と結論づけている。
-遺族は、テスラが「人間が運転する車よりも安全」と宣伝しながら、実際には効果的な衝突防止システムを搭載していなかったと主張して提訴した。2024年4月8日、テスラと遺族はカリフォルニア州裁判所での陪審員選定を前に和解に合意した。和解条件は非公表。（発生日: 2024年4月8日）</description>
-    <category>致死</category>
-  </item>
-  <item>
-    <title>テスラがFSD歩行者死亡事故（ジョーナ・ストーリー氏）訴訟を非公開で和解</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-johna-story-fsd-pedestrian-death-settlement/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-johna-story-fsd-pedestrian-death-settlement/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2023年11月28日、アリゾナ州の幹線道路で、逆光による事故で立ち往生した車両の周りの交通を誘導するため自分の車から降りた71歳のジョーナ・ストーリー氏が、Full Self-Driving（FSD）モードで走行中のテスラModel Yに高速で衝突され死亡した。テスラの自動運転技術に関連する初の歩行者死亡事例とされる。
-NHTSAの調査では、逆光がテスラのカメラベースの安全システムを著しく損ない、システムがカメラの状態悪化を衝突直前まで認識できていなかったことが確認されている。
-ストーリー氏の娘がテスラと運転者を提訴していたが、2026年6月、テスラは訴訟を法廷外で和解した。和解金額等の詳細は非公開。（発生日: 2026年6月26日）</description>
-    <category>致死</category>
-  </item>
-  <item>
-    <title>テスラがAutopilot・FSD事故の報告を法定期限より数か月遅延させNHTSAの調査対象に</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-autopilot-fsd-crash-reporting-delay-nhtsa-probe/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-autopilot-fsd-crash-reporting-delay-nhtsa-probe/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>NHTSAは、テスラがAutopilotおよびFSD関連事故について、連邦の定める報告期限（通知から1〜5日以内）を守らず、報告日より数か月以上前に発生していた事故が多数見つかったとして調査を開始した。テスラは衝突時に即座にサーバーへデータを送信する仕組みを持つにもかかわらず、報告を遅延させていた。
-テスラはこの遅延を「データ収集システムの不具合」と説明し、既に修正済みだと主張しているが、NHTSAは監査照会を通じて遅延の原因・範囲・未提出報告の有無を検証するとしている。（発生日: 2025年8月21日）</description>
-    <category>違法行為</category>
-    <category>情報隠蔽</category>
-  </item>
-  <item>
-    <title>カリフォルニア州DMVがテスラの自動運転誇大広告で販売免許停止処分を科す</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-california-dmv-false-advertising-suspension/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-california-dmv-false-advertising-suspension/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>カリフォルニア州自動車局（DMV）は2025年12月16日、テスラに対し販売店免許30日間停止（60日間の執行猶予付き）の行政処分を発表した。先進運転支援システムに「オートパイロット」「フルセルフドライビング（完全自動運転機能）」という名称・表現を用いたことが、消費者に誤解を招き州法に違反すると判断された。
-背景には2022年7月にDMVがテスラを提訴した経緯があり、テスラは同機能について「当時も今も自動運転車として動作することができない」としながら消費者を誤解させる宣伝を行っていたと指摘されていた。2024年6月にはカリフォルニア州行政審問局（OAH）がテスラの当該マーケティング表現は州法違反にあたると結論づけていた。（発生日: 2025年12月16日）</description>
-    <category>虚偽発言・印象操作</category>
-  </item>
-  <item>
-    <title>イーロン・マスクがベルファストの反移民暴動を煽る投稿を拡散した</title>
-    <link>https://rememberwhodidwhat.github.io/case/elon-musk-belfast-anti-immigration-riots-amplification/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-belfast-anti-immigration-riots-amplification/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>2026年6月、スーダン国籍の男による刃物襲撃事件を発端に北アイルランド・ベルファストで反移民暴動が発生した。イーロン・マスク氏は自身のX（旧ツイッター）で、反移民活動家トミー・ロビンソン氏の抗議呼びかけを拡散し、「繰り返し声高に抗議することでしか変化は起きない」と2億4000万人のフォロワーに投稿した。極右政党代表ルパート・ロウ氏の反移民投稿も拡散した。
-調査団体CCDHによると、3人の関連投稿は合計1億1500万回以上閲覧され、うちマスク氏が55％を占めた。（発生日: 2026年6月12日）</description>
-    <category>排外主義</category>
-    <category>攻撃扇動</category>
-  </item>
-  <item>
-    <title>Xで児童性的搾取・盗撮画像の取引投稿が15カ月で66万件超拡散しGrokが収集に悪用された</title>
-    <link>https://rememberwhodidwhat.github.io/case/x-grok-csam-file-sharing-proliferation/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/x-grok-csam-file-sharing-proliferation/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>Tansaと株式会社Japan Nexus Intelligenceの共同調査で、X上に児童ポルノや盗撮画像を含む可能性のある投稿が2025年1月から2026年3月の約15カ月間で66万831件確認された。投稿者は外部ファイル共有サービスへのリンクと隠語を組み合わせ、Xのおすすめアルゴリズムやコミュニティ機能を悪用して拡散しており、Xに搭載された対話型AI「Grok」が該当投稿の収集・整理に利用されていたことも判明した。
-Xの日本法人代表への質問状に回答はなく、総務省も個別サービスへの対応を「差し控える」としている。（発生日: 2026年7月17日）</description>
-    <category>メタクソ化</category>
-  </item>
-  <item>
-    <title>NHTSAがFSDの視界不良時の欠陥調査を320万台対象のエンジニアリング分析に格上げ</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-fsd-visibility-defect-nhtsa-engineering-analysis/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-fsd-visibility-defect-nhtsa-engineering-analysis/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>NHTSAは、Full Self-Driving（FSD）搭載のテスラ車320万台を対象とする調査を、リコールに先立つ段階であるエンジニアリング分析に格上げした。調査は2024年10月に240万台を対象とする予備調査として始まった。
-NHTSAは、テスラのカメラベースのシステムが逆光・砂塵などの視界不良状況を検知できない、または先行車両を追跡・検知できない問題を確認し、これに関連する可能性がある事故9件（うち死亡事故1件、負傷事故2件）を特定、さらに6件を調査中とした。
-2021年半ばにテスラはレーダー等を廃したカメラのみの「Tesla Vision」システムに移行しており、この視界不良への脆弱性が事故の一因になった可能性が指摘されている。（発生日: 2026年3月20日）</description>
-    <category>致死</category>
-  </item>
-  <item>
-    <title>Metaが病気・育児休暇取得者をAIで狙い撃ちして解雇したとして元従業員26人に提訴された</title>
-    <link>https://rememberwhodidwhat.github.io/case/meta-ai-layoff-targeting-leave-takers-lawsuit/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/meta-ai-layoff-targeting-leave-takers-lawsuit/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>Metaの現・元従業員26人は2026年7月13日、北カリフォルニア連邦地裁に提訴した。訴状によると、マーク・ザッカーバーグCEO率いる同社は2026年5月の約8000人規模の人員削減に際し、AI利用状況を測る社内ダッシュボードや活動監視データ、AI活用度ランキングなどを用いて従業員をスコアリングしており、病気休暇・出産育児休暇・障害休暇の取得中はスコアが下がる仕組みになっていたため、法的に保護された休暇取得者が不利益な評価を受けレイオフ対象に選ばれたと主張している。
-Metaの広報担当者は「主張には根拠がなく事実に基づいていない」と否定している。（発生日: 2026年7月13日）</description>
-    <category>地位濫用</category>
-  </item>
-  <item>
-    <title>EEOCがテスラ・フリーモント工場の黒人従業員への人種差別容認で提訴</title>
-    <link>https://rememberwhodidwhat.github.io/case/tesla-eeoc-fremont-racial-harassment-lawsuit/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tesla-eeoc-fremont-racial-harassment-lawsuit/</guid>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 +0900</pubDate>
-    <description>米連邦雇用機会均等委員会（EEOC）は2023年9月28日、テスラのカリフォルニア州フリーモント工場を対象に提訴した。訴状によれば、黒人従業員は同僚から「モンキー」「ボーイ」やN-wordなどの人種差別的な蔑称を浴びせられ、机やエレベーター、設備には鉤十字や首吊り縄を模した落書きが残されており、ハラスメントは管理職から生産ラインの従業員まで及んでいた。こうした職場環境は2015年頃から続いていたとされる。
-同工場を巡っては、この提訴以前にもメルビン・ベリー氏への100万ドルの判決（2017年）、オーウェン・ディアス氏への陪審による320万ドルの賠償認定（2016年）など人種差別を巡る和解・判決が続いており、有色人種の従業員らによる集団訴訟も係属中とされる。テスラは疑惑を否定している。（発生日: 2023年9月28日）</description>
-    <category>民族差別</category>
   </item>
 </channel>
 </rss>
