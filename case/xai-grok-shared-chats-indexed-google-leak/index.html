@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -381,12 +383,12 @@ xAIは記事執筆時点で具体的な対応策を発表しておらず、OpenA
           
         </div>
         <div class="source-meta">
-          VICE
+          Matt Jancer
            &nbsp;·&nbsp; 
           2025-08-24
         </div>
         
-        <div class="source-desc">xAIのGrokの共有機能で発行された会話URLが警告なしに検索エンジンにインデックスされ、約37万件の会話が誰でも閲覧可能になっていた問題を報じた記事。</div>
+        <div class="source-desc">Grok users weren&#39;t aware that when they click the share button on chats, their chat records became searchable by search engines.</div>
         
       </div>
       
@@ -433,7 +435,7 @@ xAIは記事執筆時点で具体的な対応策を発表しておらず、OpenA
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
             </span>
             
           </div>
@@ -623,7 +625,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

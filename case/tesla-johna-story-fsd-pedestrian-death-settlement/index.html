@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -361,8 +363,8 @@
   
   <div class="section">
     <div class="body-text">2023年11月28日、アリゾナ州の幹線道路で、逆光による事故で立ち往生した車両の周りの交通を誘導するため自分の車から降りた71歳のジョーナ・ストーリー氏が、Full Self-Driving（FSD）モードで走行中のテスラModel Yに高速で衝突され死亡した。テスラの自動運転技術に関連する初の歩行者死亡事例とされる。
-NHTSAの調査では、逆光がテスラのカメラベースの安全システムを著しく損ない、システムがカメラの状態悪化を衝突直前まで認識できていなかったことが確認されている。
-ストーリー氏の娘がテスラと運転者を提訴していたが、2026年6月、テスラは訴訟を法廷外で和解した。和解金額等の詳細は非公開。</div>
+<a class="body-link" href="../tesla-fsd-visibility-defect-nhtsa-engineering-analysis/">NHTSAの調査</a>では、逆光がテスラのカメラベースの安全システムを著しく損ない、システムがカメラの状態悪化を衝突直前まで認識できていなかったことが確認されている。
+ストーリー氏の遺族がテスラを提訴していたが、2026年6月、テスラが訴訟を和解していたことが報じられた。和解金額等の詳細は非公開。</div>
   </div>
   
 
@@ -378,12 +380,12 @@ NHTSAの調査では、逆光がテスラのカメラベースの安全システ
           
         </div>
         <div class="source-meta">
-          Electrek
+          Fred Lambert
            &nbsp;·&nbsp; 
           2026-06-26
         </div>
         
-        <div class="source-desc">2023年にアリゾナ州でFSD搭載車に轢かれ死亡したジョーナ・ストーリー氏の遺族とテスラが訴訟を非公開で和解。関連するNHTSA調査は継続中。</div>
+        <div class="source-desc">Tesla quietly settled the lawsuit over the first known &#39;Full Self-Driving&#39; pedestrian death — the Arizona crash now driving a 3.2M-vehicle NHTSA probe.</div>
         
       </div>
       
@@ -458,7 +460,7 @@ NHTSAの調査では、逆光がテスラのカメラベースの安全システ
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
             </span>
             
           </div>
@@ -648,7 +650,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -360,7 +362,7 @@
 
   
   <div class="section">
-    <div class="body-text">高市早苗首相の公設第一秘書・木下剛志氏が2026年7月22日に提出した陳述書は、他候補を誹謗中傷する動画の作成・発信を否定していた。
+    <div class="body-text">高市早苗首相の公設第一秘書・木下剛志氏が<a class="body-link" href="../takaichi-secretary-statement-submitted-denial/">2026年7月22日に提出した陳述書</a>は、他候補を誹謗中傷する動画の作成・発信を否定していた。
 しかし週刊文春の取材によると、木下氏はサナエトークン開発責任者・松井健氏と2025年9月25日にZoom会議を行い、小泉進次郎・林芳正両氏を中傷する動画の作成・投稿を依頼したとされ、67通に及ぶメッセージのやり取りや、Signalで林氏の動画データを送信した記録、投稿された動画自体などの証拠が残されていた。
 高市氏はこれまで国会答弁で中傷動画の作成・依頼を一貫して否定しており、陳述書の説明は客観的証拠と食い違うことが判明した。</div>
   </div>
@@ -675,7 +677,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

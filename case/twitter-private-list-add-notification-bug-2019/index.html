@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -374,7 +376,7 @@ Twitterは同月16日に「バグであり既に解決済み」とコメント�
       <div class="source-card">
         <div class="source-title">
           
-          <a href="https://www.vice.com/en/article/twitter-bug-private-lists/" target="_blank" rel="noopener">Twitter Bug Notifies People When They Get Added to &#39;Private&#39; Lists<span class="ext-icon">↗</span></a>
+          <a href="https://www.vice.com/en/article/twitter-bug-private-lists/" target="_blank" rel="noopener">Twitter Bug Notifies People When They Get Added to ‘Private’ Lists<span class="ext-icon">↗</span></a>
           
         </div>
         <div class="source-meta">
@@ -383,7 +385,7 @@ Twitterは同月16日に「バグであり既に解決済み」とコメント�
           2019-12-13
         </div>
         
-        <div class="source-desc">本来「本人のみアクセス可能」なはずの非公開リストに追加されたことが、追加された本人に通知されてしまうバグを報じる記事。</div>
+        <div class="source-desc">A strange bug allows some people who get added to a “private” list to know they are on that list.</div>
         
       </div>
       
@@ -635,7 +637,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

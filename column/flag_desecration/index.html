@@ -124,6 +124,9 @@
   .qr-corner img { width: 7.4074cqw; height: 7.4074cqw; display: block; }
   .qr-corner .qr-label { font-size: 1.0690cqw; font-weight: 600; line-height: 1.3; margin-bottom: 0.3367cqw; color: #333; white-space: nowrap; }
 
+  /* Web版のチラシ内リンクだけ青字下線にする（共通CSSの.frame aは装飾なしで、PDFはそのまま）。
+     チラシの地は常に白なので、テーマ依存の--linkではなく固定色を使う。 */
+  .frame a.link { color: #1868c9; text-decoration: underline; text-underline-offset: 0.15em; }
 
   .section-body { margin-bottom: 48px; }
   .section-body p { font-size: 0.88rem; color: var(--text); line-height: 1.85; margin-bottom: 12px; }
@@ -337,7 +340,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

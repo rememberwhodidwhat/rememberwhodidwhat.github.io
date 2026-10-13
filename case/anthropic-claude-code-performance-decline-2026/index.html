@@ -18,18 +18,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
-<meta name="description" content="Anthropicは2026年3月4日、処理コスト削減のためClaude Codeのデフォルト推論負荷を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・雑になったといった性能低下をAMDやM…">
+<meta name="description" content="Anthropicは2026年3月4日、応答遅延の短縮とトークン消費の抑制を理由にClaude Codeのデフォルト推論負荷（effort）を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・…">
 <link rel="canonical" href="https://rememberwhodidwhat.github.io/case/anthropic-claude-code-performance-decline-2026/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="誰が何をしたか覚えていよう">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された — 誰が何をしたか覚えていよう">
-<meta property="og:description" content="Anthropicは2026年3月4日、処理コスト削減のためClaude Codeのデフォルト推論負荷を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・雑になったといった性能低下をAMDやM…">
+<meta property="og:description" content="Anthropicは2026年3月4日、応答遅延の短縮とトークン消費の抑制を理由にClaude Codeのデフォルト推論負荷（effort）を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・…">
 <meta property="og:url" content="https://rememberwhodidwhat.github.io/case/anthropic-claude-code-performance-decline-2026/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された — 誰が何をしたか覚えていよう">
-<meta name="twitter:description" content="Anthropicは2026年3月4日、処理コスト削減のためClaude Codeのデフォルト推論負荷を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・雑になったといった性能低下をAMDやM…">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された", "description": "Anthropicは2026年3月4日、処理コスト削減のためClaude Codeのデフォルト推論負荷を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・雑になったといった性能低下をAMDやM…", "url": "https://rememberwhodidwhat.github.io/case/anthropic-claude-code-performance-decline-2026/", "startDate": "2026-03-04"}</script>
+<meta name="twitter:description" content="Anthropicは2026年3月4日、応答遅延の短縮とトークン消費の抑制を理由にClaude Codeのデフォルト推論負荷（effort）を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・…">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Event", "name": "Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された", "description": "Anthropicは2026年3月4日、応答遅延の短縮とトークン消費の抑制を理由にClaude Codeのデフォルト推論負荷（effort）を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・…", "url": "https://rememberwhodidwhat.github.io/case/anthropic-claude-code-performance-decline-2026/", "startDate": "2026-03-04"}</script>
 <style>
   :root { color-scheme: dark; }
 :root[data-theme="light"] { color-scheme: light; }
@@ -49,7 +49,7 @@
     --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
     --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
     --header-tint:    light-dark(#0a0014, #f1e9fb);
-    --accent:  #e2a855;
+    --accent:  #55b07a;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -331,8 +333,8 @@
     <h1>Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された</h1>
     
     
-    <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-      <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+    <span class="status-badge" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
+      <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
     </span>
     
   </div>
@@ -358,7 +360,7 @@
 
   
   <div class="section">
-    <div class="body-text">Anthropicは2026年3月4日、処理コスト削減のためClaude Codeのデフォルト推論負荷を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・雑になったといった性能低下をAMDやMicrosoftのエンジニアらが相次いで報告した。当初Anthropicは変更履歴に記載済みとして反論したが、その後3月26日の推論履歴消失バグ、4月16日の応答文字数制限という追加の設定ミスが重なっていたことが判明。数週間にわたる利用者の反発を経て4月20日に問題を解消し、4月23日に使用上限をリセットした。</div>
+    <div class="body-text">Anthropicは2026年3月4日、応答遅延の短縮とトークン消費の抑制を理由にClaude Codeのデフォルト推論負荷（effort）を「高」から「中」に引き下げたが、事前の十分な告知がないまま実施され、複雑な作業で指示に従わない・雑になったといった性能低下をAMDやMicrosoftのエンジニアらが相次いで報告した。当初Anthropicは変更履歴に記載済みとして反論したが、その後、この3月4日の変更に加え、3月26日の推論履歴消失バグ、4月16日のツール呼び出し間の応答を25語に制限するシステムプロンプト変更という、計3つの変更が原因だったと認めた。3つの問題は4月20日までに解消され、4月23日に全利用者の使用上限をリセットした。</div>
   </div>
   
 
@@ -370,32 +372,32 @@
       <div class="source-card">
         <div class="source-title">
           
-          <a href="https://fortune.com/2026/04/14/anthropic-claude-performance-decline-user-complaints-backlash-lack-of-transparency-accusations-compute-crunch/" target="_blank" rel="noopener">Anthropic is facing a wave of user backlash over reports of performance issues with its Claude AI chatbot<span class="ext-icon">↗</span></a>
+          <a href="https://fortune.com/2026/04/14/anthropic-claude-performance-decline-user-complaints-backlash-lack-of-transparency-accusations-compute-crunch/" target="_blank" rel="noopener">Anthropic faces user backlash over reported performance issues with its Claude AI chatbot<span class="ext-icon">↗</span></a>
           
         </div>
         <div class="source-meta">
-          Fortune
+          Beatrice Nolan
            &nbsp;·&nbsp; 
           2026-04-14
         </div>
         
-        <div class="source-desc">2026年2～3月、AnthropicがClaudeのデフォルト推論負荷をトークン節約のため引き下げたことで性能が体感的に低下し、AMDやMicrosoftのエンジニアら利用者から不透明な変更だとの反発が広がった。</div>
+        <div class="source-desc">“Claude has regressed to the point [that] it cannot be trusted to perform complex engineering,” one developer wrote.</div>
         
       </div>
       
       <div class="source-card">
         <div class="source-title">
           
-          <a href="https://fortune.com/2026/04/24/anthropic-engineering-missteps-claude-code-performance-decline-user-backlash/" target="_blank" rel="noopener">Anthropic explains Claude Code&#39;s recent performance decline after weeks of user backlash<span class="ext-icon">↗</span></a>
+          <a href="https://fortune.com/2026/04/24/anthropic-engineering-missteps-claude-code-performance-decline-user-backlash/" target="_blank" rel="noopener">Anthropic explains Claude Code’s recent performance decline after weeks of user backlash<span class="ext-icon">↗</span></a>
           
         </div>
         <div class="source-meta">
-          Fortune
+          Beatrice Nolan
            &nbsp;·&nbsp; 
           2026-04-24
         </div>
         
-        <div class="source-desc">Anthropicは、Claude Codeの性能低下が3月4日・3月26日・4月16日の3つの技術的な設定ミス（推論レベル引き下げ・推論履歴消失バグ・応答文字数制限）の積み重ねが原因だったと説明した。</div>
+        <div class="source-desc">Claude users spent weeks complaining about collapsed output quality and erratic performance. Anthropic’s explanation has done little to win them back.</div>
         
       </div>
       
@@ -515,15 +517,15 @@
         </div>
       </a>
       
-      <a class="related-card" href="../anthropic-pirated-books-copyright-settlement-1.5b/" style="--rel-color: #55b07a">
+      <a class="related-card" href="../anthropic-pirated-books-copyright-settlement-1.5b/" style="--rel-color: #e2a855">
         <div class="related-date">2026年7月20日</div>
         <div class="related-right">
           <div class="related-title-row">
             <div class="related-title">Anthropicが海賊版書籍でClaudeを訓練し著作権侵害訴訟で15億ドルの和解に至った</div>
             
             
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
-              <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>撤回のみ
             </span>
             
           </div>
@@ -547,7 +549,7 @@
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
             </span>
             
           </div>
@@ -629,7 +631,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

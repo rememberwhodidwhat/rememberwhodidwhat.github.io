@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -361,7 +363,7 @@
   
   <div class="section">
     <div class="body-text">マスク氏率いるTwitterは2023年2月、これまで無料で提供していた外部開発者向けAPIアクセスを終了し、月額100ドルの「ベーシックアクセス」等の有料プランへの移行を発表した。同年3月29日に方針が正式実施されると、クライアントアプリ「feather」やツイート保存サービス「Twilog」、ツイート検索サービス「TwTimez」などサードパーティ製アプリが相次いで機能停止に追い込まれた。
-障害者支援ボットや研究者向けツールなど、収益目的でない公共性の高いサービスも同様にAPI遮断の影響を受け、代替手段のないまま停止した例が報告されている。</div>
+有料化の発表時には、外部アプリ開発者に加えて研究者やボット開発者も支払いを求められることになり、研究や活動、商業プロジェクトを壊すものだとの反発が上がった。</div>
   </div>
   
 
@@ -373,16 +375,32 @@
       <div class="source-card">
         <div class="source-title">
           
-          <a href="https://www.itmedia.co.jp/news/articles/2304/05/news113.html" target="_blank" rel="noopener">「Twilog」「feather」、機能停止に Twitter API有料化の波紋広がる<span class="ext-icon">↗</span></a>
+          <a href="https://www.itmedia.co.jp/news/articles/2304/05/news113.html" target="_blank" rel="noopener">「Twilog」「feather」、機能停止に　Twitter API有料化の波紋広がる<span class="ext-icon">↗</span></a>
           
         </div>
         <div class="source-meta">
-          ITmedia NEWS
+          松浦立樹
            &nbsp;·&nbsp; 
           2023-04-05
         </div>
         
-        <div class="source-desc">Twitterが2023年2月に発表したAPI提供方針の変更（無料アクセス終了・有料化）により、人気クライアントアプリ「Twilog」「feather」などサードパーティ製サービスが相次いで機能停止に追い込まれたことを報じた記事。</div>
+        <div class="source-desc">米Twitter社が3発表した、Twitter APIの提供形態の変化の影響により、サービス終了するTwitterのサードパーティーアプリが相次いでいる。4月5日には、人気アプリ「Twilog」と「feather」の2つが機能停止した。</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://gizmodo.com/twitter-api-elon-musk-twitter-bots-1850064136" target="_blank" rel="noopener">Kiss Some of Your Favorite Twitter Bots Goodbye<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          Lauren Leffer
+           &nbsp;·&nbsp; 
+          2023-02-02
+        </div>
+        
+        <div class="source-desc">External app-makers, researchers, and bot programmers will have to pay up if they want to re-gain access to the platform&#39;s behind the scenes interface.</div>
         
       </div>
       
@@ -429,7 +447,7 @@
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
             </span>
             
           </div>
@@ -619,7 +637,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

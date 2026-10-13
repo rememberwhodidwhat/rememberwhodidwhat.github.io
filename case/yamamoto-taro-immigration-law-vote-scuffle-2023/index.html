@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -334,7 +336,7 @@
     
     
     <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-      <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+      <span class="status-dot" style="background: #e2a855"></span>釈明のみ
     </span>
     
   </div>
@@ -360,7 +362,7 @@
 
   
   <div class="section">
-    <div class="body-text">2023年6月8日、参院法務委員会で入管難民法改正案が採決された際、れいわ新選組の山本太郎代表は採決を阻止しようと委員長席後方の机の上から数度にわたって飛びかかろうとし、自民党議員2人が打撲などの怪我を負った。自民、立憲民主、公明などは9日、参院に懲罰動議を提出したが、6月20日に今国会中の懲罰は見送られた。議院運営委員長によれば山本本人から「反省しております」との言葉があったといい、山本は特定の議員に危害を加える意図はなかったとしつつお詫びを述べた。</div>
+    <div class="body-text">2023年6月8日、参院法務委員会で<a class="body-link" href="../immigration-law-amendment-2023-enacted/">入管難民法改正案が採決された</a>際、れいわ新選組の山本太郎代表は採決を阻止しようと委員長席後方の机の上から数度にわたって飛びかかろうとし、自民党議員2人が打撲などの怪我を負った。自民、立憲民主、公明などは9日、参院に懲罰動議を提出したが、参院議院運営委員会は6月20日の理事懇談会で懲罰を審議しない方針を決め、懲罰は審議未了で見送られた。石井準一議運委員長は山本から反省の言葉があったとしたが、山本は21日の会見で「『反省しています』とはひと言も言っていない」と否定し、「私は暴力をふるっていない」「これを暴力だというなら（懲罰を）やるべき」と述べた。</div>
   </div>
   
 
@@ -372,16 +374,32 @@
       <div class="source-card">
         <div class="source-title">
           
-          <a href="https://www.nikkei.com/article/DGXZQOUA09BB10Z00C23A6000000/" target="_blank" rel="noopener">れいわ新選組・山本太郎氏に懲罰動議 入管法採決時、議員にけが<span class="ext-icon">↗</span></a>
+          <a href="https://www.nikkei.com/article/DGXZQOUA09BB10Z00C23A6000000/" target="_blank" rel="noopener">れいわ新選組・山本太郎氏に懲罰動議　入管法採決時、議員にけが - 日本経済新聞<span class="ext-icon">↗</span></a>
           
         </div>
         <div class="source-meta">
-          日本経済新聞
+          日本経済新聞社
            &nbsp;·&nbsp; 
           2023-06-09
         </div>
         
-        <div class="source-desc">2023年6月8日の参院法務委員会での入管難民法改正案採決の際、れいわ新選組の山本太郎代表が委員長席に飛びかかり議員2人に怪我を負わせたとして懲罰動議が提出されたことを報じた記事。</div>
+        <div class="source-desc">自民、立憲民主、公明などの各党は9日、れいわ新選組の山本太郎代表が8日の参院法務委員会で入管難民法改正案が採決された際、もみ合いとなった議員にけがをさせたとして、参院に懲罰動議を提出した。懲罰委員会に付託されれば、21日までの今国会会期中に正式決定する可能性が</div>
+        
+      </div>
+      
+      <div class="source-card">
+        <div class="source-title">
+          
+          <a href="https://www.daily.co.jp/gossip/subculture/2023/06/21/0016500120.shtml" target="_blank" rel="noopener">れいわ山本太郎代表 自身の懲罰見送りに「暴力だというなら懲罰やるべき」反省も否定「ひと言も言っていない」/デイリースポーツ online<span class="ext-icon">↗</span></a>
+          
+        </div>
+        <div class="source-meta">
+          デイリースポーツ編集部
+           &nbsp;·&nbsp; 
+          2023-06-21
+        </div>
+        
+        <div class="source-desc">れいわ新選組の山本太郎代表（４８）、共同代表の櫛渕万里氏（５５）、大石晃子氏（４６）が２１日、通常国会閉会後に国会内で会見した。　山本氏は、参院で自身への懲罰が審議未了で見送られたことに「私は暴力をふるっていないから。何かしらもみ合いの中で...</div>
         
       </div>
       
@@ -643,7 +661,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

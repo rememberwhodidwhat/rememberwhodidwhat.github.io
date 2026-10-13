@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -332,7 +334,7 @@
     
     
     <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-      <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+      <span class="status-dot" style="background: #e2a855"></span>釈明のみ
     </span>
     
   </div>
@@ -358,7 +360,7 @@
 
   
   <div class="section">
-    <div class="body-text">2026年7月25日、利用者が共有リンクを作成したClaudeのチャットや公開コンテンツ「Artifacts」が、Google・Bingの検索結果に表示され第三者が閲覧できる状態になっていたことがRedditの指摘をきっかけに判明した。政治・法律相談や業務メモ、社内資料とみられる内容も含まれていた。原因は共有ページに検索エンジンへの掲載を拒否する「noindex」設定がなかったこと。Anthropicはrobots.txtの見直し等の対応を行い、利用者には不要な共有リンクの解除を呼び掛けた。</div>
+    <div class="body-text">2026年7月25日、利用者が共有リンクを作成したClaudeのチャットや公開コンテンツ「Artifacts」が、Google・Bingの検索結果に表示され第三者が閲覧できる状態になっていたことがRedditの指摘をきっかけに判明した。政治・法律相談や業務メモ、社内資料とみられる内容も含まれていた。原因は共有ページに検索エンジンへの掲載を拒否する「noindex」設定がなかったこと。Anthropicは共有チャットの一覧やサイトマップを検索エンジンに提供していないと説明した。</div>
   </div>
   
 
@@ -374,12 +376,12 @@
           
         </div>
         <div class="source-meta">
-          sbbit.jp
-           &nbsp;·&nbsp; 
+          
+          
           2026-07-28
         </div>
         
-        <div class="source-desc">Anthropicのユーザーが共有リンクを作成したClaudeのチャットやArtifactsが、noindex設定の不備によりGoogle・Bingの検索結果に表示され第三者が閲覧できる状態になっていた。</div>
+        <div class="source-desc">アンソロピックのAIチャット「Claude」で、利用者が公開用の共有リンクを作成したチャットの一部がGoogle検索に登録され、検索経由で第三者が閲覧できる状態になっていたことが分かった。</div>
         
       </div>
       
@@ -436,15 +438,15 @@
         </div>
       </a>
       
-      <a class="related-card" href="../anthropic-claude-code-performance-decline-2026/" style="--rel-color: #e2a855">
+      <a class="related-card" href="../anthropic-claude-code-performance-decline-2026/" style="--rel-color: #55b07a">
         <div class="related-date">2026年3月4日</div>
         <div class="related-right">
           <div class="related-title-row">
             <div class="related-title">Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された</div>
             
             
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
+              <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
             </span>
             
           </div>
@@ -520,15 +522,15 @@
         </div>
       </a>
       
-      <a class="related-card" href="../anthropic-pirated-books-copyright-settlement-1.5b/" style="--rel-color: #55b07a">
+      <a class="related-card" href="../anthropic-pirated-books-copyright-settlement-1.5b/" style="--rel-color: #e2a855">
         <div class="related-date">2026年7月20日</div>
         <div class="related-right">
           <div class="related-title-row">
             <div class="related-title">Anthropicが海賊版書籍でClaudeを訓練し著作権侵害訴訟で15億ドルの和解に至った</div>
             
             
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
-              <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+              <span class="status-dot" style="background: #e2a855"></span>撤回のみ
             </span>
             
           </div>
@@ -613,7 +615,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

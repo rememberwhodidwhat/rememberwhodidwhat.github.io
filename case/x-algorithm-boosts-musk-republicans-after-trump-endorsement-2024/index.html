@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -373,7 +375,7 @@
   
   <div class="section">
     <div class="body-text">クイーンズランド工科大学とモナッシュ大学の研究者は、マスクが2024年米大統領選でトランプ氏への支持を正式表明した7月13日を境に、マスク自身の投稿の表示回数が138%、リツイート数が238%急増する「構造的な断絶」が生じたと分析した。同時期から共和党系アカウント全体も左派系アカウントより表示面で優遇されるようになったとされる。
-別のボッコーニ大学主導の実験研究では、2023年に実施された7週間の比較実験で、「おすすめ」アルゴリズムに晒された利用者は共和党の政策課題を優先する傾向が強まり、親ロシア的な世論に傾き、その効果はフィードを元に戻した後も持続することが確認された。X（旧Twitter）は2023年3月に一部ソースコードを公開した際にもマスク専用の優先表示コードの存在が発覚しており、選挙を控えた時期のアルゴリズム偏向として改めて懸念が示された。</div>
+別のボッコーニ大学主導の実験研究では、2023年に実施された7週間の比較実験で、「おすすめ」アルゴリズムに晒された利用者は共和党の政策課題を優先する傾向が強まり、親ロシア的な世論に傾き、その効果はフィードを元に戻した後も持続することが確認された。X（旧Twitter）は<a class="body-link" href="../x-open-source-algorithm-author-is-elon-hardcode/">2023年3月に一部ソースコードを公開した際にもマスク専用の優先表示コードの存在が発覚</a>しており、選挙を控えた時期のアルゴリズム偏向として改めて懸念が示された。</div>
   </div>
   
 
@@ -394,14 +396,14 @@
           2024-11-15
         </div>
         
-        <div class="source-desc">マスクが2024年7月にトランプ支持を表明した日を境に、マスク本人の投稿の表示回数が急増し共和党系アカウントも優遇されるようになったとする学術研究を報じる記事。</div>
+        <div class="source-desc">The platform appears to be warped around Elon Musk&#39;s interests. Prithvi Iyer considers the findings.</div>
         
       </div>
       
       <div class="source-card">
         <div class="source-title">
           
-          <a href="https://theconversation.com/a-few-weeks-of-xs-algorithm-can-make-you-more-right-wing-and-it-doesnt-wear-off-quickly-276153" target="_blank" rel="noopener">A few weeks of X&#39;s algorithm can make you more right-wing – and it doesn&#39;t wear off quickly<span class="ext-icon">↗</span></a>
+          <a href="https://theconversation.com/a-few-weeks-of-xs-algorithm-can-make-you-more-right-wing-and-it-doesnt-wear-off-quickly-276153" target="_blank" rel="noopener">A few weeks of X’s algorithm can make you more right-wing – and it doesn’t wear off quickly<span class="ext-icon">↗</span></a>
           
         </div>
         <div class="source-meta">
@@ -410,7 +412,7 @@
           2026-02-18
         </div>
         
-        <div class="source-desc">Xの「おすすめ」アルゴリズムに数週間さらされるだけで利用者の政治的傾向が右寄りに変化し、その影響がフィード切り替え後も持続するとするボッコーニ大学主導の大規模実験研究を紹介する記事。</div>
+        <div class="source-desc">Elon Musk’s social media platform is boosting conservative content – and it’s having long-lasting effects on how users see the world.</div>
         
       </div>
       
@@ -536,7 +538,7 @@
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
             </span>
             
           </div>
@@ -705,7 +707,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

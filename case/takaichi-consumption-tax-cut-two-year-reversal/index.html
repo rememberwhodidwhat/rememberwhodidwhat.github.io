@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -360,7 +362,7 @@
 
   
   <div class="section">
-    <div class="body-text">高市早苗首相は2026年6月22日の衆院予算委員会で、飲食料品にかかる消費税減税の期限について「実行されてから2年後には元に戻す。これははっきり申し上げる」と明言した。「消費税ゼロは悲願」だとしていた当初の説明とは異なり、恒久的な減税ではなく2年間の時限措置であることを首相自身が明確にした形となった。</div>
+    <div class="body-text">高市早苗首相は2026年6月22日の衆院予算委員会で、飲食料品にかかる消費税減税の期限について「実行されてから2年後には元に戻す。これははっきり申し上げる」と明言した。<a class="body-link" href="../takaichi-consumption-tax-lifelong-wish/">「消費税ゼロは悲願」だとしていた当初の説明</a>とは異なり、恒久的な減税ではなく2年間の時限措置であることを首相自身が明確にした形となった。</div>
   </div>
   
 
@@ -736,7 +738,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

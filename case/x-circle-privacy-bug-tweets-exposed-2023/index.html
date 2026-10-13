@@ -49,7 +49,7 @@
     --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
     --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
     --header-tint:    light-dark(#0a0014, #f1e9fb);
-    --accent:  #e2a855;
+    --accent:  #55b07a;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -333,8 +335,8 @@
     <h1>Xのサークル限定投稿がバグで非公開範囲外に露出し1か月気づかれなかった</h1>
     
     
-    <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-      <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+    <span class="status-badge" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
+      <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
     </span>
     
   </div>
@@ -360,7 +362,7 @@
 
   
   <div class="section">
-    <div class="body-text">2023年4月、マスク氏率いるTwitterの「Circle」機能（選定した小規模なグループにのみ投稿を共有できる限定公開機能）にセキュリティ上の不具合が発生し、本来Circle外には見えないはずの投稿がCircle外のユーザーにも表示される状態になった。ユーザーからの指摘は4月上旬から相次いだが、Twitterは修正を行ったのみで公には沈黙し、影響を受けたユーザーへの通知は約1か月後の5月上旬にずれ込んだ。
+    <div class="body-text">2023年4月、マスク氏率いるTwitterの「Circle」機能（選定した小規模なグループにのみ投稿を共有できる限定公開機能）にセキュリティ上の不具合が発生し、本来Circle外には見えないはずの投稿がCircle外のユーザーにも表示される状態になった。ユーザーからの指摘は4月上旬から相次いだが、Twitterは修正を行ったのみで公には沈黙し、影響を受けたユーザーへの通知は約1か月後の5月上旬にずれ込んだ。通知では「セキュリティインシデント」だったと認め、「このようなことが起きたことを深く遺憾に思う」と述べた。
 記事では、マスク氏の買収後にPR部門が解雇されメディア対応が機能不全に陥っていたことも問題の背景として指摘されている。</div>
   </div>
   
@@ -382,7 +384,7 @@
           2023-04-10
         </div>
         
-        <div class="source-desc">Circle（限定公開）機能で投稿したはずのツイートが、Circle外のユーザーの「For You」タイムラインに表示されてしまうバグを報じる記事。</div>
+        <div class="source-desc">PSA: Do not post your deepest darkest secrets on your Twitter Circle. It might surface on your Followers&#39; For You timeline.</div>
         
       </div>
       
@@ -398,7 +400,7 @@
           2023-05-06
         </div>
         
-        <div class="source-desc">Twitterが4月に発生したCircle機能のセキュリティインシデントを認め、限定公開のはずのツイートがCircle外に露出していたことを利用者に通知したと報じる記事。</div>
+        <div class="source-desc">Twitter disclosed that a &#39;security incident&#39; caused private tweets sent to Twitter Circles to show publicly to users outside of the Circle.</div>
         
       </div>
       
@@ -445,7 +447,7 @@
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
             </span>
             
           </div>
@@ -635,7 +637,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

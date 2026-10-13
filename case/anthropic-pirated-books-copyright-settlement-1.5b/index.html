@@ -49,7 +49,7 @@
     --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
     --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
     --header-tint:    light-dark(#0a0014, #f1e9fb);
-    --accent:  #55b07a;
+    --accent:  #e2a855;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -331,8 +333,8 @@
     <h1>Anthropicが海賊版書籍でClaudeを訓練し著作権侵害訴訟で15億ドルの和解に至った</h1>
     
     
-    <span class="status-badge" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
-      <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
+    <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+      <span class="status-dot" style="background: #e2a855"></span>撤回のみ
     </span>
     
   </div>
@@ -373,7 +375,7 @@
       <div class="source-card">
         <div class="source-title">
           
-          <a href="https://zaikei.co.jp/article/20260722/862270.html" target="_blank" rel="noopener">Anthropic著作権侵害訴訟、15億ドルの和解を最終承認――1作品3000ドル、拘束力ある判例にはならず<span class="ext-icon">↗</span></a>
+          <a href="https://zaikei.co.jp/article/20260722/862270.html" target="_blank" rel="noopener">Anthropicの著作権訴訟、15億ドルの和解を最終承認――1作品3000ドル、拘束力ある判例にはならず<span class="ext-icon">↗</span></a>
           
         </div>
         <div class="source-meta">
@@ -382,7 +384,7 @@
           2026-07-22
         </div>
         
-        <div class="source-desc">米連邦地裁がAnthropicの著作権侵害訴訟（Bartz et al. v. Anthropic PBC）で15億ドルの和解を最終承認。約50万作品が対象で1作品あたり約3000ドルが分配される。</div>
+        <div class="source-desc">Anthropicの15億ドルの著作権和解が承認されたが、AI学習のフェアユース判断は拘束力ある判例にならない。</div>
         
       </div>
       
@@ -393,12 +395,12 @@
           
         </div>
         <div class="source-meta">
-          ITmedia NEWS
-           &nbsp;·&nbsp; 
+          
+          
           2025-09-06
         </div>
         
-        <div class="source-desc">作家アンドレア・バーツ氏らがAnthropicを提訴した著作権訴訟で、最低15億ドルの和解基金による和解が成立。Claudeの訓練にLibGen等の海賊版リポジトリを利用したことが争点となった。</div>
+        <div class="source-desc">Anthropicが著作権侵害訴訟で和解した。海賊版書籍の学習利用に対し、史上最高額となる15億ドル以上を支払う。同社は違法に入手した学習データを全て破棄することにも合意した。AIの著作権問題で大きな先例となった。</div>
         
       </div>
       
@@ -486,15 +488,15 @@
         </div>
       </a>
       
-      <a class="related-card" href="../anthropic-claude-code-performance-decline-2026/" style="--rel-color: #e2a855">
+      <a class="related-card" href="../anthropic-claude-code-performance-decline-2026/" style="--rel-color: #55b07a">
         <div class="related-date">2026年3月4日</div>
         <div class="related-right">
           <div class="related-title-row">
             <div class="related-title">Claude Codeがコスト削減目的の設定変更で性能低下し説明不足のまま数週間放置された</div>
             
             
-            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+            <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #55b07a 14%, transparent); color: #55b07a; border: 1px solid color-mix(in srgb, #55b07a 38%, transparent);">
+              <span class="status-dot" style="background: #55b07a"></span>謝罪・撤回済み
             </span>
             
           </div>
@@ -578,7 +580,7 @@
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
             </span>
             
           </div>
@@ -660,7 +662,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>

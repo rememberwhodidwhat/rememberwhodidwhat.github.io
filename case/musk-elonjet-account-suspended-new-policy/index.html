@@ -209,6 +209,8 @@
     line-height: 1.85;
     white-space: pre-line;
   }
+  .body-link { color: inherit; text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
+  .body-link:hover { text-decoration-color: currentColor; }
 
   /* ── Sources ── */
   .source-list { display: flex; flex-direction: column; gap: 10px; }
@@ -360,7 +362,7 @@
 
   
   <div class="section">
-    <div class="body-text">2022年12月14日、Twitterはマスク氏の自家用ジェットのリアルタイム位置情報を公開していたアカウント「@ElonJet」と、作者のジャック・スウィーニー氏のアカウントを凍結した。凍結と前後してTwitterはプライバシーポリシーを急遽更新し、「個人のリアルタイム位置情報」の共有を禁止する規定を新設、報道目的の例外も認めないとした。
+    <div class="body-text">2022年12月14日、Twitterはマスク氏の自家用ジェットのリアルタイム位置情報を公開していたアカウント「@ElonJet」と、作者のジャック・スウィーニー氏のアカウントを凍結した。凍結と前後してTwitterはプライバシーポリシーを急遽更新し、「個人のリアルタイム位置情報」の共有を、公開情報かどうかに関係なく禁止する規定を新設した。マスク氏は同年11月6日には「言論の自由へのコミットメントは、私の自家用ジェットを追跡するアカウントを禁止しないことにも及ぶ」と投稿していた。
 マスク氏は事前にスウィーニー氏へ5000ドルでのアカウント削除を持ちかけて拒否されており、自身に不都合な特定アカウントを狙い撃つ形で規約を新設・適用したとの批判を招いた。</div>
   </div>
   
@@ -377,12 +379,12 @@
           
         </div>
         <div class="source-meta">
-          ITmedia NEWS
+          佐藤由紀子
            &nbsp;·&nbsp; 
           2022-12-15
         </div>
         
-        <div class="source-desc">Twitterがイーロン・マスクCEOの自家用機のリアルタイム位置情報を投稿していたアカウント「@ElonJet」と作者のアカウントを凍結し、同時に個人のライブ位置情報の共有を禁止する規約変更を行ったことを報じた記事。</div>
+        <div class="source-desc">Twitterはイーロン・マスクCEOの自家用ジェットの位置情報をツイートするbot「@ElonJet」とその作者ジャック・スウィーニー氏のアカウントを凍結した。凍結の数時間後、@ElonJetは復活した。その間に、Twitterの位置情報提供に関するポリシーが更新された。</div>
         
       </div>
       
@@ -429,7 +431,7 @@
             
             
             <span class="status-badge status-badge-sm" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
-              <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+              <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
             </span>
             
           </div>
@@ -619,7 +621,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-10-10
+  最終更新: 2026-10-13
 </footer>
 
 </body>
