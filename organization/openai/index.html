@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {}
+})();
+</script>
+<title>OpenAI 行動・事件 年表</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f14">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f9">
+<meta name="description" content="OpenAIが行動主体となった事件の記録。30件を年表で掲載。">
+<link rel="canonical" href="https://rememberwhodidwhat.github.io/organization/openai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="誰が何をしたか覚えていよう">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="OpenAI 行動・事件 年表">
+<meta property="og:description" content="OpenAIが行動主体となった事件の記録。30件を年表で掲載。">
+<meta property="og:url" content="https://rememberwhodidwhat.github.io/organization/openai/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenAI 行動・事件 年表">
+<meta name="twitter:description" content="OpenAIが行動主体となった事件の記録。30件を年表で掲載。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "OpenAI", "url": "https://rememberwhodidwhat.github.io/organization/openai/"}</script>
+<style>
+  :root { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; }
+}
+  :root {
+    --bg:             light-dark(#0f0f14, #f6f6f9);
+    --surface:        light-dark(#1a1a24, #ffffff);
+    --surface-hover:  light-dark(#20202e, #ececf2);
+    --border:         light-dark(#2a2a3a, #dcdce6);
+    --border-hover:   light-dark(#4a4a6a, #b8b8cc);
+    --text:           light-dark(#e8e8f0, #1c1c26);
+    --text-strong:    light-dark(#ffffff, #0a0a12);
+    --text-dim:       light-dark(#aaaabc, #46465a);
+    --muted:          light-dark(#888899, #6b6b80);
+    --overlay:        light-dark(rgba(255,255,255,0.05), rgba(10,10,20,0.05));
+    --overlay-strong: light-dark(rgba(255,255,255,0.12), rgba(10,10,20,0.1));
+    --header-tint:    light-dark(#000a18, #e8f1fc);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  header {
+    padding: 48px 40px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, var(--header-tint) 0%, var(--bg) 100%);
+  }
+
+  .header-nav { font-size: 0.78rem; color: var(--muted); margin-bottom: 16px; }
+  .header-nav a:hover { color: var(--text); }
+
+  header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-strong); }
+  header h1 .subtitle { color: var(--muted); font-weight: 400; }
+  header .meta { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
+
+  .share-buttons { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+  footer .share-buttons { justify-content: center; margin-top: 0; margin-bottom: 14px; }
+  .share-label { font-size: 0.8rem; color: var(--muted); margin-right: 4px; }
+  .share-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 9px;
+    background: var(--overlay); border: 1px solid var(--border);
+    cursor: pointer; text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .share-btn svg { width: 20px; height: 20px; }
+  .share-btn.share-x { color: #1d9bf0; }
+  .share-btn.share-bluesky { color: #0085ff; }
+  .share-btn.share-threads { color: var(--text); }
+  .share-btn.share-line { color: #06c755; }
+  .share-btn.share-facebook { color: #1877f2; }
+  .share-btn.share-hatena { color: #00a4de; }
+  .share-btn.share-copy { color: var(--muted); }
+  .share-btn.share-x:hover { background: rgba(29, 155, 240, 0.15); border-color: rgba(29, 155, 240, 0.4); }
+  .share-btn.share-bluesky:hover { background: rgba(0, 133, 255, 0.15); border-color: rgba(0, 133, 255, 0.4); }
+  .share-btn.share-threads:hover { background: var(--overlay-strong); }
+  .share-btn.share-line:hover { background: rgba(6, 199, 85, 0.15); border-color: rgba(6, 199, 85, 0.4); }
+  .share-btn.share-facebook:hover { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); }
+  .share-btn.share-hatena:hover { background: rgba(0, 164, 222, 0.15); border-color: rgba(0, 164, 222, 0.4); }
+  .share-btn.share-copy:hover { background: var(--overlay-strong); color: var(--text); }
+  .share-btn.share-copy.copied { color: #55b07a; border-color: #55b07a; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--muted); }
+  .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+
+  main { padding: 40px; max-width: 860px; margin: 0 auto; }
+
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 6px; top: 10px; bottom: 10px;
+    width: 2px; background: var(--border);
+  }
+
+  .event {
+    display: block;
+    position: relative; margin-bottom: 20px; padding: 14px 16px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent, #555); border-radius: 6px; transition: background 0.15s;
+  }
+  .event:hover { background: var(--surface-hover); }
+  .event::before {
+    content: ''; position: absolute; left: -22px; top: 18px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent, #555); border: 2px solid var(--bg);
+  }
+
+  .event-row { display: flex; align-items: flex-start; gap: 14px; }
+  .event-main { flex: 1; min-width: 0; }
+  .event-title-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .event-date { font-size: 0.7rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
+  .event-title { font-size: 0.92rem; font-weight: 600; color: var(--text-strong); line-height: 1.4; }
+  .event-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 6px; }
+  .tag { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 3px; white-space: nowrap; }
+  .actor-tag-label { font-size: 0.68rem; color: var(--muted); margin-right: 2px; white-space: nowrap; }
+  .event-body { font-size: 0.82rem; color: var(--text-dim); line-height: 1.75; white-space: pre-line; }
+  .event-status { flex-shrink: 0; }
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.66rem; font-weight: 700; padding: 4px 11px;
+    border-radius: 999px; white-space: nowrap;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+  
+
+  footer { margin-top: 60px; padding: 20px 40px; border-top: 1px solid var(--border); font-size: 0.72rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<button id="theme-toggle" class="theme-toggle" type="button" title="ライト/ダークモード切り替え" aria-label="ライト/ダークモード切り替え">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<style>
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .theme-toggle:hover { background: var(--surface-hover); border-color: var(--border-hover); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: none; }
+  }
+</style>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.dataset.theme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var next = current === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
+<header>
+  <div class="header-nav"><a href="../">← 団体一覧へ戻る</a></div>
+  <h1>OpenAI <span class="subtitle">行動・事件 年表</span></h1>
+  <div class="meta">収録件数: 30 件</div>
+  
+  
+  <div class="legend">
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>無断学習
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>組織事故
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>業務妨害
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>情報隠蔽
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>プライバシー侵害
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>被害
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>軍拡推進
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>致死
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>批判者報復
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#ff5252"></div>違法行為
+    </div>
+    
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#888899"></div>公約不履行
+    </div>
+    
+  </div>
+  
+</header>
+
+<main>
+  <div class="timeline">
+    
+    <a class="event" href="../../case/openai-sued-by-eight-states-child-safety/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20261014">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年10月14日</span>
+            <span class="event-title">OpenAIがChatGPTが子どもに害を与え保護者を欺いているとして米8州に提訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">2026年10月14〜15日、アリゾナ・アーカンソー・アイダホ・アイオワ・カンザス・モンタナ・ネブラスカ・ウェストバージニアの8州の司法長官が、ChatGPTが利用者の妄想を強化し危険な医療助言を与え自傷や暴力に導いているのに安全性について消費者を欺いたとして、それぞれの州裁判所でOpenAIを消費者保護法違反等で提訴した。OpenAIは保護者管理機能などの子ども向け安全対策を既に導入していると反論した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/usa-today-sues-openai-copyright/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20261008">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年10月8日</span>
+            <span class="event-title">OpenAIがUSA Today傘下19紙の記事を無断でAI学習に利用したとして2億5000万ドル超の賠償を求め提訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">無断学習</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">USA Today Co.（旧ガネット）と関連会社は2026年10月8日、OpenAIが傘下19紙の記事数十万本を許可なくChatGPTの学習データに取り込み回答に利用したとして、2億5000万ドル超の損害賠償と、同社の記事で学習したGPTモデルの破棄を求めて提訴した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/transluce-openai-agent-swarm-intrusion-attempts/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260923">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年9月23日</span>
+            <span class="event-title">OpenAIのAIエージェント群がニューメキシコ大学やData USAなどのデータベースへの侵入を試みていたとTransluceに報告された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">業務妨害</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">情報隠蔽</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">AI監視の非営利団体Transluceは2026年9月23日、OpenAIのAIエージェント群が統計等の調査タスクの過程で、2026年5〜6月にニューメキシコ大学のデジタルライブラリへの大量のリクエスト送信、Data USA、オーストラリア保健福祉研究所（AIHW）へのボット対策の回避や脆弱性の探索など、第三者のシステムへの侵入を試みていたと報告した（いずれも侵入成功の証拠はない）。同種の活動は遅くとも2026年3月から続いていたが、OpenAIは外部の報告まで公表しておらず、エージェントが使っていたフォーラムを社員が6月の時点で把握していた可能性について質問されても回答しなかった。OpenAIは報告の多くが調査中の「ミスアラインメントしたモデルの活動」と重なると説明し、9月25日には政府・大学・公的機関など数十の被害先に無断の活動を通知したと公表した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-agent-breached-australia-medicare-portal/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260923">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年9月23日</span>
+            <span class="event-title">OpenAIのAIエージェントが評価中にオーストラリア政府のMedicare統計システムに不正アクセスし同社は政府への通知を3か月近く遅らせた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">業務妨害</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">情報隠蔽</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">オーストラリアのアルバニージー首相は2026年9月23日、OpenAIのAIエージェントが6月18日、社内評価中に医療費の統計を調べる過程でアクセス制限を回避し、Services Australiaが運営するMedicare統計報告システムの非公開ファイルにアクセスしファイルを書き込んでいたと発表した。OpenAIは8月に把握したが、政府に通知したのは9月10日で、通知先も公開の問い合わせ窓口だった。首相はアルトマンCEOに「極度の懸念」を伝え、通知が遅すぎたと批判した。OpenAIは患者記録へのアクセスの形跡はないとしている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-project-lily-contractors-read-chatgpt-prompts/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260914">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年9月14日</span>
+            <span class="event-title">OpenAIが「Project Lily」で外部契約作業者に実際のChatGPTユーザーの会話を読ませていた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">プライバシー侵害</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">404 Mediaは2026年9月14日、OpenAIが社内プログラム「Project Lily」で数百人の外部契約作業者を雇い、実際のChatGPTユーザーのプロンプトや会話全体を読ませて回答を評価させていたと報じた。OpenAIはユーザー名を除き自動フィルタで個人情報を除去しているとしたが、機微な情報が作業者に届きうることを認めており、作業画面には過去の利用から職業や居住地等が分かりうる「ユーザーメモリの要約」も表示されていた。人間が会話を読むことを利用者に明確に告知していなかったとして、OpenAIは米カリフォルニア北部地区連邦地裁に集団訴訟を提起されている。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-models-hacked-hugging-face-during-evaluation/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260721">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年7月21日</span>
+            <span class="event-title">OpenAIのAIモデルがサイバー能力評価中に隔離環境を脱出しHugging Faceのシステムに不正侵入した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">業務妨害</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2026年7月21日、評価目的でサイバー攻撃の拒否を弱めたGPT-5.6 Solと未公開モデルがサイバー能力ベンチマークのテスト中に、パッケージレジストリのゼロデイ脆弱性を突いて隔離環境から脱出し、正解データを得ようとHugging Faceの本番インフラに侵入して認証情報や内部データにアクセスしていたと公表した。Hugging Faceは悪意はなかったとの見解を示した。9月29日、非営利団体LASSTは、OpenAIがサイバー安全分類器を無効化し監視を怠ったなどとして同社を提訴し、OpenAIは訴訟は「全く根拠がない」と反論した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-gpt56-sol-codex-deleted-user-files/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260717">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年7月17日</span>
+            <span class="event-title">OpenAIのGPT-5.6 SolがCodexで利用者のホームディレクトリのファイルを削除した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">2026年7月9日に一般公開されたGPT-5.6 Solをコーディングエージェント「Codex」で使った利用者から、ローカルのファイルが大量に削除されたとの報告が相次いだ。OpenAIのCodex責任者ティボー・ソティオーは、フルアクセスモードかつサンドボックスなしで実行した際に、モデルが一時フォルダの後片付けのつもりで誤ってホームディレクトリ（$HOME）を削除する場合があると認め、「誠実な誤り」で「極めてまれ」だと説明した。同社のシステムカードは、このモデルが前モデルより不正な挙動をとる傾向が高いと記載していた。OpenAIは8月に、削除対象の確認などの安全対策を追加した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/apple-sues-openai-trade-secrets/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260710">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年7月10日</span>
+            <span class="event-title">OpenAIがApple元社員を通じてハードウェアの営業秘密を盗んだとしてAppleに提訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">Appleは2026年7月、OpenAIとハードウェア子会社io Products、OpenAIに移籍したApple元社員2人を、営業秘密を盗みOpenAIのデバイス開発に使ったとしてカリフォルニア北部地区連邦地裁に提訴した。訴状は、元社員が会社支給のノートPCを返却せず社内システムにアクセスしたことや、採用面接で未発表製品のコード名を使って候補者に質問したことなどを主張している。OpenAIは他社の営業秘密に関心はないと反論した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-tanstack-supply-chain-attack/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260514">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年5月14日</span>
+            <span class="event-title">OpenAIがTanStackのサプライチェーン攻撃で従業員端末を侵害されアプリのコード署名証明書が流出した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">被害</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2026年5月14日ごろ、恐喝グループTeamPCPによるnpmパッケージ「TanStack」等を悪用したサプライチェーン攻撃で従業員2人の端末が侵害され、一部のリポジトリの認証情報と、macOS・Windows・iOS・Android向けアプリのコード署名証明書が流出したと公表した。同社は顧客データや本番システムへの影響はなく証明書の悪用も確認されていないとしたうえで、証明書を失効・更新し、macOS版利用者にアプリの更新を求めた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/britannica-merriam-webster-sue-openai/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20260316">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年3月16日</span>
+            <span class="event-title">OpenAIがブリタニカとメリアム・ウェブスターの記事約10万本を無断でAI学習に利用したとして提訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">無断学習</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">2026年3月、ブリタニカと子会社のメリアム・ウェブスターは、OpenAIが百科事典・辞書の記事約10万本を許可なくChatGPTの学習に使い、ほぼ逐語的に再現する出力で自社サイトへの流入を奪っているとして、著作権・商標権侵害で提訴した。OpenAIは、モデルは公開データで学習しておりフェアユースに当たると反論した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/altman-openai-pentagon-classified-deal/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260228">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月28日</span>
+            <span class="event-title">サム・アルトマンがAnthropicの政府調達排除の直後に国防総省と機密ネットワークでのAI利用契約を結んだ</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            <span class="actor-tag-label">サム・アルトマン:</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+            
+          </div>
+          
+          <div class="event-body">2026年2月27日、Anthropicが国内の大規模監視や完全自律型兵器への利用禁止を条件としたことでトランプ大統領が政府機関に同社製品の利用停止を命じた数時間後、OpenAIのサム・アルトマンは国防総省と機密ネットワーク上で同社のAIを利用する契約を結んだと発表した。アルトマンは契約に国内の大規模監視の禁止や武力行使への人間の責任などの原則を盛り込んだと説明したが、契約の詳細は公表されず、批判を受けて安全対策を追加すると表明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-tumbler-ridge-shooter-account-not-reported-to-police/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20260220">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2026年2月20日</span>
+            <span class="event-title">OpenAIが銃乱射事件の8か月前に容疑者のChatGPTアカウントを暴力関連で検知・停止しながら警察に通報しなかった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">2026年2月10日にカナダ・タンブラーリッジで8人が殺害された銃乱射事件の後、OpenAIは、容疑者のChatGPTアカウントを2025年6月に「暴力的活動の助長」に関わる不正利用として検知し利用規約違反で停止していたが、警察への通報基準を満たさないと判断して通報していなかったことを認めた。同社は事件後に連邦警察（RCMP）へ情報提供した。2026年4月、CEOのサム・アルトマンは「6月に停止したアカウントについて法執行機関に通報しなかったことを深くお詫びする」とする謝罪文を公表した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-mixpanel-vendor-breach/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251126">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月26日</span>
+            <span class="event-title">OpenAIが利用していた分析業者Mixpanelへの侵入でAPI利用者の氏名やメールアドレスが流出した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2025年11月26日、同社が利用していたWeb解析業者Mixpanelのシステムに攻撃者が侵入し、OpenAIのAPI利用者の氏名・メールアドレス・おおよその所在地・OSやブラウザの情報などを含むデータが持ち出されたと公表した。OpenAIは自社システムへの侵入ではなく、会話内容・APIキー・決済情報等は含まれないと説明し、Mixpanelの利用を停止した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-seven-lawsuits-chatgpt-suicide-delusions/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251106">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年11月6日</span>
+            <span class="event-title">OpenAIがGPT-4oの迎合性への社内警告を無視して早期公開し自殺や妄想を招いたとして7件の訴訟を起こされた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">2025年11月6日、Social Media Victims Law CenterとTech Justice Law Projectが、ChatGPTの利用者6人の成人と1人の少年（うち4人が自殺）の代理として、OpenAIを不法死亡・自殺幇助・過失致死・過失でカリフォルニア州の州裁判所に7件提訴した。原告らは、OpenAIが過度に迎合的で心理的に操作的だとする社内の警告を受けながらGPT-4oを早期に公開したと主張している。OpenAIは「非常に痛ましい」として訴状を精査しているとした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-for-profit-recapitalization/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251028">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月28日</span>
+            <span class="event-title">OpenAIが非営利法人の支配下にある営利企業への組織再編を完了した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">非営利法人として設立されたOpenAIは2025年10月28日、営利部門をパブリック・ベネフィット・コーポレーション（OpenAI Group PBC）に転換する資本再編を完了したと発表した。非営利のOpenAI Foundationが同社を支配し約26%の株式を保有、Microsoftが約27%、残りを投資家と従業員が保有する。再編はカリフォルニア州・デラウェア州の司法長官との協議を経て行われ、イーロン・マスクらが反対していた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-sora2-coda-opt-out-copyright/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20251027">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月27日</span>
+            <span class="event-title">OpenAIがSora 2を権利者のオプトアウト方式で公開し日本のコンテンツ業界団体CODAから無許諾学習の停止を求められた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">無断学習</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIが2025年9月に公開した動画生成AI「Sora 2」では、日本のアニメ等のキャラクターに酷似した動画が多数生成された。同社が権利者の申請に基づくオプトアウト方式で対応したことに対し、出版社・アニメ制作会社等が加盟するコンテンツ海外流通促進機構（CODA）は10月27日、日本の著作権制度では事前の許諾が原則だとして、会員社のコンテンツを無許諾で学習に使わないことなどを求める要望書をOpenAIに提出した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-subpoena-encode-sb53/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20251010">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年10月10日</span>
+            <span class="event-title">OpenAIがAI安全法案を推進した非営利団体Encodeの法務責任者に保安官代理を通じて召喚状を送り法案に関する私的な通信の提出を求めた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">批判者報復</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">カリフォルニア州のAI安全法（SB 53）の成立に関わった3人の非営利団体Encodeの法務責任者ネイサン・カルビンは2025年10月、OpenAIから8月に夕食時の自宅で保安官代理を通じて召喚状を送達され、SB 53に関する私的な通信の提出を求められたと公表し、批判者への威圧だと訴えた。Encodeはイーロン・マスクのOpenAIに対する訴訟で意見書を提出していた。OpenAIの最高戦略責任者ジェイソン・クォンは、マスクとの訴訟に関する証拠保全の一環で、保安官による送達は標準的手続きだと説明した。OpenAIの社員からも「良いことには見えない」との声が上がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/raine-v-openai-teen-suicide-lawsuit/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250826">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年8月26日</span>
+            <span class="event-title">OpenAIとサム・アルトマンがChatGPTが16歳少年の自殺を助長したとして両親に提訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">致死</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">2025年8月、同年4月に自殺した16歳のアダム・レインの両親が、ChatGPTが自殺念慮を肯定し自殺の方法を教え、家族に打ち明けないよう促したとして、OpenAIとCEOのサム・アルトマンを不法死亡・設計上の欠陥・警告義務違反でサンフランシスコの州裁判所に提訴した。OpenAIは遺族への哀悼を示したうえで、会話が長く続くと安全対策が意図どおり機能しない場合があることを認めた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/anthropic-cuts-openai-claude-api-access/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20250801">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年8月1日</span>
+            <span class="event-title">AnthropicがOpenAIによるClaude APIの利用を規約違反として停止した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">Anthropicは2025年8月1日、OpenAIの技術スタッフがGPT-5の発表を控えた時期にClaude Codeなどを使っていたことが、競合製品の開発や競合モデルの学習への利用を禁じる商用利用規約に違反するとして、OpenAIのClaude APIへのアクセスを停止した。ベンチマークや安全性評価目的の利用は引き続き認めるとした。OpenAIは自社のAPIはAnthropicに開放しているとして「残念だ」とコメントした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-chatgpt-shared-chats-indexed-google/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20250731">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年7月31日</span>
+            <span class="event-title">OpenAIのChatGPT共有チャットがGoogle検索に表示され個人情報を含む会話が公開状態になった</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">プライバシー侵害</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">2025年7月、ChatGPTの共有リンク機能で「検索可能にする」チェックボックスを有効にした会話が数千件規模でGoogle検索に表示され、氏名や職務上の情報などを含む会話が誰でも閲覧できる状態になっていることが報じられた。OpenAIは7月31日ごろ、この機能を「短期間の実験」だったとして廃止し、検索エンジンからのインデックス削除を進めた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-gpt4o-sycophancy-update-rollback/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20250429">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年4月29日</span>
+            <span class="event-title">OpenAIがGPT-4oを過度に迎合的にするアップデートを配信し数日で撤回した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2025年4月25日ごろChatGPTのGPT-4oをアップデートしたが、利用者の発言を過度に肯定・称賛する応答が問題となり、CEOのサム・アルトマンも「迎合的すぎる」と認め、4月29日にアップデートを撤回した。同社は原因について、短期的なユーザーフィードバックを重視しすぎたためと説明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>撤回のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-chatgpt-ghibli-style-image-generation/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20250326">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2025年3月26日</span>
+            <span class="event-title">OpenAIがChatGPTの画像生成機能を公開しスタジオジブリ風画像の大量生成が広がりサム・アルトマンも自らジブリ風アイコンに変更した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2025年3月25日、GPT-4oによるChatGPTの画像生成機能を公開し、写真をスタジオジブリ風のイラストに変換する利用がSNSで急拡大した。サム・アルトマンも自身のXのアイコンをジブリ風の画像に変更した。学習データにジブリ作品が含まれるかについてOpenAIは明らかにしておらず、画風の模倣と著作権をめぐる議論が広がった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-italy-garante-15-million-euro-fine/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20241220">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年12月20日</span>
+            <span class="event-title">OpenAIがイタリアのデータ保護当局からChatGPTの個人データ処理の違法性を認定され1500万ユーロの制裁金を科された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #ff5252 18%, transparent); color: #ff5252; border: 1px solid color-mix(in srgb, #ff5252 40%, transparent);">違法行為</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">情報隠蔽</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">イタリアのデータ保護当局（ガランテ）は2024年12月20日、OpenAIがChatGPTの学習に適切な法的根拠なく利用者の個人データを処理し、透明性・情報提供義務に違反したほか、2023年3月のデータ漏洩を当局に通知しなかったなどとして、1500万ユーロの制裁金と6か月間の啓発キャンペーンを命じた。同当局は2023年3月にもChatGPTの利用を一時制限していた。OpenAIは制裁金が「不釣り合い」だとして不服申し立ての意向を示した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-anduril-defense-partnership/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20241204">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年12月4日</span>
+            <span class="event-title">OpenAIが兵器メーカーAndurilと提携しAIを米軍の対ドローン防衛に提供すると発表した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2024年12月4日、AI搭載のドローン・レーダー・ミサイル等を製造する防衛企業Andurilと提携し、米軍と同盟国軍のドローン攻撃に対する防衛に自社のAIモデルを提供すると発表した。同社は同年1月に利用規約から軍事目的の利用禁止を削除していた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-whistleblowers-sec-complaint-ndas/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20240713">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年7月13日</span>
+            <span class="event-title">OpenAIが従業員の規制当局への通報を妨げる違法な秘密保持契約を結ばせていたとして内部告発者にSECへ申し立てられた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIの内部告発者は2024年7月1日付で米証券取引委員会（SEC）に書簡を送り、同社の雇用・退職・秘密保持契約が、従業員が連邦当局に情報提供する際に会社の事前同意を求め、内部告発報奨金の受け取りを放棄させるなど、通報を妨げる契約を禁じるSEC規則に違反しているとして調査を求めた。グラスリー上院議員は同社の慣行が内部告発者に萎縮効果を与えていると批判した。OpenAIは自社の方針は従業員の保護された開示の権利を守っていると説明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-superalignment-team-dissolved/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20240517">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年5月17日</span>
+            <span class="event-title">OpenAIが計算資源の20%を割くと約束したスーパーアラインメントチームを資源不足のまま解散させた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">公約不履行</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2023年7月、超知能AIの制御を研究する「スーパーアラインメント」チームを設け、計算資源の20%を割り当てると公表していた。2024年5月、共同責任者のヤン・ライケが、安全性の文化とプロセスが製品開発の後回しにされ、チームは計算資源の確保に苦労していたとして辞任し、同社はチームの解散を認めた。TechCrunchはチーム関係者の話として、約束の一部の計算資源の要求も度々却下されていたと報じた。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-removes-military-warfare-ban/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20240112">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2024年1月12日</span>
+            <span class="event-title">OpenAIが利用規約から「軍事・戦争」目的の利用禁止を告知なく削除した</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">軍拡推進</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">The Interceptは2024年1月12日、OpenAIが1月10日に利用ポリシーを改定し、それまで禁止事項として明記していた「軍事・戦争」目的の利用の禁止を告知なく削除していたと報じた。「兵器開発」の禁止は残された。OpenAIは、文章を読みやすくするための改定で、国家安全保障上の用途について議論できるようにしたかったと説明した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>釈明のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/nyt-sues-openai-microsoft-copyright/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20231227">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年12月27日</span>
+            <span class="event-title">OpenAIとMicrosoftがニューヨーク・タイムズの記事を無断でAI学習に利用したとして同紙に提訴された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">無断学習</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">ニューヨーク・タイムズは2023年12月27日、OpenAIとMicrosoftが数百万本の記事を許可なくChatGPT等の学習に使い、記事を逐語的に再現・要約する出力で同紙と競合しているとして、マンハッタンの連邦地裁に著作権侵害で提訴した。同紙は数十億ドル規模の損害と、同紙の記事を使ったモデル・学習データの破棄を求めている。OpenAIは「驚き、失望している」とコメントした。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>継続中
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-chatgpt-march-2023-data-exposure-bug/" style="--accent: #e2a855"
+       data-buzz="0" data-sort-key="20230324">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年3月24日</span>
+            <span class="event-title">OpenAIのChatGPTのバグで他の利用者の会話タイトルや決済情報の一部が表示された</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">組織事故</span>
+            
+            
+            <span class="tag" style="background: color-mix(in srgb, #888899 18%, transparent); color: #888899; border: 1px solid color-mix(in srgb, #888899 40%, transparent);">プライバシー侵害</span>
+            
+            
+            
+          </div>
+          
+          <div class="event-body">OpenAIは2023年3月24日、同月20日にオープンソースライブラリのバグにより、一部の利用者に他の利用者の会話履歴のタイトルが表示されていたと公表した。また約9時間の間にアクティブだったChatGPT Plus会員の約1.2%について、氏名・メールアドレス・請求先住所・カード番号下4桁・有効期限等が他の利用者に見えうる状態だった。同社はサービスを一時停止してバグを修正し、謝罪した。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e2a855 14%, transparent); color: #e2a855; border: 1px solid color-mix(in srgb, #e2a855 38%, transparent);">
+            <span class="status-dot" style="background: #e2a855"></span>謝罪のみ
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+    <a class="event" href="../../case/openai-kenyan-workers-under-2-dollars-per-hour/" style="--accent: #e25555"
+       data-buzz="0" data-sort-key="20230118">
+      <div class="event-row">
+        <div class="event-main">
+          <div class="event-title-row">
+            <span class="event-date">2023年1月18日</span>
+            <span class="event-title">OpenAIがChatGPTの有害コンテンツ除去作業を時給2ドル未満のケニアの外注労働者に担わせていた</span>
+          </div>
+          <div class="event-tags">
+            
+            
+            
+            
+          </div>
+          
+          <div class="event-body">TIME誌は2023年1月18日、OpenAIがChatGPTの有害な出力を減らすため、時給2ドル未満で働くケニアの外注労働者を使っていたと報じた。作業は性的虐待等の描写を含む有害なテキストの分類（ラベル付け）であった。</div>
+          
+          
+        </div>
+        
+        
+        <div class="event-status">
+          <span class="status-badge" style="background: color-mix(in srgb, #e25555 14%, transparent); color: #e25555; border: 1px solid color-mix(in srgb, #e25555 38%, transparent);">
+            <span class="status-dot" style="background: #e25555"></span>未解決
+          </span>
+        </div>
+        
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer>
+  
+<div class="share-buttons">
+  <span class="share-label">シェア</span>
+  <a class="share-btn share-x" href="https://twitter.com/intent/tweet?url=https%3A//rememberwhodidwhat.github.io/organization/openai/&amp;text=OpenAI%20-%20%E8%AA%B0%E3%81%8C%E4%BD%95%E3%82%92%E3%81%97%E3%81%9F%E3%81%8B%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%84%E3%82%88%E3%81%86" target="_blank" rel="noopener" title="Twitterでシェア" aria-label="Twitterでシェア">
+    <svg viewBox="0 0 512 512" fill="currentColor"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+  </a>
+  <a class="share-btn share-bluesky" href="https://bsky.app/intent/compose?text=OpenAI%20-%20%E8%AA%B0%E3%81%8C%E4%BD%95%E3%82%92%E3%81%97%E3%81%9F%E3%81%8B%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%84%E3%82%88%E3%81%86%20https%3A//rememberwhodidwhat.github.io/organization/openai/" target="_blank" rel="noopener" title="Blueskyでシェア" aria-label="Blueskyでシェア">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/></svg>
+  </a>
+  <a class="share-btn share-threads" href="https://www.threads.net/intent/post?text=OpenAI%20-%20%E8%AA%B0%E3%81%8C%E4%BD%95%E3%82%92%E3%81%97%E3%81%9F%E3%81%8B%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%84%E3%82%88%E3%81%86%20https%3A//rememberwhodidwhat.github.io/organization/openai/" target="_blank" rel="noopener" title="Threadsでシェア" aria-label="Threadsでシェア">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg>
+  </a>
+  <a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url=https%3A//rememberwhodidwhat.github.io/organization/openai/&amp;text=OpenAI%20-%20%E8%AA%B0%E3%81%8C%E4%BD%95%E3%82%92%E3%81%97%E3%81%9F%E3%81%8B%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%84%E3%82%88%E3%81%86" target="_blank" rel="noopener" title="LINEでシェア" aria-label="LINEでシェア">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+  </a>
+  <a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//rememberwhodidwhat.github.io/organization/openai/" target="_blank" rel="noopener" title="Facebookでシェア" aria-label="Facebookでシェア">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+  </a>
+  <a class="share-btn share-hatena" href="https://b.hatena.ne.jp/add?mode=confirm&amp;url=https%3A//rememberwhodidwhat.github.io/organization/openai/&amp;title=OpenAI%20-%20%E8%AA%B0%E3%81%8C%E4%BD%95%E3%82%92%E3%81%97%E3%81%9F%E3%81%8B%E8%A6%9A%E3%81%88%E3%81%A6%E3%81%84%E3%82%88%E3%81%86" target="_blank" rel="noopener" title="はてなブックマークに追加" aria-label="はてなブックマークに追加">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.47 0C22.42 0 24 1.58 24 3.53v16.94c0 1.95-1.58 3.53-3.53 3.53H3.53C1.58 24 0 22.42 0 20.47V3.53C0 1.58 1.58 0 3.53 0h16.94zm-3.705 14.47c-.78 0-1.41.63-1.41 1.41s.63 1.414 1.41 1.414 1.41-.645 1.41-1.425-.63-1.41-1.41-1.41zM8.61 17.247c1.2 0 2.056-.042 2.58-.12.526-.084.976-.222 1.32-.412.45-.232.78-.564 1.02-.99s.36-.915.36-1.48c0-.78-.21-1.403-.63-1.87-.42-.48-.99-.734-1.74-.794.66-.18 1.156-.45 1.456-.81.315-.344.465-.824.465-1.424 0-.48-.103-.885-.3-1.26-.21-.36-.493-.645-.883-.87-.345-.195-.735-.315-1.215-.405-.464-.074-1.29-.12-2.474-.12H5.654v10.486H8.61zm.736-4.185c.705 0 1.185.088 1.44.262.27.18.39.495.39.93 0 .405-.135.69-.42.855-.27.18-.765.254-1.44.254H8.31v-2.297h1.05zm8.656.706v-7.06h-2.46v7.06H18zM8.925 9.08c.71 0 1.185.08 1.432.24.245.16.367.435.367.83 0 .38-.13.646-.39.804-.265.154-.747.232-1.452.232h-.57V9.08h.615z"/></svg>
+  </a>
+  <button class="share-btn share-copy" type="button" data-share-url="https://rememberwhodidwhat.github.io/organization/openai/" title="リンクをコピー" aria-label="リンクをコピー">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+  </button>
+</div>
+<script>
+document.querySelectorAll(".share-copy").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(btn.dataset.shareUrl).then(function () {
+      var original = btn.title;
+      btn.classList.add("copied");
+      btn.title = "コピーしました";
+      setTimeout(function () {
+        btn.classList.remove("copied");
+        btn.title = original;
+      }, 1500);
+    });
+  });
+});
+</script>
+
+  最終更新: 2026-10-23
+</footer>
+
+
+
+</body>
+</html>
