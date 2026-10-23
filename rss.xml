@@ -6,7 +6,7 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Fri, 23 Oct 2026 02:46:51 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 23 Oct 2026 13:19:21 +0900</lastBuildDate>
   <item>
     <title>高市早苗が麻生太郎らとの公邸での会食後にG7首脳オンライン会議を欠席し、国会で「ディスプレーの業者が間に合わなかった」と答弁した</title>
     <link>https://rememberwhodidwhat.github.io/case/takaichi-sanae-g7-online-summit-absence/</link>
@@ -75,6 +75,34 @@
     <description>神奈川県警が運転免許証の更新時に回収した有効期限切れの免許証を、警備部門が顔写真収集のために30年以上不正に流用していた疑いがあることを、警察庁が2026年10月22日に明らかにした。発覚の発端は、保土ケ谷署警備課の巡査長が8月に失効した免許証31枚が入ったリュックサックを駅で紛失したことだった。個人情報保護法に抵触する可能性が高く、警察庁は県警に実態解明を指示し、他の都道府県警でも同様の事例がないか全国調査を始めた。（発生日: 2026年10月22日）</description>
     <category>プライバシー侵害</category>
     <category>市民監視</category>
+  </item>
+  <item>
+    <title>石破茂が政策活動費廃止に代えて支出先を非公開にできる「公開方法工夫支出」の新設を主張し野党の反発で撤回した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ishiba-shigeru-kokai-hoho-kufu-shishutsu/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ishiba-shigeru-kokai-hoho-kufu-shishutsu/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>派閥裏金事件を受けた政治資金規正法の再改正で、石破茂総裁の自民党は2024年11月、政策活動費を廃止する一方、外交上の機密や法人の業務上の秘密などを理由に支出先を非公開にできる「公開方法工夫支出」の新設を打ち出し、単独で法案を提出した。12月13日の参院予算委員会で、自民党東京都連のDappi運営会社への支出が収支報告書で判明した例を挙げ「法人等業務秘密関連支出」で公開されなくなるのではと問われた石破は、「その企業名が明らかにならないということはございます」と認めた。野党の反発を受けて自民党は同日に結論先送り案に転じ、最終的に工夫支出を撤回して政策活動費を例外なく廃止する案を受け入れ、政治改革関連3法は12月24日に成立した。（発生日: 2024年12月13日）</description>
+    <category>情報隠蔽</category>
+  </item>
+  <item>
+    <title>瀬野憲一（維新）が補助金増額問題で百条委員会に資質への重大な疑問を指摘され辞職勧告決議を可決されたが辞職を拒否した</title>
+    <link>https://rememberwhodidwhat.github.io/case/seno-kenichi-moriguchi-hyakujo-resignation-recommendation/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/seno-kenichi-moriguchi-hyakujo-resignation-recommendation/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>守口市議会の百条委員会は2024年12月19日、社会教育関係団体補助金の増額問題の報告書案で「決定過程や決定後の説明に不適切な点があった」とし、瀬野憲一市長の「資質に重大な疑問を抱く」と結論づけた。市長は証人尋問で増額を「担当課からの提案」を了承しただけだと述べたが、報告書はこれを担当課長の証言や内示書の記載と食い違うとし、最終責任を取る意識に乏しいと指摘した。
+市議会は12月23日に辞職勧告決議を可決した。瀬野市長は「もっと丁寧に説明をすればよかったと責任を感じている」と述べたが、辞職しない意向を示した。（発生日: 2024年12月23日）</description>
+    <category>詭弁</category>
+  </item>
+  <item>
+    <title>瀬野憲一（維新）が守口市長として同じ維新の西田薫府議が会長のスポーツ協会への補助金を急きょ増額させ議会に説明しなかった</title>
+    <link>https://rememberwhodidwhat.github.io/case/nishida-kaoru-moriguchi-subsidy-favoritism/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/nishida-kaoru-moriguchi-subsidy-favoritism/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>守口市の瀬野憲一市長は2024年1月10日、スポーツ協会の新年互礼会を前に担当課から補助金の説明を受け、同月12日にスポーツ協会本体への補助を指示した。同協会の会長は市長と同じ大阪維新の会の西田薫府議で、協会の事務所は同府議の事務所と同一だった。担当課の求めで文化協会・スポーツ少年団も対象に加え、15日には社会教育関係団体補助金を50万円から100万円に増額して予算に計上した。内示書には「市長指示で急きょ足しこんだ」と手書きされていた。
+増額の必要性や団体の財政状況は十分に検討されなかった。2024年3月の予算説明でも増額と対象拡大には触れず、交付要綱の改正も議会に説明しなかった。（発生日: 2024年1月15日）</description>
+    <category>利権・癒着</category>
+    <category>議会軽視</category>
+    <category>公費浪費</category>
   </item>
   <item>
     <title>武部新（自民）の後援会幹部が2012年衆院選で運動員に報酬として商品券を渡したとして公職選挙法違反（買収）容疑で逮捕された</title>
@@ -159,12 +187,44 @@
     <category>家父長制肯定</category>
   </item>
   <item>
+    <title>松野博一（自民）が官房機密費をDappiのような世論操作に使ってよいか一般論として問われ定型答弁を繰り返した</title>
+    <link>https://rememberwhodidwhat.github.io/case/matsuno-hirokazu-kimitsuhi-dappi-stock-answer/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/matsuno-hirokazu-kimitsuhi-dappi-stock-answer/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>参院予算委員会で杉尾秀哉は、「Dappi」の投稿が2021年の自民党総裁選の期間に止まり菅政権から岸田政権への交代とともに途絶えたことを挙げ、弁護団が官房機密費使用の可能性を指摘していると述べた上で、世論操作に官房機密費を使うことがあってよいのかを「一般論として」問うた。松野博一官房長官は「内閣官房報償費は、取扱責任者である官房長官の判断と責任の下に厳正で効果的な執行を行っているところであります」と、直前の質問への答弁と同じ趣旨を繰り返し、世論操作への使用の是非には答えなかった。（発生日: 2023年11月29日）</description>
+    <category>議会軽視</category>
+  </item>
+  <item>
     <title>文部科学省が国立美術館に展示事業の自己収入目標を課し常設展の入館料が最大3倍超に値上げされることになった</title>
     <link>https://rememberwhodidwhat.github.io/case/mext-national-museums-self-revenue-target-price-hike/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/mext-national-museums-self-revenue-target-price-hike/</guid>
     <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
     <description>文部科学省は2026年2月27日、独立行政法人国立美術館の2026〜30年度の中期目標で、展示事業の費用に対する自己収入の割合を最終年度に65%以上（2024年度実績53%）、次期中期目標期間中に100%とする目標を課し、所蔵作品展の入館料引き上げと訪日客向けの「二重価格」導入を求めた。展示収入が費用の4割を下回る館は「再編」の対象とし得るとしている。これを受け国立美術館は9月、国立西洋美術館など6館の常設展の一般料金を2026年10月から順次おおむね2倍以上（国立工芸館は3倍超）に引き上げると発表した。（発生日: 2026年2月27日）</description>
     <category>公的責任放棄</category>
+  </item>
+  <item>
+    <title>岸田文雄が森ゆうこにDappi問題を踏まえ自民党議員にネット工作をさせないと約束するよう求められ公選法に従うべきとの一般論のみ答弁した</title>
+    <link>https://rememberwhodidwhat.github.io/case/kishida-fumio-dappi-net-manipulation-general-answer/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kishida-fumio-dappi-net-manipulation-general-answer/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>参院本会議の代表質問で立憲民主党の森ゆうこは、河井克行元法相が業者を雇って架空の人物を名乗るブログでネット工作をしていたこと、自民党と取引のある法人が「Dappi」を運営していたことを挙げ、党本部から河井陣営に渡った1億5千万円がネット工作に使われていないと断言すること、次期衆院選で自民党議員にネット工作をさせないと約束することを岸田文雄首相に求めた。岸田は「選挙運動や政治活動については、公職選挙法などに定めがあります。我が党の議員に限らず、それぞれの議員や候補者がそれらのルールに従って発信をし、選挙運動を行い、政治活動を行うべきである」と答えるにとどめ、1億5千万円の使途にもネット工作をさせない約束にも答えなかった。（発生日: 2021年10月13日）</description>
+    <category>議会軽視</category>
+  </item>
+  <item>
+    <title>岸田文雄がDappi裁判を受けて自民党との資金の流れの調査を求められ「判決は自民党に触れていない」として調査を拒否した</title>
+    <link>https://rememberwhodidwhat.github.io/case/kishida-fumio-dappi-no-investigation/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kishida-fumio-dappi-no-investigation/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>参院予算委員会で杉尾秀哉は、Dappiの投稿を会社の業務と認定されたワンズクエストが、自民党本部から毎年約4000万円の負担金を受ける「システム収納センター」（岸田文雄も経理局長時代に代表取締役を務めた）と取引関係にあったと指摘し、自民党として資金提供の有無を調べる意思を問うた。岸田は「判決では、自民党とDappiというアカウントとの関係について一切触れられておりません。何ら調査の必要があるとは考えていない」と答弁した。自民党は同訴訟の当事者ではなく、判決が自民党との関係を審理の対象としていなかった点には触れなかった。（発生日: 2023年10月31日）</description>
+    <category>詭弁</category>
+  </item>
+  <item>
+    <title>山本有二（自民）がDappi発信元会社の社長に自身のサイト制作を手伝わせ謝礼を「ポケットマネー」から払ったとして政治資金収支報告書に記載していなかった</title>
+    <link>https://rememberwhodidwhat.github.io/case/yamamoto-yuji-dappi-company-website-unreported/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yamamoto-yuji-dappi-company-website-unreported/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>元農水相の山本有二衆院議員は、自身が代表取締役を務める自民党関連の集金代行会社「システム収納センター」の取引先で、「Dappi」の発信元の回線契約者だったウェブ制作会社の社長に、2018年に公開した自身の公式サイトの制作を手伝ってもらっていたが、本人・政党支部・後援会の政治資金収支報告書にサイト関連の支出を記載していなかった。事務所は社長が「友人として個人的に手伝って」くれたもので、「寸志としての謝礼を代議士本人のポケットマネーから一度支払った」と説明し、Dappiへの関与は否定した。政治資金オンブズマンの阪口徳雄弁護士は、サイトは政治活動のためのもので、無償でも寄付として記載が必要であり規正法の不記載に当たるとの見方を示した。（発生日: 2021年12月2日）</description>
+    <category>金銭問題</category>
   </item>
   <item>
     <title>外務省がモンゴルの自然保護区での日系企業幹部の車による大規模火災に触れないまま日モンゴル外交関係樹立55周年のロゴ募集をXで呼び掛けた</title>
@@ -210,6 +270,16 @@
     <category>利権・癒着</category>
   </item>
   <item>
+    <title>ワンズクエストが匿名アカウント「Dappi」で小西洋之・杉尾秀哉への虚偽投稿を業務として行ったと認定され賠償が確定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/ones-quest-dappi-defamation-konishi-sugio/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ones-quest-dappi-defamation-konishi-sugio/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>「日本が大好きです」と自己紹介し野党議員やマスコミへの批判を繰り返していた匿名アカウント「Dappi」は、2020年10月25日に森友学園問題を巡り「近財職員は杉尾秀哉や小西洋之が1時間吊るしあげた翌日に自殺」と投稿した。両議員の名誉毀損訴訟で東京地裁は2023年10月16日、投稿が都内のウェブ制作会社ワンズクエストで社長の指示のもと業務として行われたと認定して計220万円の賠償と投稿削除を命じ、判決は控訴されず確定した。同社は投稿者名を明かした給与明細の提出命令に従わず、投稿の目的や依頼主も明らかにしなかった。同社は主要な販売先に自民党を挙げ、自民党東京都連から2019〜21年に約536万円（一部は政党交付金）の支払いを受けていたほか、社長は自民党本部の元宿仁事務総長の親族と報じられた。（発生日: 2023年10月16日）</description>
+    <category>被害</category>
+    <category>虚偽発言・印象操作</category>
+    <category>なりすまし工作</category>
+  </item>
+  <item>
     <title>ダリオ・アモデイが社内メモで「独裁者を利する」と認めつつUAE・カタールからの投資を受け入れる方針を示した</title>
     <link>https://rememberwhodidwhat.github.io/case/amodei-memo-gulf-state-investment/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/amodei-memo-gulf-state-investment/</guid>
@@ -218,7 +288,7 @@
     <category>矛盾発言</category>
   </item>
   <item>
-    <title>ダリオ・アモデイが業界全体でのAI開発の減速を呼びかけAnthropic・OpenAI・Google・SpaceXAIが違法なカルテルだとして提訴された</title>
+    <title>ダリオ・アモデイがAI開発の業界一斉減速を呼びかけ賛同したAnthropicなど4社が独禁法違反で提訴された</title>
     <link>https://rememberwhodidwhat.github.io/case/ai-slowdown-antitrust-lawsuit/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ai-slowdown-antitrust-lawsuit/</guid>
     <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
@@ -254,13 +324,38 @@
     <category>軍拡推進</category>
   </item>
   <item>
-    <title>イーロン・マスクがウクライナ軍の使う軍用版スターリンクの速度制限を指示し、制限は米軍と大統領が決めるとXに投稿した</title>
+    <title>イーロン・マスクが母メイ・マスクのXアカウントで父エロール・マスクの立場から投稿したのではないかと指摘された</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-accused-posting-as-father-from-mother-maye-x-account/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-accused-posting-as-father-from-mother-maye-x-account/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2026年5月5日、マスク氏が「祖母はイングランドで家政婦をしていた」と投稿したのに対し、母メイ・マスク氏のアカウントが「あなたのお母さんは子どもの頃リバプールの下宿でトイレ掃除をしていたと私に話した。1966年に彼女に会ったとき…」と返信し、間もなく削除した。
+内容が父エロール・マスク氏の母（リバプール出身）と経歴に合致することから、マスク氏が家族名義のアカウントを操作しているのではないかと指摘された。一方で「祖母」を「母」と書き誤っただけとする見方もあり、マスク氏・メイ氏・エロール氏はいずれも説明していない。（発生日: 2026年5月5日）</description>
+  </item>
+  <item>
+    <title>イーロン・マスクが幼い息子になりすました別アカウント@ErmnMuskを自ら運用していたと宣誓証言で認めた</title>
+    <link>https://rememberwhodidwhat.github.io/case/musk-admits-ermnmusk-burner-account-in-deposition/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/musk-admits-ermnmusk-burner-account-in-deposition/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>マスク氏は、ネオナチの乱闘に関与したと誤って結び付けられたユダヤ人男性ベン・ブロディ氏が起こした名誉毀損訴訟の2024年3月28日の宣誓証言で、幼い息子X Æ A-XIIを装って「5月4日にやっと3歳になる！」等と投稿していた別アカウント@ErmnMuskの運用を認め、「短期間使ったテストアカウント」と説明した。
+同アカウントは2024年2月、裁判所が証拠開示命令を出したのと同じ日に削除されていた。マスク氏は証言で、自身の主アカウントと同じ論調で批判者を攻撃する別アカウント（@babysmurf9000とみられる）の存在も認めた。（発生日: 2024年3月28日）</description>
+    <category>なりすまし工作</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがウクライナ軍向けスターリンクの速度制限は米軍と大統領が決めるとXに投稿したが国務長官らは要請や指示を否定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/elon-musk-starlink-limits-decided-by-potus-post/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-starlink-limits-decided-by-potus-post/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
+    <description>2026年10月14日、ウクライナ軍向け軍用版スターリンクの速度制限が公になった数時間後、イーロン・マスク氏はXで「速度や使用に関する制限はいずれも米軍、そして最終的には大統領が決定する」と投稿した。その後、ルビオ国務長官は政権は制限を要請していないと述べ、ヘグセス国防長官は「指示などは一切出していない」と述べ、トランプ大統領も誰の指示か分からないとした。ウォール・ストリート・ジャーナルは10月20日、速度制限はマスク氏が指示したものと報じたが、マスク氏とSpaceXはコメント要請に応じていない。（発生日: 2026年10月14日）</description>
+    <category>根拠不明発言</category>
+  </item>
+  <item>
+    <title>イーロン・マスクがウクライナ軍の使う軍用版スターリンクの速度制限を指示しドローンを事実上使用不能にした</title>
     <link>https://rememberwhodidwhat.github.io/case/elon-musk-starlink-ukraine-throttling/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/elon-musk-starlink-ukraine-throttling/</guid>
     <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
-    <description>2026年10月14日、ウクライナ軍が依存する軍用版スターリンクで機器が接続を維持できる速度に上限が設けられ、一部の攻撃用・迎撃用ドローンが事実上使用不能になった。イーロン・マスク氏は同日、Xで「速度や使用に関する制限はいずれも米軍、そして最終的には大統領が決定する」と投稿し、ゼレンスキー大統領に退陣を呼び掛ける投稿もしたが、ウォール・ストリート・ジャーナルは10月20日、米当局者らの話として速度制限はマスク氏が指示したもので、同氏は事前にトランプ大統領を含む政権高官と協議していたと報じた。ルビオ国務長官は政権は制限を要請していないと述べ、ヘグセス国防長官は「スターリンクには利用規約に関して決定を下す選択肢がある」と述べた。（発生日: 2026年10月14日）</description>
+    <description>2026年10月14日、ウクライナ軍が依存する軍用版スターリンクで機器が接続を維持できる速度に上限が設けられ、一部の攻撃用・迎撃用ドローンが事実上使用不能になった。ウォール・ストリート・ジャーナルは10月20日、米当局者らの話として速度制限はイーロン・マスク氏が指示したもので、同氏は事前にトランプ大統領を含む政権高官と協議していたと報じた。速度制限は米・ウクライナ間の緊張を高め、報道時点でも制限は続いていた。（発生日: 2026年10月14日）</description>
     <category>外交問題</category>
-    <category>虚偽発言・印象操作</category>
+    <category>侵略国支援</category>
   </item>
   <item>
     <title>TikTokがイーロン・マスクのドキュメンタリー映画「Musk」の公開日に「政治的コンテンツ」を理由に配給会社の広告出稿を停止した</title>
@@ -750,116 +845,6 @@ BuzzFeed Newsと「こびナビ」はいずれも「明確な誤り」と判定�
 続けて「自分は血栓になった、あるいはターボがんになった、そういう報告が上がっていて」と述べ、ワクチン接種について「打てば打つほど感染する。打てば打つほど私のような被害者が出る」として、加藤勝信財務相に接種の中止を求めた。（発生日: 2025年2月18日）</description>
     <category>エセ科学</category>
     <category>根拠不明発言</category>
-  </item>
-  <item>
-    <title>北條智彦（立憲）が「永久不妊の可能性」などワクチンの誤情報を投稿し削除した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hojo-tomohiko-vaccine-infertility-misinformation-post/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hojo-tomohiko-vaccine-infertility-misinformation-post/</guid>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    <description>立憲民主党の東京都第13区総支部長で衆院選に立候補予定だった北條智彦は2021年7月11日、「ワクチンに感染予防効果は見込めない」「子供や若い方への接種は絶対ダメ」「卵巣の損傷や永久不妊の可能性が否定できません」「接種者の息や汗からスパイクタンパク質が放出される」などとする「立憲民主号外版」の記事をTwitterに投稿した。
-BuzzFeed Newsと「こびナビ」はこれらを誤りと判定した。北條は23時間後に投稿を削除したが、削除の理由は明らかにしなかった。（発生日: 2021年7月11日）</description>
-    <category>エセ科学</category>
-    <category>虚偽発言・印象操作</category>
-  </item>
-  <item>
-    <title>北村晴男（弁護士・後に保守所属）がYouTubeでコロナワクチンを「巨大なロシアンルーレット」と表現した</title>
-    <link>https://rememberwhodidwhat.github.io/case/kitamura-haruo-covid-vaccine-giant-russian-roulette/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kitamura-haruo-covid-vaccine-giant-russian-roulette/</guid>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    <description>弁護士の北村晴男は2023年1月23日、自身のYouTubeチャンネルに「コロナに対して思う事」という動画を投稿し、ワクチンを「巨大なロシアンルーレット」「運を天に任せた話」と表現した。
-新型コロナワクチンについては短時間で作られたため「十分に安全性は検討されていなかった」とし、「死亡リスクが極めて低いのに、巨大なロシアンルーレットをやる意味があるのかと言うと、私から見れば全く意味がない」と述べ、自身も家族も接種していないと明かした。
-北村は2025年の参院選に日本保守党から立候補して当選した。（発生日: 2023年1月23日）</description>
-    <category>根拠不明発言</category>
-  </item>
-  <item>
-    <title>初鹿野裕樹（参政）が参院選中に「沢山の仲間が共産党員により殺害」とXに投稿した</title>
-    <link>https://rememberwhodidwhat.github.io/case/hajikano-hiroki-jcp-murder-post/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hajikano-hiroki-jcp-murder-post/</guid>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    <description>参院選神奈川選挙区に参政党から立候補していた元警視庁警察官の初鹿野裕樹は、2025年7月7日にXで「沢山の仲間が共産党員により殺害され、殺害方法も残虐であり、今だに恐怖心が拭えません」と投稿した。
-共産党神奈川県委員会は翌8日、事実に基づかないとして撤回・謝罪を求める抗議文を届けたが、15日までに回答はなかった。
-共産党神奈川県委員会は同日、名誉毀損と公職選挙法違反（虚偽事項の公表）の疑いで初鹿野を神奈川県警に告訴した。（発生日: 2025年7月7日）</description>
-    <category>根拠不明発言</category>
-    <category>ヘイト扇動</category>
-    <category>選挙工作</category>
-    <category>被害</category>
-  </item>
-  <item>
-    <title>初鹿野裕樹（参政）が共産党への名誉毀損容疑で神奈川県警に書類送検された</title>
-    <link>https://rememberwhodidwhat.github.io/case/hajikano-hiroki-defamation-papers-sent/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hajikano-hiroki-defamation-papers-sent/</guid>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    <description>神奈川県警は、2025年7月の参院選期間中に「たくさんの仲間が共産党員により殺害」されたなどとXに投稿したとして共産党側から名誉毀損容疑で刑事告訴されていた参政党の初鹿野裕樹参院議員を書類送検した。
-2026年9月11日、捜査関係者への取材で判明したと共同通信が報じた。（発生日: 2026年9月11日）</description>
-  </item>
-  <item>
-    <title>先沖仁志（参政）が衆院選の第一声で自閉症の原因に母親と接する時間が関わるという研究結果があると発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/sakioki-hitoshi-autism-mother-remark/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/sakioki-hitoshi-autism-mother-remark/</guid>
-    <pubDate>Sat, 17 Oct 2026 00:00:00 +0900</pubDate>
-    <description>衆院選神奈川14区に参政党から立候補した先沖仁志は、2026年1月27日の第一声で、自閉症の子どもが増えている大きな原因に0〜3歳の時期に母親といかに長く接しているかが関わっているという「研究結果もある」と述べた。
-児童精神科医の内山登紀夫は、親に原因があるとする説は遅くとも1980年代に否定されているとして「全く根拠がない」と批判した。日本自閉症協会もホームページで「自閉症の原因は親の育て方や愛情不足ではない」としている。
-先沖は神奈川新聞の取材に「誤解を与える発言」だったとして訂正し、2月3日にXで「根拠のない発言」だったと謝罪した。（発生日: 2026年1月27日）</description>
-    <category>エセ科学</category>
-  </item>
-  <item>
-    <title>須藤元気（国民から出馬）が国会議員時代のワクチンに関する発信を「事実に反するものがある」と謝罪した</title>
-    <link>https://rememberwhodidwhat.github.io/case/sudo-genki-vaccine-posts-apology/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/sudo-genki-vaccine-posts-apology/</guid>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
-    <description>元参院議員の須藤元気は国会議員在任中、Xで「もういい加減ワクチン接種を進める理由はないでしょ」と投稿するなど新型コロナワクチンに否定的な発信を行っていた。
-2025年の参院選で国民民主党から擁立されると過去の発信が問題視され、須藤は6月30日、玉木雄一郎代表と並んだ会見で「科学的根拠が乏しい」との指摘を深く反省し、「その中に事実に反するものがあることは改めて反省しています」と述べ、医療従事者に負担をかけたと謝罪した。（発生日: 2025年6月30日）</description>
-    <category>エセ科学</category>
-  </item>
-  <item>
-    <title>陸自の現地情報隊が協力者情報の報告書を情報公開請求の対象とならないよう公文書として扱っていなかった</title>
-    <link>https://rememberwhodidwhat.github.io/case/gsdf-local-intelligence-unit-reports-not-public-documents/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/gsdf-local-intelligence-unit-reports-not-public-documents/</guid>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
-    <description>陸上自衛隊の現地情報隊が協力者の情報を取りまとめた報告書「ベーシック・ソース・データ（BSD）」（数百〜1000人単位で保存とされる）について、複数の元隊幹部が毎日新聞の取材に「公文書として扱っていなかった」と証言し、2026年10月13日に報じられた。2007年の隊設立前にフォーマット作成に関わった元幹部は、情報公開請求の対象になることを恐れたと明かした。防衛省は毎日新聞の情報公開請求に対し、報告書の存否自体の応答を拒否して不開示とした。（発生日: 2026年10月13日）</description>
-    <category>情報隠蔽</category>
-  </item>
-  <item>
-    <title>農水省が予算カット発言・公選法違反疑惑の簗和生農相を支援する「簗大臣お支えチーム」を内々に新設した</title>
-    <link>https://rememberwhodidwhat.github.io/case/maff-yana-daijin-osasae-team/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/maff-yana-daijin-osasae-team/</guid>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
-    <description>「予算カット」発言や衆院選でのシャトルバス無料送迎（公選法違反疑惑）で批判を受けていた簗和生農相を支えるため、農水省内に秘書課を中心とする「簗大臣お支えチーム」が内々に作られたことが2026年10月9日、複数の農水省関係者の話で分かった。無料送迎の適法性などの反証材料を整理し、国会答弁や会見対応を補強する狙いとされ、省内からは「勤務時間中に本来業務そっちのけでやるべきことか」との疑問の声が出た。簗氏は同日の閣議後会見で、無料送迎について「事実関係を確認している」「しっかり整理でき次第、説明する」と述べており、この整理作業を同チームが担うとみられている。（発生日: 2026年10月9日）</description>
-    <category>地位濫用</category>
-    <category>公費浪費</category>
-  </item>
-  <item>
-    <title>谷本誠一（呉市議）が機内でマスク着用を拒否して降機させられ、コロナは「闇の組織による陰謀」と語った</title>
-    <link>https://rememberwhodidwhat.github.io/case/tanimoto-seiichi-mask-refusal-flight-conspiracy/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tanimoto-seiichi-mask-refusal-flight-conspiracy/</guid>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
-    <description>広島県呉市議の谷本誠一は2022年2月6日、釧路空港発羽田行きのエア・ドゥ機内で知人男性とともに客室乗務員の再三のマスク着用要請を拒み、離陸前に降機させられた。同機の出発は1時間14分遅れた。
-谷本は週刊女性PRIMEの取材に「新型コロナウイルス感染症自体がとんでもない茶番劇。世界を操る闇の組織による陰謀」「コロナもPCR検査もワクチンも、みなエビデンスがない」と語った。（発生日: 2022年2月6日）</description>
-    <category>衛生観念欠如</category>
-    <category>陰謀論</category>
-  </item>
-  <item>
-    <title>簗和生（自民）が農水相を辞任し、高市早苗が任命責任を「重く受け止める」と述べた</title>
-    <link>https://rememberwhodidwhat.github.io/case/yana-kazuo-resignation-takaichi-appointment-responsibility/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yana-kazuo-resignation-takaichi-appointment-responsibility/</guid>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
-    <description>「予算カット」発言とシャトルバス無料送迎疑惑を巡り、簗和生農相は2026年10月13・14日の衆院予算委員会で、国交省幹部への問い合わせについて「記憶や記録を持ち合わせていない」、送迎問題について「法令にのっとり適切に対処している」と答弁するにとどまった。高市早苗首相は同委員会の答弁で予算カット発言を「本当に不適切で、本当にダサい」と評した。
-簗氏は14日夜に辞表を提出し、農林水産相（国務大臣）の職を辞任した（衆院議員の職は辞していない）。高市内閣発足後初の閣僚辞任で、首相は「任命責任を重く受け止めている」と述べたが、自身の処分など任命責任の具体的な取り方は示さなかった。
-辞任は大臣職を退いたものであり、道路予算が減額された那須烏山市・那珂川町（簗氏を支援した首長の自治体では増額）の配分の見直しや、両市町への補償等の措置は示されていない。（発生日: 2026年10月14日）</description>
-    <category>議会軽視</category>
-    <category>管理不行き届き</category>
-    <category>品格欠如</category>
-    <category>詭弁</category>
-  </item>
-  <item>
-    <title>神谷宗幣が米国のmRNAワクチン開発終了報道に「世界が正常化」と投稿した</title>
-    <link>https://rememberwhodidwhat.github.io/case/kamiya-sohei-mrna-vaccine-world-normalizing-post/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kamiya-sohei-mrna-vaccine-world-normalizing-post/</guid>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 +0900</pubDate>
-    <description>参政党代表の神谷宗幣は2025年8月、米厚生省傘下の生物医学先端研究開発局（BARDA）がmRNAワクチン開発を段階的に終了するとの報道を受け、Xで「世界が正常化していきますね」「でも責任を取ってない人たちがいますね」と投稿した。
-開発終了の背景には、ワクチン懐疑派で知られるケネディ厚生長官が科学的証拠を示さずに予防効果がないと説明した見直し方針があるとされる。
-医師でもある米山隆一衆院議員（立憲）は「mRNAワクチンが多くの人の命を救った事を丸で無視する非科学的『反ワクチン』そのもの」と批判した。（発生日: 2025年8月7日）</description>
-    <category>エセ科学</category>
   </item>
 </channel>
 </rss>
