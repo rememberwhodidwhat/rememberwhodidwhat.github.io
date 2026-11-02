@@ -6,7 +6,32 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Mon, 02 Nov 2026 23:48:03 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 01:43:42 +0900</lastBuildDate>
+  <item>
+    <title>鶴指真澄（海老名市議）がTwitterに「同性愛は異常なのだ」「異常人間が多くなれば人類の破滅」と投稿した</title>
+    <link>https://rememberwhodidwhat.github.io/case/tsurusashi-masumi-douseiai-ijou/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tsurusashi-masumi-douseiai-ijou/</guid>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+    <description>神奈川県海老名市の鶴指真澄市議（無所属）は2015年11月29日未明、自身のTwitterに「同性愛は異常なのだ。異常人間の行動を正当化した報道はするな」「異常人間が多くなれば人類の破滅」などと投稿した。約10時間後に「不適切な表現であったことを深くお詫び申し上げます」と謝罪して投稿を撤回・削除し、取材には「酒を飲んで酔った勢いでいたずらとしてやってしまった」と釈明した。差別発言との指摘は認めたが、議員辞職は「現時点では考えていない」と述べた。（発生日: 2015年11月29日）</description>
+    <category>性的マイノリティ差別</category>
+  </item>
+  <item>
+    <title>村松裕美（甲府市議）が芥川賞作家の李琴峰をFacebookで名指しして性別変更歴を暴露し東京地裁が賠償を命じた</title>
+    <link>https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-ri-kotomi-outing/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-ri-kotomi-outing/</guid>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+    <description>甲府市の村松裕美市議は2024年5月下旬、面識のない芥川賞作家の李琴峰さんを名指しし、Facebookに「身体が男性で手術もしていません」などと投稿した。警察から注意を受けて投稿を削除し、断定的な投稿をしたことを謝罪するとした一方、同日に李さんの性別変更前の写真や氏名を含む別の人物の投稿のスクリーンショットを掲載した。李さんの訴えに対し、東京地裁は2026年10月29日、投稿がプライバシーを違法に侵害したと認め、村松市議に110万円の支払いを命じた。判決は削除後の再投稿について「強い非難を免れない」とした。（発生日: 2024年5月）</description>
+    <category>性的マイノリティ差別</category>
+    <category>プライバシー侵害</category>
+  </item>
+  <item>
+    <title>村松裕美（甲府市議）が性自認暴露を巡る甲府市議会の警告書を「従うつもりはない」と拒否した</title>
+    <link>https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-keikokusho-kyohi/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-keikokusho-kyohi/</guid>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+    <description>甲府市議会は2025年12月9日、芥川賞作家の李琴峰さんの性自認を同意なく発信したことなどが議会の信頼を損ねたとして、政治倫理審査会の決定に基づき村松裕美市議に警告書を手渡した。村松市議は受理を拒否し、取材に「私をおとしたいメンバーで決められた警告に従うつもりはない」「（誓約書は）もちろん出しません」と述べた。村松市議は、発信がアウティングに当たるかは係争中で、警告も適切な手順を踏んでいないと主張した。（発生日: 2025年12月9日）</description>
+    <category>議会軽視</category>
+  </item>
   <item>
     <title>荒井勝喜（首相秘書官）が同性婚などについて「見るのも嫌だ。隣に住んでいたらやっぱり嫌だ」と発言し更迭された</title>
     <link>https://rememberwhodidwhat.github.io/case/arai-masayoshi-dousei-kon-miru-no-mo-iya/</link>
@@ -880,28 +905,6 @@
     <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
     <description>ニューヨーク・タイムズは2023年12月27日、OpenAIとMicrosoftが数百万本の記事を許可なくChatGPT等の学習に使い、記事を逐語的に再現・要約する出力で同紙と競合しているとして、マンハッタンの連邦地裁に著作権侵害で提訴した。同紙は数十億ドル規模の損害と、同紙の記事を使ったモデル・学習データの破棄を求めている。OpenAIは「驚き、失望している」とコメントした。（発生日: 2023年12月27日）</description>
     <category>無断学習</category>
-  </item>
-  <item>
-    <title>OpenAIが非営利法人の支配下にある営利企業への組織再編を完了した</title>
-    <link>https://rememberwhodidwhat.github.io/case/openai-for-profit-recapitalization/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/openai-for-profit-recapitalization/</guid>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
-    <description>非営利法人として設立されたOpenAIは2025年10月28日、営利部門をパブリック・ベネフィット・コーポレーション（OpenAI Group PBC）に転換する資本再編を完了したと発表した。非営利のOpenAI Foundationが同社を支配し約26%の株式を保有、Microsoftが約27%、残りを投資家と従業員が保有する。再編はカリフォルニア州・デラウェア州の司法長官との協議を経て行われ、イーロン・マスクらが反対していた。（発生日: 2025年10月28日）</description>
-  </item>
-  <item>
-    <title>OpenAIが計算資源の20%を割くと約束したスーパーアラインメントチームを資源不足のまま解散させた</title>
-    <link>https://rememberwhodidwhat.github.io/case/openai-superalignment-team-dissolved/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/openai-superalignment-team-dissolved/</guid>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
-    <description>OpenAIは2023年7月、超知能AIの制御を研究する「スーパーアラインメント」チームを設け、計算資源の20%を割り当てると公表していた。2024年5月、共同責任者のヤン・ライケが、安全性の文化とプロセスが製品開発の後回しにされ、チームは計算資源の確保に苦労していたとして辞任し、同社はチームの解散を認めた。TechCrunchはチーム関係者の話として、約束の一部の計算資源の要求も度々却下されていたと報じた。（発生日: 2024年5月17日）</description>
-    <category>公約不履行</category>
-  </item>
-  <item>
-    <title>OpenAIが従業員の規制当局への通報を妨げる違法な秘密保持契約を結ばせていたとして内部告発者にSECへ申し立てられた</title>
-    <link>https://rememberwhodidwhat.github.io/case/openai-whistleblowers-sec-complaint-ndas/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/openai-whistleblowers-sec-complaint-ndas/</guid>
-    <pubDate>Fri, 23 Oct 2026 00:00:00 +0900</pubDate>
-    <description>OpenAIの内部告発者は2024年7月1日付で米証券取引委員会（SEC）に書簡を送り、同社の雇用・退職・秘密保持契約が、従業員が連邦当局に情報提供する際に会社の事前同意を求め、内部告発報奨金の受け取りを放棄させるなど、通報を妨げる契約を禁じるSEC規則に違反しているとして調査を求めた。グラスリー上院議員は同社の慣行が内部告発者に萎縮効果を与えていると批判した。OpenAIは自社の方針は従業員の保護された開示の権利を守っていると説明した。（発生日: 2024年7月13日）</description>
   </item>
 </channel>
 </rss>
