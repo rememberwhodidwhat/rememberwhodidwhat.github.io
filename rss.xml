@@ -6,7 +6,7 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Tue, 03 Nov 2026 17:20:51 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 17:34:30 +0900</lastBuildDate>
   <item>
     <title>鶴指真澄（海老名市議）がTwitterに「同性愛は異常なのだ」「異常人間が多くなれば人類の破滅」と投稿した</title>
     <link>https://rememberwhodidwhat.github.io/case/tsurusashi-masumi-douseiai-ijou/</link>
@@ -230,6 +230,15 @@ LGBT問題に取り組む松岡宗嗣氏がTwitterで「トランス女性への
 小嶋市議が起こした損害賠償訴訟で、名古屋地裁は2025年6月25日、発言はトランスジェンダー当事者を揶揄するもので社会的に許容できる限度を超えた侮辱にあたるとして、村上市議に17万円の支払いを命じた。（発生日: 2024年1月19日）</description>
     <category>性的マイノリティ差別</category>
     <category>侮辱的発言</category>
+  </item>
+  <item>
+    <title>最上佳則（参政・都議）が都議補選の応援演説で「子宮頸がんは風邪の一部」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/mogami-yoshinori-cervical-cancer-common-cold/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/mogami-yoshinori-cervical-cancer-common-cold/</guid>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
+    <description>参政党の最上佳則都議は、2026年10月28日、都議補選（千代田区）の参政党候補の応援街宣で東京都のHPVワクチン男性接種事業を批判し、「コロナにしたって、子宮頸がんにしたって、RSワクチンにしたって、普通に、それは&#34;風邪の一部&#34;なんだから」「自然免疫で私たちは病気に強い体になっていく」と述べた。
+最上は女性自身の取材に書面で、言い間違いで医学的に誤った説明だったと認めて訂正し、子宮頸がんは主にHPVの持続感染を原因とする悪性腫瘍で風邪とは全く異なると説明したうえで謝罪した。（発生日: 2026年10月28日）</description>
+    <category>エセ科学</category>
   </item>
   <item>
     <title>星野博（自民・江東区議）が区議会でパートナーシップ制度は「少子化の進行につながる」と述べ保険金目当ての殺人事件が増えるのではとの趣旨の発言をした</title>
@@ -941,14 +950,6 @@ LGBTQの自殺防止に取り組むNPO「ザ・トレバー・プロジェクト
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/nakayama-yasuhide-late-diplomacy-committee/</guid>
     <pubDate>Fri, 30 Oct 2026 00:00:00 +0900</pubDate>
     <description>2021年5月20日の参院外交防衛委員会で、中山泰秀防衛副大臣が質疑に2分遅れて出席し、野党の反発で委員会は取りやめとなった。質疑時間の繰り上がりが中山氏に伝わっていなかった事務方のミスとされる。仕切り直しの委員会で中山氏は「あってはならないことで、心から猛省し、お詫び申し上げたい」と謝罪した。（発生日: 2021年5月20日）</description>
-  </item>
-  <item>
-    <title>三原じゅん子が厚生労働副大臣として参院厚生労働委員会に約30分遅刻し法案採決が見送られた</title>
-    <link>https://rememberwhodidwhat.github.io/case/mihara-junko-late-health-committee/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/mihara-junko-late-health-committee/</guid>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0900</pubDate>
-    <description>2021年5月13日の参院厚生労働委員会で、三原じゅん子厚生労働副大臣が審議に約30分遅刻し、野党が反発したため予定していた医療法改正案の採決が見送られた。その余波で、14日の参院本会議で菅義偉首相が出席して行う予定だった医療制度改革関連法案の趣旨説明・質疑も先送りとなった。（発生日: 2021年5月13日）</description>
-    <category>議会軽視</category>
   </item>
 </channel>
 </rss>
