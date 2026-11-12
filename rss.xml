@@ -6,7 +6,7 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Thu, 12 Nov 2026 13:53:53 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 12 Nov 2026 21:55:03 +0900</lastBuildDate>
   <item>
     <title>阿部圭史（維新）が衆院憲法審査会で9条2項の削除と集団的自衛権の全面容認・国防軍の創設を主張した</title>
     <link>https://rememberwhodidwhat.github.io/case/abe-keishi-article-9-2-deletion-national-defense-army/</link>
@@ -15,6 +15,25 @@
     <description>2026年11月12日、憲法9条と自衛隊の位置付けを集中討議した衆院憲法審査会で、日本維新の会の阿部圭史は、戦力不保持を定めた9条2項を削除するべきだと主張した。
 そのうえで、集団的自衛権の行使を全面的に容認し、国防軍を創設するべきだとした。（発生日: 2026年11月12日）</description>
     <category>軍拡推進</category>
+  </item>
+  <item>
+    <title>玉木雄一郎が野党が一致すれば企業・団体献金禁止に賛成すると述べた後に自民・公明と献金を存続させる案で合意した</title>
+    <link>https://rememberwhodidwhat.github.io/case/tamaki-yuichiro-kigyou-dantai-kenkin-mujun/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tamaki-yuichiro-kigyou-dantai-kenkin-mujun/</guid>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
+    <description>国民民主党の玉木雄一郎代表は2024年11月3日のテレビ番組で、野党が一致して企業・団体献金禁止法案を出すなら賛成かと問われ「一致してやるんだったら我々賛成です」と答えたが、5日の会見では「基本的には与野党」と前提を言い換えた。12月には政治団体を禁止対象から除いた立憲民主党などの法案に「抜け穴がある」と批判し、国民民主党は2025年3月にも「政治団体からの迂回献金が防げない」と主張して野党5党派の禁止法案に加わらなかった。現行法では企業・団体から政治団体への献金は禁じられており、5党派の法案は政治団体間の寄付の上限や団体が構成員を政治団体に勧誘して献金させることの禁止も盛り込んでいた。
+国民民主党は2025年3月31日、収支報告書をオンライン提出する政党支部は従来通り企業・団体献金を受け取れるとする、献金そのものを存続させる案で自民・公明と実務者合意した。また、国民民主党の浜口誠政調会長は、トヨタ系労組の政治団体から関連政治団体を通じて計約2億4853万円の寄付を受けていたと報じられている。（発生日: 2025年3月31日）</description>
+    <category>矛盾発言</category>
+    <category>詭弁</category>
+  </item>
+  <item>
+    <title>浜口誠（国民）がトヨタ系労組の政治団体から関連政治団体4つに分散する形で計約2億4853万円の寄付を受けていたと報じられた</title>
+    <link>https://rememberwhodidwhat.github.io/case/hamaguchi-makoto-toyota-roso-kenkin/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hamaguchi-makoto-toyota-roso-kenkin/</guid>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
+    <description>日刊ゲンダイは2024年12月、国民民主党の浜口誠政調会長（参院比例・トヨタ労組出身の組織内議員）の関連政治団体4つに、トヨタ自動車系労組の2つの政治団体が分散する形で計約2億4853万円を寄付していたと報じた。同紙が調べた2022年参院選で当選した産別労組の組織内議員8人の中で突出した額だった。
+当時、国民民主党は企業・団体献金の廃止に慎重な姿勢を示しており、玉木雄一郎代表は政治団体を禁止対象から除いた立憲民主党などの禁止法案を「抜け穴がある」と批判していた。（発生日: 2024年12月10日）</description>
+    <category>金銭問題</category>
   </item>
   <item>
     <title>武部新（自民）の政党支部と地域支部の政治資金収支報告書で2022〜2024年の交付金の記載に計約85万円の食い違いがあった</title>
@@ -375,12 +394,13 @@ Metaは技術的な障害や不正対策によるものとして政治的偏向�
     <category>被害</category>
   </item>
   <item>
-    <title>立憲民主党など野党5党派が政治団体を禁止対象から除いた企業・団体献金禁止法案を提出し労組系政治団体からの献金が残る抜け穴だと指摘された</title>
-    <link>https://rememberwhodidwhat.github.io/case/rikken-kigyou-dantai-kenkin-kinshi-seiji-dantai-jogai/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/rikken-kigyou-dantai-kenkin-kinshi-seiji-dantai-jogai/</guid>
+    <title>立憲民主党・日本維新の会・参政党・社民党・有志の会が企業・団体献金禁止法案を共同提出した</title>
+    <link>https://rememberwhodidwhat.github.io/case/rikken-yatou-kigyou-dantai-kenkin-kinshi-houan/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/rikken-yatou-kigyou-dantai-kenkin-kinshi-houan/</guid>
     <pubDate>Wed, 04 Nov 2026 00:00:00 +0900</pubDate>
-    <description>2024年12月、立憲民主党など野党5党派は、「会社、労働組合、職員団体その他の団体（政治団体を除く。）」による政治献金とパーティー券購入を禁じる企業・団体献金禁止法案を衆院に提出した。法案は政治団体間の寄付の上限引き下げや、団体が構成員を政治団体に勧誘して献金させることの禁止も盛り込んだが、政治団体からの献金は禁止の対象外とした。
-毎日新聞の調べでは、参院比例代表で当選した立憲・国民民主の労組出身の組織内議員16人は、2023年に支援労組やその関連政治団体から計約2億4000万円を受け取っていた。国民民主党の玉木雄一郎代表は法案に「抜け穴がある」と指摘し、立憲の野田佳彦代表は「個人の意思でつくった政治団体が自発的に寄付する場合を除かざるを得ない」と説明した。共産党の塩川鉄也は、現行法でも企業・団体から政治団体への献金は禁じられていると指摘した。法案は2025年3月末までに衆院で過半数の賛同を得られなかった。（発生日: 2024年12月）</description>
+    <description>立憲民主党・有志の会・参政党は2024年12月9日、会社・労働組合などの団体による政治献金とパーティー券購入を禁じる企業・団体献金禁止法案を衆院に提出した。2025年3月19日には日本維新の会・社民党を加えた野党5党派（立憲・維新・参政・社民・有志の会）で法案を出し直し、政治団体間の寄付に年間総額6千万円・同一団体へ2千万円の上限を設けることや、団体が構成員を政治団体に勧誘して献金させることの禁止も盛り込んだ。
+現行法でも企業・団体から政治団体への献金は禁じられており、共産党は共同提出には加わらなかったが賛成の立場を示した。国民民主党は加わらず、禁止に賛成する党派は衆院で過半数に届かなかった。（発生日: 2025年3月19日）</description>
+    <category>金権政治の是正</category>
   </item>
   <item>
     <title>鶴指真澄（海老名市議）がTwitterに「同性愛は異常なのだ」「異常人間が多くなれば人類の破滅」と投稿した</title>
@@ -926,24 +946,6 @@ LGBT法連合会は「当事者に対する、存在の否定ともいえる発�
 AERA（2021年6月21日号）は、法案に積極的だった自民党議員の話として、ある総理経験者が「これは闘争だ」と言って議連の修正案を絶対に通すなと総務会役員に直接働きかけたと報じ、その人物は安倍晋三前首相だと複数の関係者が証言していると伝えた。（発生日: 2021年6月12日）</description>
     <category>人権保障反対</category>
     <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>安倍昭恵が安倍晋三の政治団体を継承し約2億4400万円の政治資金を非課税で引き継いだ</title>
-    <link>https://rememberwhodidwhat.github.io/case/abe-akie-seiji-dantai-keishou/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/abe-akie-seiji-dantai-keishou/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>2022年7月8日に銃撃されて死去した安倍晋三元首相の資金管理団体「晋和会」と「自民党山口県第4選挙区支部」について、妻の安倍昭恵が同日付で代表に就任していたことが、2023年6月にしんぶん赤旗の調べで分かった。安倍の関連政治団体には2021年末時点で計約2億4400万円の政治資金が残っていた。
-国税庁によれば、親族が政治団体の新しい代表になれば、相続税を課されずに政治資金を引き継げる。昭恵は2023年4月の衆院山口4区補選に立候補せず議員になっていないが、晋和会の所在地は議員会館から昭恵の自宅に移された。支部は2023年1月に解散されたが、残金の処理は当時公表されておらず、昭恵は赤旗の質問に回答しなかった。（発生日: 2022年7月8日）</description>
-    <category>脱法行為</category>
-  </item>
-  <item>
-    <title>塩入清香（参政）が参院選中にロシア国営メディア「スプートニク」のインタビューを受け神谷宗幣が「参政党は親露派ではない」と反論した</title>
-    <link>https://rememberwhodidwhat.github.io/case/shioiri-sayaka-sputnik-interview/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/shioiri-sayaka-sputnik-interview/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>2025年7月14日、EUが「ロシア政府による体系的な偽情報・情報操作」として域内での放送を禁じているロシア国営メディア「スプートニク」が、参院選東京選挙区の参政党候補・さや（塩入清香）のインタビュー動画をTwitterの日本語アカウントに投稿し、ロシア製ボットの関与など参政党へのロシアの支援を疑う見方が広がった。神谷宗幣代表は「私も広報部も許可を出していません。現場と党の末端の職員が勝手にやってしまった」として職員を処分したと投稿し、「参政党の躍進の裏にはロシアの工作がある」との指摘を「陰謀論」と呼んで「参政党は親露派ではない」と主張した。神谷氏はそれまで、ロシアのウクライナ侵攻を「米国の戦争」と表現し、「ロシア側にはロシア側の言い分もある」として対露経済制裁の緩和を求めていた。（発生日: 2025年7月14日）</description>
-    <category>不適切な共演・称賛</category>
-    <category>虚偽発言・印象操作</category>
   </item>
 </channel>
 </rss>
