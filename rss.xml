@@ -6,7 +6,16 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Tue, 10 Nov 2026 03:39:15 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 12 Nov 2026 12:19:28 +0900</lastBuildDate>
+  <item>
+    <title>吉住健一（新宿区長）が区立公園の座りにくいベンチを「意地悪ベンチ」とする批判に対し「非現実的な投稿」とSNSで反論した</title>
+    <link>https://rememberwhodidwhat.github.io/case/yoshizumi-kenichi-shinjuku-park-bench-sns-rebuttal/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yoshizumi-kenichi-shinjuku-park-bench-sns-rebuttal/</guid>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
+    <description>新宿区立公園に1996年から設置されている背もたれのないアーチ状のベンチがSNSで「意地悪ベンチ」「排除アート」と批判され、吉住健一区長は2024年3月28日、Twitterで「ホームレス対策ではなく住宅地における夜間の騒音防止です」「地元からの苦情はありません」と反論した。自らベンチに座る写真を添えて「ユッタリと本も読め、お茶やカップも置けます」と投稿し、「子どもや高齢者が転倒してけがをする恐れがある」「貧血時に寝そべれない」といった批判には、来たことも使ったこともない人たちによる「非現実的な投稿」と応じた。区は、酔客の寝そべりや長時間の滞留を抑えるための形状だと説明している。（発生日: 2024年3月28日）</description>
+    <category>弱者攻撃</category>
+    <category>根拠不明発言</category>
+  </item>
   <item>
     <title>高市早苗がG7首脳オンライン会議の欠席を衆院財務金融委で「総合的に判断された」と答弁し具体的な理由を示さなかった</title>
     <link>https://rememberwhodidwhat.github.io/case/takaichi-sanae-g7-online-summit-absence-comprehensive-judgment-answer/</link>
@@ -930,16 +939,6 @@ LGBT法連合会の神谷悠一事務局長は「同性愛者や、様々な理�
     <description>ロシアのプーチン大統領は2023年7月24日、「先天的な生理的逸脱」の場合を除いて性別適合手術とホルモン治療を禁止し、公的書類の性別変更も認めない法律に署名し、同法は公布と同時に施行された。
 同法は配偶者の一方が性別を変更した婚姻を無効にできるとし、施行前に性別移行していた場合にも遡って適用されるほか、性別を変更した人がいる夫婦の養子縁組も禁止した。（発生日: 2023年7月24日）</description>
     <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>プーチンがLGBTに関する情報の拡散や「宣伝」を禁止する法律に署名した</title>
-    <link>https://rememberwhodidwhat.github.io/case/putin-lgbt-propaganda-law-2022/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/putin-lgbt-propaganda-law-2022/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>ロシアのプーチン大統領は2022年12月5日、LGBTら性的少数者などに関する情報の拡散や「宣伝」、「示威行為」などを禁止・制限する法律に署名した。
-LGBTに関連するいかなる情報も、公共の場やオンライン、映画、書籍、広告などで拡散することが禁止され、違反した場合は重い罰金刑が科される可能性がある。（発生日: 2022年12月5日）</description>
-    <category>性的マイノリティ差別</category>
-    <category>言論弾圧</category>
   </item>
 </channel>
 </rss>
