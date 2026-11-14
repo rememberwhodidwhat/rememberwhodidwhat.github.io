@@ -130,6 +130,8 @@
 
   .section-body { margin-bottom: 48px; }
   .section-body p { font-size: 0.88rem; color: var(--text); line-height: 1.85; margin-bottom: 12px; }
+  .section-body figure.column-image { margin: 16px 0; }
+  .section-body figure.column-image img { display: block; max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); }
   .actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .btn { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); text-decoration: none; color: var(--text); transition: background 0.15s, border-color 0.15s; }
   .btn:hover { background: var(--surface-hover); border-color: var(--accent); }
@@ -248,10 +250,12 @@
 
   <h2 class="section-label">ダウンロード</h2>
   <div class="section-body">
+<figure class="column-image"><img src="flag_desecration.jpg" alt="" loading="lazy"></figure>
 <p>　以下のリンクからチラシがダウンロードできます。ライセンスは <a class="link" href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener">CC BY</a> です。勝手に印刷して勝手に配布してもらって問題ありません。</p>
 <div class="actions">
       <a class="btn primary" href="../flag_desecration.pdf" download>⬇ 印刷用PDFをダウンロード</a>
     </div>
+<ul><li><a class="link" href="https://bsky.app/profile/rememberwhodidw.bsky.social/post/3n26z3pqdwk2k" target="_blank" rel="noopener">Blueskyでの紹介ポスト</a></li><li><a class="link" href="https://x.com/rememberwhodidw/status/2121224987348816262" target="_blank" rel="noopener">Twitterでの紹介ポスト</a></li></ul>
   </div>
 
   <h2 class="section-label">関連する事件</h2>
@@ -340,7 +344,7 @@ document.querySelectorAll(".share-copy").forEach(function (btn) {
 });
 </script>
 
-  最終更新: 2026-11-12
+  最終更新: 2026-11-14
 </footer>
 
 </body>
