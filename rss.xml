@@ -6,7 +6,7 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Tue, 17 Nov 2026 18:11:32 +0900</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 00:19:28 +0900</lastBuildDate>
   <item>
     <title>高市早苗内閣が冬の電気・ガス料金補助などに予備費から約6500億円の支出を閣議決定した</title>
     <link>https://rememberwhodidwhat.github.io/case/takaichi-naikaku-fuyu-denki-gas-hojo-yobihi-6500oku/</link>
@@ -123,6 +123,17 @@
     <category>詭弁</category>
   </item>
   <item>
+    <title>石川知裕（民主）ら小沢一郎の元秘書3人が陸山会の土地購入資金4億円を政治資金収支報告書に記載せず逮捕・起訴され有罪が確定した</title>
+    <link>https://rememberwhodidwhat.github.io/case/rikuzankai-false-reporting-ozawa-secretaries/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/rikuzankai-false-reporting-ozawa-secretaries/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>民主党幹事長・小沢一郎の資金管理団体「陸山会」が2004年に世田谷区の土地を購入した際の資金4億円などを政治資金収支報告書に記載しなかったとして、2010年1月15日に東京地検特捜部が元秘書の石川知裕衆院議員らを逮捕し、2月4日に石川・大久保隆規・池田光智の3人を政治資金規正法違反（虚偽記載）で起訴した。小沢は「秘書が独断でやったことで、知らない」と関与を否定し、嫌疑不十分で不起訴となった（検察審査会の議決で強制起訴されたが2012年11月に無罪確定）。
+3人は一審・二審で執行猶予付きの有罪判決を受け、判決は約21億7000万円の虚偽記載と水谷建設からの1億円の裏献金受領を認定し、裏献金の隠蔽を動機とした。3人は虚偽記載を「手続き上の手法」と主張して無罪を訴えたが、2014年9月に最高裁が石川の上告を棄却し、全員の有罪が確定した。（発生日: 2010年1月15日）</description>
+    <category>違法行為</category>
+    <category>金銭問題</category>
+    <category>管理不行き届き</category>
+  </item>
+  <item>
     <title>玉木雄一郎が電気代高騰対策として再エネ賦課金の徴収停止を参院選の追加公約に掲げ国民民主党が停止法案を参議院に提出した</title>
     <link>https://rememberwhodidwhat.github.io/case/tamaki-yuichiro-saiene-fukakin-choshu-teishi/</link>
     <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/tamaki-yuichiro-saiene-fukakin-choshu-teishi/</guid>
@@ -140,6 +151,14 @@
     <description>首相の岸田文雄は2022年10月14日、電気料金の負担軽減策を「料金請求システムを活用し、直接的かつ実感できる」形で導入すると表明した。自民党の新藤義孝政調会長代行は10月23日のNHK番組で、負担軽減策は再エネ賦課金の徴収停止と事業者への補助金支出が軸になるかと問われ「おおむねそういう形で詰めに入っている」と答えた。
 政府が10月28日に決めた総合経済対策では、賦課金の徴収は止めず、全国の電力小売会社に政府が支援金を配って値引きさせる方式とし、家庭向けは1キロワット時あたり7円、企業向けは賦課金に相当する3.5円を政府が実質的に肩代わりして補助することになった。
 この電気・ガス価格激変緩和対策事業の事務局は博報堂が受託し、多重委託が会計検査院に指摘された。（発生日: 2022年10月28日）</description>
+  </item>
+  <item>
+    <title>小泉進次郎が通常国会召集日に「自由があるのが自民党。自由がないのが民主党」と発言した</title>
+    <link>https://rememberwhodidwhat.github.io/case/koizumi-jiyu-ga-nai-no-ga-minshuto/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/koizumi-jiyu-ga-nai-no-ga-minshuto/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>2010年1月18日の通常国会召集日、小沢一郎民主党幹事長の資金管理団体を巡る政治資金規正法違反事件で元秘書の石川知裕衆院議員らが逮捕された直後で民主党の新人議員たちが一様に口を閉ざす中、同じ質問を受けた自民党の小泉進次郎衆院議員はテレビの取材に「名前をみればわかる。自由があるのが自民党。自由がないのが民主党。自民党でよかったなぁ～」と答えた。（発生日: 2010年1月18日）</description>
+    <category>侮辱的発言</category>
   </item>
   <item>
     <title>安倍晋三が新型コロナ対応の首相会見を事前に質問を受けた記者への回答だけで打ち切り「まだ聞きたいことがあります」と求めた江川紹子に答えず退席した</title>
@@ -935,23 +954,6 @@ LGBT問題に取り組む松岡宗嗣氏がTwitterで「トランス女性への
 冊子の内容の否定や回収を求める5万1503筆の署名が岸田文雄首相（自民党総裁）と懇談会事務局長宛てに提出された。神政連は東洋経済の取材に、冊子は講演録を掲載しただけで「神政連の意図に基づくものではない」と回答した。（発生日: 2022年6月13日）</description>
     <category>性的マイノリティ差別</category>
     <category>エセ科学</category>
-  </item>
-  <item>
-    <title>神谷宗幣が参院選の松山市での街頭演説でLGBTQについて「生物学的に線引きするのが正しい社会の在り方じゃないか」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/kamiya-sohei-matsuyama-lgbtq/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kamiya-sohei-matsuyama-lgbtq/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>参政党の神谷宗幣代表は2025年7月14日、参院選の応援で松山市で街頭演説し、LGBTQ（性的少数者）への対応について「生物学的に線引きするのが正しい社会の在り方じゃないか」と述べ、「個人が権利や自由を主張し過ぎることで婚姻数が減り、少子化につながっている」と発言した。同性婚やLGBT法に反対する立場を示した。（発生日: 2025年7月14日）</description>
-    <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>神谷宗幣が参院財政金融委員会でロシアのウクライナ侵攻を米国の機関投資家らがNATO東進を進めロシアの怒りを買って始まった「アメリカの戦争」と述べた</title>
-    <link>https://rememberwhodidwhat.github.io/case/kamiya-sohei-america-no-senso/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/kamiya-sohei-america-no-senso/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>参政党の神谷宗幣参院議員は2023年4月6日の参院財政金融委員会で、拠出国債によるウクライナ支援を質す前提として「アメリカの機関投資家や政治活動家の面々がゼレンスキー大統領を担いでＮＡＴＯの東進を進めようとし、ロシアの怒りを買って始まったロシアのウクライナ侵攻」と述べ、EU諸国は「もうこれ以上アメリカの戦争には付き合えないと悲鳴を上げています」と発言した。同年6月には党公式YouTubeチャンネルの動画でも「金融投資家みたいな人たちがウクライナの政治に入り込んで、ゼレンスキーさんを大統領にしてロシア系の住民を殺したりした結果、ロシアが怒って侵攻してきたという流れ」と述べた。神谷氏は当時、党副代表だった。（発生日: 2023年4月6日）</description>
-    <category>侵略擁護</category>
-    <category>陰謀論</category>
   </item>
 </channel>
 </rss>
