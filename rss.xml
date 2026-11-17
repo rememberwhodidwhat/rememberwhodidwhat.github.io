@@ -6,7 +6,7 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Tue, 17 Nov 2026 02:24:03 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 17 Nov 2026 02:46:05 +0900</lastBuildDate>
   <item>
     <title>関芳弘（自民）が議員会館で開いたパーティーに厚労省の担当課長を講師として招きバイオ医薬品企業9人から各9万円の会費を受け取っていた</title>
     <link>https://rememberwhodidwhat.github.io/case/seki-yoshihiro-bio-forum-mhlw-official-lecturer/</link>
@@ -17,6 +17,81 @@
     <category>地位濫用</category>
     <category>利権・癒着</category>
     <category>金銭問題</category>
+  </item>
+  <item>
+    <title>経済産業省資源エネルギー庁が電気・ガス補助金の事務局を担う博報堂の多重委託を理由の記載も判断の記録もないまま認めていたと会計検査院が指摘した</title>
+    <link>https://rememberwhodidwhat.github.io/case/enecho-denki-gas-hojokin-hakuhodo-itaku/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/enecho-denki-gas-hojokin-hakuhodo-itaku/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>2022年度に始まった電気・ガス価格激変緩和対策事業で、資源エネルギー庁は事務局に博報堂を採択した。約319億円の事務費のうち博報堂は博報堂プロダクツなどに計227億円（71.2％）を委託し、博報堂プロダクツはさらに186億円（81.7％）を再委託、その先でも再々委託が行われていた。
+経産省の内規では委託費率が50％を超える場合に理由を書類で説明させることになっているが、会計検査院は2024年11月6日公表の決算検査報告で、理由が具体的に書かれておらず、相見積もりも取られず、同庁が承認した経緯の記録も残されていなかったと指摘した。同庁の担当者は「無駄や過大な支出とは認識していない。記録を残していない点には不備があった」とした。
+2022年度予算約3兆1000億円のうち2兆5000億円超が翌年度に繰り越されており、同庁は「年度内に小売事業者が値引きを行うための必要額を見込むことが困難」と説明した。（発生日: 2024年11月6日）</description>
+    <category>公費浪費</category>
+  </item>
+  <item>
+    <title>経済産業省が持続化給付金の事務を電通・パソナらの設立した一般社団法人に769億円で委託し電通グループを経由する多重の再委託・外注が行われていた</title>
+    <link>https://rememberwhodidwhat.github.io/case/meti-jizokuka-kyufukin-dentsu-saiitaku/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/meti-jizokuka-kyufukin-dentsu-saiitaku/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>経済産業省は新型コロナ対策の持続化給付金の事務を、電通・パソナ・トランスコスモスなどが設立した一般社団法人サービスデザイン推進協議会に769億円で委託した。協議会はその97％にあたる749億円で電通に再委託し、電通は子会社5社に計645.1億円で外注、子会社はさらにパソナなどに外注していた。
+2020年6月5日の野党合同ヒアリングで、経産省の担当者は電通本体に約104億円が残ることを「現行の予算ではそうなっている」と認めたが、電通本体の実際の業務は明らかにされなかった。梶山弘志経産相は8日、「契約の中身は非常に明快」と述べつつ、再委託先・外注先を含む支出の中間検査を行うと発表した。（発生日: 2020年6月5日）</description>
+    <category>公費浪費</category>
+    <category>利権・癒着</category>
+  </item>
+  <item>
+    <title>竹中平蔵（パソナ会長）が持続化給付金の外注をパソナが受けていた問題で週刊新潮の直撃に「会社を通してください」と答えなかった</title>
+    <link>https://rememberwhodidwhat.github.io/case/takenaka-heizo-jizokuka-kyufukin-pasona/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takenaka-heizo-jizokuka-kyufukin-pasona/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>持続化給付金の事務は、パソナが電通・トランスコスモスと設立した一般社団法人サービスデザイン推進協議会が受託し、電通・電通ライブを経てパソナにも外注されていた。パソナグループ会長の竹中平蔵は、会長在任中も政府の未来投資会議や国家戦略特区諮問会議の民間議員を務めていた。
+週刊新潮（2020年6月25日号）がこうした利益相反の指摘について直撃取材すると、竹中は「いや、そういったことは会社を通してください」と答え、説明しなかった。（発生日: 2020年6月）</description>
+    <category>説明責任放棄</category>
+  </item>
+  <item>
+    <title>竹中平蔵が国家戦略特区諮問会議の民間議員として外国人家事支援事業を提案し、自身が会長のパソナが同事業の事業者に選ばれた</title>
+    <link>https://rememberwhodidwhat.github.io/case/takenaka-heizo-tokku-pasona-orix/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takenaka-heizo-tokku-pasona-orix/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>2014年5月に国家戦略特区諮問会議に提案された外国人による家事支援サービスの受け入れ事業などは、民間議員の八田達夫・竹中平蔵ら5人が提案者だった。特区諮問会議は東京都などで外国人による家事代行を解禁し、参入事業者の一つに竹中が取締役会長を務めるパソナグループの子会社を選定した。兵庫県養父市の農業特区でも、竹中が社外取締役を務めるオリックスの子会社が選定された。
+衆院地方創生特委は2017年5月16日の特区法改正案の可決時に、民間企業の役員を務める議員が直接の利害関係を有するときは審議・議決に参加させないことができるとする附帯決議を付けた。内閣府は2019年6月20日の野党合同ヒアリングで、提案者が審査に関わることは「法的に排除されていない」と説明した。（発生日: 2014年5月）</description>
+    <category>利権・癒着</category>
+  </item>
+  <item>
+    <title>竹中平蔵が会長を務めるパソナに、自社も設立に加わった一般社団法人と電通を経由して持続化給付金の事務委託費約171億円が還流した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takenaka-heizo-pasona-jizokuka-kyufukin-kanryu/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takenaka-heizo-pasona-jizokuka-kyufukin-kanryu/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>経済産業省は持続化給付金の事務を、パソナ・電通・トランスコスモスが2016年に設立した一般社団法人サービスデザイン推進協議会に769億円で委託した。協議会は電通に再委託し、電通は子会社の電通ライブに外注、電通ライブは審査やコールセンターなどの業務をパソナに約171億円で外注していたと報じられた。協議会の理事・職員は再委託先の企業からの出向者だった。
+パソナグループ会長の竹中平蔵は、会長在任中も政府の未来投資会議や国家戦略特区諮問会議の民間議員を務めていた。（発生日: 2020年6月）</description>
+    <category>利権・癒着</category>
+  </item>
+  <item>
+    <title>竹中平蔵がオリックス社外取締役のまま未来投資会議の分科会会長として国交省に空港運営の非公表資料を「竹中会長限り」で提出させていた</title>
+    <link>https://rememberwhodidwhat.github.io/case/takenaka-heizo-kuko-hikohyo-shiryo/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takenaka-heizo-kuko-hikohyo-shiryo/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>竹中平蔵は未来投資会議の分科会会長として空港や水道のコンセッション政策を取りまとめる一方、関西3空港の運営権を持ち浜松市の下水道コンセッションにも参入するオリックスの社外取締役を務めていた。2019年11月の分科会で、竹中は今後の入札に影響するとして開示に慎重だった国交省幹部に各空港の財務指標の開示を求め、2020年1月15日の非公表の会議で、黒塗りなしの資料が〈竹中会長限り〉として提供された。
+週刊朝日の情報公開請求で2020年4月に判明した。竹中は「私が役員を務める会社に提供することはない」と述べ、利益相反はないと主張した。（発生日: 2020年1月15日）</description>
+    <category>利権・癒着</category>
+  </item>
+  <item>
+    <title>竹中平蔵が『朝まで生テレビ！』で空港の非公表資料を「提出させてません」と否定し利益相反の追及を「民間議員の言論を封じる」と反発した</title>
+    <link>https://rememberwhodidwhat.github.io/case/takenaka-heizo-asanama-rieki-sohan/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takenaka-heizo-asanama-rieki-sohan/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>竹中平蔵は2020年11月27日深夜の『朝まで生テレビ！』で、森裕子（立憲）に国交省の非公表資料を「竹中会長限り」で提出させたことを問われ、「提出させてません」「私はそういうものを出せとは言ってません」と否定した。分科会の議事メモには、竹中が「数字は、どうして開示できないのか」と国交省幹部に開示を迫った発言が記録されていた。
+森がオリックスの取締役のまま政府の会議に出席していること自体が利益相反だと重ねて問うと、竹中は「国権の最高機関である国会議員が、民間議員の言論を封じるようなことは言わないでください！」と反発した。（発生日: 2020年11月27日）</description>
+    <category>虚偽発言・印象操作</category>
+    <category>詭弁</category>
+  </item>
+  <item>
+    <title>安倍晋三が新型コロナ対応の首相会見を事前に質問を受けた記者への回答だけで打ち切り「まだ聞きたいことがあります」と求めた江川紹子に答えず退席した</title>
+    <link>https://rememberwhodidwhat.github.io/case/abe-shinzo-corona-kaiken-uchikiri/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/abe-shinzo-corona-kaiken-uchikiri/</guid>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0900</pubDate>
+    <description>安倍晋三首相は2020年2月29日、新型コロナ対応を説明する初の記者会見で、プロンプターの冒頭発言を読み上げた後、記者クラブの幹事社などの質問に手元の想定問答を見ながら答え、約35分で会見を打ち切った。フリーの江川紹子が「まだ聞きたいことがあります」と声を上げたが、答えずに退席し、次の予定はなく私邸に帰ったことが後に判明した。
+安倍氏は3月2日の参院予算委員会で、首相会見では「あらかじめ質問をいただいている」と述べ、記者クラブと広報室側が事前に打ち合わせをし、誰に答えるかは司会の内閣広報官が決めていると認めた。第2次安倍政権の発足以降、この会見までの7年余り、フリーランスの記者は一度も質問者に指名されていなかった。（発生日: 2020年2月29日）</description>
+    <category>説明責任放棄</category>
   </item>
   <item>
     <title>厚生労働省の副反応検討部会がHPVワクチンの積極的勧奨の再開を8年5か月ぶりに了承した</title>
@@ -878,79 +953,6 @@ LGBT問題に取り組む松岡宗嗣氏がTwitterで「トランス女性への
     <description>長崎市議会の浅田五郎議員は2019年9月10日の定例会一般質問で、同月に始まった市のパートナーシップ宣誓制度について「長崎市のためになるのか憂慮せざるを得ない」と述べた。
 理由として、制度が子どもたちの健全教育などを脅かす可能性がある、子どもたちが男女の区別が付かなくなる、婚姻制度が根底から覆る、などとした文献を引用した。田上富久市長は制度は「性の多様性が認められる社会を構築する上で大きなステップ」と答弁した。（発生日: 2019年9月10日）</description>
     <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>法務省の尾道刑務支所がトランスジェンダー女性の受刑者に丸刈りを強要し広島弁護士会が人権侵害として勧告した</title>
-    <link>https://rememberwhodidwhat.github.io/case/onomichi-keimushisho-trans-marugari/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/onomichi-keimushisho-trans-marugari/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>尾道刑務支所でトランスジェンダー女性の受刑者が丸刈りを強要され、「短くしたくない」と拒否したものの職員に怒鳴られて調髪に応じた。
-広島弁護士会は2024年1月、これを人権侵害として法相と尾道刑務支所長に勧告書を送付した（一般社団法人fair「2024年LGBTQニュースまとめ」による）。（発生日: 2024年1月5日）</description>
-    <category>性的マイノリティ差別</category>
-    <category>収容者虐待</category>
-  </item>
-  <item>
-    <title>法務省が同性婚訴訟の東京地裁で「婚姻の目的は自然生殖可能性のある関係性の保護だ」と主張した</title>
-    <link>https://rememberwhodidwhat.github.io/case/homusho-shizen-seishoku-kanosei/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/homusho-shizen-seishoku-kanosei/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>「結婚の自由をすべての人に」訴訟の東京地裁での2022年2月9日の口頭弁論で、被告の国側は「婚姻の目的は“自然生殖可能性”のある関係性の保護だ」「同性カップルは異性カップルと同等の“社会的承認”を得ていないから認められない」などと主張した。
-国は当初、婚姻の目的を「子を産み育てる関係性」の保護としていたが、原告側から子を産まない男女も結婚できるとのダブルスタンダードを指摘されると、「生物学的な自然生殖可能性」で婚姻の範囲が決められていると主張を修正していた。（発生日: 2022年2月9日）</description>
-    <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>江原利勝（公明・富里市議）が市議会の一般質問でLGBTQを「病気」と表現した</title>
-    <link>https://rememberwhodidwhat.github.io/case/ebara-toshikatsu-lgbtq-byoki/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/ebara-toshikatsu-lgbtq-byoki/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>公明党の江原利勝富里市議は2021年9月1日の市議会本会議の一般質問で、市内の中学校の制服を性的少数者に配慮して自由に選べるよう提案する中で「今、病気というか、LGBTQのさまざまな問題がある」「自分がそういう病気かどうか分からない。本人しか分からない病気で悩んでいる子どもがいるかもしれない」と述べた。
-江原市議は質問直後に発言の取り消しを求め、毎日新聞の取材に「不適切だった。不快を与えたのであれば申し訳ない」と謝罪した。（発生日: 2021年9月1日）</description>
-    <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>森山裕（自民）が裏金事件で非公認とした衆院選候補の党支部に政党交付金2000万円を支給し「候補者に支給したものではない」と釈明した</title>
-    <link>https://rememberwhodidwhat.github.io/case/moriyama-hiroshi-hikounin-shibu-2000man-en/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/moriyama-hiroshi-hikounin-shibu-2000man-en/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>2024年衆院選で、自民党は派閥裏金事件に関与した11人を非公認としたが、森山裕幹事長名の通知に基づき、公示直後の10月10日付で公認候補の党支部と同額の計2000万円（公認料500万円・活動費1500万円）を、非公認候補が支部長を務める党支部にも政党交付金から振り込んでいた。しんぶん赤旗の調べでは、萩生田光一・平沢勝栄・高木毅ら8人が支部長のままだった。
-しんぶん赤旗の10月23日付の報道を受け、森山は同日「党勢拡大のための活動費として支給した」と認めつつ「候補者に支給したものではない」と釈明し、石破茂首相も「政党支部に出している」として非公認候補が選挙活動に使うことはないと述べたが、支部の代表は非公認候補本人だった。（発生日: 2024年10月23日）</description>
-    <category>金銭問題</category>
-    <category>詭弁</category>
-  </item>
-  <item>
-    <title>柳川樹一郎（自民・浜松市議）が市議会の委員会で男性宅に侵入した教諭の事件について「異常な性癖」「普通の感覚で言うと女性のアパート」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/yanagawa-juichiro-ijo-na-seiheki/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/yanagawa-juichiro-ijo-na-seiheki/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>浜松市議会の最大会派「自民党浜松」の柳川樹一郎市議は2023年2月2日の市議会市民文教委員会で、市立中学教諭が男性宅への住居侵入容疑で逮捕された事件について「こういうふうな事件を起こす教員をどうやって見抜くか。このような人は異常な性癖だ。（男性のアパートに侵入しているが）普通の感覚で言うと女性のアパート」と発言した。
-柳川市議は8日に記者会見し「異常な性癖と言葉に出してしまったことが失言。大変申し訳なく思っている」と謝罪し、議事録からの発言削除を求めた。性的少数者らの団体は「ストレートな差別発言だ」として公開質問状を提出した。（発生日: 2023年2月2日）</description>
-    <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>松村智成（自民・台東区議）が区議会でLGBTを教える学校教育について「偏った指導があれば同性愛へ誘導しかねない」と発言した</title>
-    <link>https://rememberwhodidwhat.github.io/case/matsumura-tomonari-doseiai-yudo/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/matsumura-tomonari-doseiai-yudo/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>自民党の松村智成台東区議は2023年9月20日の区議会一般質問で、LGBT理解増進法を受けた区の教育現場での取り組みについて「偏向した教材や偏った指導があれば（児童たちを）同性愛へ誘導しかねない」と発言した。性的少数者の全国組織は「性的指向は自分では変えられないという理解が欠落している」と批判した。
-台東区議会の自民会派は10月6日に謝罪と発言取り消しを発表し、松村区議は10月26日の議会で「配慮に欠ける表現があり、傷つかれた方におわび」と謝罪して発言の一部を撤回した。（発生日: 2023年9月20日）</description>
-    <category>性的マイノリティ差別</category>
-  </item>
-  <item>
-    <title>村松裕美（甲府市議）が芥川賞作家の李琴峰をFacebookで名指しして性別変更歴を暴露し東京地裁が賠償を命じた</title>
-    <link>https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-ri-kotomi-outing/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-ri-kotomi-outing/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>甲府市の村松裕美市議は2024年5月下旬、面識のない芥川賞作家の李琴峰さんを名指しし、Facebookに「身体が男性で手術もしていません」などと投稿した。警察から注意を受けて投稿を削除し、断定的な投稿をしたことを謝罪するとした一方、同日に李さんの性別変更前の写真や氏名を含む別の人物の投稿のスクリーンショットを掲載した。李さんの訴えに対し、東京地裁は2026年10月29日、投稿がプライバシーを違法に侵害したと認め、村松市議に110万円の支払いを命じた。判決は削除後の再投稿について「強い非難を免れない」とした。（発生日: 2024年5月）</description>
-    <category>性的マイノリティ差別</category>
-    <category>プライバシー侵害</category>
-  </item>
-  <item>
-    <title>村松裕美（甲府市議）が性自認暴露を巡る甲府市議会の警告書を「従うつもりはない」と拒否した</title>
-    <link>https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-keikokusho-kyohi/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/muramatsu-hiromi-keikokusho-kyohi/</guid>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0900</pubDate>
-    <description>甲府市議会は2025年12月9日、芥川賞作家の李琴峰さんの性自認を同意なく発信したことなどが議会の信頼を損ねたとして、政治倫理審査会の決定に基づき村松裕美市議に警告書を手渡した。村松市議は受理を拒否し、取材に「私をおとしたいメンバーで決められた警告に従うつもりはない」「（誓約書は）もちろん出しません」と述べた。村松市議は、発信がアウティングに当たるかは係争中で、警告も適切な手順を踏んでいないと主張した。（発生日: 2025年12月9日）</description>
-    <category>議会軽視</category>
   </item>
 </channel>
 </rss>
