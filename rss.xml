@@ -6,7 +6,15 @@
   <atom:link href="https://rememberwhodidwhat.github.io/rss.xml" rel="self" type="application/rss+xml" />
   <description>政治家・団体の言動・事件を出典付きで記録するサイトの更新情報</description>
   <language>ja</language>
-  <lastBuildDate>Mon, 23 Nov 2026 11:00:29 +0900</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 11:52:50 +0900</lastBuildDate>
+  <item>
+    <title>へずまりゅうが新日鉄住金に勤務していた時期に母校の高校へ忍び込み楽器などを盗んでメルカリで転売していたと明かした</title>
+    <link>https://rememberwhodidwhat.github.io/case/hezuma-ryu-high-school-instrument-theft/</link>
+    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/hezuma-ryu-high-school-instrument-theft/</guid>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0900</pubDate>
+    <description>へずまりゅう（本名・原田将大）は、2021年12月29日に公開されたYouTubeチャンネル「街録ch」のインタビューで、新日鉄住金に勤めていた時期に、保証人となった借金の取り立てが実家に及ぶのを避ける金を作るため、高価なものを盗んでメルカリで売ることを繰り返していたと語った。母校の高校に忍び込み、「100万とか200万とか」で売れると聞いた楽器などを盗んだほか、母校の後輩のレスリングシューズを盗み、大学でも同じことを繰り返したという。学校が被害届を出し、指紋と防犯カメラの映像から窃盗の容疑で逮捕され、その後に建造物侵入の容疑で再逮捕されて執行猶予付きの判決を受けたと述べた。（発生日: 2021年12月29日）</description>
+    <category>窃盗</category>
+  </item>
   <item>
     <title>高木桂一（産経新聞那覇支局長）が沖縄道の事故で米兵が日本人を救出したと報じて沖縄2紙を「報道機関を名乗る資格はない」と批判し産経が記事を削除・謝罪した</title>
     <link>https://rememberwhodidwhat.github.io/case/takagi-keiichi-sankei-okinawa-marine-rescue-false-report/</link>
@@ -941,16 +949,6 @@
     <description>武部新衆院議員の2014年と2017年の衆院選の選挙運動費用収支報告書には、自身が代表を務める自民党北海道第十二選挙区支部から武部氏個人への寄付が計約3027万円（2014年1500万円、2017年約1527万円）と記載されている一方、同支部の政治資金収支報告書にはこの寄付が一切記載されていないと、2026年11月に「週刊文春」が報じた。
 武部氏の事務所は「本来、武部新への寄附と記載すべきところ、誤りがあった」と認めたうえで、当時の事務担当者は他界しており、報告書は保存期間の経過で廃棄されたため訂正できないと回答した。口座記録や会計帳簿などの資料は示していない。（発生日: 2014年12月）</description>
     <category>金銭問題</category>
-  </item>
-  <item>
-    <title>武部新（自民）の後援会が会費2000円のパーティーで会費を上回るとみられる景品が当たる抽選会を開いていた</title>
-    <link>https://rememberwhodidwhat.github.io/case/takebe-arata-supporters-party-lottery-prizes/</link>
-    <guid isPermaLink="true">https://rememberwhodidwhat.github.io/case/takebe-arata-supporters-party-lottery-prizes/</guid>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0900</pubDate>
-    <description>武部新衆院議員の後援会が地元・北見市などで開く会費2000円の「ビールパーティー」「収穫感謝祭」等で、家電・自転車・スーツケース・冷凍ホタテ・空気清浄機など会費を上回るとみられる景品が当たる抽選会を行っていたと、2026年10〜11月に「週刊新潮」「週刊文春」が報じた。2018年10月の収穫感謝祭の様子は本人のSNSに投稿されており、専門家は選挙区内の有権者への寄附を禁じた公選法に抵触する疑いを指摘した。
-農水相の武部氏は「抽選会を企画の一つとして行ったものなので寄付に当たらない」「地元の方々から持ち寄られたものを景品としていた」などと述べて違法性を否定したが、北海道選管は「『企画の一つとして行った場合は寄付にあたらない』という趣旨の文言は公選法にはない」としている。（発生日: 2018年10月）</description>
-    <category>選挙工作</category>
-    <category>根拠不明発言</category>
   </item>
 </channel>
 </rss>
